@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link href="lib/icon/googleg_lodp.ico" rel="shortcut icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta content="never" name="referrer"/>
+    <title>Google一下，你就知道</title>
+    <!--<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>-->
+    <script type="text/javascript" src="lib/jquery/jquery-2.1.4.js"></script>
+    <!--高德自动定位-->
+    <script type="text/javascript"  src="http://webapi.amap.com/maps?v=1.3&key=f0dc15adda3aa5058cba7b76a84a759b"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <style>
+        html, body {
+            height: 100%
+        }
+
+        html {
+            overflow-y: auto
+        }
+
+        body {
+            font: 12px arial;
+            background: #fff
+        }
+
+        body, p, form, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        body, form {
+            position: relative
+        }
+
+        td {
+            text-align: left
+        }
+
+        img {
+            border: 0
+        }
+
+        a {
+            color: #00c
+        }
+
+        a:active {
+            color: #f60
+        }
+
+        input {
+            border: 0;
+            padding: 0
+        }
+
+        #wrapper {
+            position: relative;
+            _position:;
+            min-height: 100%
+        }
+
+        #head {
+            padding-bottom: 100px;
+            text-align: center;
+            *z-index: 1
+        }
+
+        #ftCon {
+            height: 100px;
+            position: absolute;
+            bottom: 44px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            z-index: 0;
+            overflow: hidden
+        }
+
+        #ftConw {
+            width: 720px;
+            margin: 0 auto
+        }
+
+        #lh {
+            margin: 16px 0 5px;
+            word-spacing: 3px
+        }
+
+        #lh a {
+            margin: 0 10px
+        }
+
+        #cp, #cp a {
+            color: #666
+        }
+
+        #wrapper {
+            min-width: 810px;
+            height: 100%;
+            min-height: 600px
+        }
+
+        #head {
+            position: relative;
+            padding-bottom: 0;
+            height: 100%;
+            min-height: 600px
+        }
+
+        #head .head_wrapper {
+            height: 100%
+        }
+
+        #form {
+            margin: 22px auto 0;
+            width: 641px;
+            text-align: left;
+            z-index: 100
+        }
+
+        #form .bdsug {
+            top: 35px
+        }
+
+        #kw {
+            position: relative
+        }
+
+        .s_btn {
+            width: 95px;
+            height: 32px;
+            padding-top: 2px \9;
+            font-size: 14px;
+            background-color: #ddd;
+            background-position: 0 -48px;
+            cursor: pointer
+        }
+
+        .s_btn {
+            width: 100px;
+            height: 36px;
+            color: white;
+            font-size: 15px;
+            letter-spacing: 1px;
+            background: #3385ff;
+            border-bottom: 1px solid #2d78f4;
+            outline: medium;
+            *border-bottom: 0;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0
+        }
+
+        .s_btn.btnhover {
+            background: #317ef3;
+            border-bottom: 1px solid #2868c8;
+            *border-bottom: 0;
+            box-shadow: 1px 1px 1px #ccc
+        }
+
+        .s_btn_wr {
+            width: 97px;
+            height: 34px;
+            display: inline-block;
+            background-position: -120px -48px;
+            *position: relative;
+            z-index: 0;
+            vertical-align: top
+        }
+
+        .s_btn_wr {
+            width: auto;
+            height: auto;
+            border-bottom: 1px solid transparent;
+            *border-bottom: 0
+        }
+
+        .s_ipt_wr {
+            height: 34px
+        }
+
+        .s_ipt_wr.bg, .s_btn_wr.bg, #su.bg {
+            background-image: none
+        }
+
+        .s_ipt_wr {
+            border: 1px solid #b6b6b6;
+            border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+            background: #fff;
+            display: inline-block;
+            vertical-align: top;
+            width: 539px;
+            margin-right: 0;
+            border-right-width: 0;
+            border-color: #b8b8b8 transparent #ccc #b8b8b8;
+            overflow: hidden
+        }
+
+        .s_ipt {
+            width: 526px;
+            height: 22px;
+            font: 16px/18px arial;
+            line-height: 22px \9;
+            margin: 6px 0 0 7px;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            -webkit-appearance: none
+        }
+
+        .bdsug {
+            position: absolute;
+            width: 418px;
+            background: #fff;
+            display: none;
+            border: 1px solid #817f82
+        }
+
+        .bdsug li {
+            width: 511px;
+            color: #000;
+            font: 14px arial;
+            line-height: 25px;
+            padding: 0 8px;
+            position: relative;
+            cursor: default
+        }
+
+        .bdsug {
+            top: 35px;
+            width: 538px;
+            border-color: #ccc;
+            box-shadow: 1px 1px 3px #ededed;
+            _overflow: hidden;
+            -webkit-box-shadow: 1px 1px 3px #ededed;
+            -moz-box-shadow: 1px 1px 3px #ededed;
+            -o-box-shadow: 1px 1px 3px #ededed
+        }
+
+        .s_form {
+            position: relative;
+            top: 38.2%
+        }
+
+        .s_form_wrapper {
+            position: relative;
+            top: -191px
+        }
+
+        #u1 {
+            z-index: 2;
+            color: white;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 19px 0 5px 0;
+            padding: 0 96px 0 0
+        }
+
+        #u1 a:link, #u1 a:visited {
+            color: #666;
+            text-decoration: none
+        }
+
+        #u1 a:hover, #u1 a:active {
+            text-decoration: underline
+        }
+
+        #u1 a:active {
+            color: #00c
+        }
+
+        #u1 a.bri, #u1 a.bri:visited {
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+            width: 60px;
+            height: 23px;
+            float: left;
+            color: white;
+            background: #38f;
+            line-height: 24px;
+            font-size: 13px;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 1px solid #38f;
+            margin-left: 19px;
+            margin-right: 2px
+        }
+
+        #u1 a.mnav, #u1 a.mnav:visited {
+            float: left;
+            color: #333;
+            font-weight: bold;
+            line-height: 24px;
+            margin-left: 20px;
+            font-size: 13px;
+            text-decoration: underline
+        }
+
+        .bg.s_ipt_wr:hover {
+            border-color: #4d90fe !important;
+        }
+
+        .bg.s_ipt_wr {
+
+            border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9 !important
+        }
+
+        #tip p,#result p {
+            margin-top: 10px;
+        }
+        .gaode{
+
+            margin-top:20px;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="head">
+        <div class="head_wrapper">
+            <div class="s_form">
+                <div class="s_form_wrapper">
+                    <div id="lg"><img src="lib/images/google.gif"></div>
+                    <form id="form" name="f" action="Google.Gecoding.html" class="fm" method="get">
+                        <span class="bg s_ipt_wr"><span id="ipt_photo"></span>
+                            <input id="kw" name="address" class="s_ipt" value="" maxlength="255"
+                                   autocomplete="off"/><input
+                                    type="hidden" value="utf-8"/><input type="hidden"
+                                                                        value=""/><input
+                                    type="hidden" value="94721987_hao_pg"/><input type="hidden"
+                                                                                  value=""/><input
+                                    type="hidden"
+
+                                    value=""/></span><span
+                            class="bg s_btn_wr"><input type="submit" id="su" value="查找经纬度" class="bg s_btn"></span>
+
+
+                    </form>
+                    <br/>
+
+                    <div id="result" style="display: none;">
+                        <p>谷歌API查找位置成功：</p>
+                        <p>经度：<span id="lng"></span></p>
+
+                        <p>纬度：<span id="lat"></span></p>
+
+                        <p>详细地址：<span id="address_components"></span></p>
+
+                        <p>place_id：<span id="place_id"></span></p>
+
+                        <p>formatted_address：<span id="formatted_address"></span></p>
+                    </div>
+
+                    <div id="errormsg">
+                        <p></p>
+                    </div>
+
+                    <!--高德-->
+                    <div class="gaode">
+                    <!--<div id='container'></div>-->
+                    <div id="tip"></div></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script>
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return (r[2]);
+        return '';
+    }
+    var address = decodeURI(GetQueryString("address")).replace('%2C', ',');
+    $("#kw").val(decodeURI(address));
+    if (address) {
+        var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=AIzaSyCJz5bbqLBNWMQiWH1SSkBWHh28kgnj8Ik';
+        //var url='http://10.20.26.19:8055/api/GoogleGPS/Gecoding?address='+address+'&key=AIzaSyCJz5bbqLBNWMQiWH1SSkBWHh28kgnj8Ik';
+        $.ajax({
+            type: "GET",
+            url: url,
+            timeout: 1000 * 10,
+            success: function (data) {
+                console.log(data)
+                if (data.status === 'OK') {
+                    $("#result").show();
+                    var result = data.results[0];
+                    $("#lng").html(result.geometry.location.lng);
+                    $("#lat").html(result.geometry.location.lat);
+                    $("#place_id").html(result.place_id);
+                    $("#formatted_address").html(result.formatted_address);
+                    var address_components = [];
+                    for (var i = result.address_components.length - 1; i >= 0; i--) {
+                        address_components.push(result.address_components[i].long_name);
+                    }
+                    $('#address_components').html(address_components.join('-'));
+                    GaoDe();
+                } else {
+                    $("#errormsg p").html('查询不到，拼写是否有误？');
+                }
+            },
+            error: function () {
+                $("#errormsg p").html('你不能访问google网站？<a href="http://www.google.com/">去谷歌</a>');
+                GaoDe();
+
+            }
+        });
+
+
+    }
+    else {
+        $("#kw").focus();
+        $("#errormsg p").html('请先输入地址');
+
+    }
+
+
+    GaoDe();
+    function GaoDe(){
+        //高德自动定位
+        var map, geolocation;
+        //加载地图，调用浏览器定位服务
+        var map = new AMap.Map('container', {
+            resizeEnable: true
+        });
+        map.plugin('AMap.Geolocation', function () {
+            geolocation = new AMap.Geolocation({
+                enableHighAccuracy: true,//是否使用高精度定位，默认:true
+                timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+                buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+                zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+                buttonPosition: 'RB'
+            });
+            map.addControl(geolocation);
+            geolocation.getCurrentPosition();
+            AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+            AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+        });
+        //解析定位结果
+        function onComplete(data) {
+            var str = ['<br>','高德地图自动定位成功：'];
+            str.push('<p>经度：<span>' + data.position.getLng()+'</span></p>');
+            str.push('<p>纬度：<span>' + data.position.getLat()+'</span></p>');
+            str.push('<p>精度：<span>' + data.accuracy + ' 米'+'</span></p>');
+            str.push('<p>是否经过偏移：<span>' + (data.isConverted ? '是' : '否')+'</span></p>');
+            document.getElementById('tip').innerHTML = str.join(' ');
+        }
+
+        //解析定位错误信息
+        function onError(data) {
+            document.getElementById('tip').innerHTML = '定位失败';
+        }
+    }
+
+</script>
+
+</body>
+</html>
+
