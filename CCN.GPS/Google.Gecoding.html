@@ -9,7 +9,8 @@
     <!--<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>-->
     <script type="text/javascript" src="lib/Jquery/jquery-2.1.4.js"></script>
     <!--高德自动定位-->
-    <script type="text/javascript"  src="https://webapi.amap.com/maps?v=1.3&key=f0dc15adda3aa5058cba7b76a84a759b"></script>
+    <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=1.3&key=f0dc15adda3aa5058cba7b76a84a759b"></script>
     <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
     <style>
         html, body {
@@ -310,12 +311,13 @@
             border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9 !important
         }
 
-        #tip p,#result p {
+        #tip p, #result p {
             margin-top: 10px;
         }
-        .gaode{
 
-            margin-top:20px;
+        .gaode {
+
+            margin-top: 20px;
             height: 50%;
         }
     </style>
@@ -346,6 +348,7 @@
 
                     <div id="result" style="display: none;">
                         <p>谷歌API查找位置成功：</p>
+
                         <p>经度：<span id="lng"></span></p>
 
                         <p>纬度：<span id="lat"></span></p>
@@ -363,8 +366,10 @@
 
                     <!--高德-->
                     <div class="gaode">
-                    <!--<div id='container'></div>-->
-                    <div id="tip"></div></div>
+                        <img src="lib/images/loading.gif" alt="" id="load"/>
+                        <!--<div id='container'></div>-->
+                        <div id="tip"></div>
+                    </div>
 
                 </div>
 
@@ -385,8 +390,8 @@
         if (r != null) return (r[2]);
         return '';
     }
-
-    function GaoDe(){
+    GaoDe();
+    function GaoDe() {
         //高德自动定位
         var map, geolocation;
         //加载地图，调用浏览器定位服务
@@ -408,20 +413,21 @@
         });
         //解析定位结果
         function onComplete(data) {
-            var str = ['<br>','高德地图自动定位成功：'];
-            str.push('<p>经度：<span>' + data.position.getLng()+'</span></p>');
-            str.push('<p>纬度：<span>' + data.position.getLat()+'</span></p>');
-            str.push('<p>精度：<span>' + data.accuracy + ' 米'+'</span></p>');
-            str.push('<p>是否经过偏移：<span>' + (data.isConverted ? '是' : '否')+'</span></p>');
+            $("#load").hide();
+            var str = ['<br>', '高德地图自动定位成功：'];
+            str.push('<p>经度：<span>' + data.position.getLng() + '</span></p>');
+            str.push('<p>纬度：<span>' + data.position.getLat() + '</span></p>');
+            str.push('<p>精度：<span>' + data.accuracy + ' 米' + '</span></p>');
+            str.push('<p>是否经过偏移：<span>' + (data.isConverted ? '是' : '否') + '</span></p>');
             document.getElementById('tip').innerHTML = str.join(' ');
         }
 
         //解析定位错误信息
         function onError(data) {
+            $("#load").hide();
             document.getElementById('tip').innerHTML = '定位失败';
         }
     }
-    GaoDe();
     var address = decodeURI(GetQueryString("address")).replace('%2C', ',');
     $("#kw").val(decodeURI(address));
     if (address) {
@@ -464,7 +470,6 @@
         $("#errormsg p").html('请先输入地址');
 
     }
-
 
 
 </script>
