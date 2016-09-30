@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="mainCtrl">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>联系人信息</title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body ng-controller="userCtrl">
+<div class="address_head">
+    修改联系人信息
+    <div class="back_wrap" ng-click="user.back()">
+        <img src="../../static/images/back.png" alt="" class="img_back"/>
+    </div>
+</div>
+<div class="old_info">
+   <div class="parent">
+       <div class="child">
+           <p>联系人：<span>吴秀波</span></p>
+           <p>手机：<span>13788955988</span></p>
+       </div>
+   </div>
+</div>
+<div class="address_wrap">
+    <div class="arrow_wrap">
+        <div class="arrow_left"></div>
+        <div class="arrow_center"><img src="../../static/images/detail/arrow_modify.png" alt="" class="arrow_modify"/></div>
+        <div class="arrow_right"></div>
+    </div>
+</div>
+<div class="new_info">
+    <p class="new_info_left">修改为</p>
+    <div class="new_info_right">
+        <div class="new_info_input">联系人：<input type="text"/></div>
+        <div class="new_info_input">手机：<input type="tel" maxlength="11"/></div>
+    </div>
+</div>
+<button type="button" class="btn_info" ng-click="user.back()">保存</button>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/angular.js"></script>
+<script type="text/javascript" src="../../static/script/controller/mainCtrl.js"></script>
+<script type="text/javascript" src="../../static/script/controller/userCtrl.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="mainCtrl">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>地址管理</title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body ng-controller="addressCtrl" class="addressPage">
+<div class="address_head">
+    管理收货地址
+    <div class="back_wrap"   ng-click="address.back()">
+        <img src="../../static/images/back.png" alt="" class="img_back"/>
+    </div>
+</div>
+<div class="address_wrap">
+    <div class="address_list">
+        <div class="address_info">
+            <div class="parent">
+                <div class="child">
+                    上海市浦东新区长阳路26号7栋601室上海市浦东新区长阳路26号7栋601室
+                </div>
+            </div>
+        </div>
+        <div class="address_manage">
+            <div class="parent">
+                <div class="child">
+                    <img src="../../static/images/detail/delete.png" alt="" class="delete_address"/><img
+                        src="../../static/images/detail/modify_.png"  alt="" class="add_address" ng-click="address.modify()"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="address_list">
+        <div class="address_info">
+            <div class="parent">
+                <div class="child">
+                    上海市浦东新区长阳路26号7栋601室上海市浦东新区长阳路26号7栋601室
+                </div>
+            </div>
+        </div>
+        <div class="address_manage">
+            <div class="parent">
+                <div class="child">
+                    <img src="../../static/images/detail/delete.png" alt="" class="delete_address"/><img
+                        src="../../static/images/detail/modify_.png"  alt="" class="add_address" ng-click="address.modify()"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="address_foot">
+    <div class="address_add" ng-click="address.add_address()">新增收货地址</div>
+    <button type="button" class="btn_preserve"  ng-click="address.back()">保存</button>
+</div>
+<!--修改收货地址-->
+<div class="pop_modify none">
+    <div class="address_head">
+        收货地址修改
+        <div class="back_wrap" ng-click="address.closeModify()">
+            <img src="../../static/images/back.png" alt="" class="img_back"/>
+        </div>
+    </div>
+    <div class="address_old">上海市浦东新区长阳路26号7栋601室上海市浦东新区长阳路26号7栋601室</div>
+    <div class="arrow_wrap">
+        <div class="arrow_left"></div>
+        <div class="arrow_center"><img src="../../static/images/detail/arrow_modify.png" alt="" class="arrow_modify"/></div>
+        <div class="arrow_right"></div>
+    </div>
+    <span class="modify_label">修改为:</span><input type="text" class="input_pop_modify"/>
+    <button type="button" class="btn_pop_modify" ng-click="address.closeModify()">修改</button>
+</div>
+<!--增加收货地址-->
+<div class="pop_add none">
+    <div class="address_head">
+        新增收货地址
+        <div class="back_wrap" ng-click="address.closeModify()">
+            <img src="../../static/images/back.png" alt="" class="img_back"/>
+        </div>
+    </div>
+    <input type="text" class="input_pop_add" placeholder="请填写您的收货地址"/>
+    <button type="button" class="btn_pop_add" ng-click="address.closeModify()">保存</button>
+</div>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/angular.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/move.js"></script>
+<script type="text/javascript" src="../../static/script/controller/mainCtrl.js"></script>
+<script type="text/javascript" src="../../static/script/controller/addressCtrl.js"></script>
+
+</body>
+</html>

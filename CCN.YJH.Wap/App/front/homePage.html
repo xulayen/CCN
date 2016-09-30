@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="homePage bg">
+<div class="container">
+    <!--页面顶部-->
+    <div class="top clearfix">
+        <!-- 跳转用户积分页面-->
+        <img src="../../static/images/home/user.png" alt="" class="user" onclick="jumpTo('user.html')"/>
+        <!-- 季度目标 年度晋升切换-->
+        <div class="switch_box">
+            <div class="switch_block"></div>
+            <div class="switch_line"></div>
+        </div>
+        <div class="switch_name"><span class="switch_l">季度目标</span><span class="switch_r">年度晋升</span></div>
+        <div class="switch_on">
+            <div class="switch_onL"></div>
+            <div class="switch_onR"></div>
+        </div>
+        <!-- 广告-->
+        <img src="../../static/images/home/arrow.png" alt="" class="arrow" onclick="bannerShow()"/>
+        <img src="../../static/images/home/arrow_top.png" alt="" class="arrow_top none" onclick="bannerHide()"/>
+    </div>
+    <!--进度条-->
+    <div class="progress">
+        <!-- 会员特权-->
+        <img src="../../static/images/home/medal_silver.png" alt="" class="medal" onclick="jumpTo('medal.html')"/>
+        <!-- 进度条-->
+        <div class="progress_wrap">
+            <img src="../../static/images/home/progress.png" alt="" class="pro_img"/>
+            <div class="circle" id="circle"></div>
+            <div class="percent">
+                <div class="percent_d"><span class="percent_digi"></span>%</div>
+                <div style="padding-right: 0.1rem;"><span class="ratio_son">10080KL</span><span class="ratio_parent">/12000KL</span></div>
+            </div>
+        </div>
+    </div>
+    <!--当前积分结果-->
+    <div class="result">
+        <div class="result_left">
+            <p class="result_title">当季积分</p>
+            <p class="digit"><img src="../../static/images/digist/8.png" alt=""/><img src="../../static/images/digist/9.png" alt=""/><img src="../../static/images/digist/1.png" alt=""/><img src="../../static/images/digist/4.png" alt=""/></p>
+        </div>
+        <div class="result_right">
+            <p class="result_title">全国排名</p>
+            <p class="digit"><img src="../../static/images/digist/5.png" alt=""/><img src="../../static/images/digist/8.png" alt=""/><img src="../../static/images/digist/7.png" alt=""/></p>
+        </div>
+    </div>
+
+</div>
+<!--脚部-->
+<div class="foot">
+    <!--活动入口-->
+    <div class="import">
+        <div class="import_left home_import_left" onclick="jumpTo('mall.html')"><img src="../../static/images/home/mall.png" alt="" class="home_mall"/>积分兑换</div>
+        <div class="import_right home_import_right" onclick="jumpTo('order.html')"><img src="../../static/images/home/list.png" alt="" class="home_list"/>订单查询</div>
+    </div>
+    <!--反馈-->
+    <div class="feedback" onclick="jumpTo('words.html')"><span>我有话对壳牌说</span></div>
+</div>
+<!--遮罩层-->
+<div class="mask none" onclick="bannerHide()"></div>
+<!--广告位-->
+<div class="banner_box">
+    <ul class="banner">
+        <li><img src="../../static/images/home/banner1.png" alt=""/></li>
+        <li><img src="../../static/images/home/banner2.png" alt=""/></li>
+        <li><img src="../../static/images/home/banner3.png" alt=""/></li>
+    </ul>
+    <ul class="banner_nav">
+    </ul>
+    <img src="../../static/images/login_logo.png" alt="" class="banner_logo"/>
+</div>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/circle-progress.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/move.js"></script>
+<script type="text/javascript" src="../../static/script/homePage.js"></script>
+</body>
+</html>
