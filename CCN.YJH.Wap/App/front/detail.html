@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html ng-app="myApp"  ng-controller="mainCtrl">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>商品详情</title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body ng-controller="detailCtrl">
+<div class="detail_wrap">
+    <!--详情页上面图片-->
+    <div class="detail_top">
+        <img ng-src="../../static/images/mall/goods/{{detail.good.l_src}}.png" alt="" class="detail_top_img"/>
+    </div>
+    <!--回到上一页-->
+    <div class="back_wrap" ng-click="main.jumpTo('mall')">
+        <img src="../../static/images/back_w.png" alt="" class="img_back"/>
+    </div>
+    <div class="push_cart_wrap">
+        <p class="cart_num">0</p>
+        <img src="../../static/images/detail/cart.png" alt="" class="img_cart"/>
+    </div>
+    <!--详情页内容-->
+    <div class="detail_content">
+        <p class="detail_title" ng-bind="detail.good.name"></p>
+        <p class="detail_sold">销量：<span ng-bind="detail.good.sold"></span>件</p>
+        <div class="datail_box">
+            <div class="detail_left">
+                <div class="parent">
+                    <div class="child">
+                        <p class="detail_left_volume">数量</p>
+                        <div class="detail_num"><span>-</span><p>1</p><span>+</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail_right">
+                <div class="parent">
+                    <div class="child">
+                        <p class="detail_left_volume">所需积分</p>
+                        <p class="detail_right_num" ng-bind="detail.good.point"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--商品详情图片-->
+    <div class="detail_detail">
+        <p class="detail_detail_title">商品详情</p>
+        <img ng-src="../../static/images/detail/Imgs/{{detail.Id+1}}/{{v}}.png"  alt="" ng-repeat="v in detail.ImgList track by $index"/>
+    </div>
+    <!--脚部-->
+    <div class="detail_foot">
+        <!--活动入口-->
+        <div class="import">
+            <div class="import_left" id="add_cart" ng-click="detail.add_cart()"><img src="../../static/images/home/cart.png" alt="" class="cart"/>加入购物车</div>
+            <div class="import_right" id="buy_now" onclick="popShow()"><img src="../../static/images/detail/exchange.png" alt="" class="list"/>立即兑换</div>
+        </div>
+    </div>
+</div>
+<!--遮罩层-->
+<div class="pop_mask none"></div>
+<!--商品兑换弹出层-->
+<div class="pop_box none">
+    <div class="goods_pop clearfix">
+        <img ng-src="../../static/images/mall/goods/{{detail.good.m_src}}.png" alt="" class="pop_img"/>
+        <div class="pop_line"></div>
+        <div class="pop_name" ng-bind="detail.good.name"></div>
+        <div class="pop_dash">
+            <div class="pop_left">
+                <div class="parent">
+                    <div class="child">
+                        <p>积分：<span class="pop_point" ng-bind="detail.good.point"></span></p>
+                        <p>数量：<span>1</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_center">
+                <div class="parent">
+                    <div class="child">
+                        <p>联系人：<span>吴秀波</span></p>
+                        <p>手机：<span>13788955988</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_right" ng-click="main.jumpTo('userInfo',detail.oid,false)">
+                <div class="parent">
+                    <div class="child">
+                        <img src="../../static/images/detail/modify.png" alt="" class="img_modify_info"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop_address_wrap">
+            <table class="pop_address">
+                <tbody>
+                <tr>
+                    <td><img src="../../static/images/detail/dot.png" alt="" class="address_dot"/></td>
+                    <td class="address_name address_select">上海市浦东新区长阳路26号7栋601室上海市浦东新区长阳路26号7栋601室</td>
+                </tr><tr>
+                    <td><img src="../../static/images/detail/dot_.png" alt="" class="address_dot"/></td>
+                    <td class="address_name ">上海市浦东新区长阳路26号7栋601室</td>
+                </tr><tr>
+                    <td><img src="../../static/images/detail/dot_.png" alt="" class="address_dot"/></td>
+                    <td class="address_name ">上海市浦东新区长阳路26号7栋601室</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <button type="button" class="pop_btn" ng-click="detail.exchangeR()">确定兑换</button>
+    </div>
+    <div class="address_modify" ng-click="main.jumpTo('address',detail.oid,false)">管理收货地址</div>
+    <img src="../../static/images/return.png" alt="" class="address_return" onclick="popHide()"/>
+</div>
+<!--loading图-->
+<img src="../../static/images/loading2.gif" alt="" class="loading" ng-class="{show:detail.isLoading}"/>
+<!--兑换结果-->
+<div class="exchange_result none" onclick="popHide()">
+    <!-- 两种兑换结果 img point_lack success
+     p   兑换成功！ 积分不够哦-->
+    <img src="../../static/images/detail/success.png" alt="" class="img_result"/>
+    <p>兑换成功！</p>
+</div>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/angular.js"></script>
+<script type="text/javascript" src="../../static/data/goods.js"></script>
+<script type="text/javascript" src="../../static/data/detailImg.js"></script>
+<script type="text/javascript" src="../../static/script/controller/mainCtrl.js"></script>
+<script type="text/javascript" src="../../static/script/controller/detailCtrl.js"></script>
+<script>
+    function popShow(){
+        $('.detail_foot').css({'position':'absolute'});
+        $('.detail_wrap').addClass('detail_blur');
+        $('.pop_box,.pop_mask').show();
+    }
+    function popHide(){
+        $('.pop_box,.pop_mask,.exchange_result').hide();
+        $('.detail_wrap').removeClass('detail_blur');
+        $('.detail_foot').css({'position':'fixed'});
+    }
+</script>
+</body>
+</html>

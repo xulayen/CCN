@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="mainCtrl">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>优家会积分商城</title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="mallPage bg"   ng-controller="mallCtrl">
+<div class="mall_content">
+    <!--左侧导航栏-->
+    <div class="nav_left">
+        <div class="nav_user">
+            <div class="parent">
+                <div class="child">
+                    <img src="../../static/images/mall/nav/user.png" alt="" class="nav_img_user"/><p>56900</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav_mall nav_current" ng-click="main.jumpTo('mall')">
+            <img src="../../static/images/mall/nav/mall.png" alt="" class="nav_img_mall"/><p>商城</p>
+        </div>
+        <div class="nav_cart" ng-click="main.jumpTo('cart')">
+            <img src="../../static/images/mall/nav/cart_.png" alt="" class="nav_img_cart"/><p>购物车</p>
+        </div>
+        <div class="nav_order" ng-click="main.jumpTo('order')">
+            <img src="../../static/images/mall/nav/order_.png" alt="" class="nav_img_order"/><p>订单查询</p>
+        </div>
+        <div class="nav_home" ng-click="main.jumpTo('homePage')">首页</div>
+    </div>
+    <!--右侧图标-->
+    <div class="mall_right">
+        <img src="../../static/images/mall/search.png" alt="" class="img_search" ng-click="goods.searchShow()"/>
+        <div class="point"></div>
+        <img ng-src="../../static/images/mall/big{{goods.isBCurrent}}.png" alt="" class="img_big" ng-click="goods.isBig=true;goods.isBCurrent='';goods.isSCurrent='_'"/>
+        <img ng-src="../../static/images/mall/small{{goods.isSCurrent}}.png" alt="" class="img_small" ng-click="goods.isBig=false;goods.isBCurrent='_';goods.isSCurrent=''"/>
+    </div>
+    <!--页面商品内容大-->
+    <div class="container_big clearfix" ng-show="goods.isBig" >
+        <div class="goodsB_list" ng-repeat="g in goods.goodsList track by $index" ng-click="main.jumpTo('detail',g.id,false)">
+            <div class="goodsB_img" ng-class="{goodsB_hot:g.hot,goodsB_new:g.new}">
+                <img ng-src="../../static/images/mall/goods/{{g.m_src}}.png" alt="" class="goods_big"/>
+            </div>
+            <div class="goodsB_content">
+                <div class="none"  ng-class="{'show':goods.isBig}">
+                    <div class="goodsB_line" ng-class="{none:g.hot+g.new}"></div>
+                </div>
+                <div class="goodsB_name" ng-bind="g.name"></div>
+                <div class="goodsB_price none" ng-class="{'show':goods.isBig}"><span class="goodsB_point" ng-bind="g.point"></span>积分</div>
+            </div>
+        </div>
+    </div>
+    <!--页面商品内容小-->
+    <div class="container_small none" ng-class="{'show':!goods.isBig}">
+        <div class="goodsS_list" ng-class="{goodsS_hot:g.hot,goodsS_new:g.new}"  ng-repeat="g in goods.goodsList track by $index" ng-click="main.jumpTo('detail',g.id,false)">
+            <img ng-src="../../static/images/mall/goods/{{g.s_src}}.png" alt="" class="goods_small"/>
+            <div class="goodsS_content">
+                <div class="parent">
+                    <div class="child">
+                        <div class="goodsS_name" ng-bind="g.name" ng-class="{'goodsS_name_':g.hot+g.new}"></div>
+                        <div class="goodsS_price"><span ng-bind="g.point" ng-class="{white:g.hot}"></span>积分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsS_line" ng-class="{none:g.hot+g.new}"></div>
+            <div class="new_xp none" ng-class="{'show':g.new}">新品</div>
+            <div class="hot_bk none" ng-class="{'show':g.hot}">爆款</div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="mall_bottom">
+        <div class="mall_bottom_left" ><span ng-bind="goods.filterName"></span><img src="../../static/images/mall/more.png" class="bottom_more"/></div>
+        <div class="mall_bottom_right"><span  ng-bind="goods.classifyName"></span><img src="../../static/images/mall/more.png" class="bottom_more"/></div>
+    </div>
+</div>
+<!--分类弹出层-->
+<div class="classify none">
+    <ul class="classify_content">
+        <li ng-click="goods.changeFilter('all','全部')"><img src="../../static/images/mall/filter/all_order.png" alt="" class="all_order"/>全部</li>
+        <li ng-click="goods.changeFilter('life','生活类')"><img src="../../static/images/mall/filter/life_order.png" alt="" class="life_order"/>生活类</li>
+        <li ng-click="goods.changeFilter('tool','工具类')"><img src="../../static/images/mall/filter/tool_order.png" alt="" class="tool_order"/>工具类</li>
+        <li ng-click="goods.changeFilter('new','最新')"><img src="../../static/images/mall/filter/new_order.png" alt="" class="new_order"/>最新</li>
+        <li ng-click="goods.changeFilter('change','我能兑')"><img src="../../static/images/mall/filter/change_order.png" alt="" class="change_order"/>我能兑</li>
+    </ul>
+    <img src="../../static/images/return.png" alt="" class="return" ng-click="goods.closeMask()"/>
+</div>
+<!--排序弹出层-->
+<div class="order none">
+    <ul class="order_content">
+        <li ng-click="goods.changeOrder('-point','积分从高到低')"><img src="../../static/images/mall/filter/point_orderT.png" alt="" class="point_orderT"/>积分从高到低</li>
+        <li ng-click="goods.changeOrder('point','积分从低到高')"><img src="../../static/images/mall/filter/point_orderL.png" alt="" class="point_orderL"/>积分从低到高</li>
+        <li ng-click="goods.changeOrder('-sold','销量从高到低')"><img src="../../static/images/mall/filter/sale_orderT.png" alt="" class="sale_orderT"/>销量从高到低</li>
+        <li ng-click="goods.changeOrder('sold','销量从低到高')"><img src="../../static/images/mall/filter/sale_orderL.png" alt="" class="sale_orderL"/>销量从低到高</li>
+    </ul>
+    <img src="../../static/images/return.png" alt="" class="return" ng-click="goods.closeMask()"/>
+</div>
+<!--遮罩层-->
+<div class="mall_mask none">
+</div>
+<!--搜索框-->
+<div class="mall_search none">
+    <div class="mall_search_top">
+        <img src="../../static/images/mall/return.png" alt="" class="mall_img_return" ng-click="goods.searchHide()"/>
+        <div class="search_box">
+            <input type="text" class="search_input" ng-model="goods.searchG"/>
+            <img src="../../static/images/mall/search_.png" alt="" class="mall_img_search"/>
+            <img src="../../static/images/mall/delete.png" alt="" class="mall_img_delete" ng-click="goods.clearSearch()"/>
+        </div>
+    </div>
+    <div class="mall_search_btn" ng-click="goods.searchGoods()">搜索</div>
+</div>
+<!--未搜索到物品提示-->
+<div class="goods_no none">
+    <p>没找到相关商品，试试别的吧！</p>
+</div>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/angular.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/move.js"></script>
+<script type="text/javascript" src="../../static/data/goods.js"></script>
+<script type="text/javascript" src="../../static/script/controller/mainCtrl.js"></script>
+<script type="text/javascript" src="../../static/script/controller/mallCtrl.js"></script>
+</body>
+</html>

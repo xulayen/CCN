@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="mainCtrl">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>订单查询</title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="orderPage bg">
+<div class="order_wrap">
+    <!--左侧导航栏-->
+    <div class="nav_left">
+        <div class="nav_user">
+            <div class="parent">
+                <div class="child">
+                    <img src="../../static/images/mall/nav/user.png" alt="" class="nav_img_user"/>
+                    <p>56900</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav_mall" ng-click="main.jumpTo('mall')">
+            <img src="../../static/images/mall/nav/mall_.png" alt="" class="nav_img_mall"/>
+            <p>商城</p>
+        </div>
+        <div class="nav_cart" ng-click="main.jumpTo('cart')">
+            <img src="../../static/images/mall/nav/cart_.png" alt="" class="nav_img_cart"/>
+            <p>购物车</p>
+        </div>
+        <div class="nav_order nav_current" ng-click="main.jumpTo('order')">
+            <img src="../../static/images/mall/nav/order.png" alt="" class="nav_img_order"/>
+            <p>订单查询</p>
+        </div>
+        <div class="nav_home" ng-click="main.jumpTo('homePage')">首页</div>
+    </div>
+    <!-- 订单详情-->
+    <div class="order_list_wrap">
+        <div class="order_list">
+            <img src="../../static/images/mall/goods/3_2.png" alt="" class="order_img"/>
+            <img src="../../static/images/transit.png" class="order_trans"/>
+            <div class="order_name">快递单号：666781439630</div>
+        </div>
+        <div class="order_list">
+            <img src="../../static/images/mall/goods/4_2.png" alt="" class="order_img"/>
+            <img src="../../static/images/sign.png" class="order_status"/>
+            <div class="order_name">快递单号：666781439630</div>
+        </div>
+    </div>
+</div>
+<!--遮罩层-->
+<div class="pop_mask none"></div>
+<!--loading图-->
+<img src="../../static/images/loading2.gif" alt="" class="loading" ng-class="{show:cart.isLoading}"/>
+
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/angular.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/move.js"></script>
+<script type="text/javascript" src="../../static/data/goods.js"></script>
+<script type="text/javascript" src="../../static/script/controller/mainCtrl.js"></script>
+</body>
+</html>

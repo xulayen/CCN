@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="mainCtrl">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>购物车</title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="cartPage bg"  ng-controller="cartCtrl">
+<div class="cart_wrap">
+    <!--左侧导航栏-->
+    <div class="nav_left">
+        <div class="nav_user">
+            <div class="parent">
+                <div class="child">
+                    <img src="../../static/images/mall/nav/user.png" alt="" class="nav_img_user"/>
+                    <p>56900</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav_mall" ng-click="main.jumpTo('mall')">
+            <img src="../../static/images/mall/nav/mall_.png" alt="" class="nav_img_mall"/>
+
+            <p>商城</p>
+        </div>
+        <div class="nav_cart nav_current" ng-click="main.jumpTo('cart')">
+            <img src="../../static/images/mall/nav/cart.png" alt="" class="nav_img_cart"/>
+            <p>购物车</p>
+        </div>
+        <div class="nav_order" ng-click="main.jumpTo('order')">
+            <img src="../../static/images/mall/nav/order_.png" alt="" class="nav_img_order"/>
+            <p>订单查询</p>
+        </div>
+        <div class="nav_home" ng-click="main.jumpTo('homePage')">首页</div>
+    </div>
+    <!-- 购物车内容-->
+    <div class="cart_content">
+        <div class="cart_no none">
+            <p>购物车内空空如也</p>
+            <p>赶快去挑选些商品吧</p>
+        </div>
+        <div class="cart_has">
+            <div class="cart_list">
+                <div class="cart_list_head">
+                    <span>壳牌劲霸R5E合成润滑油</span>
+                    <img src="../../static/images/cart/trash.png" alt="" class="cart_delete"/>
+                </div>
+                <div class="cart_list_body">
+                    <img src="../../static/images/cart/sawtooth.png" alt="" class="cart_bg_tooth"/>
+                    <div class="cart_left">
+                        <img src="../../static/images/cart/dot_3.png" alt="" class="cart_check"/>
+                    </div>
+                    <div class="cart_center">
+                        <div class="cart_center_top">积分 <span>2000</span></div>
+                        <div class="cart_center_bottom">
+                            数量 - <span>1</span> +
+                            <div class="btn_remove"></div>
+                            <div class="btn_add"></div>
+                        </div>
+                    </div>
+                    <div class="cart_right"><img src="../../static/images/mall/goods/1_3.png" alt="" class="cart_good"/></div>
+                </div>
+            </div>
+            <div class="cart_list">
+                <div class="cart_list_head">
+                    <span>壳牌劲霸R5E合成润滑油</span>
+                    <img src="../../static/images/cart/trash.png" alt="" class="cart_delete"/>
+                </div>
+                <div class="cart_list_body">
+                    <img src="../../static/images/cart/sawtooth.png" alt="" class="cart_bg_tooth"/>
+                    <div class="cart_left">
+                        <img src="../../static/images/cart/dot_.png" alt="" class="cart_check"/>
+                    </div>
+                    <div class="cart_center">
+                        <div class="cart_center_top">积分 <span>2000</span></div>
+                        <div class="cart_center_bottom">
+                            数量 - <span>1</span> +
+                            <div class="btn_remove"></div>
+                            <div class="btn_add"></div>
+                        </div>
+                    </div>
+                    <div class="cart_right"><img src="../../static/images/mall/goods/1_3.png" alt="" class="cart_good"/></div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn_cart" onclick="cartPopShow()">结算</button>
+    </div>
+</div>
+<!--遮罩层-->
+<div class="pop_mask none"></div>
+<!--购物车清单-->
+<div class="pop_box none">
+    <div class="goods_pop">
+        <div class="cart_pop_name">壳牌劲霸R5E润滑油X1</div>
+        <div class="cart_pop_name">飞利浦手持式无线吸尘器X2</div>
+        <div class="pop_dash">
+            <div class="pop_left">
+                <div class="parent">
+                    <div class="child">
+                        <p>积分：<span class="pop_point">2000</span></p>
+                        <p>数量：<span>1</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_center">
+                <div class="parent">
+                    <div class="child">
+                        <p>联系人：<span>吴秀波</span></p>
+                        <p>手机：<span>13788955988</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_right" ng-click="main.jumpTo('userInfo','undefined',true)">
+                <div class="parent">
+                    <div class="child">
+                        <img src="../../static/images/detail/modify.png" alt="" class="img_modify_info"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop_address_wrap">
+            <table class="pop_address">
+                <tbody>
+                <tr>
+                    <td><img src="../../static/images/detail/dot.png" alt="" class="address_dot"/></td>
+                    <td class="address_name address_select">上海市浦东新区长阳路26号7栋601室上海市浦东新区长阳路26号7栋601室</td>
+                </tr>
+                <tr>
+                    <td><img src="../../static/images/detail/dot_.png" alt="" class="address_dot"/></td>
+                    <td class="address_name ">上海市浦东新区长阳路26号7栋601室</td>
+                </tr>
+                <tr>
+                    <td><img src="../../static/images/detail/dot_.png" alt="" class="address_dot"/></td>
+                    <td class="address_name ">上海市浦东新区长阳路26号7栋601室</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <button type="button" class="pop_btn" ng-click="cart.exchangeR()">确定兑换</button>
+    </div>
+    <div class="address_modify" ng-click="main.jumpTo('address','undefined',true)">管理收货地址</div>
+    <img src="../../static/images/return.png" alt="" class="address_return" onclick="cartPopHide()"/>
+</div>
+<!--loading图-->
+<img src="../../static/images/loading2.gif" alt="" class="loading" ng-class="{show:cart.isLoading}"/>
+<!--兑换结果-->
+<div class="exchange_result none" onclick="cartPopHide()">
+    <!-- 两种兑换结果 img point_lack success
+     p   兑换成功！ 积分不够哦-->
+    <img src="../../static/images/detail/success.png" alt="" class="img_result"/>
+    <p>兑换成功！</p>
+</div>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/angular.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/move.js"></script>
+<script type="text/javascript" src="../../static/data/goods.js"></script>
+<script type="text/javascript" src="../../static/script/controller/mainCtrl.js"></script>
+<script type="text/javascript" src="../../static/script/controller/cartCtrl.js"></script>
+<script>
+    function cartPopShow(){
+        $('.nav_left,.btn_cart').css({'position':'absolute'});
+        $('.cart_wrap').addClass('detail_blur');
+        $('.pop_box,.pop_mask').show();
+    }
+    function cartPopHide(){
+        $('.pop_box,.pop_mask,.exchange_result').hide();
+        $('.cart_wrap').removeClass('detail_blur');
+        $('.nav_left,.btn_cart').css({'position':'fixed'});
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优家会-购物车</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/common.css">
+    <script src="../../static/script/plugins/jquery-1.10.2.min.js"></script>
+    <script src="../../static/script/plugins/jquery.slimscroll.min.js"></script>
+    <style>
+        .sc-header {
+            background: #fed500;
+            width: 100%;
+            height: 46px;
+            position: fixed;
+            z-index: 101;
+        }
+
+        .sc-header-cnt {
+            width: 1050px;
+            margin: auto;
+            height: 45px;
+            line-height: 45px;
+            color: #535552;
+        }
+
+        .sc-header-cnt img {
+            width: 20px;
+            vertical-align: text-bottom;
+        }
+
+        .sc-header-nav {
+            width: 530px;
+            float: right;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .sc-header-nav span {
+            flex: 1;
+            text-align: center;
+            height: 45px;
+            line-height: 50px;
+            border-bottom: solid #fed500 1px;
+        }
+
+        .sc-header-nav span:hover {
+            border-bottom: solid red 1px;
+            color: #ffffff;
+        }
+
+        .sc-header-nav span:nth-child(1)::before {
+            content: url(../../static/images/order_icon.png);
+            vertical-align: middle;
+        }
+
+        .sc-header-nav span:nth-child(2)::before {
+            content: url(../../static/images/s_exchange_icon.png);
+            vertical-align: middle;
+        }
+
+        .sc-header-nav span:nth-child(3)::before {
+            content: url(../../static/images/sc_icon.png);
+            vertical-align: middle;
+        }
+
+        .sc-header-nav span:nth-child(4)::before {
+            content: url(../../static/images/order_icon.png);
+            vertical-align: middle;
+        }
+
+        .sc-header-nav span:nth-child(1):hover::before {
+            content: url(../../static/images/order_c_icon.png);
+            vertical-align: middle;
+        }
+
+        .sc-header-nav span:nth-child(2):hover::before {
+            content: url(../../static/images/s_exchange_c_icon.png);
+            vertical-align: middle;
+        }
+
+        .sc-header-nav span:nth-child(3):hover::before {
+            content: url(../../static/images/sc_c_icon.png);
+            vertical-align: middle;
+        }
+
+        .sc-header-nav span:nth-child(4):hover::before {
+            content: url(../../static/images/order_c_icon.png);
+            vertical-align: middle;
+        }
+
+        .sc-header-nav span b {
+            float: right;
+            color: #333333 !important;
+        }
+
+        .sc-main {
+            margin: auto;
+        }
+
+        .sc-box {
+            width: 794px;
+            margin: auto auto 40px auto;
+            height: 275px;
+            background: url("../../static/images/sc_box_bg.png");
+        }
+
+        .sc-box-header {
+            height: 90px;
+            font-size: 1rem;
+            text-align: center;
+            line-height: 70px;
+            position: relative;
+        }
+
+        .sc-box-header img {
+            position: absolute;
+            right: 44px;
+            top: 24px;
+        }
+
+        .sc-box-cnt {
+            position: relative;
+            height: 185px;
+            border-radius: 10px;
+        }
+
+        .sc-box-cnt-left {
+            width: 295px;
+            border-left: dashed #333333 2px;
+            border-right: dashed #333333 2px;
+            height: 170px;
+            text-align: center;
+            margin-left: 150px;
+        }
+
+        .sc-box-cnt-left hr {
+            border: none;
+            border-top: dashed #333333 2px;
+        }
+
+        .sc-box-cnt-left p {
+            height: 83.5px;
+            line-height: 83.5px;
+            font-size: 1.1rem;
+            padding-left: 20px;
+        }
+
+        .sc-box-cnt-left p span {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .sc-box-cnt-left p span b {
+            color: #535552;
+            cursor: pointer;
+        }
+
+        .select_icon {
+            left: 61px;
+            top: 72px;
+        }
+
+        .sc-box-cnt .select_icon {
+            position: absolute;
+        }
+
+        .good-img {
+            position: absolute;
+            right: 55px;
+            top: 0px;
+        }
+
+        .sc-footer {
+            width: 1050px;
+            height: 70px;
+            background: #e5e5e5;
+            position: fixed;
+            left: 50%;
+            margin-left: -525px;
+            bottom: 0px;
+            line-height: 70px;
+        }
+
+        .sc-footer .select_icon {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .sc-footer-button {
+            width: 127px;
+            height: 70px;
+            line-height: 70px;
+            float: right;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="sc-header">
+    <div class="sc-header-cnt">
+        <img src="../../static/images/user_icon.png">
+        <span class="ft_16">老张汽修店&nbsp;&nbsp;52140积分</span>
+        <div class="sc-header-nav ft_18">
+            <span>首页<b>&bull;</b></span>
+            <span>积分兑换<b>&bull;</b></span>
+            <span>购物车<b>&bull;</b></span>
+            <span>订单详情</span>
+        </div>
+    </div>
+</div>
+<div class="division"></div>
+<div class="sc-main">
+    <div class="sc-box">
+        <div class="sc-box-header">
+            <span class="ft_333333">壳牌劲霸R5E润滑油2L装</span>
+            <img src="../../static/images/del_icon.png">
+        </div>
+        <div class="sc-box-cnt">
+            <img class="select_icon active" src="../../static/images/select_c_icon.png">
+            <div class="sc-box-cnt-left ft_333333">
+                <p>积分<span class="ft_yellow">2000</span></p>
+                <hr>
+                <p>数量
+                    <span class="ft_yellow">
+                    <b class="fl_l mgl_15 subtract">-</b>
+                        <a>1</a>
+                    <b class="fl_r mgr_15 add">+</b>
+                    </span>
+                </p>
+            </div>
+            <img class="good-img" src="../../static/images/demo/1.png">
+        </div>
+    </div>
+    <div class="sc-box">
+        <div class="sc-box-header">
+            <span class="ft_333333">壳牌劲霸R5E润滑油2L装</span>
+            <img src="../../static/images/del_icon.png">
+        </div>
+        <div class="sc-box-cnt">
+            <img class="select_icon" src="../../static/images/select_icon.png">
+            <div class="sc-box-cnt-left ft_333333">
+                <p>积分<span class="ft_yellow">560</span></p>
+                <hr>
+                <p>数量
+                    <span class="ft_yellow">
+                    <b class="fl_l mgl_15 subtract">-</b>
+                        <a>0</a>
+                    <b class="fl_r mgr_15 add">+</b>
+                    </span>
+                </p>
+            </div>
+            <img class="good-img" src="../../static/images/demo/32.png">
+        </div>
+    </div>
+    <div class="sc-box">
+        <div class="sc-box-header">
+            <span class="ft_333333">壳牌劲霸R5E润滑油2L装</span>
+            <img src="../../static/images/del_icon.png">
+        </div>
+        <div class="sc-box-cnt">
+            <img class="select_icon active" src="../../static/images/select_c_icon.png">
+            <div class="sc-box-cnt-left ft_333333">
+                <p>积分<span class="ft_yellow">2000</span></p>
+                <hr>
+                <p>数量
+                    <span class="ft_yellow">
+                    <b class="fl_l mgl_15 subtract">-</b>
+                        <a>1</a>
+                    <b class="fl_r mgr_15 add">+</b>
+                    </span>
+                </p>
+            </div>
+            <img class="good-img" src="../../static/images/demo/1.png">
+        </div>
+    </div>
+    <div class="sc-footer">
+        <img class="select_icon active mgl_70" src="../../static/images/select_c_icon.png">
+        <span>全选</span>
+        <span class="mgl_50">全部删除</span>
+        <span class="mgl_260">已选商品<b class="ft_red ft_20">1</b>件</span>
+        <span class="mgl_40">合计（包含运费）：<b class="ft_red ft_20">2400</b>积分</span>
+        <a class="button sc-footer-button">结算</a>
+    </div>
+</div>
+<script>
+    $('.sc-main').slimScroll({
+        width: 'auto', //可滚动区域宽度
+        height: '590', //可滚动区域高度
+        size: '10px', //组件宽度
+        color: '#000', //滚动条颜色
+        position: 'right', //组件位置：left/right
+        distance: '0px', //组件与侧边之间的距离
+        start: 'top', //默认滚动位置：top/bottom
+        opacity: 0, //滚动条透明度
+        alwaysVisible: true, //是否 始终显示组件
+        disableFadeOut: false, //是否 鼠标经过可滚动区域时显示组件，离开时隐藏组件
+        railVisible: true, //是否 显示轨道
+        railColor: '#333', //轨道颜色
+        railOpacity: 0, //轨道透明度
+        railDraggable: true, //是否 滚动条可拖动
+        railClass: 'slimScrollRail', //轨道div类名
+        barClass: 'slimScrollBar', //滚动条div类名
+        wrapperClass: 'slimScrollDiv', //外包div类名
+        allowPageScroll: true, //是否 使用滚轮到达顶端/底端时，滚动窗口
+        wheelStep: 20, //滚轮滚动量
+        touchScrollStep: 200, //滚动量当用户使用手势
+        borderRadius: '7px', //滚动条圆角
+        railBorderRadius: '7px' //轨道圆角
+    });
+    $('.subtract').click(function () {
+        var num = parseInt($(this).next('a').text());
+        $(this).next('a').text((num - 1) > 0 ? num - 1 : 0);
+    });
+    $('.add').click(function () {
+        var num = parseInt($(this).prev('a').text());
+        $(this).prev('a').text(num + 1);
+    });
+    $('.select_icon').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).attr('src', '../../static/images/select_icon.png');
+        } else {
+            $(this).addClass('active');
+            $(this).attr('src', '../../static/images/select_c_icon.png');
+        }
+    });
+</script>
+</body>
+</html>
