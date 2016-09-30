@@ -11,6 +11,6 @@ Angular.Page
 
 ```html
 
-https://xulayen.github.io/CCN/CCN.Agnualr.Page/app/views/index.html
+<a href="https://xulayen.github.io/CCN/CCN.Agnualr.Page/app/views/index.html">https://xulayen.github.io/CCN/CCN.Agnualr.Page/app/views/index.html</a>
 
 ```
