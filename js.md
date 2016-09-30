@@ -4,6 +4,7 @@
 1、金额大写转换函数
 
 ```js
+
 //格式转换
 function transform(tranvalue) {
     try {
@@ -79,3 +80,224 @@ function splits(tranvalue) {
     }
     return value;
 }
+
+```
+
+2、数组去重
+
+```js
+
+String.prototype.unique=function(){
+    var x=this.split(/[\r\n]+/);
+    var y='';
+    for(var i=0;i<x.length;i++){
+        if(!new RegExp("^"+x.replace(/([^\w])/ig,"\\$1")+"$","igm").test(y)){
+            y+=x+"\r\n"
+        }
+    }
+    return y
+};
+
+```
+
+3、返回顶部
+
+```js
+
+function backTop(btnId) {
+    var btn = document.getElementById(btnId);
+    var d = document.documentElement;
+    var b = document.body;
+    window.onscroll = set;
+    btn.style.display = "none";
+    btn.onclick = function() {
+        btn.style.display = "none";
+        window.onscroll = null;
+        this.timer = setInterval(function() {
+            d.scrollTop -= Math.ceil((d.scrollTop + b.scrollTop) * 0.1);
+            b.scrollTop -= Math.ceil((d.scrollTop + b.scrollTop) * 0.1);
+            if ((d.scrollTop + b.scrollTop) == 0) clearInterval(btn.timer, window.onscroll = set);
+            }, 10);
+    };
+    function set() {
+        btn.style.display = (d.scrollTop + b.scrollTop > 100) ? 'block': "none"
+    }
+};
+backTop('goTop');
+
+```
+
+3、日期格式化
+
+```js
+
+Date.prototype.format = function(format){
+    var o = {
+        "M+" : this.getMonth()+1, //month
+        "d+" : this.getDate(),    //day
+        "h+" : this.getHours(),   //hour
+        "m+" : this.getMinutes(), //minute
+        "s+" : this.getSeconds(), //second
+        "q+" : Math.floor((this.getMonth()+3)/3),  //quarter
+        "S" : this.getMilliseconds() //millisecond
+    };
+    if(/(y+)/.test(format)) format=format.replace(RegExp.$1,
+(this.getFullYear()+"").substr(4 - RegExp.$1.length));
+    for(var k in o){
+        if(new RegExp("("+ k +")").test(format))
+            format = format.replace(RegExp.$1,RegExp.$1.length==1 ? o[k] :("00"+ o[k]).substr((""+ o[k]).length));
+    }
+    return format;
+}
+//调用
+//new Date().format("yyyy-MM-dd hh:mm:ss");
+
+//类似
+Date.prototype.Format = function(formatStr) {
+    var str = formatStr;
+    var Week = ['日', '一', '二', '三', '四', '五', '六'];
+    str = str.replace(/yyyy|YYYY/, this.getFullYear());
+    str = str.replace(/yy|YY/, (this.getYear() % 100) > 9 ? (this.getYear() % 100).toString() : '0' + (this.getYear() % 100));
+    str = str.replace(/MM/, (this.getMonth() + 1) > 9 ? (this.getMonth() + 1).toString() : '0' + (this.getMonth() + 1));
+    str = str.replace(/M/g, (this.getMonth() + 1));
+    str = str.replace(/w|W/g, Week[this.getDay()]);
+    str = str.replace(/dd|DD/, this.getDate() > 9 ? this.getDate().toString() : '0' + this.getDate());
+    str = str.replace(/d|D/g, this.getDate());
+    str = str.replace(/hh|HH/, this.getHours() > 9 ? this.getHours().toString() : '0' + this.getHours());
+    str = str.replace(/h|H/g, this.getHours());
+    str = str.replace(/mm/, this.getMinutes() > 9 ? this.getMinutes().toString() : '0' + this.getMinutes());
+    str = str.replace(/m/g, this.getMinutes());
+    str = str.replace(/ss|SS/, this.getSeconds() > 9 ? this.getSeconds().toString() : '0' + this.getSeconds());
+    str = str.replace(/s|S/g, this.getSeconds());
+    return str
+}
+
+
+```
+
+4、动态加载脚本
+
+```js
+
+function appendscript(src, text, reload, charset) {
+    var id = hash(src + text);
+    if(!reload && in_array(id, evalscripts)) return;
+    if(reload && $(id)) {
+        $(id).parentNode.removeChild($(id));
+    }
+
+    evalscripts.push(id);
+    var scriptNode = document.createElement("script");
+    scriptNode.type = "text/javascript";
+    scriptNode.id = id;
+    scriptNode.charset = charset ? charset : (BROWSER.firefox ? document.characterSet : document.charset);
+    try {
+        if(src) {
+            scriptNode.src = src;
+            scriptNode.onloadDone = false;
+            scriptNode.onload = function () {
+                scriptNode.onloadDone = true;
+                JSLOADED[src] = 1;
+             };
+             scriptNode.onreadystatechange = function () {
+                 if((scriptNode.readyState == 'loaded' || scriptNode.readyState == 'complete') && !scriptNode.onloadDone) {
+                    scriptNode.onloadDone = true;
+                    JSLOADED[src] = 1;
+                }
+             };
+        } else if(text){
+            scriptNode.text = text;
+        }
+        document.getElementsByTagName('head')[0].appendChild(scriptNode);
+    } catch(e) {}
+}
+
+```
+
+5、返回脚本内容
+
+```js
+
+function evalscript(s) {
+    if(s.indexOf('<script') == -1) return s;
+    var p = /<script[^\>]*?>([^\x00]*?)<\/script>/ig;
+    var arr = [];
+    while(arr = p.exec(s)) {
+        var p1 = /<script[^\>]*?src=\"([^\>]*?)\"[^\>]*?(reload=\"1\")?(?:charset=\"([\w\-]+?)\")?><\/script>/i;
+        var arr1 = [];
+        arr1 = p1.exec(arr[0]);
+        if(arr1) {
+            appendscript(arr1[1], '', arr1[2], arr1[3]);
+        } else {
+            p1 = /<script(.*?)>([^\x00]+?)<\/script>/i;
+            arr1 = p1.exec(arr[0]);
+            appendscript('', arr1[2], arr1[1].indexOf('reload=') != -1);
+        }
+    }
+    return s;
+}
+
+```
+
+6、设置cookie
+
+```js
+
+function setCookie(name, value, Hours) {
+    var d = new Date();
+    var offset = 8;
+    var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+    var nd = utc + (3600000 * offset);
+    var exp = new Date(nd);
+    exp.setTime(exp.getTime() + Hours * 60 * 60 * 1000);
+    document.cookie = name + "=" + escape(value) + ";path=/;expires=" + exp.toGMTString() + ";domain=360doc.com;"
+}
+
+```
+
+7、获取cookie
+
+```js
+
+function getCookie(name) {
+    var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+    if (arr != null) return unescape(arr[2]);
+    return null
+}
+
+```
+
+
+8、判断是否是数字
+
+```js
+
+function isDigit(value) {
+    var patrn = /^[0-9]*$/;
+    if (patrn.exec(value) == null || value == "") {
+        return false
+    } else {
+        return true
+    }
+}
+
+```
+
+9、获取随n~m的随机数
+
+```js
+
+Math.random()*(n-m)+m
+
+```
+
+
+
+
+
+
+
+
+
+
+
