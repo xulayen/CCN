@@ -1,3 +1,8 @@
+# 以下是常用的代码收集，没有任何技术含量
+
+
+1、金额大写转换函数
+
 ```js
 //格式转换
 function transform(tranvalue) {
