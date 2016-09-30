@@ -9,8 +9,4 @@ https://xulayen.github.io/CCN/CCN.GPS/Google.Gecoding.html?address=30.335165%2C1
 
 Angular.Page
 
-```html
-
-<a href="https://xulayen.github.io/CCN/CCN.Agnualr.Page/app/views/index.html">https://xulayen.github.io/CCN/CCN.Agnualr.Page/app/views/index.html</a>
-
-```
+https://xulayen.github.io/CCN/CCN.Agnualr.Page/app/views/index.html
