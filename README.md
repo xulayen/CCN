@@ -1,4 +1,4 @@
-﻿# 定位 api
+﻿# 测试地址
 CCN测试页面 调用Google API / 高德API 
 
 ```html
@@ -7,7 +7,6 @@ https://xulayen.github.io/CCN/CCN.GPS/Google.Gecoding.html?address=30.335165%2C1
 
 ```
 
-﻿# Angular 分页
 Angular.Page
 
 ```html
