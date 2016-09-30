@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="mainCtrl">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>商城页面</title>
+    <!--[if IE 8]>
+    <script src="/njs.cloudflare.com/ajax/libs/es5-shim/4.0.5/es5-shim.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../static/css/front.css" />
+    <script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+    <!--<script type="text/javascript" src="../../static/script/plugins/jquery-1.11.3.js"></script>-->
+    <script type="text/javascript" src="../../static/script/plugins/angular1_2.js"></script>
+    <script type="text/javascript" src="../../static/script/plugins/move.js"></script>
+    <script type="text/javascript" src="../../static/data/goods.js"></script>
+    <script type="text/javascript" src="../../static/script/plugins/angular-resource.js"></script>
+    <script type="text/javascript" src="../../static/script/services/services.js"></script>
+    <script type="text/javascript" src="../../static/script/controller/mainCtrl.js"></script>
+    <script type="text/javascript" src="../../static/script/controller/mallCtrl.js"></script>
+    <script>
+
+    </script>
+    <style type="text/css">
+        .input_search::-webkit-input-placeholder
+        {
+            color: #ccc;
+        }
+        .goods_img_wrap
+        {
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .goods_list
+        {
+            margin-bottom: 30px;
+            margin-left: 24px;
+        }
+        .goods_all
+        {
+            margin-top: 45px;
+            padding-left: 20px;
+        }
+        .goods_img_wrap_div img:hover
+        {
+            transform: scale(1.05);
+            -webkit-transform: scale(1.06);
+            -moz-transform: scale(1.06);
+            -ms-transform: scale(1.06);
+            -o-transform: scale(1.06);
+        }
+        .goods_content
+        {
+            width: 1180px;
+        }
+        .count_left,.count_right{
+            cursor: pointer;
+        }
+        .count_left:hover,.count_right:hover{
+            color:#666;
+        }
+    </style>
+</head>
+<body class="mallPage" ng-controller="mallCtrl" onselectstart="return false">
+    <!--页面头部导航栏-->
+    <div class="common_nav">
+        <div class="nav_content">
+            <div class="nav_left">
+                <img src="../../static/images/user.png" alt="" class="nav_left_user" />
+                <span class="nav_left_name" id="nav_left_name">老张汽修店</span> <span><span id="span_leftpoint">
+                    0</span>积分</span>
+            </div>
+            <div class="nav_right">
+                <ul class="nav_list_wrap clearfix" id="nav_wrap">
+                    <li class="list_home" ng-click="main.jumpTo('home')"><span>首页</span><i>·</i></li>
+                    <li class="list_mall list_current" ng-click="main.jumpTo('mall')"><span>积分兑换</span><i>·</i></li>
+                    <li class="list_cart" ng-click="main.jumpTo('cart')"><span>购物车</span><i>·</i></li>
+                    <li class="list_order" ng-click="main.jumpTo('order')"><span>订单详情</span></li>
+                    <div class="line_under" id="line_move"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--页面logo和搜索栏和分类栏-->
+    <div class="search_box">
+        <div class="search_content">
+            <img src="../../static/images/logo.png" alt="" class="img_logo" />
+            <div class="QRcode_wrap">
+                <img src="../../static/images/QRcode.png" alt="" />
+                <p>
+                    手机优家会</p>
+            </div>
+            <div class="search_right">
+                <div class="search_input_wrap">
+                    <input type="text" placeholder="请填写您想要搜索的商品" class="input_search" ng-model="goods.searchG" />
+                    <button type="button" class="btn_search" ng-click="goods.searchGoods()">
+                        搜索</button>
+                </div>
+                <ul class="filter_wrap">
+                    <li class="filter_type" onmouseover="goods.pullShow('type_wrap')" onmouseout="goods.pullHide('type_wrap')">
+                        <span ng-bind="goods.filterName"></span>
+                        <ul class="type_wrap none">
+                            <li class="type_all" ng-click="goods.changeFilter('all','全部')">全部</li>
+                            <li class="type_life" ng-click="goods.changeFilter('life','生活类')">生活类</li>
+                            <li class="type_tool" ng-click="goods.changeFilter('tool','工具类')">工具类</li>
+                            <li class="type_new" ng-click="goods.changeFilter('new','最新')">最新</li>
+                        </ul>
+                    </li>
+                    <li class="filter_sort" onmouseover="goods.pullShow('sort_wrap')" onmouseout="goods.pullHide('sort_wrap')">
+                        <span ng-bind="goods.classifyName"></span>
+                        <ul class="sort_wrap none">
+                            <li class="sort_soldL" ng-click="goods.changeOrder('sold','销量从低到高')">销量从低到高</li>
+                            <li class="sort_soldT" ng-click="goods.changeOrder('-sold','销量从高到低')">销量从高到低</li>
+                            <li class="sort_pointL" ng-click="goods.changeOrder('point','积分从低到高')">积分从低到高</li>
+                            <li class="sort_pointT" ng-click="goods.changeOrder('-point','积分从高到低')">积分从高到低</li>
+                        </ul>
+                    </li>
+                    <li class="filter_exchange" ng-class={'active':goods.selExchange} ng-click="goods.exchange('change','我能兑换')">我能兑换</li>
+                    <li class="page_count"><span class="count_left" ng-click="goods.pageScrollT()">&lt; </span><span class="page_count_now">1</span><span
+                        class="page_count_sum" ng-bind="'/'+goods.countSum"></span><span class="count_right" ng-click="goods.pageScrollL()"> &gt;</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--商品列表-->
+    <div class="goods_wrap">
+        <div class="goods_content clearfix">
+            <ul class="goods_all">
+                <li class="goods_list" ng-repeat="g in goods.goodsLists track by $index">
+                    <div class="goods_img_wrap" ng-class="{bg_hot:g.hot,bg_new:g.new}">
+                        <div class="goods_img_wrap_div" style="position: absolute; left: 0; right: 0; bottom: 0;">
+                            <img ng-src="../../static/images/small/{{g.l_src}}.png" ng-click="main.jumpTo('detail',g.id,false)"
+                                style="margin-bottom: -5px;" />
+                        </div>
+                        <div class="goods_line" ng-class="{none:g.hot+g.new}">
+                        </div>
+                    </div>
+                    <p class="goods_name" ng-bind="g.name" ng-click="main.jumpTo('detail',g.id,false)">
+                    </p>
+                    <p class="goods_sold_wrap">
+                        <span class="goods_point" ng-bind="g.point"></span>积分 | <span class="goods_sold"
+                            ng-bind="g.sold"></span>人兑换</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 未找到商品 -->
+        <div class="goods_no none" id="goodsNo">
+            很抱歉！没有找到与“<span ng-bind="goods.searchG"></span>”相关的商品，再看看别的吧！</div>
+    </div>
+</body>
+</html>
