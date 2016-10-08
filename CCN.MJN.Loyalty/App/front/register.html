@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="MJN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>注册</title>
+    <script type="text/javascript" src="../../static/script/autoRem.js"></script>
+    <!-- 除iPhone5之外的设备引用样式-->
+    <link rel="stylesheet" media="screen and (min-width: 321px)" href="../../static/css/front.css"/>
+    <!--iPhone5引用样式-->
+    <link rel="stylesheet" media="screen and (max-width: 320px)" href="../../static/css/iphone5.css" />
+</head>
+<body  ng-controller="configCtrl" class="regPage">
+    <div class="page_head">
+        <p class="required_notice">*为必填</p>
+    </div>
+    <div class="reg_form_wrap">
+        <!--设置背景图-->
+        <div class="bg_line"></div>
+        <div class="bg_foot"></div>
+        <!--设置背景图结束-->
+        <div class="reg_group_wrap">
+            <div class="form_group">
+                <div>
+                    <span>*门店名称:</span><input type="text"/>
+                </div>
+            </div>
+            <div class="form_group">
+                <div onclick="showPop()">
+                    <span>*所在省</span><span ng-bind="':新疆维吾尔自治区'"></span></input><img src="../../static/images/icon/more.png" alt="" class="more"/>
+                </div>
+            </div>
+            <div class="form_group">
+                <span>*城市</span><span ng-bind=""></span><img src="../../static/images/icon/more.png" alt="" class="more"/>
+            </div>
+            <div class="form_group">
+                <span>*区县</span><span ng-bind=""></span><img src="../../static/images/icon/more.png" alt="" class="more"/>
+            </div>
+            <div class="form_group">
+                <span>*详细地址:</span><input type="text"/>
+            </div>
+            <div class="form_group">
+                <span>*联系人姓名:</span><input type="text" class="reg_name"/>
+            </div>
+            <div class="form_group">
+                <div class="input_wrap">
+                    <span>*联系人手机号:</span><input type="text" maxlength="11" class="reg_tel"/>
+                </div>
+                <div class="reg_error none">*请正确输入11位手机号码</div>
+            </div>
+            <div class="form_group">
+                <span>所属渠道</span><span ng-bind=""></span><img src="../../static/images/icon/more.png" alt="" class="more"/>
+            </div>
+            <div class="form_group">
+                <span>所属大区</span><span ng-bind=""></span><img src="../../static/images/icon/more.png" alt="" class="more"/>
+            </div>
+            <div class="form_group">
+                <span>所属片区</span><span ng-bind=""></span><img src="../../static/images/icon/more.png" alt="" class="more"/>
+            </div>
+            <div class="form_group">
+                <span>所属区域</span><span ng-bind=""></span><img src="../../static/images/icon/more.png" alt="" class="more"/>
+            </div>
+            <div class="form_group">
+                <span>所属销售城市</span><span ng-bind=""></span><img src="../../static/images/icon/more.png" alt="" class="more"/>
+            </div>
+            <div class="form_group">
+                <div onclick="showPop()">
+                    <span>所属经销商</span><span ng-bind="':深圳市泰华通实业发展有限公司'" class="max_width"></span><img src="../../static/images/icon/more.png" alt="" class="more"/>
+                </div>
+            </div>
+            <!--<button  onclick="showNotice()">123456</button>-->
+        </div>
+        <div class="btn_register_wrap">
+            <button class="btn_register" onclick="showNotice()"><img src="../../static/images/button/reg_info.png" alt="reg_info"/></button>
+        </div>
+    </div>
+
+    <!-- 弹窗遮罩层-->
+    <div class="mask none" onclick="hideMask()"></div>
+    <!--  选择省市区等 ，有三种不同宽度的弹框 .pop_all控制弹框的整体样式
+      pop_thin  pop_medium pop_wide 对不同宽度的弹框进行宽度和背景的修改
+      用到哪个哪个为true，其它为false -->
+    <div class="pop_all pop_medium pop_wide  pop_thin none" >
+        <ul class="item_wrap">
+            <li>海南省</li>
+            <li>青海省</li>
+            <li>辽宁省</li>
+            <li>新疆维吾尔族自治区</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+            <li>青海省</li>
+        </ul>
+
+    </div>
+    <!-- 注册提示框-->
+    <div class="reg_notice none">
+        <!-- 提交成功内容-->
+        <div class="reg_success_wrap none">
+            <p class="reg_success_title">提交成功</p>
+            <p class="reg_success_content">
+                您的信息已提交成功，系统将在1-3个工作日内完成审核。如审核通过，将以短信形式将门店ID、密码发送到您注册手机。请耐心等待，感谢！
+            </p>
+        </div>
+        <!-- 其他异常答复-->
+        <div class="reg_notice_wrap">
+            <div class="parent">
+                <!-- 请完成*号必填项  该门店已被注册 该手机号已注册 门店名称不能为空-->
+                <div class="child">
+                    <!-- scan_error_one  scan_error_two  scan_error_three 一行，两行，三行，根据内容三选一-->
+                    <!-- scan_error_three 奶粉兑换券需输入兑换奶粉的防伪码  -->
+                    <!-- scan_error_one 防伪码不正确 该防伪码已被核销-->
+                    <!-- scan_error_two 该防伪码与活动不匹配-->
+                    <p class="scan_error_one">奶粉兑换券需输入兑换奶粉的防伪码</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../_public/jquery/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="../../_public/angular/angular.js" type="text/javascript"></script>
+    <script src="../../_public/angular/angular-resource.js" type="text/javascript"></script>
+    <script src="../../_public/angular/angular-route.min.js" type="text/javascript"></script>
+    <script src="../service/services.js" type="text/javascript"></script>
+    <script src="../controller/main.js" type="text/javascript"></script>
+    <script src="../../static/script/front.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</body>
+</html>

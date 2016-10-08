@@ -1,0 +1,87 @@
+﻿<div class="page_head">
+    <img src="../../../static/images/logo.png" alt="logo" class="logo"/>
+</div>
+<div class="page_center_wrap">
+    <!-- page_center上加背景图片，使页面滚动时依然有背景图片-->
+    <div class="page_center">
+        <!--设置背景图-->
+        <div class="bg_line"></div>
+        <div class="bg_foot"></div>
+        <!--设置背景图结束-->
+        <div class="input_center clearfix">
+            <div class="form_group">
+                <input type="text" class="seek_input" id="start" readonly/>
+                <div class="seek_label">
+                    <span>开始时间:</span>
+                </div>
+            </div>
+            <div class="form_group">
+                <input type="text" class="seek_input" id="end" readonly/>
+                <div class="seek_label">
+                    <span>结束时间:</span>
+                </div>
+            </div>
+            <div class="form_group" onclick="showPop()">
+                <input type="text" class="seek_input" readonly/>
+                <div class="seek_label">
+                    <span>活动名称:</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn_bottom">
+            <button class="btn_sure" onclick="showSeek()"><img src="../../../static/images/button/seek_info.png" alt=""/></button>
+        </div>
+    </div>
+</div>
+<!-- 弹窗遮罩层-->
+<div class="mask none" onclick="hideMask()"></div>
+<!--  活动内容弹框 -->
+<div class="pop_all  pop_thin none" >
+    <ul class="item_wrap">
+        <li>活动内容</li>
+        <li>活动内容</li>
+        <li>活动内容</li>
+        <li>活动内容</li>
+        <li>活动内容</li>
+        <li>活动内容</li>
+        <li>活动内容</li>
+        <li>活动内容</li>
+        <li>活动内容</li>
+    </ul>
+</div>
+<!-- 查询结果弹窗-->
+<div class="pop_seek none">
+    <div class="pop_seek_wrap">
+        <ul class="pop_seek_content">
+            <li>
+                <div class="seek_content_left">活动名称</div>
+                <div class="seek_content_right">XXXXXX</div>
+            </li>
+            <li>
+                <div class="seek_content_left">开始时间</div>
+                <div class="seek_content_right">2016-11-20</div>
+            </li>
+            <li>
+                <div class="seek_content_left">结束时间</div>
+                <div class="seek_content_right">2017-11-20</div>
+            </li>
+            <li>
+                <div class="seek_content_left">产品销量</div>
+                <div class="seek_content_right">66</div>
+            </li>
+            <li>
+                <div class="seek_content_left">核券数量</div>
+                <div class="seek_content_right">299</div>
+            </li>
+            <li>
+                <div class="seek_content_left">卡券金额</div>
+                <div class="seek_content_right">99&yen;</div>
+            </li>
+        </ul>
+    </div>
+    <button type="button" class="btn_seek_foot" onclick="hideMask()">
+        <img src="../../../static/images/button/return_info.png" alt=""/>
+    </button>
+</div>
+<!--根据foot中内容获得当前页脚-->
+<div class="foot" style="display: none">2</div>
