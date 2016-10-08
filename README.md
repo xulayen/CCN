@@ -28,7 +28,7 @@
       </li>
     </ul>
   </div>
-
+ 
   <div>
     <h3>优家会手机版</h3>
     <ul>
@@ -43,6 +43,15 @@
     <ul>
       <li>
         https://xulayen.github.io/CCN/CCN.YJH.Web/App/front/login.html
+      </li>
+    </ul>
+  </div>
+
+ <div>
+    <h3>消费者忠诚度项目</h3>
+    <ul>
+      <li>
+        https://xulayen.github.io/CCN/CCN.MJN.Loyalty/App/front/gatherPage/index.html#/activity
       </li>
     </ul>
   </div>
