@@ -47,6 +47,15 @@
     </ul>
   </div>
 
+ <div>
+    <h3>消费者忠诚度项目</h3>
+    <ul>
+      <li>
+        https://xulayen.github.io/CCN/CCN.MJN.Loyalty/App/front/gatherPage/index.html#/activity
+      </li>
+    </ul>
+  </div>
+
 
   </div>
 </div>
