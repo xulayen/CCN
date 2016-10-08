@@ -1,0 +1,36 @@
+﻿<div class="page_head">
+    <img src="../../../static/images/logo.png" alt="logo" class="logo"/>
+</div>
+<div class="page_center_wrap">
+    <div class="page_center scanMilk">
+        <!--设置背景图-->
+        <div class="bg_line"></div>
+        <div class="bg_foot"></div>
+        <!--设置背景图结束-->
+        <!-- 扫描框-->
+        <!--<div class="scan_wrap">-->
+        <img src="../../../static/images/scan_img2.png" alt="" class="scanMilk_img"/>
+        <button type="button" class="btn_scan"><img src="../../../static/images/button/scan_info2.png" alt=""></button>
+        <div class="scan_code">
+            <input type="tel" class="_input" maxlength="16" placeholder="输入16位防伪码" />
+            <button type="button" class="btn_scan_sure" onclick="showScanPop()"></button>
+        </div>
+        <!--</div>-->
+    </div>
+</div>
+<!-- 弹窗遮罩层-->
+<div class="mask" onclick="hideMask()"></div>
+<!-- 扫描提示框-->
+<div class="scan_pop">
+    <div class="parent">
+        <div class="child">
+            <!-- scan_error_one  scan_error_two  scan_error_three 一行，两行，三行，根据内容三选一-->
+            <!-- scan_error_three 奶粉兑换券需输入兑换奶粉的防伪码  -->
+            <!-- scan_error_one 防伪码不正确 该防伪码已被核销-->
+            <!-- scan_error_two 该防伪码与活动不匹配-->
+            <p class="scan_error_three">奶粉兑换券需输入兑换奶粉的防伪码</p>
+        </div>
+    </div>
+</div>
+<!--根据foot中内容获得当前页脚-->
+<div class="foot" style="display: none">1</div>
