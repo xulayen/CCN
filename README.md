@@ -65,5 +65,16 @@
     </ul>
   </div>
 
+ 
+   <div>
+    <h3>微信插件</h3>
+    <ul>
+      <li>
+        <a href="https://github.com/xulayen/WeChat">WeChat</a>
+      </li>
+    </ul>
+  </div>
+
+
   </div>
 </div>
