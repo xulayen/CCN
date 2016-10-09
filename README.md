@@ -56,6 +56,14 @@
     </ul>
   </div>
 
+ <div>
+    <h3>老虎机摇奖</h3>
+    <ul>
+      <li>
+        https://xulayen.github.io/CCN/CCN.TiggerLottery/index.html
+      </li>
+    </ul>
+  </div>
 
   </div>
 </div>
