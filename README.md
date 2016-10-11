@@ -79,7 +79,7 @@
     <h3>花瓣下落背景</h3>
     <ul>
       <li>
-        <a href="https://xulayen.github.io/CCN/CCN.Flower.SlowDown/flower.html">WeChat</a>
+       https://xulayen.github.io/CCN/CCN.Flower.SlowDown/flower.html
       </li>
     </ul>
   </div>
