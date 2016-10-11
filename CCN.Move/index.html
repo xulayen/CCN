@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <style>
+        html{
+            height:100%;
+        }
+        body{
+            margin:0;
+            padding:0;
+            height:100%;
+        }
+        .clearfix:before {
+            content: '';
+            display: table;
+        }
+        .clearfix:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        #wrap{
+            list-style: none;
+        }
+        #wrap li{
+            width:150px;
+            height:40px;
+            line-height: 40px;
+            text-align: center;
+            background: lightblue;
+            color:#fff;
+            margin:10px;
+            cursor: pointer;
+            position: relative;
+            left: 0;
+        }
+        #wrap li:active{
+           color:#000;
+        }
+       button{
+           width: 100px;
+           height:30px;
+           margin:20px;
+       }
+
+    </style>
+</head>
+<body onselectstart="return false">
+<button>run</button>
+<ul class="clearfix" id="wrap">
+    <li>linear</li>
+    <li>easeIn</li>
+    <li>easeOut</li>
+    <li>easeBoth</li>
+    <li>easeInStrong</li>
+    <li>easeOutStrong</li>
+    <li>easeBothStrong</li>
+    <li>elasticIn</li>
+    <li>elasticOut</li>
+    <li>elasticBoth</li>
+    <li>backIn</li>
+    <li>backOut</li>
+    <li>backBoth</li>
+    <li>bounceIn</li>
+    <li>bounceOut</li>
+    <li>bounceBoth</li>
+</ul>
+<script type="text/javascript" src="move.js"></script>
+<script>
+    var oWrap=document.getElementById('wrap');
+    var aLi=oWrap.getElementsByTagName('li');
+    var oBtn=document.getElementsByTagName('button')[0];
+    var allTarget=0;
+    oBtn.onclick=function(){
+        allTarget=allTarget==0?800:0;
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].aTarget=allTarget;
+            move(aLi[i],{left:allTarget},1000,aLi[i].innerHTML);
+        }
+    };
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].aTarget=allTarget;
+        aLi[i].onclick=function(){
+            this.aTarget=this.aTarget==0?800:0;
+            move(this,{left:this.aTarget},1000,this.innerHTML);
+        };
+    }
+</script>
+</body>
+</html>
