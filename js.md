@@ -1,77 +1,77 @@
-# ÒÔÏÂÊÇ³£ÓÃµÄ´úÂëÊÕ¼¯£¬Ã»ÓĞÈÎºÎ¼¼Êõº¬Á¿
+# ä»¥ä¸‹æ˜¯å¸¸ç”¨çš„ä»£ç æ”¶é›†ï¼Œæ²¡æœ‰ä»»ä½•æŠ€æœ¯å«é‡
 
 
-1¡¢½ğ¶î´óĞ´×ª»»º¯Êı
+1ã€é‡‘é¢å¤§å†™è½¬æ¢å‡½æ•°
 
 ```js
 
-//¸ñÊ½×ª»»
+//æ ¼å¼è½¬æ¢
 function transform(tranvalue) {
     try {
         var i = 1;
-        var dw2 = new Array("", "Íò", "ÒÚ"); //´óµ¥Î»
-        var dw1 = new Array("Ê°", "°Û", "Çª"); //Ğ¡µ¥Î»
-        var dw = new Array("Áã", "Ò¼", "·¡", "Èş", "ËÁ", "Îé", "Â½", "Æâ", "°Æ", "¾Á"); //ÕûÊı²¿·ÖÓÃ
-        //ÒÔÏÂÊÇĞ¡Ğ´×ª»»³É´óĞ´ÏÔÊ¾ÔÚºÏ¼Æ´óĞ´µÄÎÄ±¾¿òÖĞ     
-        //·ÖÀëÕûÊıÓëĞ¡Êı
+        var dw2 = new Array("", "ä¸‡", "äº¿"); //å¤§å•ä½
+        var dw1 = new Array("æ‹¾", "ä½°", "ä»Ÿ"); //å°å•ä½
+        var dw = new Array("é›¶", "å£¹", "è´°", "å", "è‚†", "ä¼", "é™†", "æŸ’", "æŒ", "ç–"); //æ•´æ•°éƒ¨åˆ†ç”¨
+        //ä»¥ä¸‹æ˜¯å°å†™è½¬æ¢æˆå¤§å†™æ˜¾ç¤ºåœ¨åˆè®¡å¤§å†™çš„æ–‡æœ¬æ¡†ä¸­     
+        //åˆ†ç¦»æ•´æ•°ä¸å°æ•°
         var source = splits(tranvalue);
         var num = source[0];
         var dig = source[1];
-        //×ª»»ÕûÊı²¿·Ö
-        var k1 = 0; //¼ÆĞ¡µ¥Î»
-        var k2 = 0; //¼Æ´óµ¥Î»
+        //è½¬æ¢æ•´æ•°éƒ¨åˆ†
+        var k1 = 0; //è®¡å°å•ä½
+        var k2 = 0; //è®¡å¤§å•ä½
         var sum = 0;
         var str = "";
-        var len = source[0].length; //ÕûÊıµÄ³¤¶È
+        var len = source[0].length; //æ•´æ•°çš„é•¿åº¦
         for (i = 1; i <= len; i++) {
-              var n = source[0].charAt(len - i); //È¡µÃÄ³¸öÎ»ÊıÉÏµÄÊı×Ö
+              var n = source[0].charAt(len - i); //å–å¾—æŸä¸ªä½æ•°ä¸Šçš„æ•°å­—
               var bn = 0;
               if (len - i - 1 >= 0) {
-                bn = source[0].charAt(len - i - 1); //È¡µÃÄ³¸öÎ»ÊıÇ°Ò»Î»ÉÏµÄÊı×Ö
+                bn = source[0].charAt(len - i - 1); //å–å¾—æŸä¸ªä½æ•°å‰ä¸€ä½ä¸Šçš„æ•°å­—
               }
               sum = sum + Number(n);
               if (sum != 0) {
-                str = dw[Number(n)].concat(str); //È¡µÃ¸ÃÊı×Ö¶ÔÓ¦µÄ´óĞ´Êı×Ö£¬²¢²åÈëµ½str×Ö·û´®µÄÇ°Ãæ
+                str = dw[Number(n)].concat(str); //å–å¾—è¯¥æ•°å­—å¯¹åº”çš„å¤§å†™æ•°å­—ï¼Œå¹¶æ’å…¥åˆ°strå­—ç¬¦ä¸²çš„å‰é¢
                 if (n == '0') sum = 0;
               }
-              if (len - i - 1 >= 0) { //ÔÚÊı×Ö·¶Î§ÄÚ
-                if (k1 != 3) { //¼ÓĞ¡µ¥Î»
+              if (len - i - 1 >= 0) { //åœ¨æ•°å­—èŒƒå›´å†…
+                if (k1 != 3) { //åŠ å°å•ä½
                       if (bn != 0) {
                         str = dw1[k1].concat(str);
                       }
                       k1++;
-                } else { //²»¼ÓĞ¡µ¥Î»£¬¼Ó´óµ¥Î»
+                } else { //ä¸åŠ å°å•ä½ï¼ŒåŠ å¤§å•ä½
                       k1 = 0;
                       var temp = str.charAt(0);
-                      if (temp == "Íò" || temp == "ÒÚ") //Èô´óµ¥Î»Ç°Ã»ÓĞÊı×ÖÔòÉáÈ¥´óµ¥Î»
+                      if (temp == "ä¸‡" || temp == "äº¿") //è‹¥å¤§å•ä½å‰æ²¡æœ‰æ•°å­—åˆ™èˆå»å¤§å•ä½
                       str = str.substr(1, str.length - 1);
                       str = dw2[k2].concat(str);
                       sum = 0;
                 }
               }
-              if (k1 == 3){ //Ğ¡µ¥Î»µ½Ç§Ôò´óµ¥Î»½øÒ»
+              if (k1 == 3){ //å°å•ä½åˆ°åƒåˆ™å¤§å•ä½è¿›ä¸€
                 k2++;
               }
         }
-        //×ª»»Ğ¡Êı²¿·Ö
+        //è½¬æ¢å°æ•°éƒ¨åˆ†
         var strdig = "";
         if (dig != "") {
               var n = dig.charAt(0);
               if (n != 0) {
-                strdig += dw[Number(n)] + "½Ç"; //¼ÓÊı×Ö
+                strdig += dw[Number(n)] + "è§’"; //åŠ æ•°å­—
               }
               var n = dig.charAt(1);
               if (n != 0) {
-                strdig += dw[Number(n)] + "·Ö"; //¼ÓÊı×Ö
+                strdig += dw[Number(n)] + "åˆ†"; //åŠ æ•°å­—
               }
         }
-        str += "Ôª" + strdig;
+        str += "å…ƒ" + strdig;
     } catch(e) {
-        return "0Ôª";
+        return "0å…ƒ";
     }
     return str;
 }
-//²ğ·ÖÕûÊıÓëĞ¡Êı
+//æ‹†åˆ†æ•´æ•°ä¸å°æ•°
 function splits(tranvalue) {
     var value = new Array('', '');
     temp = tranvalue.split(".");
@@ -83,7 +83,7 @@ function splits(tranvalue) {
 
 ```
 
-2¡¢Êı×éÈ¥ÖØ
+2ã€æ•°ç»„å»é‡
 
 ```js
 
@@ -100,7 +100,7 @@ String.prototype.unique=function(){
 
 ```
 
-3¡¢·µ»Ø¶¥²¿
+3ã€è¿”å›é¡¶éƒ¨
 
 ```js
 
@@ -127,7 +127,7 @@ backTop('goTop');
 
 ```
 
-3¡¢ÈÕÆÚ¸ñÊ½»¯
+3ã€æ—¥æœŸæ ¼å¼åŒ–
 
 ```js
 
@@ -149,13 +149,13 @@ Date.prototype.format = function(format){
     }
     return format;
 }
-//µ÷ÓÃ
+//è°ƒç”¨
 //new Date().format("yyyy-MM-dd hh:mm:ss");
 
-//ÀàËÆ
+//ç±»ä¼¼
 Date.prototype.Format = function(formatStr) {
     var str = formatStr;
-    var Week = ['ÈÕ', 'Ò»', '¶ş', 'Èı', 'ËÄ', 'Îå', 'Áù'];
+    var Week = ['æ—¥', 'ä¸€', 'äºŒ', 'ä¸‰', 'å››', 'äº”', 'å…­'];
     str = str.replace(/yyyy|YYYY/, this.getFullYear());
     str = str.replace(/yy|YY/, (this.getYear() % 100) > 9 ? (this.getYear() % 100).toString() : '0' + (this.getYear() % 100));
     str = str.replace(/MM/, (this.getMonth() + 1) > 9 ? (this.getMonth() + 1).toString() : '0' + (this.getMonth() + 1));
@@ -175,7 +175,7 @@ Date.prototype.Format = function(formatStr) {
 
 ```
 
-4¡¢¶¯Ì¬¼ÓÔØ½Å±¾
+4ã€åŠ¨æ€åŠ è½½è„šæœ¬
 
 ```js
 
@@ -214,7 +214,7 @@ function appendscript(src, text, reload, charset) {
 
 ```
 
-5¡¢·µ»Ø½Å±¾ÄÚÈİ
+5ã€è¿”å›è„šæœ¬å†…å®¹
 
 ```js
 
@@ -239,7 +239,7 @@ function evalscript(s) {
 
 ```
 
-6¡¢ÉèÖÃcookie
+6ã€è®¾ç½®cookie
 
 ```js
 
@@ -255,7 +255,7 @@ function setCookie(name, value, Hours) {
 
 ```
 
-7¡¢»ñÈ¡cookie
+7ã€è·å–cookie
 
 ```js
 
@@ -268,7 +268,7 @@ function getCookie(name) {
 ```
 
 
-8¡¢ÅĞ¶ÏÊÇ·ñÊÇÊı×Ö
+8ã€åˆ¤æ–­æ˜¯å¦æ˜¯æ•°å­—
 
 ```js
 
@@ -283,7 +283,7 @@ function isDigit(value) {
 
 ```
 
-9¡¢»ñÈ¡Ëæn~mµÄËæ»úÊı
+9ã€è·å–éšn~mçš„éšæœºæ•°
 
 ```js
 
@@ -291,7 +291,91 @@ Math.random()*(n-m)+m
 
 ```
 
+10ã€æ•°ç»„è¿‡æ»¤å™¨
+```js
 
+/**
+ *
+ * @param fun å›è°ƒå‡½æ•°
+ * @param thisArg æ‰§è¡Œä½œç”¨åŸŸ
+ * @returns {Array} ç»“æœæ•°ç»„
+ */
+Array.prototype.filter = function(fun/*, thisArg*/) {
+    'use strict';
+    if (this === void 0 || this === null) {
+        throw new TypeError();
+    }
+
+    var t = Object(this);
+    var len = t.length >>> 0;
+    if (typeof fun !== 'function') {
+        throw new TypeError();
+    }
+
+    var res = [];
+    var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+    for (var i = 0; i < len; i++) {
+        if (i in t) {
+            var val = t[i];
+            /**
+             * thisArg æ‰§è¡Œä½œç”¨åŸŸ
+             * val å½“å‰å¯¹è±¡
+             * i å½“å‰ä¸‹è¡¨
+             * t å½“å‰åŸå§‹æ•°ç»„
+             */
+            if (fun.call(thisArg, val, i, t)) {
+                res.push(val);
+            }
+        }
+    }
+
+    return res;
+};
+
+
+
+/*æµ‹è¯• demo*/
+var arr = [
+    { id: 15 },
+    { id: -1 },
+    { id: 0 },
+    { id: 3 },
+    { id: 12.2 },
+    { },
+    { id: null },
+    { id: NaN },
+    { id: 'undefined' }
+];
+var invalidEntries = 0;
+/**
+ * è‡ªå·±ä¸šåŠ¡éœ€è¦çš„ç­›é€‰æ¡ä»¶
+ * @param obj å½“å‰ä¾¿ç†æƒ³
+ * @param i å½“å‰ä¸‹æ ‡
+ * @param t åŸå§‹æ•°ç»„å¯¹è±¡
+ * @returns {boolean}
+ */
+function filterByID(obj,i,t) {
+
+    console.log(i);
+    console.log(t);
+    if (obj.id !== undefined && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
+        return true;
+    } else {
+        invalidEntries++;
+        return false;
+    }
+
+}
+
+var arrByID = arr.filter(filterByID);
+
+
+console.log(arrByID);
+
+console.log('æ•°é‡ï¼š'+invalidEntries);
+
+
+```
 
 
 
