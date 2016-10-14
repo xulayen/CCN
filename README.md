@@ -108,5 +108,14 @@
   </div>
 
 
+   <div>
+    <h3>图片放大镜</h3>
+    <ul>
+      <li>
+         https://xulayen.github.io/CCN/CCN.Magnifier/index.html
+      </li>
+    </ul>
+  </div>
+
   </div>
 </div>
