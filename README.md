@@ -114,7 +114,7 @@
       <li>
          https://xulayen.github.io/CCN/CCN.Magnifier/index.html
       </li>
-    </ul>
+    </ul> 
   </div>
 
   </div>
