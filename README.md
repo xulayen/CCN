@@ -94,5 +94,19 @@
     </ul>
   </div>
 
+
+
+       <div>
+    <h3>GitHub名片</h3>
+    <ul>
+      <li>
+        https://xulayen.github.io/CCN/
+<br>
+        <a href="https://github.com/xulayen/github-widget-user">GitHub名片</a>
+      </li>
+    </ul>
+  </div>
+
+
   </div>
 </div>
