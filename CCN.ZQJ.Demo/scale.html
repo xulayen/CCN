@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            width: 100px;
+            height: 150px;
+            margin: auto;
+            margin-top: 30px;
+            overflow: auto;
+            position: relative;
+        }
+
+        #wrap div {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrap">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+</div>
+<script>
+    var oWrap = document.getElementById('wrap');
+    var aDiv = oWrap.getElementsByTagName('div');
+    var i;
+    var scale = [];
+    var apos = [];
+    //    oWrap.ontouchmove=function(){
+    //        move();
+    //    };
+    //    oWrap.ontouchend=function(){
+    //        move();
+    //    };
+    //    move();
+    function move() {
+        for (i = 0; i < aDiv.length; i++) {
+            var aTops = parseInt(aDiv[i].offsetTop);
+            scale[i] = 1 - Math.abs(aTops - 60 - oWrap.scrollTop) / 100;
+            scale[i] = scale[i].toFixed(2);
+            if (scale[i] < 0.2) {
+                scale[i] = 0.2;
+            }
+            r = parseInt(scale[i] * 26);
+            aDiv[i].style.fontSize = r + 'px';
+        }
+    }
+    setInterval(move, 0);
+</script>
+</body>
+</html>
