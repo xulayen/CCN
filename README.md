@@ -154,7 +154,7 @@
     </div>
 
     <div>
-        <h3>永鑫牛肉</h3>
+        <h3>泳鑫牛肉</h3>
         <ul>
           <li>
              https://xulayen.github.io/CCN/CCN.YX/app/front/homePage.html
@@ -166,7 +166,7 @@
         <h3>美光</h3>
         <ul>
           <li>
-             https://xulayen.github.io/CCN/CCN.YX/app/front/防伪查询.html
+             https://xulayen.github.io/CCN/CCN.MG/app/front/防伪查询.html
           </li>
         </ul>
       </div>
@@ -202,7 +202,7 @@
           <h3>曼牌</h3>
           <ul>
             <li>
-               https://xulayen.github.io/CCN/CCN.MP/MP/app/front/homePage.html
+               https://xulayen.github.io/CCN/CCN.MP/app/front/homePage.html
             </li>
           </ul>
         </div>
@@ -220,7 +220,7 @@
       <h3>易到</h3>
       <ul>
         <li>
-           https://xulayen.github.io/CCN/CCN.YD/yidao/app/front/login.html
+           https://xulayen.github.io/CCN/CCN.YD/app/front/login.html
         </li>
       </ul>
     </div>
