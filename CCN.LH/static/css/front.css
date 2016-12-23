@@ -1,0 +1,895 @@
+@font-face {
+    font-family: 'Yuanti-SC-Regular';
+    /*src: url('../font/Yuanti-SC-Regular.eot');*/
+    src:
+    url('../font/Yuanti-SC-Regular.woff') format('woff'),
+    url('../font/Yuanti-SC-Regular.ttf') format('truetype'),
+    url('../font/Yuanti-SC-Regular.svg') format('svg');
+    font-weight:normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HeitiCSEG';
+    /*src: url('../font/HeitiCSEG.eot');*/
+    src:
+    url('../font/HeitiCSEG.woff') format('woff'),
+    url('../font/HeitiCSEG.ttf') format('truetype'),
+    url('../font/HeitiCSEG.svg') format('svg');
+    font-weight:normal;
+    font-style: normal;
+}
+/********公共样式*********/
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Yuanti-SC-Regular',sans-serif;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    color:#1158a6;
+    position: relative;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background: url(../images/common/bg_line.png) repeat-y;
+    background-size: 100% 10px;
+    text-shadow: 1px 0 0 #fff,-1px 0 0 #fff,0 1px 0 #fff,0 -1px 0 #fff;
+    font-size: 0.64rem;
+    text-align: center;
+    font-weight:bold;
+}
+.simHei{
+    font-family:'HeitiCSEG',sans-serif;
+    font-weight: bold;
+    text-shadow: none;
+}
+ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,div,input,button,a,form,textarea,th,tr,td,table,span,img{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+ul,ol{
+    list-style:none;
+}
+input,button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: none;
+    outline: none;
+}
+.parent {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.child {
+    display: table-cell;
+    vertical-align: middle;
+}
+.clearfix:before {
+    content: '';
+    display: table;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.none {
+    display: none;
+}
+.noneI {
+    display: none!important;
+}
+.block{
+    display:block;
+}
+.loading_img{
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+}
+.img_loading{
+    position: fixed;
+    left: 50%;
+    top:40%;
+    width:2rem;
+    height:2rem;
+    margin-left:-1rem;
+    z-index: 101;
+}
+.loading{
+    position: fixed;
+    z-index: 1110;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:#fff;
+}
+.loading .pro {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -80px;
+    font-size: 2rem;
+}
+.border_r {
+    border-radius: 0.4rem !important;
+}
+.bd_xl{
+    width: 9.2rem;
+    height:1.5rem;
+    line-height: 1.5rem;
+    background: url('../images/common/bd_xl.png') no-repeat;
+    background-size: 100% 100%;
+    font-weight: normal;
+    text-align: center;
+}
+.bd_l{
+    width: 8.65rem;
+    height:1rem;
+    line-height: 1rem;
+    background: url('../images/common/bd_l.png') no-repeat;
+    background-size: 100% 100%;
+    font-weight: normal;
+    text-align: center;
+}
+.bd_m{
+    width: 8rem;
+    height:1.3rem;
+    line-height: 1.3rem;
+    background: url('../images/common/bd_m.png') no-repeat;
+    background-size: 100% 100%;
+    font-weight: normal;
+    text-align: center;
+}
+.bd_s{
+    width: 6.4rem;
+    height:1.2rem;
+    line-height: 1.2rem;
+    background: url('../images/common/bd_s.png') no-repeat;
+    background-size: 100% 100%;
+    font-weight: normal;
+    text-align: center;
+}
+.bd_xs{
+    width: 3.6rem;
+    height:0.8rem;
+    line-height: 0.8rem;
+    background: url('../images/common/bd_xs.png') no-repeat;
+    background-size: 100% 100%;
+    font-weight: normal;
+    text-align: center;
+}
+.arrow_letter{
+    letter-spacing: -2px;
+}
+/********公共样式结束*********/
+/*菜单主页面*/
+.menu_page{
+    padding-bottom: 5.2rem;
+    font-weight: normal;
+}
+.menu_wrap{
+    width: 100%;
+}
+.page_head{
+    width: 100%;
+    height: 11.9rem;
+}
+.bg_head{
+    width: 100%;
+    height:11.9rem;
+}
+.page_body{
+    background: url('../images/common/bg_body.png') no-repeat;
+    background-size: 100% auto;
+}
+.mc_title{
+    width:13.4rem;
+    margin: auto;
+}
+.mc_subhead{
+    width:7.8rem;
+    height: 1.2rem;
+    line-height: 1.15rem;
+    border-radius: 2rem;
+    letter-spacing: 2px;
+    padding-left: 0.2rem;
+    background: linear-gradient(to bottom, #5199d4, #039);
+    margin:0.3rem auto 0 auto;
+}
+.mc_nav{
+    width: 9.4rem;
+    margin:0.6rem auto 0 auto;
+}
+.mc_nav li{
+    width: 9.4rem;
+    height:1.7rem;
+    background: url('../images/common/bd_xl.png') no-repeat;
+    background-size: 100% 100%;
+    margin-top:0.4rem;
+    line-height: 1.7rem;
+    color:#0171ac;
+    padding-left: 1.95rem;
+    position: relative;
+}
+.mc_nav li:before{
+    content: "";
+    display: inline-block;
+    width: 2.3rem;
+    height:1.7rem;
+    position: absolute;
+    left: -0.1rem;
+    top: 0;
+}
+.mc_nav li i{
+    width: 1px;
+    height:0.6rem;
+    position: absolute;
+    top:0.55rem;
+    left: 2.2rem;
+    background:#3571b4 ;
+    box-shadow: 0 0 0 1px #fff;
+}
+.nav_csz:before{
+    background: url(../images/menu/icon_1.png) no-repeat;
+    background-size: 2.3rem auto;
+}
+.nav_mcny:before{
+    background: url(../images/menu/icon_2.png) no-repeat;
+    background-size: 2.3rem auto;
+}
+.nav_ygyx:before{
+    background: url(../images/menu/icon_3.png) no-repeat;
+    background-size: 2.3rem auto;
+}
+.nav_xxljy:before{
+    background: url(../images/menu/icon_4.png) no-repeat;
+    background-size: 2.3rem auto;
+}
+.nav_zgjy:before{
+    background: url(../images/menu/icon_5.png) no-repeat;
+    background-size: 2.3rem auto;
+}
+.nav_xszz:before{
+    background: url(../images/menu/icon_6.png) no-repeat;
+    background-size: 2.3rem auto;
+}
+/*菜单主页面结束*/
+/*配置子页面公共样式*/
+.bg_subpage{
+    padding-bottom:5.5rem;
+}
+.page_foot{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.nav_subPage{
+    margin-bottom: 0.2rem;
+}
+.nav_subPage li{
+    width: 16.5%;
+    height: 2.7rem;
+    float: left;
+    position: relative;
+}
+.nav_subPage li img{
+    width:2.25rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left:-1.15rem;
+}
+.nav_current{
+    width: 2.325rem!important;
+    bottom: -0.2rem!important;
+}
+.line_subPage{
+    width: 100%;
+
+}
+.page_location{
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    margin-top:0.7rem;
+    font-weight: normal;
+}
+.page_location li{
+    float: left;
+    width: 2.9rem;
+    height:1rem;
+    margin-left:0.8rem;
+}
+.page_location li img{
+    width: 100%;
+    height: 100%;
+}
+.xszz_page .page_location li{
+    margin-left: 2.4rem;
+}
+.page_location li:first-child{
+   margin-left:0;
+}
+
+/*配置子页面公共样式结束*/
+/*出生证页面*/
+.csz_box{
+    width: 86%;
+    margin:2.6rem  auto 0 auto;
+    position: relative;
+    border:1px solid #1158a6;
+    border-radius:5px;
+}
+.csz_box_title{
+    position: absolute;
+    color:#1158a6;
+    left: 50%;
+    margin-left: -4rem;
+    top:-0.625rem;
+    font-weight: bold;
+}
+.csz_box_content{
+    text-align: left;
+    text-shadow: none;
+    padding-top: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+.csz_box_content li{
+    padding-left:1.25rem;
+    font-weight: bold;
+    line-height: 1.7em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.csz_banner{
+    width:100%;
+    margin-top: -0.3rem;
+    position: relative;
+    z-index: 9;
+}
+/*出生证页面结束*/
+/*牧场奶源*/
+.mcny_info{
+    padding:0 1.3rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+.mcny_info div{
+    line-height: 1.6em;
+    margin-bottom: 0.2rem;
+}
+.border_box{
+    width: 96%;
+    margin: auto;
+    border: 1px solid #2f67ad;
+    border-radius:0.4rem ;
+}
+.mcny_milk{
+    margin-top: 2.2rem;
+    padding:0 0.3rem;
+}
+.mm_btn{
+    margin:-0.6rem auto 0 auto;
+    font-size: 0.74rem;
+}
+.mm_title{
+    text-align: left;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+    padding: 0 0.4rem;
+}
+.white_box{
+    border-radius: 0.4rem;
+    background: linear-gradient(to bottom, #fafeff,#cbebf8);
+    background: -webkit-linear-gradient(to bottom, #fafeff,#ccebf9);
+    text-align: justify;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.2);
+    position: relative;
+}
+.video_box_wrap{
+    width: 100%;
+    height:10.85rem;
+    padding:0.4rem;
+}
+.video_box{
+    width:100%;
+    height:100%;
+    border-radius: 0.4rem;
+    overflow: hidden;
+}
+.mcny_adv1{
+    margin-top:0.65rem;
+    margin-bottom: 0.4rem;
+    height: 8rem;
+}
+.mcny_adv1 li{
+    width: 49%;
+    height: 3.6rem;
+    float: left;
+    margin-bottom: 0.4rem;
+    position: relative;
+}
+.mcny_adv1 li:nth-child(2n+1){
+    margin-right:2%;
+}
+.mcny_adv1 li img{
+   width: 100%;
+    height: 100%;
+}
+.adv1_li1_img,.adv1_li2_img,.adv1_li3_img,.adv1_li4_img{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 99;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+.adv1_li1_img{
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+}
+.adv1_li2_img{
+    transform-origin: 100% 0%;
+    -webkit-transform-origin: 100% 0%;
+}
+.adv1_li3_img{
+    transform-origin: 0% 100%;
+    -webkit-transform-origin: 0% 100%;
+}
+.adv1_li4_img{
+    transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+}
+.adv1_ani{
+    transform: scale(2.04,2.12);
+    -webkit-transform: scale(2.04,2.12);
+}
+.mcny_origin{
+    margin-top:2.8rem;
+}
+.mcny_o_title{
+    margin-top: 0.5rem;
+    text-align: left;
+    padding: 0 0.6rem;
+    line-height: 1.6em;
+}
+.mcny_adv2{
+    padding:0 0.6rem;
+    margin-top:0.4rem;
+}
+.mcny_adv2 li{
+    float: left;
+    width: 48%;
+    margin-bottom: 0.6rem;
+}
+.mcny_adv2 li:nth-child(2n+1){
+    margin-right:4% ;
+}
+.mcny_adv2_box{
+    background: linear-gradient(to bottom, #fff,#cbebf8);
+    border-radius: 0.4rem;
+    padding:0.3rem 0.4rem;
+    box-shadow:2px 2px 7px 2px rgba(0,0,0,0.2);
+}
+.ma2_title{
+    width: 3.6rem;
+    height: 0.8rem;
+    margin:0.2rem auto 0 auto;
+    display: block;
+}
+.ma2_cnt{
+    line-height: 1.4em;
+    font-size: 0.5rem;
+    text-align: justify;
+    margin-top: 0.2rem;
+    height: 4rem;
+}
+.ma2_cnt_less{
+    height:3rem;
+}
+.ma2_cnt_much{
+    height:5.4rem;
+}
+.ma2_img{
+    width: 100%;
+}
+/*牧场奶源结束*/
+/*原厂原罐原箱*/
+.ygyx_info{
+    padding:0 2.3rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+.ygyx_info div{
+    line-height: 1.6em;
+    margin-bottom: 0.2rem;
+}
+.ygyx_box{
+    padding:0 0.3rem;
+}
+.ygyx_box1{
+    padding:1.2rem 0.8rem 0.5rem 0.8rem;
+    margin-top:2.5rem;
+    line-height: 1.5em;
+}
+.ygyx_box1_title{
+    position: absolute;
+    left: 50%;
+    margin-left: -4rem;
+    margin-top:-0.65rem;
+    top:0;
+}
+.ygyx_box2{
+    margin-top:1.8rem;
+}
+.ygyx_box3{
+    margin-top:2.8rem;
+    padding:0 0.4rem;
+}
+.ygyx_box3_title{
+    position: absolute;
+    left: 50%;
+    top:0;
+    margin-left:-3.2rem;
+    margin-top:-0.6rem;
+}
+.ygyx_box3_cnt{
+    padding: 1rem 0.4rem 0 0.4rem;
+    line-height: 1.5em;
+}
+.bg_box3{
+    width: 100%;
+    border-radius: 0.4rem;
+    margin-top: -2rem;
+    margin-bottom: 0.2rem;
+    z-index: -1;
+}
+.ygyx_box4{
+    margin-top:2.1rem;
+    padding: 0.95rem 0.4rem 0.4rem 0.4rem;
+    position: relative;
+    margin-bottom:2.8rem;
+}
+.ygyx_box4_title{
+    width: 11rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    background: linear-gradient(to bottom, #5199d4, #039);
+    border-radius: 0.5rem;
+    color: #fff;
+    text-shadow: none;
+    font-size: 0.6rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -5.5rem;
+    top: 0.4rem;
+    z-index: 99;
+    text-align: center;
+    font-weight: normal;
+}
+.bg_box4{
+    width: 100%;
+    border-radius: 0.4rem;
+    z-index: -1;
+}
+/*原厂原罐原箱结束*/
+/*新西兰检验*/
+.xxljy_box:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -99;
+    border-radius: 0.4rem;
+}
+.xxljy_box{
+    background: linear-gradient(to bottom,rgba(250,254,255,0.3), rgba(203,235,248,0.5));
+    position: relative;
+}
+.xxljy_box1{
+    padding:0.7rem 0.5rem;
+    margin-top:2.9rem;
+}
+.xxljy_box1_cnt{
+    text-align: justify;
+    line-height: 1.5em;
+    margin-top:0.5rem;
+}
+.xxljy_icon1{
+    width: 1.5rem;
+    position: absolute;
+    top:-1.5rem;
+    left: 0.1rem;
+    z-index: 99;
+}
+.xxljy_box1_title{
+    position: absolute;
+    left: 0.5rem;
+    top: -0.8rem;
+    background: linear-gradient(to bottom, #5199d4, #039);
+    border-radius: 1rem;
+    color: #fff;
+    letter-spacing: -1px;
+    font-size: 0.6rem;
+    padding: 0.3rem 0.3rem 0.3rem 1.3rem;
+    font-weight: normal;
+}
+.xxljy_box2{
+    margin-top:2.8rem;
+    padding:1rem 0.5rem 0.4rem 0.5rem;
+    margin-bottom: 2.8rem;
+}
+.xxljy_box2_title{
+    position: absolute;
+    left: 50%;
+    top:0;
+    margin-left:-4rem;
+    margin-top:-0.7rem;
+}
+.xxljy_certi_wrap{
+    margin-left: 1%;
+}
+.xxljy_certi_wrap li{
+    float: left;
+    width: 32%;
+    height:7.8rem;
+    margin-right: 1%;
+    border:1px solid #8dbfef;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin-bottom: 1%;
+}
+.xxljy_certi_img{
+    width:100%;
+    height: 100%;
+}
+.xxljy_icon2{
+    width: 1.5rem;
+    position: absolute;
+    bottom:-1.5rem;
+    right: 0.2rem;
+    z-index: 99;
+}
+.xxljy_box2_bottom{
+   color:#0f6ea6;
+    font-size: 0.5rem;
+    position: absolute;
+    bottom:-1rem;
+    right:1.8rem;
+    text-shadow: none;
+}
+.scale_mask{
+    width: 100%;
+    height:100%;
+    position: fixed;
+    left: 0;
+    top:0;
+    background: #000;
+    z-index: 999;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+}
+.scale_mask_ani{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+.view_img,.view_img div{
+    width: 100%;
+    height: 100%;
+}
+.view_img img{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 15%;
+}
+.scale_back{
+    position: absolute;
+    color: #fff;
+    left: 0.5rem;
+    top: 40%;
+    font-size: 0.8rem;
+    text-shadow: none;
+    font-weight: normal;
+    line-height: 0.8rem;
+    padding: 0.4rem 1rem 0.4rem 1.5rem;
+    background: rgba(0,0,0,0.7);
+    border-radius: 0.4rem;
+}
+.scale_back i{
+    width: 0.6rem;
+    height:0.6rem;
+    position: absolute;
+    left: 0.5rem;
+    right:0;
+    border: 2px solid #fff;
+    border-right:none;
+    border-bottom: none;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+/*新西兰检验结束*/
+/*中国检验*/
+.zgjy_title{
+    padding: 0 1.4rem;
+    text-align: justify;
+    line-height: 1.6em;
+    margin-top: 1.82rem;
+}
+.zgjy_box_wrap{
+    width: 78%;
+    margin:2rem auto 0 auto;
+}
+.zgjy_box:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -99;
+    border-radius: 0.4rem;
+}
+.zgjy_box{
+    width:100%;
+    border: 1px solid #73afea;
+    border-radius:0.4rem ;
+    background: linear-gradient(to bottom,rgba(250,254,255,0.3), rgba(203,235,248,0.5));
+    position: relative;
+}
+.zgjy_box1{
+    padding:1.2rem 0 0.6rem 0;
+}
+.zgjy_box1_title{
+    width: 9rem;
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left:-4.5rem;
+    margin-top:-0.5rem;
+    font-size: 0.6rem;
+}
+.zgjy_certi_img{
+    width: 7.35rem;
+    height: 10.5rem;
+    border: 1px solid #1f88b9;
+    box-shadow: 0 0 9px -1px #1f88b9;
+}
+.zgjy_icon_img{
+    width: 2.1rem;
+    position: absolute;
+    right:0.2rem;
+    bottom:-1rem;
+}
+.zgjy_box2{
+    margin-top:2.8rem;
+    padding: 0 0.75rem 0.3rem 0.75rem;
+    border-radius: 1rem;
+}
+.zgjy_box2:before{
+    border-radius: 1rem;
+}
+.zgjy_box2_title{
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left:-3.2rem;
+    margin-top:-0.6rem;
+    font-size: 0.7rem;
+}
+.zgjy_box2_cnt{
+    line-height: 1.5em;
+    text-align: left;
+    margin: 1.2rem auto 0.8rem auto;
+    font-size: 0.7rem;
+}
+.zgjy_bg_box2{
+   width: 100%;
+}
+.zgjy_box3{
+    margin-top:2.5rem;
+    margin-bottom: 2.1rem;
+}
+.zgjy_box3_cnt{
+    padding: 1rem 0.4rem 0.6rem 0.4rem;
+    text-align: justify;
+    line-height: 1.5em;
+}
+/*中国检验结束*/
+/*国内销售追踪*/
+.xszz_title{
+    margin: auto;
+    font-size: 0.74rem;
+    width: 9rem;
+    margin-top:1.4rem;
+}
+.xszz_box{
+    width:82%;
+    margin:0.9rem auto 2rem auto;
+    border:1px solid #0c53a1;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    padding-bottom:4.4rem;
+}
+.xszz_box_bg{
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+.xszz_box_s{
+    width: 10.4rem;
+    margin: auto;
+    position: relative;
+    padding:0.1rem;
+    background: url(../images/xszz/border_bg.png) center top repeat-y;
+    background-size: 100% auto;
+    border-radius:0.3rem ;
+    box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.3);
+}
+.xszz_boxs_cnt{
+    width: 100%;
+    height: 100%;
+    background:#acdafc;
+    border-radius:0.3rem ;
+    padding:0.4rem;
+}
+.xszz_boxs_cnt p{
+    font-size: 0.7rem;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+.xszz_arrow{
+    width: 1.2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.1rem;
+}
+.xszz_boxs_cnt2{
+    text-align: justify;
+    padding: 0.4rem 0.6rem;
+}
+/*国内销售追踪结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

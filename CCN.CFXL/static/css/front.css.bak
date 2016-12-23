@@ -1,0 +1,476 @@
+/********公共样式*********/
+html{
+    height: 100%;
+}
+body {
+    font-family: SimHei,"Microsoft YaHei", sans-serif;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+label{
+    font-weight: normal;
+    margin:0;
+}
+.parent{
+    display: table;
+    height: 100%;
+}
+.child{
+    display: table-cell;
+    vertical-align: middle;
+}
+input,button{
+    -webkit-appearance: none;
+    border-radius:0;
+    outline:none;
+}
+
+/************homePage页面************/
+#pageAll{
+    width:100%;
+}
+.page1_on{
+    background:#ffd801 url("../../static/images/bg_small.png") no-repeat center top;
+    background-size:cover;
+    position:relative;
+}
+.page2_on{
+    position: relative;
+}
+.page2_body{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:3.2rem;
+    background:#181818 url("../images/front.png") no-repeat center top;
+    background-size:100% auto;
+}
+.footer{
+    width: 100%;
+    height:3.2rem;
+    line-height:3.2rem;
+    position:absolute;
+    bottom:0;
+    background: #ffd200;
+    font-size:1.55rem;
+    font-weight: bold;
+    text-align:center;
+    color:#000;
+    text-decoration: none;
+    border:none;
+}
+.head_logo{
+    width:16.85rem;
+    height:5.75rem;
+    margin-top:1.15rem;
+    float: right;
+}
+.play_panel{
+    width: 13.55rem;
+    height:9.15rem;
+    background:rgba(255,210,0,0.5);
+    box-shadow:0 0 0.5rem 0.5rem rgba(255,210,0,0.5);
+    position: absolute;
+    left:50%;
+    margin-left:-6.775rem;
+    bottom:1.8rem;
+}
+.play_video{
+    width:100%;
+    height:7.9rem;
+    /*background: #000;*/
+}
+.play_control{
+    width:100%;
+    height:1.15rem;
+    background: url("../images/play.png") no-repeat;
+    background-size: 100%;
+    margin-top:0.2rem;
+}
+.link_store{
+    position: absolute;
+    left: 4.6rem;
+    top:15.7rem;
+    font-size: 0.8rem;
+}
+.link_store a{
+    color:#ffd200;
+    text-decoration: underline;
+}
+.active_rule{
+    display: inline-block;
+    width:3.65rem;
+    height:1.2rem;
+    border: 1px solid #ffd200;
+    border-radius:1rem;
+    /*margin-top:0.7rem;*/
+    /*margin-left:11.3rem;*/
+    color:#ffd200;
+    font-size: 0.6rem;
+    text-align: center;
+    line-height: 1.2rem;
+    text-decoration: none;
+    position: absolute;
+    bottom:3.5rem;
+    right:3rem;
+}
+/*填写手机号*/
+.input_wrap{
+    width:15.2rem;
+    height:2.25rem;
+    position: absolute;
+    bottom:0.6rem;
+    left:1.4rem;
+}
+.input_tel{
+    float:left;
+    width: 11.4rem;
+    height:100%;
+    background:#555 url("../images/phone.png") no-repeat 0.95rem center;
+    background-size:0.7rem 1.12rem ;
+    border:1px solid #707070;
+    color:#fff;
+    font-size: 0.8rem;
+    padding-left: 2rem;
+}
+.input_tel::-webkit-input-placeholder{
+    color:#fff;
+}
+.input_tel::-moz-placeholder{
+    color:#fff;
+}
+.input_tel:-ms-input-placeholder{
+    color:#fff;
+}
+.btn_help{
+    float: right;
+    width:3.6rem;
+    height:100%;
+    background:#a3a3a3;
+    border:none;
+    color:#000;
+    font-size: 0.8rem;
+}
+.img_help{
+    width:8.65rem;
+    height:6.5rem;
+    position: absolute;
+    bottom:6.4rem;
+    left:5.7rem;
+}
+/******弹出遮罩层******/
+.mask{
+    position: absolute;
+    left: 0;
+    right:0;
+    top:0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+/*规则弹窗*/
+.pop_panel{
+    width: 15.35rem;
+    background: #fff;
+    position:absolute;
+    top:1.55rem;
+    left: 50%;
+    margin-left: -7.675rem;
+    bottom:1.45rem;
+    box-shadow: 0 0 0.3rem 0.15rem rgba(0,0,0,0.3);
+    overflow: auto;
+}
+.active_panel{
+    bottom:4rem;
+}
+.pop_head{
+    width:15.35rem;
+    height:3.05rem;
+    line-height:3.05rem;
+    background: #ffd200;
+    font-size:1.36rem;
+    font-weight: bold;
+    text-align: center;
+}
+.active_body{
+    width: 100%;
+    position: absolute;
+    top:3.05rem;
+    bottom:0;
+    padding:0.8rem 0.7rem 1.5rem 0.7rem;
+    overflow: scroll;
+}
+.active_body h3{
+    font-size: 0.6rem;
+    font-weight:bold;
+    color:#424042;
+    padding:0.2rem 0;
+}
+.active_body p{
+    font-size: 0.6rem;
+    color:#424042;
+    text-indent:2em;
+    line-height: 1.5em;
+}
+.active_body li{
+    text-indent: 0.5em;
+    font-size: 0.6rem;
+    color:#424042;
+    line-height: 1.5em;
+}
+.copyright{
+    color:#888;
+    font-size:0.55rem;
+    font-weight: 300;
+    margin-top:1rem;
+    text-align: center;
+}
+.active_close{
+    width:3.8rem;
+    height:2rem;
+    border:none;
+    color:#fff;
+    font-size:1rem;
+    background: #ffd200;
+    position: absolute;
+    left:50%;
+    margin-left: -1.9rem;
+    bottom:1rem;
+    padding:0;
+}
+.active_wrap,.store_wrap,.help_wrap{
+    display: none;
+}
+/*门店列表弹窗*/
+.store_body{
+    padding:0.7rem 0.75rem 1rem 0.75rem;
+}
+.sel_no{
+    width: 100%;
+    height:2.15rem;
+    text-align: center;
+    line-height:2.15rem;
+    border-radius: 2.15rem;
+    color:#cecece;
+    font-size:0.85rem;
+    background: url("../images/more_y.png") no-repeat 66% center;
+    background-size:4%;
+    border:1px solid #cecece;
+    margin-bottom:0.35rem;
+}
+.sel_ing{
+    background: #cecece;
+    color:#fff;
+}
+.sel_end{
+    background: #ffd200 url("../images/close2.png") no-repeat 12rem center;
+    background-size:1.1rem;
+    color:#fff;
+    border-color: #ffd200;
+}
+.sel_notice{
+    width: 100%;
+    height:3.55rem;
+    border-bottom: 1px solid #cecece;
+    position: relative;
+}
+.sel_title{
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    position: absolute;
+    left:0;
+    bottom:0.4rem;
+    color: #cecece;
+}
+ul.sel_city_list:before{
+    content:"";
+    display: table;
+}
+ul.sel_city_list:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+ul.sel_city_list,ul.sel_store_list{
+    width: 100%;
+    padding-top:0.65rem;
+    position: absolute;
+    top:15rem;
+    left:0;
+    bottom:2rem;
+    overflow: scroll;
+}
+ul.sel_city_list li,ul.sel_store_list li{
+    height:1.3rem;
+    line-height: 1.3rem;
+    text-align: center;
+    color:#afafaf;
+    font-size: 0.7rem;
+    padding:0 0.5rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+ul.sel_city_list li{
+    float: left;
+    width: 33%;
+}
+ul.store_result{
+    padding:1.6rem 1rem 1rem 1rem;
+}
+ul.store_result li{
+    font-size: 0.81rem;
+    color: #ffd200;
+    line-height: 1.4em;
+}
+.giftPage:before{
+    content:"";
+    background:#fefbea url("../images/bg_2.png") no-repeat;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    background-size:100%;
+    z-index: -1;
+}
+.gift_container{
+    padding:7.35rem 2rem 0.9rem 2rem;
+}
+.gift_lucky,.book_suc{
+    font-size:1.85rem;
+    color:#ed1d24;
+    text-align: center;
+}
+.gift_get,.book_guild{
+    font-size:1.45rem;
+    margin-top: 0.1rem;
+    color:#ed1d24;
+    text-align: center;
+}
+.gift_get{
+    padding-left:0.4em;
+}
+.gift_sel{
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    color:#848588;
+    text-align: center;
+}
+.gift_result{
+    font-size: 0.81rem;
+    color:#808285;
+    line-height: 1.4em;
+    padding:0.3rem 0.5rem 0.7rem 0.5rem;
+}
+.btn_submit{
+    width: 100%;
+    height:2.15rem;
+    text-align: center;
+    line-height:2.15rem;
+    border-radius: 2.15rem;
+    color:#fff;
+    font-size:0.85rem;
+    background:#ffd200;
+    border:none;
+}
+/*选择城市弹窗*/
+.option_wrap{
+    display: none;
+}
+.option_body{
+    width: 100%;
+    padding:0 1.1rem 1rem 1.1rem;
+    position: absolute;
+    top:3.05rem;
+    bottom:0;
+    overflow: scroll;
+}
+.option_list li{
+    width:100%;
+    height:3.05rem;
+    padding:1.65rem 1rem 0.65rem 1rem;
+    border-bottom:1px solid #82827f;
+    text-align: center;
+    font-size: 0.75rem;
+    color:#82827f;
+}
+.book_wrap{
+    width: 15.35rem;
+    height:15.35rem;
+    background: #fff;
+    position: absolute;
+    top:7rem;
+    left: 50%;
+    margin-left: -7.675rem;
+    text-align: center;
+    display: none;
+}
+.book_head{
+    width:15.35rem;
+    height:3.05rem;
+    line-height:3.05rem;
+    background: #ffd200;
+    font-size:1.36rem;
+    font-weight: bold;
+    text-align: center;
+}
+.book_suc{
+    padding-left:1em;
+    margin-top:1.5rem;
+}
+.book_body{
+    padding:0 1rem;
+}
+.book_guild{
+    margin-top: 0.6rem;
+}
+.book_more{
+    font-size: 0.85rem;
+    color:#848588;
+    margin-top:0.9rem;
+}
+@media only screen and (min-width:384px){
+    .page2_body{
+        bottom:2.6rem;
+    }
+    .footer{
+        height:2.6rem;
+        line-height:2.6rem;
+    }
+    .input_wrap{
+        height:2rem;
+    }
+    .img_help{
+        bottom:5.4rem;
+    }
+    .active_rule{
+        bottom:3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

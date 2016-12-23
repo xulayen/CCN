@@ -1,0 +1,378 @@
+/********公共样式*********/
+html{
+    height: 100%;
+}
+body {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+label{
+    font-weight: normal;
+    margin:0;
+}
+.parent{
+    display: table;
+    height: 100%;
+}
+.child{
+    display: table-cell;
+    vertical-align: middle;
+}
+input,button{
+    -webkit-appearance: none;
+    border-radius:0;
+    outline:none;
+    border:none;
+}
+/*防伪查询页面*/
+.inquiryPage{
+    min-height: 100%;
+    background: url("../images/bg_inquiry.png") no-repeat;
+    background-size:100% auto;
+    padding-bottom:10rem;
+    position: relative;
+}
+.inquiry_form{
+    padding:4.8rem 0.8rem 0 0.8rem;
+}
+.form_group{
+    width: 100%;
+    height:2.05rem;
+    margin-bottom: 1.1rem;
+    position: relative;
+}
+.inquiry_input{
+    width: 100%;
+    height:100%;
+    background:#606060 url("../images/input_bg.png") no-repeat;
+    background-size: 100% auto;
+    padding-left:4.2rem;
+    font-size: 0.85rem;
+    color:#fff;
+}
+/*.inquiry_input::-webkit-input-placeholder{*/
+    /*color:#fff;*/
+/*}*/
+/*.inquiry_input::-moz-placeholder{*/
+    /*color:#fff;*/
+/*}*/
+/*.inquiry_input:-ms-input-placeholder{*/
+    /*color:#fff;*/
+/*}*/
+.input_help{
+    position: absolute;
+    top:0;
+    left:0.75rem;
+    font-size: 0.85rem;
+    color:#fff;
+    height:2.05rem;
+    line-height:2.05rem;
+}
+.btn_wrap{
+    width: 100%;
+    padding:0 1.4rem;
+    height:2.1rem;
+    position: absolute;
+    bottom:2.35rem;
+    left:0;
+}
+.btn_inquiry,.btn_guide_turn{
+    width:100%;
+    height:2.1rem;
+    background: url("../images/btn_l.png") no-repeat;
+    background-size:cover;
+    font-size: 1rem;
+    color:#2c1212;
+}
+/*防伪查询结果页面*/
+.inquiry_result{
+    padding:0.9rem;
+}
+.inquiry_notice{
+    font-size:0.84rem;
+    color:#fff;
+    line-height: 1.5rem;
+}
+.btn_guide_turn{
+    display: inline-block;
+    line-height: 2.1rem;
+    text-align: center;
+    text-decoration: none;
+}
+/*转盘抽奖页面*/
+.turnPage,.regPageEndPage{
+    min-height: 100%;
+    background: url("../images/bg_turn.png") no-repeat;
+    background-size:cover;
+    position: relative;
+    overflow-x: hidden;
+}
+.turnPage{
+    padding-bottom:4.5rem;
+    overflow: hidden;
+}
+.active_date{
+    padding-top: 6.8rem;
+    margin-left: 1.8rem;
+}
+.active_date p{
+    font-size:0.6rem;
+    color:#fff;
+    transform: rotate(-13deg);
+    margin-top: -0.7rem;
+}
+.turn_wrap{
+    width: 13.6rem;
+    height:13.6rem;
+    margin:auto;
+    margin-top: 2rem;
+    position: relative;
+}
+.turn_panel{
+    width: 13.6rem;
+    height:13.6rem;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+    will-change:transform;
+}
+.turn_panel img{
+    width: 13.6rem;
+    height:13.6rem;
+}
+.turn_guide{
+    width: 5rem;
+    height:5rem;
+    position: absolute;
+    top:50%;
+    margin-top:-2.5rem;
+    left:50%;
+    margin-left:-2.5rem;
+    z-index: 20;
+}
+.turn_guide img{
+    width: 5rem;
+    height:5rem;
+}
+.win_record{
+    width:100%;
+    padding:0 0.8rem;
+    position: absolute;
+    left:0;
+    bottom:1.4rem;
+}
+.btn_record{
+    width: 100%;
+    height:2.15rem;
+    background: url("../images/btn_lr.png") no-repeat;
+    background-size: 100% auto;
+    font-size: 1rem;
+    color:#fff;
+}
+.mask{
+    position: absolute;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+    display: none;
+}
+.panel{
+    width: 16rem;
+    height:18.3rem;
+    border-radius: 0.3rem;
+    background: #fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8rem;
+    margin-top:-9.15rem;
+    z-index: 999;
+    display: none;
+}
+.panel_head{
+    width: 100%;
+    height:2.25rem;
+    background: url("../images/bg_panel.png") no-repeat;
+    background-size: 100% auto;
+    position: relative;
+}
+.close{
+    width:1.65rem;
+    position: absolute;
+    right:0.7rem;
+    top:50%;
+    margin-top:-0.825rem;
+}
+.panel_body{
+    padding:0 2rem;
+}
+.panel_body_title{
+    margin-top:1.2rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.83rem;
+    color:#2c2b2b;
+    line-height:1.5rem;
+    padding-bottom: 0.2rem;
+}
+.panel_body_content{
+    width: 100%;
+    text-align: justify;
+    font-size: 0.83rem;
+    color:#2c2b2b;
+    line-height: 1.2rem;
+}
+.panel_foot{
+    width: 100%;
+    height:4.25rem;
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-top:1px solid #e5e5e5;
+    text-align: center;
+}
+.turn_register,.turn_inquiry{
+    display: inline-block;
+    width:10.45rem;
+    height:2.1rem;
+    line-height: 2.1rem;
+    background: url("../images/btn_s.png") no-repeat;
+    background-size: 100% auto;
+    margin-top:1.075rem;
+    color:#2c2b2b;
+    text-decoration: none;
+}
+
+/*注册页面*/
+.registerPage{
+    min-height: 100%;
+    background: url("../images/bg_register.png") no-repeat;
+    background-size:100% auto;
+    position: relative;
+    padding-bottom:6rem;
+}
+.register_form{
+    padding:4.8rem 0.8rem 4rem 0.8rem;
+}
+.register_input{
+    width: 100%;
+    height:100%;
+    background:#fff url("../images/input_bg.png") no-repeat;
+    background-size: 100% auto;
+    font-size: 0.85rem;
+    color:#2c2b2b;
+    font-weight: normal;
+}
+.register_input.uname{
+    padding-left:3.3rem;
+}
+.register_input.utel{
+    padding-left:4.8rem;
+}
+.register_form .input_help{
+    color:#2c2b2b;
+}
+/*.register_input::-webkit-input-placeholder{*/
+    /*color:#2c2b2b;*/
+/*}*/
+/*.register_input::-moz-placeholder{*/
+    /*color:#2c2b2b;*/
+/*}*/
+/*.register_input:-ms-input-placeholder{*/
+    /*color:#2c2b2b;*/
+/*}*/
+.btn_register_wrap{
+    width:100%;
+    padding:0 0.8rem;
+    position:absolute;
+    bottom:1rem;
+    left:0;
+}
+.btn_register_submit{
+    width: 100%;
+    height:2.15rem;
+    background: url("../images/btn_lr.png") no-repeat;
+    background-size: 100% auto;
+    font-size: 1rem;
+    color:#fff;
+    margin-bottom: 0.7rem;
+}
+.btn_register_reset{
+    width: 100%;
+    height:2.15rem;
+    background: url("../images/btn_l.png") no-repeat;
+    background-size: 100% auto;
+    font-size: 1rem;
+    color:#2c2b2b;
+}
+/*注册后页面*/
+.regPageEndPage .mask,.regPageEndPage .panel{
+   display: block;
+}
+/*控制页面横屏*/
+.mask_alert{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+}
+.panel_alert{
+    width:300px;
+    height:150px;
+    background: #fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-75px;
+    margin-left:-150px;
+    display: none;
+    text-align: center;
+
+    border-radius: 10px;
+}
+.panel_alert_head{
+    width: 100%;
+    height:50px;
+    background:#f0d001;
+    border-radius: 10px 10px 0 0;
+}
+.panel_alert_body{
+    width: 100%;
+    padding:20px 10px;
+    font-size: 20px;
+}
+/*@media screen and (orientation:landscape) {*/
+    /*.mask_alert,.panel_alert{*/
+        /*display: block;*/
+    /*}*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+

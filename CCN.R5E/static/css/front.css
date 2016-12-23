@@ -1,0 +1,310 @@
+.verify-page .page-head{
+    padding-right:10%;
+    text-align: right;
+}
+.myContainer-verify{
+    padding-top:2rem;
+    width:80%;
+    margin:auto;
+}
+.verify-page input {
+    width: 100%;
+    height: 3.6rem;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    background: #e6e7e9;
+    outline: none;
+    border: none;
+    border-radius: 0;
+}
+.myContainer-verify .form-group:before{
+    content:"";
+    display: table;
+}
+.myContainer-verify .form-group:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+p.help-block{
+    margin-bottom: 0;
+}
+.user-name::-moz-placeholder,.store-number::-moz-placeholder,.phone-number::-moz-placeholder,.message-left::-moz-placeholder{
+    color:#798486;
+}
+.user-name::-webkit-input-placeholder,.store-number::-webkit-input-placeholder,.phone-number::-webkit-input-placeholder,.message-left::-webkit-input-placeholder{
+     color:#798486;
+ }
+.user-name:-ms-input-placeholder,.store-number:-ms-input-placeholder,.phone-number:-ms-input-placeholder,.message-left:-ms-input-placeholder{
+    color:#798486;
+}
+input.message-left{
+    width:66%;
+    float:left;
+    letter-spacing:-1px;
+}
+.message-right{
+    width:32%;
+    float:right;
+    border:none;
+    height:3.6rem;
+    line-height:3.6rem;
+    background: #ffd200;
+    padding:0;
+    font-size:1.5rem;
+    color:#fff;
+}
+.store-number+p.help-block,.phone-number+p.help-block{
+    color:#ffd200;
+    float:right;
+    padding-right:0.6rem;
+    font-size:1rem;
+}
+.message-left~p.help-block{
+    color:#ffd200;
+    float:left;
+    padding-left:0.6rem;
+    font-size:1rem;
+}
+.verify-agree{
+    margin-top:-0.5rem;
+}
+.chk{
+    display: none;
+}
+label.check-left{
+    float:left;
+    width:16px;
+    height:16px;
+    background: url("../images/sure-border.png") no-repeat;
+    background-size:100% auto;
+    display: inline-block;
+    margin-top:5px;
+}
+.chk:checked + label.check-left{
+    width:23px;
+    height:24px;
+    background: url("../images/sure.png") no-repeat;
+    background-size:100% auto;
+}
+.check-right{
+    float:right;
+    width:90%;
+    font-size:1.1rem;
+    color:#8b9496;
+    font-weight: normal;
+}
+.full-verify{
+    width:100%;
+    background: #ed3123;
+    color:#fff;
+    font-weight:bold;
+    font-size:2rem;
+    border:none;
+    margin-top:-12px;
+    padding:5px;
+}
+.verify-page .mask-bg-sm{
+    width:80%;
+    left:10%;
+}
+/*之前所用油品弹出层*/
+.oil-mask{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background: #fff;
+    display:none;
+    z-index:100;
+    /*margin-bottom:-40rem;*/
+}
+.myContainer-oil{
+    width:70%;
+    margin:auto;
+}
+.oil-list li{
+    list-style: none;
+    width:100%;
+    text-align: center;
+    border-bottom:1px solid #bbc0c0;
+    color:#bbc0c0;
+    padding:2rem 0 1rem 0;
+    font-size:1.5rem;
+}
+.oil-list .input-text{
+    text-align:center;
+    background:#fff url("../images/more.png") no-repeat 62% 48%;
+    background-size:5% 55%;
+    font-size:1.5rem;
+    border:none;
+    outline:none;
+    padding:0;
+    height:auto;
+}
+/*扫描页面*/
+.scan-page .page-head{
+    font-size:2.4rem;
+}
+.wrap-scan{
+    width:86%;
+    height:24rem;
+    margin:auto;
+    margin-top:3.6rem;
+    background: #fff;
+    position: relative;
+}
+.scan-img{
+    width: 10rem;
+    height: 10rem;
+    background: url("../images/scan.png") no-repeat;
+    background-size: 100% auto;
+    margin:auto;
+    position: relative;
+    top:5rem;
+}
+.scan-btn{
+    background: #ffd200;
+    width:90%;
+    padding:0.5rem;
+    margin:auto;
+    border:none;
+    position:absolute;
+    bottom:10%;
+    left:5%;
+
+}
+.scan-btn span{
+    color:#fff;
+    font-weight: bold;
+    font-size:1.8rem;
+    background:url("../images/scan-code.png") no-repeat;
+    background-position-y: 50%;
+    background-size:19% auto;
+    padding-left:2rem;
+}
+.scan-search{
+    width:86%;
+    margin:auto;
+    margin-top:1.6rem;
+    position:relative;
+}
+.scan-search .scan-search-input{
+    width:100%;
+    height:3rem;
+    background: #fff;
+    border:none;
+    outline: none;
+    padding:2rem 5%;
+    font-size: 1.3rem;
+    color:#bbc0c0;
+    font-weight:bold;
+    letter-spacing:-0.3px;
+    border-radius:0;
+}
+.scan-search-btn{
+    width:5.8rem;
+    height:3rem;
+    position:absolute;
+    right:5%;
+    top:0.5rem;
+    background: #a8a9ad;
+    border:1px solid #a8a9ad;
+    border-radius: 5px;
+    color:#fff;
+    font-size:1.4rem;
+    font-weight: bold;
+    outline:none;
+    padding:0;
+}
+.scan-search .help-block{
+    float:right;
+    padding-right:5%;
+    color:#ed3123;
+    font-size:1rem;
+}
+.bg-get{
+    width:110%;
+    height:60rem;
+    background:url("../../static/images/bg-get.png") no-repeat;
+    background-size: 100% auto;
+    margin:auto;
+    margin-top:4.7rem;
+    margin-left:-4.2%;
+    padding-top:56%;
+    text-align: center;
+    font-weight: bold;
+    overflow-x: hidden;
+
+}
+.congra_c,.congra{
+    color: #ed3123;
+    font-size: 3.3rem;
+    line-height: 3.3rem;
+}
+.congra{
+    margin-left: 0.8rem;
+}
+.rechanging{
+    font-size: 1.5rem;
+    color: #8c8c8c;
+    margin-top: 1rem;
+    letter-spacing: -0.5px;
+}
+.active-share{
+    font-size:1.9rem;
+    color:#ed3123;
+    margin-top:3.2rem;
+}
+/*分享成功页面*/
+.share-page .page-head{
+    padding-right:7%;
+    text-align: right;
+}
+.share-page .mask{
+    display: block;
+}
+.share-page .bg-get{
+    background:url("../../static/images/bg-share.png") no-repeat;
+    background-size: 100% auto;
+}
+.gift{
+    width:40%;
+    margin:auto;
+}
+.share-success .congra{
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    margin-left: 0;
+    margin-top: 1rem;
+}
+.receive{
+    font-size:2.1rem;
+    color: #515151;
+    margin-top:3rem;
+    font-weight: bold;
+}
+.share-success-btn{
+    width:68%;
+    margin:auto;
+    background: #ffd200;
+    color:#515151;
+    font-weight: bold;
+    border:none;
+    outline:none;
+    padding:7px 0;
+    font-size:2.1rem;
+    border-radius:2.1rem;
+}
+.form-group p{
+    margin-top: 0.5rem;
+    margin-bottom: -1.1rem;
+}
+.form-group{
+    margin-bottom:2.4rem;
+}
+.verify-agree label{
+    margin-bottom:-0.8rem;
+}
+

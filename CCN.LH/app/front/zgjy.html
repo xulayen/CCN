@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+    <link rel="stylesheet" href="../../static/css/slick.css"/>
+</head>
+<body onselectstart="return false" class="zgjy_page bg_page bg_subpage">
+<!--页面头部-->
+    <div class="page_head">
+        <img src="../../static/images/common/bg_head.png" alt="" class="bg_head"/>
+    </div>
+<!--页面主体内容-->
+    <div class="page_body">
+        <ul class="nav_subPage clearfix">
+            <li onclick="jumpTo('csz')"><img src="../../static/images/common/nav_1.png" alt=""/></li>
+            <li onclick="jumpTo('mcny')"><img src="../../static/images/common/nav_2.png" alt=""/></li>
+            <li onclick="jumpTo('ygyx')"><img src="../../static/images/common/nav_3.png" alt=""/></li>
+            <li onclick="jumpTo('xxljy')"><img src="../../static/images/common/nav_4.png" alt=""/></li>
+            <li onclick="jumpTo('zgjy')"><img src="../../static/images/common/nav_5_l.png" alt=""  class="nav_current"/></li>
+            <li onclick="jumpTo('xszz')"><img src="../../static/images/common/nav_6.png" alt=""/></li>
+        </ul>
+        <img src="../../static/images/common/nav_line.png" class="line_subPage" alt=""/>
+        <div class="simHei zgjy_title">
+            <span>尊敬的用户</span>，您手中的这罐蓝河绵羊奶粉经中华人民共和国出入境检验检疫（CIQ）检验合格，允许在国内进行销售。
+        </div>
+        <div class="zgjy_box_wrap">
+            <div class="zgjy_box zgjy_box1">
+                <div class="bd_l zgjy_box1_title">中国出入境检验检疫卫生证书</div>
+                <!-- 检验证书-->
+                <img src="../../static/images/zgjy/certi.png" alt="" class="zgjy_certi_img" onclick="scaleShow()"/>
+                <!---右下角图标-->
+                <img src="../../static/images/zgjy/icon.png" alt="" class="zgjy_icon_img"/>
+            </div>
+            <div class="zgjy_box zgjy_box2">
+                <div class="bd_s zgjy_box2_title">极致纯净品质</div>
+                <p class="simHei zgjy_box2_cnt">100%新西兰原厂原罐原箱进口，国际品质，一步到位。</p>
+                <img src="../../static/images/zgjy/bg_box2.png" alt="" class="zgjy_bg_box2"/>
+            </div>
+            <div class="zgjy_box zgjy_box3">
+                <div class="bd_l zgjy_box1_title">持有中国出入境检疫局证书</div>
+                <div class="zgjy_box3_cnt">
+                    到达中国后，蓝河奶粉还要经过中国海关检测，符合中国最新婴幼儿配方奶粉国家标准，持有中国出入境检疫局（CIQ）出具的合格证书，才能在中国市场上流通。
+                </div>
+            </div>
+        </div>
+
+        <ul class="page_location clearfix">
+            <li id="scrollTop" onclick="PageTop()"><img src="../../static/images/common/nav_b1.png" alt=""/></li>
+            <li onclick="jumpTo('menu')"><img src="../../static/images/common/nav_b2.png" alt=""/></li>
+            <li onclick="jumpTo('xxljy')" ><img src="../../static/images/common/nav_b3.png" alt=""/></li>
+            <li onclick="jumpTo('xszz')"><img src="../../static/images/common/nav_b4.png" alt=""/></li>
+        </ul>
+        <!--证书弹出层-->
+        <div class="scale_mask">
+            <div class="view_img slider">
+                <div class="slick_item">
+                    <img src="../../static/images/zgjy/certi.png" alt="" />
+                </div>
+            </div>
+            <div class="scale_back"><i></i>返回</div>
+        </div>
+    </div>
+<!--页面脚部背景图-->
+    <img src="../../static/images/common/bg_foot.png" alt="" class="page_foot"/>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../../static/script/common.js"></script>
+<script type="text/javascript" src="../../static/script/plugins/slick.js"></script>
+<script>
+    $('.view_img').slick();
+    function scaleShow(){
+        $('.scale_mask').addClass('scale_mask_ani');
+    }
+    $('.scale_back').click(function(){
+        $('.scale_mask').removeClass('scale_mask_ani');
+    });
+</script>
+</body>
+</html>

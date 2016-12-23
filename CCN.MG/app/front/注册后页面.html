@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>注册后页面</title>
+    <!-- 屏幕适配 rem 的大小-->
+    <script src="../../static/js/autoRem.js"></script>
+    <!-- 前端页面样式-->
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+
+</head>
+<body class="regPageEndPage">
+    <div class="active_date">
+        <p>活动时间：2016年6月1日至2016年7月30日</p>
+    </div>
+    <div class="win_record">
+        <button type="button" class="btn_record" onclick="recordShow()">我的中奖纪录</button>
+    </div>
+
+    <!----- 弹出层----->
+    <!-- 遮罩层-->
+    <div class="mask"></div>
+    <!-- 弹出面板-->
+    <div class="panel">
+        <div class="panel_head">
+            <img src="../../static/images/close.png" alt="" class="close"/>
+        </div>
+        <div class="panel_body">
+            <h4 class="panel_body_title"></h4>
+            <p class="panel_body_content">亲，您的信息已经成功注册，请关注中奖结果。美光中国会及时通知你哦！</p>
+        </div>
+        <div class="panel_foot">
+            <a class="turn_inquiry">确定</a>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../static/jquery/jquery-2.2.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script>
+        $(function(){
+            $(".close,.turn_inquiry").click(function(){
+                $('.mask,.panel').hide();
+            });
+        })
+        function recordShow(){
+            $('.panel_body_content').text('您还没有相关中奖纪录！请持续关注美光活动！');
+            $('.mask,.panel').show();
+        }
+    </script>
+
+</body>
+</html>

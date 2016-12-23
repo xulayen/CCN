@@ -1,0 +1,143 @@
+/*iphone4s*/
+@media only screen and (min-device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2){
+
+}
+/* iphone5*/
+@media only screen and (min-device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+}
+/*三星S4*/
+@media only screen and (min-width:360px) and (max-device-width:640px) and (orientation:portrait){
+
+}
+/*iphone6*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait){
+
+}
+/*iphone6 Plus */
+@media only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation : portrait){
+    .panel-heading{
+        background-position:65% 0.85rem;
+    }
+    .panel_hide_bg{
+        background-position:65% 0.85rem;
+    }
+    .panel_show_bg{
+        background-position:65% 1.1rem;
+    }
+}
+
+/*ipad */
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation : portrait){
+    .panel-heading{
+        background-size:2.5%;
+        background-position:60.5% 0.8rem;
+    }
+    .panel_hide_bg{
+        background-position:60.5% 0.8rem;
+    }
+    .panel_show_bg{
+        background-position:61% 1.1rem;
+    }
+    .fgc .panel-heading{
+        background-position:62% 0.8rem;
+    }
+    .fgc .panel_show_bg{
+        background-position:63% 1.1rem;
+    }
+}
+/*********************************************/
+/*所有屏幕横屏*/
+@media all and (orientation : landscape){
+    .panel-heading{
+        background-size:3%;
+        background-position:63% 0.85rem;
+    }
+    .panel_hide_bg{
+        background-position:63% 0.85rem;
+    }
+    .panel_show_bg{
+        background-position:63% 1.3rem;
+    }
+    .fgc .panel-heading{
+        background-position:66% 0.85rem;
+    }
+    .fgc .panel_show_bg{
+        background-position:66% 1.3rem;
+    }
+    ul.product_name li{
+        margin-left:1rem;
+    }
+    ul.product_intro li{
+        margin-left:0.94rem;
+    }
+}
+/*************************************************************************************************************/
+/*ipad横屏 */
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation :landscape){
+    .panel-heading{
+        background-size:2%;
+        background-position:58% 0.8rem;
+    }
+    .panel_hide_bg{
+        background-position:58% 0.8rem;
+    }
+    .panel_show_bg{
+        background-position:58% 1.1rem;
+    }
+    .fgc .panel-heading{
+        background-position:60% 0.8rem;
+    }
+    .fgc .panel_show_bg{
+        background-position:60% 1.1rem;
+    }
+}
+/*iphone6Plus横屏*/
+@media only screen and (min-width:414px) and (max-device-width:736px) and (orientation:landscape){
+    .panel-heading{
+        background-size:3%;
+        background-position:61% 0.8rem;
+    }
+    .panel_hide_bg{
+        background-position:61% 0.8rem;
+    }
+    .panel_show_bg{
+        background-position:61% 1.1rem;
+    }
+    .fgc .panel-heading{
+        background-position:63% 0.8rem;
+    }
+    .fgc .panel_show_bg{
+        background-position:63% 1.1rem;
+    }
+}
+/*iphone6横屏*/
+@media only screen and (min-width:375px) and (max-device-width:667px) and (orientation:landscape){
+
+}
+/*三星S4横屏*/
+@media only screen and (min-width:360px) and (max-device-width:640px) and (orientation:landscape){
+    .panel-heading{
+        background-size:3%;
+        background-position:62% 0.85rem;
+    }
+    .panel_hide_bg{
+        background-position:62% 0.85rem;
+    }
+    .panel_show_bg{
+        background-position:62.5% 1.1rem;
+    }
+    .fgc .panel-heading{
+        background-position:64.5% 0.85rem;
+    }
+    .fgc .panel_show_bg{
+        background-position:65% 1.1rem;
+    }
+}
+/*iphone5横屏*/
+@media only screen and (min-width:320px) and (max-device-width:568px) and (orientation:landscape){
+
+}
+/*iphone4横屏*/
+@media only screen and (min-width:320px) and (max-device-width: 480px) and (orientation:landscape){
+
+}

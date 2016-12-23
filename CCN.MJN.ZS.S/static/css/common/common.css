@@ -1,0 +1,25 @@
+
+.parent {
+    display: table;
+    height: 100%;
+}
+
+.child {
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+.parent-absolute {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.child-relative {
+    position: relative;
+    top: -50%;
+    right: 0;
+    text-align: center;
+}

@@ -1,0 +1,330 @@
+ul.product {
+    list-style: none;
+    float: right;
+    margin-right: 1.4rem;
+    margin-top: 1.6rem;
+    margin-bottom:-30px;
+    padding-bottom: 30px;
+    overflow-y: hidden;
+    width: 90%;
+}
+
+ul.product li {
+    float: right;
+    height: 20rem;
+    margin-left: 0.5rem;
+    padding: 0 0.2rem;
+    word-wrap: break-word;
+    text-align: center;
+    width: 1.3rem;
+    font-size: 1.1rem;
+
+}
+
+ul.product li span {
+    display: inline-block;
+    font-size: 0.8rem;
+    width: 0.8rem;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.05rem;
+}
+
+ul.product li span.product_intro{
+    direction: rtl;
+    display: inline-block;
+    width: 10rem;
+    height: 12rem;
+    column-width: 0.8rem;
+    -webkit-column-width: 0.8rem;
+    -ms-column-width: 0.8rem;
+    -moz-column-width: 0.8rem;
+    -o-column-width: 0.8rem;
+    column-gap: 0.2rem;
+    -webkit-column-gap: 0.2rem;
+    -ms-column-gap: 0.2rem;
+    -o-column-gap: 0.2rem;
+    -moz-column-gap: 0.2rem;
+    position: relative;
+    right: 9rem;
+}
+.product b{
+    display: block;
+    font-weight: normal;
+}
+
+/*主页脚部固定底部*/
+body.home_page {
+    position: relative;
+    padding-bottom: 10rem;
+}
+
+.home_page .foot {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+}
+
+.origin,
+.inspect {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(180, 180, 180, 0.3);
+    line-height: 6rem;
+    font-size: 1.56rem;
+    font-weight: 300;
+    text-align: center;
+    height: 6rem;
+    width: 36%;
+}
+
+.origin {
+    left: 0;
+    float: left;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+
+.inspect {
+    right: 0;
+    float: right;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.origin_import,
+.inspect_import {
+    background: #d22e2c url("../images/import.png") no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 10rem;
+    width: 64%;
+}
+
+.origin_import {
+    left: 0;
+    float: left;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.inspect_import {
+    right: 0;
+    float: right;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+
+.transSmall {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: all 0.01s;
+    -webkit-transition: all 0.01s;
+    -moz-transition: all 0.01s;
+    -ms-transition: all 0.01s;
+    -o-transition: all 0.01s;
+}
+
+.transLarge {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: all 0.01s;
+    -webkit-transition: all 0.01s;
+    -moz-transition: all 0.01s;
+    -ms-transition: all 0.01s;
+    -o-transition: all 0.01s;
+}
+
+.transLarge_s {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.origin_import h1,
+.inspect_import h1 {
+    font-size: 3.1rem;
+    font-weight: 200;
+    margin: 0.8rem 0 0.3rem 0;
+}
+
+.origin_import p,
+.inspect_import p {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.origin_import_btn, .inspect_import_btn {
+    background: rgba(255, 255, 255, 0.3);
+    width: 70%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    font-size: 1.8rem;
+}
+
+/*origin页面*/
+.left_arrow {
+    width: 10%;
+    margin: 1rem 0;
+}
+
+.myContainer {
+    width: 80%;
+    margin: auto;
+    padding-bottom:6rem;
+}
+
+.panel {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.panel-heading {
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    padding: 0;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.2) url("../images/hide_bg.png") no-repeat;
+    background-size: 4%;
+    background-position: 65% 0.8rem;
+}
+.panel_hide_bg {
+    background: rgba(255, 255, 255, 0.2) url("../images/hide_bg.png") no-repeat;
+    background-size: 4%;
+    background-position: 65% 0.8rem;
+}
+
+.panel_show_bg {
+    background: rgba(255, 255, 255, 0.6) url("../images/show_bg.png") no-repeat;
+    background-size: 4%;
+    background-position: 65% 1rem;
+}
+
+.fgc .panel-heading {
+    background-position: 69% 0.8rem;
+}
+
+.fgc .panel_show_bg {
+    background-position: 69% 1.05rem;
+}
+
+.panel-heading a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.6rem 0;
+    letter-spacing: 0.05rem;
+}
+
+.myContainer .panel-group .panel .panel-body {
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+.panel-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel-body ul li {
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.1rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.origin_foot {
+    display: none;
+}
+
+.down_arrow {
+    width: 12%;
+    margin: auto;
+    position: fixed;
+    bottom: 1rem;
+    left: 44%;
+}
+
+/*inspect页面*/
+.inspect_page .left_arrow {
+    margin: 0.2rem 0;
+}
+
+.inspect_page .panel-heading {
+    padding: 0.2rem 0 0.1rem 0;
+    margin-bottom: -0.2rem;
+    background-image: none;
+}
+
+.inspect_page .panel-heading p {
+    margin: 0 0 -0.4rem 0;
+}
+
+.panel-heading span {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: -0.1rem;
+}
+
+.inspect_page .panel {
+    margin-bottom: -0.1rem;
+}
+
+.panel-body {
+    padding: 15px 0 0 0;
+}
+
+.inspect_page .panel-body li {
+    font-size: 0.7rem;
+}
+
+.inspect_ins {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.inspect-foot {
+    width: 100%;
+    height: 5rem;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}

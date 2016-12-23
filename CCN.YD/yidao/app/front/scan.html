@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>扫描</title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="scan_page none">
+    <div class="scan_cnt">
+        <!-- 主题图片-->
+        <img src="../../static/images/theme.png" alt="" class="page_theme"/>
+        <!-- 扫描框和输入框-->
+        <div class="scan_form none">
+            <div class="scan_box">
+                <img src="../../static/images/scan.png" alt="" class="scan_icon"/>
+                <div class="btn_m scan_btn">开始扫描</div>
+            </div>
+            <div class="scan_input_box">
+                <input type="tel" placeholder="无法扫描请输入16位防伪码"  class="scan_input" maxlength="16" oninput="change('scan_input')" onfocus="change('scan_input')"/>
+                <div class="scan_sure" onclick="location.href='result.html?vv_url='+Math.random()+''">确定</div>
+            </div>
+        </div>
+    </div>
+    <!-- 页面背景-->
+    <div class="board scan_board">
+        <img src="../../static/images/oil.png" alt="" class="oil"/>
+    </div>
+    <script type="text/javascript" src="../../static/script/main.js"></script>
+    <script>
+        $(function(){
+            pageShow();    //页面显示
+        });
+        function pageShow(){
+            var $cnt=$('.scan_cnt');
+            $cnt.height($(window).height());
+            var pageTimer=setInterval(showPage,200);
+            function showPage(){
+                if($cnt.height()==$(window).height()){
+                    $('.scan_page').show();
+                    formAni();
+                    clearInterval(pageTimer);
+                }
+            }
+        }
+        function formAni(){
+            $('.scan_form').show().addClass('flipInX_V');
+            $('.scan_input_box').addClass('flipInX');
+        }
+        function change(target){   /* 输入框只能输入数字*/
+            var $input=$("."+target);
+            var val = $input.val().replace(/\D/,'');
+            $input.val(val);
+        }
+    </script>
+</body>
+</html>

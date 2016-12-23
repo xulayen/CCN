@@ -1,0 +1,88 @@
+@media screen and (max-width: 240px){
+    html{font-size: 50%;}/*8 ÷ 16 × 100% = 50% */
+}
+/*小米1*/
+@media screen and (min-width: 240px) and (max-width:359px) {
+    html{font-size: 56.25%;}/*9 ÷ 16 × 100% = 56.25% */
+}
+/*iphone4s iphone5*/
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    html{font-size: 62.5%;}/*10 ÷ 16 × 100% = 62.5%*/
+}
+/*小米2 vivoX3 vivoX5 oppoR3*/
+@media screen and (min-width: 360px) and (max-width:539px) {
+    html{font-size: 65.625%;}/*10.5 ÷ 16 × 100% = 65.625%*/
+}
+/*iphone6*/
+@media screen and (min-width:375px) and (max-width:413px) {
+    html{font-size: 70%;}/*11.2 ÷ 16 × 100% = 70%*/
+}
+/*iphone6 Plus*/
+@media screen and (min-width:414px) and (max-width:767px){
+    html{font-size: 80%;}/*12.8 ÷ 16 × 100% = 80%*/
+}
+/*小米3  小米4  小米5 vivoX6 vivoX5Max vivoX6plus oppoR5 oppoR7 oppoR9*/
+@media screen and (min-width: 540px) {
+    html{font-size: 90%;}/*14.4 ÷ 16 × 100% = 90%*/
+}
+/*三星S4 三星S5 三星Note3 三星A7*/
+@media screen and (min-width: 540px) and (max-width: 719px) {
+    html{font-size: 90%;}/*14.4 ÷ 16 × 100% = 90%*/
+}
+/*三星S6 三星S7 三星Note4 三星Note5*/
+@media screen and (min-width: 720px) and (max-width: 767px){
+    html{font-size: 97.5%;}/*15.6÷ 16 × 100% = 97.5%*/
+}
+/*ipad */
+@media screen and (min-width:768px){
+    html{font-size: 100%;}/*16 ÷ 16 × 100% = 100%*/
+}
+
+/*landscape*/
+/*小米1 landscape*/
+@media screen and (min-width: 427px) {
+    html{font-size: 81.25%;}/*13 ÷ 16 × 100% = 81.25%*/
+}
+/*iphone4s landscape*/
+@media screen and (min-width: 480px) {
+    html{font-size: 87.5%;}/*14 ÷ 16 × 100% = 87.5%*/
+}
+/*iphone5 landscape*/
+@media screen and (min-width: 568px) {
+    html{font-size: 92.5%;}/*14.8 ÷ 16 × 100% = 92.5%*/
+}
+/*小米2 vivoX3 vivoX5 oppoR3 landscape*/
+@media screen and (min-width: 640px) {
+    html{font-size: 93.75%;}/*15÷ 16 × 100% = 93.75%*/
+}
+/*iphone6 landscape*/
+@media screen and (min-width:667px){
+    html{font-size: 95%;}/*15.2 ÷ 16 × 100% =95%*/
+}
+/*iphone6 Plus landscape*/
+@media screen and (min-width:736px){
+    html{font-size: 98.75%;}/*15.8 ÷ 16 × 100% = 98.75%*/
+}
+
+/*小米3 小米4 小米5 vivoX6 vivoX5Max vivoX6plus oppoR5 oppoR7 oppoR9 landscape
+@media screen and (min-width: 960px){
+
+}
+/*ipad landscape
+@media screen and (min-width:1024px){
+
+}
+/*三星S4 三星S5 三星Note3 三星A7 landscape
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+
+}
+/*三星S6 三星S7 三星Note4 三星Note5 landscape
+@media screen and (min-width: 1280px) {
+
+}*/
+
+
+
+
+
+

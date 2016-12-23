@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="ShellWT" ng-controller="configCtrl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>扫描结果</title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="result_page" ng-controller="resultCtrl" onselectstart="return false">
+    <div class="img_result">
+        <img src="../../static/images/img_r1.png" alt=""/>
+    </div>
+    <div class="result_content clearfix">
+        <img src="../../static/images/result/r_7.png" alt="" class="rc_img"/>
+        <!-- 两种字体大小 纸巾，擦车巾为rc_title_s，其它全为rc_title-->
+        <!-- 恭喜您 谢谢您！-->
+        <div class="rc_title">恭喜您</div>
+        <div class="rc_name">获得机油滤清器，请注意保留！</div>
+        <!--当为谢谢您！时，ul上加.none隐藏-->
+        <ul class="rc_list">
+            <li>代码：12345678</li>
+            <li>有效期：2017年3月31日</li>
+        </ul>
+        <!-- 请关注曼牌滤清器公众号，了解更多活动及详情。-->
+        <div class="rc_help">请截图妥善保存，以便后期兑换。</div>
+    </div>
+    <script src="../../static/script/main.js"></script>
+    <script src="../controller/resultCtrl.js"></script>
+</body>
+</html>

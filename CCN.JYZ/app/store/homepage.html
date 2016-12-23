@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>homepage页面</title>
+    <!-- 屏幕适配 rem 的大小-->
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <!-- 前端页面样式-->
+    <link rel="stylesheet" href="../../static/css/swiper.min.css"/>
+    <link rel="stylesheet" href="../../static/css/animate.min.css"/>
+    <link rel="stylesheet" href="../../static/css/store.css"/>
+</head>
+<body class="homePage">
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+    <!-- 第一屏-->
+        <section class="swiper-slide page1">
+            <img src="../../static/images/head_logo.png" class="head_logo"/>
+            <div class="page1_bottom">
+                <h2>十月<span>•</span>法国<span>•</span>马赛</h2>
+
+                <h2>体验宝马赛车之旅</h2>
+            </div>
+            <div class="page_bottom">
+                <div class="arrow_down_wrap">
+                    <div class="arrow_down"></div>
+                </div>
+            </div>
+        </section>
+        <!-- 第二屏-->
+        <section class="swiper-slide page2 clearfix">
+            <div class="page2_title"><span class="left_top"></span>参与流程<span class="right_bottom"></span></div>
+            <ul class="active_flow">
+                <li class="active_flow_one ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <h3>扫码抽奖</h3>
+
+                    <p>前往壳牌指定加油站扫码参与活动</p>
+                </li>
+                <li class="active_flow_two ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.7s" swiper-animate-delay="0.2s">
+                    <h3>选拔名额</h3>
+
+                    <p>抽取幸运中奖者进入下一轮选拔</p>
+                </li>
+                <li class="active_flow_three ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.8s" swiper-animate-delay="0.4s">
+                    <h3>前赴法国</h3>
+
+                    <p>选拔决定最终去法国名单</p>
+                </li>
+            </ul>
+            <div class="active_bottom_wrap clearfix">
+                <table class="active_left ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.2s">
+                    <tr>
+                        <td>产品范围:</td>
+                        <td>HX8、HX7、4L装喜力超凡</td>
+                    </tr>
+                    <tr>
+                        <td>奖品类型:</td>
+                        <td>有机会领取法兰西之旅!</td>
+                    </tr>
+                    <tr>
+                        <td>活动门店:</td>
+                        <td><span>壳牌油站便利店</span><br/>(北京、重庆、广东、华北、陕西、山西、四川)</td>
+                    </tr>
+                </table>
+                <div class="active_right">
+                    <img src="../../static/images/oil.png" alt="" class="active_right_img"/>
+                    <a href="#" onclick="showActiveMask()" class="active_rule">活动规则</a>
+                </div>
+            </div>
+            <div class="page_bottom">
+                <div class="arrow_down_wrap">
+                    <div class="arrow_down"></div>
+                </div>
+            </div>
+        </section>
+        <!-- 第三屏-->
+        <section class="swiper-slide page3">
+            <div class="page_head">验证信息&nbsp;进行抽奖</div>
+            <div class="verify_wrap">
+                <form action="" class="verify_form">
+                    <div class="form-group">
+                        <input type="text" placeholder="姓名(必填）"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="手机号(必填)" maxlength="11"/>
+                        <label>请输入正确11位手机号码</label>
+                    </div>
+                    <div class="form-group clearfix">
+                        <input type="tel" placeholder="请填写短信验证码(必填)" maxlength="6" class="message_code"/>
+                        <button type="button" class="message_get">获取验证码</button>
+                        <label class="message_label">验证码错误，点击重新获取</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="省份(必填)"  class="sel_prov_" readonly  onclick="showProvinceMask()"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="城市(必填)"  readonly/>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="区域(必填)"  readonly/>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="加油站(必填)" class="input_scroll" readonly/>
+                    </div>
+                    <div class="form-group btn_submit_wrap">
+                        <button type="button" class="btn_submit" onclick="location.href='scan.html'">我要抽奖</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- 遮罩层黑背景-->
+<div class="mask none" onclick="hideMask()"></div>
+<!--已参与过活动提示框-->
+<div class="notice_wrap none">
+    <img src="../../static/images/face-1.png" alt="" class="img_face"/>
+    <div class="notice_info_wrap">
+        <div class="parent">
+            <div class="child">
+                <p class="notice_info_t">您已参与过本次活动</p>
+                <p class="notice_info">叫上朋友一起来抢好礼吧！</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 活动规则弹窗-->
+<div class="active_wrap none">
+    <div class="pop_panel active_panel">
+        <div class="pop_head"> 活动规则</div>
+        <div class="active_body">
+            <h3>一、活动时间</h3>
+
+            <p>即日起至2016年9月15日</p>
+
+            <h3>二、活动声明及注意事项</h3>
+            <ol>
+                <li><b>1、</b>活动主办方：壳牌（中国）有限公司。</li>
+                <li><b>2、</b>凡自愿参与本活动的，即视为同意本活动规则所述的各项规定，并同意注册手机接收来自壳牌喜力的活动提醒、优惠及其他相关讯息。</li>
+                <li><b>3、</b>活动时间以主办方网络服务器时间为准。</li>
+                <li><b>4、</b>前往壳牌油站的便利店内购买活动产品方可参与本次活动，活动门店包括北京壳牌、重庆东银壳牌、壳牌华北集团、延长壳牌、延长壳牌（广东）、延长壳牌（四川）旗下所有油站的便利店。</li>
+                <li><b>5、</b>本次活动仅限购买壳牌4升装喜力超凡、HX8和HX7产品的用户，填写正确完整的个人手机号码（限中国大陆地区移动、联通、电信运营商），验证通过后即可参与活动，每位用户仅有一次活动参与机会。</li>
+                <li><b>6、</b>壳牌4升装喜力超凡、HX8和HX7产品标签内的防伪码具有唯一性，每个防伪码在活动期间只能参与一次活动。如一个防伪码参与活动后，再次参与活动均视为无效扫码，将不产生任何有效数据。</li>
+                <li><b>7、</b>如发现有用户在活动中使用任何不正当的手段（包括但不限于软件作弊、通过系统漏洞、利用黑客工具等）参与活动，活动主办方有权取消其活动参与资格，并有权撤回其所获不当获益，具体认定以主办方判定为准。
+                </li>
+                <li>
+                    <b>8、</b>活动过程中，如出现不可抗力或情势变更的情况（包括但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或因系统故障需要暂停举办等），活动主办方可依相关法律法规的规定主张免责。
+                </li>
+                <li><b>9、</b>活动主办方可以根据本活动的实际举办情况对活动规则进行变动或调整，相关变动或调整将公布在活动页面上，并于公布时即时生效。</li>
+            </ol>
+            <div class="copyright">本次活动最终解释权归壳牌（中国）有限公司所有</div>
+        </div>
+    </div>
+    <button type="button" onclick="hideMask();" class="active_close">关闭</button>
+</div>
+<!-- 选择省份弹窗-->
+<div class="option_wrap none">
+    <span class="panel_close" onclick="hideMask();"></span>
+    <div class="pop_panel">
+        <div class="pop_head"> 选择省份</div>
+        <div class="option_body">
+            <ul class="option_list">
+                <li>河北省</li>
+                <li>河南省</li>
+                <li>湖南省</li>
+                <li>山东省</li>
+                <li>辽宁省</li>
+                <li>江苏省</li>
+                <li>浙江省</li>
+                <li>四川省</li>
+                <li>河北省</li>
+                <li>河南省</li>
+                <li>河北省</li>
+                <li>河南省</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- jQuery  -->
+<script src="../../static/jquery/jquery-2.2.0.min.js"></script>
+<script src="../../static/script/plugins/swiper.min.js"></script>
+<script src="../../static/script/plugins/swiper.animate.min.js"></script>
+
+<script src="../../static/script/store.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction : 'vertical',
+        pagination: '.swiper-pagination',
+        onInit: function(swiper){
+            swiperAnimateCache(swiper);
+            swiperAnimate(swiper);
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper);
+        }
+    });
+</script>
+</body>
+</html>

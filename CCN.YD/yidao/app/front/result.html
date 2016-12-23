@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>结果</title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="result_page">
+    <img src="../../static/images/sunny.png" alt=""  class="result_sunny"/>
+    <!-- 两种获奖结果 result_1 result_2-->
+    <div class="result_1 none">
+        <img src="../../static/images/result1.png" alt=""  class="result_img result1_img"/>
+        <p class="result_text">*请不要关闭页面，向门店工作人员出示页面结果用于本次消费抵扣，截图无效！</p>
+        <div class="btn_s result1_btn">关闭</div>
+    </div>
+    <div class="result_2 none">
+        <img src="../../static/images/result2.png" alt=""  class="result_img result2_img"/>
+        <p class="result_text">*请不要关闭页面，向门店工作人员出示页面结果用于本次消费抵扣，截图无效！请填写收货地址，我们将尽快为您配送</p>
+        <div class="btn_m result2_btn" onclick="rFormShow()">填写收货信息</div>
+    </div>
+    <!-- 获得油后的填写表单-->
+    <div class="result_form_mask none">
+        <div class="result_input_wrap">
+            <input type="text" placeholder="姓名" class="regist_user"/>
+            <input type="tel" placeholder="手机号" class="regist_tel"/>
+            <input type="text" placeholder="地址" class="regist_adr"/>
+        </div>
+        <div class="btn_m send_btn" onclick="rResultShow()">提交</div>
+    </div>
+    <!-- 提示层-->
+    <div class="mask_notice none">
+        <div class="box_notice">
+            <h3 class="rResult_title">提交成功！</h3>
+            <p class="rResult_cnt">稍后将会有客服跟您电话确认收货信息，请注意接听。如有疑问，还请拨打: 021-26095506</p>
+        </div>
+    </div>
+    <!-- 页面背景-->
+    <script type="text/javascript" src="../../static/script/main.js"></script>
+    <script>
+        window.onload=function(){
+            $('.result_2').show();
+            $('.result_img').addClass('zoomIn');
+            $('.result_text').addClass('shake');
+        }
+        function change(target){   /* 输入框只能输入数字*/
+            var $input=$("."+target);
+            var val = $input.val().replace(/\D/,'');
+            $input.val(val);
+        }
+        function rFormShow(){
+            var $cnt=$('.result_page,.result_form_mask').height($(window).height()).show().find('.result_input_wrap').addClass('zoomIn');
+        }
+        function rResultShow(){
+            $('.result_form_mask').hide();
+            $('.mask_notice').show().find('.box_notice').addClass('zoomIn');
+        }
+    </script>
+</body>
+</html>

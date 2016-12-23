@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>主页面</title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body onselectstart="return false" class="menu_page">
+    <!--预加载所有页面中用到的图片-->
+    <div class="loading">
+        <div class="pro">
+            loading <span class="loading_percent">0%</span>
+        </div>
+    </div>
+    <!-- 页面内容-->
+    <div class="menu_wrap none">
+        <!--页面头部-->
+        <div class="page_head">
+            <img src="../../static/images/common/bg_head.png" alt="" class="bg_head"/>
+        </div>
+        <!--页面主体内容-->
+        <div class="page_body">
+            <img src="../../static/images/menu/menu_title.png" alt="" class="mc_title"/>
+            <div class="mc_subhead">原厂原罐原箱进口</div>
+            <ul class="mc_nav">
+                <li class="nav_csz" onclick="jumpTo('csz')"><i></i>绵羊奶幸福出生证</li>
+                <li class="nav_mcny" onclick="jumpTo('mcny')"><i></i>新西兰极地牧场奶源</li>
+                <li class="nav_ygyx" onclick="jumpTo('ygyx')"><i></i>原厂原罐原箱</li>
+                <li class="nav_xxljy" onclick="jumpTo('xxljy')"><i></i>新西兰出境检验检疫</li>
+                <li class="nav_zgjy" onclick="jumpTo('zgjy')"><i></i>中国入关检验检疫</li>
+                <li class="nav_xszz" onclick="jumpTo('xszz')"><i></i>国内销售追踪</li>
+            </ul>
+        </div>
+        <!--页面脚部背景图-->
+        <img src="../../static/images/menu/menu_foot.png" alt="" class="page_foot"/>
+    </div>
+    <!-- 预加载插件放在所有插件前面-->
+    <script type="text/javascript" src="../../static/script/plugins/preload.js"></script>
+    <script type="text/javascript" src="../../static/script/menuPre.js"></script>
+    <!-- 预加载插件放在所有插件前面-->
+    <script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="../../static/script/common.js"></script>
+</body>
+</html>

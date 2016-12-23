@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>扫描抢红包</title>
+    <!-- Bootstrap -->
+    <link href="../../static/bootstrap-3.3.6-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../../static/css/channel/m.css" type="text/css" rel="stylesheet">
+    <link href="../../static/css/common/common.css" type="text/css" rel="stylesheet">
+    <link href="../../static/css/responsive/responsive.css" type="text/css" rel="stylesheet">
+    <link href="../../static/css/font/font.css" type="text/css" rel="stylesheet">
+</head>
+<body class="scan-body scan-body-bg">
+<div class="top text-center">
+          <span class="page_title btn-block">
+            红包已得125.21元
+        </span>
+    <img src="../../static/images/s/y.png" class="img-responsive" alt=""/>
+</div>
+<div>
+    <!-- Nav tabs nav-tabs-->
+    <ul class="nav nav-pills tab" role="tablist">
+        <li role="presentation" class="active"><a href="s.html">小红包</a></li>
+        <li role="presentation"><a href="y.html">大红包</a>
+        </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content clearfix">
+        <!--//小红包-->
+        <div role="tabpanel" class="tab-pane active smallRed" id="s">
+            <div class="text-center scan">
+                <img src="../../static/images/s/qr.png" class="img-thumbnail" alt=""/>
+
+                <div class="">
+                    <button class="btn btn-block btnScan" class="btnScan "><span class="iconfont icon-erweima"></span>
+                        开始扫描
+                    </button>
+                </div>
+            </div>
+
+            <div class="input-group input">
+                <input type="tel" maxlength="16" class="form-control notnull " regex="/[\d]{16}/"
+                       logicmsg="16位防伪码必须是纯数字！" nullmsg="请输入16位防伪码！" id="qrCode"
+                       placeholder="请填写16位数字防伪码">
+                <span class="input-group-addon btnSubmit" id="btnSubmit">确 定</span>
+            </div>
+        </div>
+        <!--//大大大红包-->
+        <div role="tabpanel" class="tab-pane " id="b">
+            大大大红包
+        </div>
+
+    </div>
+
+</div>
+<div class="cover text-center clearfix" id="cover">
+    <p>
+        <img src="../../static/images/s/g.png" class="tip" alt=""/>
+    </p>
+    <div class="result">
+        <h1 class="text-center">恭喜你</h1>
+        <h2 class="text-center">获得1.2元</h2>
+        <h3 class="text-center">请前往微信红包查收</h3>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../static/jquery/jquery-2.2.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="../../static/layer/layer.js" type="text/javascript"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style type="text/css">
+    .layui-layer-page .layui-layer-content {
+        overflow: visible;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+        $("#btnSubmit").click(function () {
+            //自定页
+            layer.open({
+                title: '',
+                type: 1,
+                area: ['80%', '50%'],
+                skin: 'layui-layer-demo', //样式类名
+                closeBtn: 0, //不显示关闭按钮
+                shift: 2,
+                shadeClose: true, //开启遮罩关闭
+                content: $("#cover")
+            });
+        });
+    });
+</script>
+</body>
+</html>

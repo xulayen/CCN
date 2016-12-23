@@ -1,0 +1,20 @@
+<form action="#" method="post">
+    <ul class="sel_name">
+        <li class="sel_no" ng-class="{sel_ing:pcc.pselecting,sel_end:pcc.pselected}" ng-bind="pcc.pname" ng-click="pcc.getP()"></li>
+        <li class="sel_no" ng-class="{sel_ing:pcc.cselecting,sel_end:pcc.cselected}" ng-bind="pcc.cname" ng-click="pcc.getC()"></li>
+        <li class="sel_no" ng-class="{sel_ing:pcc.rselecting,sel_end:pcc.rselected}" ng-bind="pcc.rname" ng-click="pcc.getR()"></li>
+    </ul>
+    <div ng-transclude></div>
+    <!-- 选择省-->
+    <ul class="sel_city_list">
+        <li class="sel_city_li" ng-repeat="p in pcc.plist track by $index" ng-click="pcc.selectPItem(p,$index)" ng-bind="p.ProName" ng-class="{red:pcc.isPred[$index]}"></li>
+    </ul>
+    <!-- 选择市-->
+    <ul class="sel_city_list">
+        <li class="sel_city_li" ng-repeat="c in pcc.clist track by $index" ng-click="pcc.selectCItem(c,$index)" ng-bind="c.CityName" ng-class="pcc.isCred[$index]"></li>
+    </ul>
+    <!-- 选择区-->
+    <ul class="sel_city_list">
+        <li class="sel_city_li" ng-repeat="r in pcc.rlist track by $index" ng-click="pcc.selectRItem(r,$index)" ng-bind="r.DisName" ng-class="pcc.isRred[$index]"></li>
+    </ul>
+</form>

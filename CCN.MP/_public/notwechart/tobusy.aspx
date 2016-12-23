@@ -1,0 +1,22 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="tobusy.aspx.cs" Inherits="DigitalMarketing._public.notwechart.tobusy" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorry</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/connect/en_US/htmledition/style/wap_err.css" />
+</head>
+<body>
+    <div class="page_msg">
+        <div class="inner">
+            <span class="msg_icon_wrp"><i class="icon80_smile"></i></span>
+            <div class="msg_content">
+                <h4>
+                    你刷新的太频繁了:(</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

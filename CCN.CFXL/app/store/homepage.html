@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>homepage页面</title>
+    <!-- 屏幕适配 rem 的大小-->
+    <script src="../../static/js/autoRem.js"></script>
+    <!-- 前端页面样式-->
+    <link rel="stylesheet" href="../../static/css/store.css"/>
+    <!-- jQuery  -->
+    <script src="../../static/jquery/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            var winH=$(window).height();
+            $(".page1").height(winH*0.9);
+            $(".page2").height(winH);
+        });
+        var nowTop=0;
+        function showActiveMask(){
+            nowTop = document.body.scrollTop;
+            $('#pageAll').css('top',-1*nowTop);
+            $('#pageAll').css('position','fixed');
+            $('.mask').css('position','fixed');
+            $(".mask,.active_wrap").show();
+        }
+        function showStoreMask(){
+            nowTop = document.body.scrollTop;
+            $('#pageAll').css('top',-1*nowTop);
+            $('#pageAll').css('position','fixed');
+            $('.mask').css('position','fixed');
+            $(".mask,.store_wrap").show();
+        }
+        function hideMask(){
+            $('#pageAll').css('top','0');
+            $('#pageAll').css('position','relative');
+            $('.mask').css('position','absolute');
+            $(".mask,.active_wrap,.store_wrap").hide();
+            $(window).scrollTop(nowTop);
+        }
+    </script>
+</head>
+<body class="homePage">
+    <div id="pageAll">
+        <!-- 第一屏-->
+        <div class="page1">
+            <img src="../../static/images/head_logo.png" class="head_logo"/>
+            <div class="play_panel">
+                <iframe id="viderFrame" frameborder="0" width="100%" height="100%"
+                        src="http://v.qq.com/iframe/player.html?vid=f01984r03rr&tiny=0&auto=0" allowfullscreen >
+                </iframe>
+            </div>
+        </div>
+        <!-- 第二屏-->
+        <div class="page2">
+            <div class="link_store"><a href="#" onclick="showStoreMask()">指定门店列表</a></div>
+            <a href="#" onclick="showActiveMask()" class="active_rule">活动规则</a>
+        </div>
+    </div>
+<a class="footer" href="verify.html">马上参加</a>
+    <!-- 遮罩层黑背景-->
+<div class="mask" onclick="hideMask()"></div>
+<!-- 活动规则弹窗-->
+<div class="active_wrap">
+    <div class="pop_panel active_panel">
+        <div class="pop_head"> 活动规则</div>
+        <div class="active_body">
+            <h3>一、活动时间</h3>
+
+            <p>即日起至2016年9月</p>
+
+            <h3>二、活动咨询</h3>
+
+            <p>咨询热线：021-26095506</p>
+
+            <p>工作时间：周一至周日9:00—21:00</p>
+
+            <h3>三、活动声明及注意事项</h3>
+            <ol>
+                <li>1、活动主办方：壳牌（中国）有限公司。</li>
+                <li>2、凡自愿参与本活动的，即视为同意本活动规则所述的各项规定，并同意注册手机接收来自壳牌喜力的活动提醒、优惠及其他相关讯息。</li>
+                <li>3、活动时间以主办方网络服务器时间为准。</li>
+                <li>4、前往壳牌喜力指定门店内购买才可参与本次活动，咨询活动服务热线或查看门店列表了解可参与门店。</li>
+                <li>5、本次活动仅限购买壳牌4升装喜力超凡、HX8产品的用户，填写正确完整的个人手机号码（限中国大陆地区移动、联通、电信运营商），验证通过后即可参与活动，每位用户仅有一次活动参与机会。</li>
+                <li>6、壳牌4升装喜力超凡、HX8产品标签内的防伪码具有唯一性，每个防伪码在活动期间只能领取一次奖品。如一个防伪码参与活动且领取过奖品后，再次参与活动均视为无效扫码，将不产生任何有效数据。</li>
+                <li>7、如发现有用户在活动中使用任何不正当的手段（包括但不限于软件作弊、通过系统漏洞、利用黑客工具等）参与活动，活动主办方有权取消其活动参与资格，并有权撤回其所获不当获益，具体认定以主办方判定为准。
+                </li>
+                <li>
+                    8、活动过程中，如出现不可抗力或情势变更的情况（包括但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或因系统故障需要暂停举办等），活动主办方可依相关法律法规的规定主张免责。
+                </li>
+                <li>9、活动主办方可以根据本活动的实际举办情况对活动规则进行变动或调整，相关变动或调整将公布在活动页面上，并于公布时即时生效。</li>
+            </ol>
+            <div class="copyright">本次活动最终解释权归壳牌（中国）有限公司所有</div>
+        </div>
+    </div>
+    <button type="button" onclick="hideMask();" class="active_close">关闭</button>
+</div>
+<!-- 门店详情弹窗-->
+<div class="store_wrap">
+    <div class="pop_panel">
+        <div class="pop_head"> 门店详情</div>
+        <div class="store_body">
+            <form action="#" method="post">
+                <ul class="sel_name">
+                    <li class="sel_no sel_end">选择省份</li>
+                    <li class="sel_no sel_ing">选择城市</li>
+                    <li class="sel_no">选择门店</li>
+                </ul>
+                <div class="sel_notice">
+                    <h3 class="sel_title">请选择</h3>
+                </div>
+                <!-- 选择省市-->
+                <ul class="sel_city_list">
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                    <!--<li>上海市</li>-->
+                    <!--<li>云南省</li>-->
+                </ul>
+                <!-- 选择门店-->
+                <ul class="sel_store_list">
+                    <!--<li>上海张传兴修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>宝安公路华发</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>大个汽配汽修厂修理厂</li>-->
+                    <!--<li>宝安公路华发</li>-->
+                </ul>
+                <!-- 选择结果 -->
+                <ul class="store_result">
+                    <li>门店编码：<span>10001</span></li>
+                    <li>门店名称：<span>上海张传兴修理厂</span></li>
+                    <li>门店地址：<span>嘉定区思义路1768号</span></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

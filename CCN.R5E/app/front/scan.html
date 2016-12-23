@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>scan</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../static/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../static/css/common.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+    <link rel="stylesheet" href="../../static/css/adaptation.css"/>
+    <script src="../../static/js/autoRem.js"></script>
+</head>
+<body class="scan-page bg">
+<div class="page-head text-center">揭开桶盖标签扫描防伪码</div>
+<div class="wrap-scan">
+    <div class="scan-img"></div>
+    <button type="button" class="scan-btn" onclick="luckyShow()"><span>开始扫描</span></button>
+</div>
+<form action="" class="scan-search">
+    <div class="form-group ">
+        <input type="tel" placeholder="无法扫描请填写16位数字防伪码" class="scan-search-input" maxlength="16"/>
+        <button type="button" class="scan-search-btn">确定</button>
+        <p class="help-block none">请正确输入防伪标签上16位数字防伪码</p>
+    </div>
+</form>
+<!-- 活动未开始页面  -->
+<div class="active-unStart">
+    <div class="mask none">
+        <div class="mask-bg-sm">
+            <div class="face"><img src="../../static/images/face-2.png" alt=""/></div>
+            <p class="notice">活动暂未开始</p>
+            <p class="cue">收藏页面，5月1日后再来尝试吧！</p>
+        </div>
+    </div>
+</div>
+
+<!-- 活动结束页面  -->
+<div class="active-end">
+    <div class="mask none">
+        <div class="mask-bg-sm">
+            <div class="face"><img src="../../static/images/face-3.png" alt=""/></div>
+            <p class="notice">本次活动已结束</p>
+            <p class="cue">返回壳牌劲霸公众号了解更多活动</p>
+        </div>
+    </div>
+</div>
+
+<!-- 产品不参加活动页面  -->
+<div class="active-noJoin">
+    <div class="mask none">
+        <div class="mask-bg-sm">
+            <div class="face"><img src="../../static/images/face-4.png" alt=""/></div>
+            <p class="notice">该产品不参加本次活动</p>
+            <p class="cue">请扫描壳牌劲霸R5E新包装</p>
+            <p class="cue">产品18L防伪码</p>
+        </div>
+    </div>
+</div>
+
+<!-- 已参与活动页面 -->
+<div class="active-actived">
+    <div class="mask none">
+        <div class="mask-bg-sm">
+            <div class="face"><img src="../../static/images/face-5.png" alt=""/></div>
+            <p class="notice">该码已参与过本活动</p>
+            <p class="cue">如您未领取过话费请咨询</p>
+            <p class="cue">活动热线：021-26095506</p>
+        </div>
+    </div>
+</div>
+
+<!-- 活动名额被抢光页面 -->
+<div class="active-haveNone">
+    <div class="mask none">
+        <div class="mask-bg-sm">
+            <div class="face"><img src="../../static/images/face-6.png" alt=""/></div>
+            <p class="notice">该码已参与过本活动</p>
+            <p class="cue">下次早点来喽～</p>
+        </div>
+    </div>
+</div>
+
+<!-- 获得100元话费页面 -->
+<div class="active-hundred">
+    <div class="mask">
+        <div class="bg-get">
+            <p class="congra_c">恭喜您</p>
+            <p class="congra">获得100元话费！</p>
+            <p class="rechanging">正在充值中，稍等片刻～</p>
+            <p class="active-share">叫上朋友一起抢话费吧</p>
+        </div>
+    </div>
+</div>
+<!-- 已领取福利页面 -->
+<div class="active-got none">
+    <div class="mask none">
+        <div class="mask-bg-sm">
+            <div class="face"><img src="../../static/images/face-7.png" alt=""/></div>
+            <p class="notice">你已领过现金福利啦</p>
+            <p class="cue">快去“服务通知”看看吧</p>
+        </div>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../static/jquery/jquery-2.2.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="../../static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script type="application/javascript" src="../../static/js/front.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</body>
+</html>

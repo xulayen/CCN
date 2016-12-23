@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="ShellWT" ng-controller="configCtrl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>homePage</title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body onselectstart="return false">
+    <!--预加载所有页面中用到的图片-->
+    <div class="loading">
+        <div class="pro">
+            loading <span>0%</span>
+        </div>
+    </div>
+    <div class="home_start none">
+        <img src="../../static/images/bg_start.png" alt="" class="img_start"/>
+    </div>
+    <!-- 页面内容 -->
+    <div class="home_contain clearfix none" ng-controller="homeCtrl">
+        <div class="home_head"></div>
+        <div class="home_space"></div>
+        <img src="../../static/images/home_gift.png" alt="" class="home_gift"/>
+        <div class="home_bottom">
+            <div class="active_btn" ng-click="home.isPopShow=true">活动规则</div>
+            <div class="active_join" onclick="location.href='login.html'">进入活动</div>
+        </div>
+        <!-- 活动规则弹窗-->
+        <div class="active_content none" ng-class="{'block':home.isPopShow}">
+            <div class="active_head">活动规则</div>
+            <div class="active_body">
+                <h3>一、活动时间</h3>
+                <p class="active_pre">请您在2017年3月31日前通过曼牌滤清器天猫旗舰店/曼牌滤清器京东旗舰店客服领取抽奖所获得的奖品（奖品需要与您购买的曼牌滤清器商品一并享受包邮服务)。</p>
+                <h3>二、活动流程</h3>
+                <ol>
+                    <li><b>1、</b>在天猫、京东曼牌滤清器官方店铺购买指定产品</li>
+                    <li><b>2、</b>刮开产品标签表面涂层，扫描防伪码，关注曼牌滤清器微信公众号</li>
+                    <li><b>3、</b>点击微信公众号中“参与抽奖”菜单栏，填写用户信息</li>
+                    <li><b>4、</b>再次扫描产品防伪码，进行抽奖。获取抽奖结果，并保存中奖信息</li>
+                    <li><b>5、</b>二次购买指定产品，将中奖码告知客服，即可兑换中奖产品</li>
+                </ol>
+                <h3>三、活动声明及注意事项</h3>
+                <ol>
+                    <li><b>1、</b>活动主办方：曼胡默尔管理（上海）有限公司</li>
+                    <li><b>2、</b>凡自愿参与本活动的，即视为同意本活动规则所述的各项规定，并同意注册手机接收来自曼胡默尔管理（上海）有限公司的活动提醒、优惠及其他相关讯息。</li>
+                    <li><b>3、</b>活动时间以主办方网络服务器时间为准。</li>
+                    <li><b>4、</b>本活动仅限在曼牌滤清器天猫、京东官方店铺购买贴标滤清器产品的用户，填写正确完整的个人手机号码（限中国大陆地区移动、联通、电信运营商），验证通过后即可参与活动。</li>
+                    <li><b>5、</b>曼牌滤清器活动标签内的防伪码具有唯一性，每个防伪码在活动期间只能领取一次奖品。如一个防伪码参与活动且领取过奖品后，再次参与活动均视为无效扫码，将不产生任何有效数据。</li>
+                    <li><b>6、</b>如发现有用户在活动中使用任何不正当的手段（包括但不限于软件作弊、通过系统漏洞、利用黑客工具等）参与活动，活动主办方有权取消其活动参与资格，并有权撤回其所获不当获益，具体认定以主办方判定为准。</li>
+                    <li><b>7、</b>活动过程中，如出现不可抗力或情势变更的情况（包括但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或因系统故障需要暂停举办等），活动主办方可依相关法律法规的规定主张免责。</li>
+                    <li><b>8、</b>活动主办方可以根据本活动的实际举办情况对活动规则进行变动或调整，相关变动或调整将公布在活动页面上，并于公布时即时生效。</li>
+                </ol>
+                <div class="copyright">本次活动最终解释权归曼胡默尔管理（上海）有限公司所有</div>
+            </div>
+            <div class="active_close"  ng-click="home.isPopShow=false">返回</div>
+        </div>
+    </div>
+    <script src="../../../_public/jquery/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <!-- 预加载插件-->
+    <script src="../../static/script/plugins/preload.js"></script>
+    <!-- 预加载页面图片-->
+    <script src="../../static/script/homePre.js"></script>
+    <script src="../../static/script/main.js"></script>
+    <script src="../controller/homeCtrl.js"></script>
+
+</body>
+</html>

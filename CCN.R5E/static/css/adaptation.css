@@ -1,0 +1,310 @@
+/*iphone4s*/
+@media only screen and (min-device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2){
+    .myContainer-verify {
+        padding-top: 1rem;
+    }
+    .form-group p{
+        margin-bottom: -0.6rem;
+    }
+    .form-group{
+        margin-bottom:1.1rem;
+    }
+    .oil-list li{
+        padding:1.8rem 0 0.8rem 0;
+    }
+    .wrap-scan,.mask-bg-sm{
+        height:22rem;
+    }
+    .bg-get{
+        margin-top:4.8rem;
+    }
+    .rechanging {
+        margin-bottom: 1.8rem;
+    }
+    .share-success .congra{
+        line-height: 1.4rem;
+    }
+}
+/* iphone5*/
+@media only screen and (min-device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+    .myContainer-verify {
+        padding-top: 1.8rem;
+    }
+    .form-group p{
+        margin-bottom: -1rem;
+    }
+    .form-group{
+        margin-bottom:2rem;
+    }
+    .verify-page input,.message-right{
+        height:3.8rem;
+    }
+    .wrap-scan{
+        margin-top: 4.4rem;
+    }
+    .mask-bg-sm{
+        margin-top: 9.8rem;
+    }
+    .scan-page .bg-get{
+        margin-top:5.4rem;
+    }
+    .share-page .bg-get{
+        margin-top:6.3rem;
+    }
+    .rechanging {
+        margin-bottom: 1.8rem;
+    }
+    .share-success .congra{
+        line-height: 1.2rem;
+    }
+}
+/*三星S4*/
+@media only screen and (min-width:360px) and (max-device-width:640px) and (orientation:portrait){
+    .verify-page input,.message-right{
+        height:3.9rem;
+    }
+    .wrap-scan,.mask-bg-sm{
+        height:27rem;
+    }
+    .share-page .bg-get{
+        margin-top: 4.8rem;
+    }
+}
+/*iphone6*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait){
+    .myContainer-verify {
+        padding-top: 1.9rem;
+    }
+    .form-group p{
+        margin-bottom: -1.1rem;
+    }
+    .form-group{
+        margin-bottom:2.1rem;
+    }
+    .verify-page input,.message-right{
+        height:4rem;
+    }
+    .scan-page .page-head{
+        font-size:2.5rem;
+    }
+    .wrap-scan,.mask-bg-sm{
+        height:27rem;
+    }
+    .congra {
+        margin-bottom: 0.5rem;
+    }
+    .receive{
+        margin-top: 2.9rem;
+    }
+    .scan-page .bg-get{
+        margin-top: 4.9rem;
+    }
+    .share-page .bg-get{
+        margin-top: 4.4rem;
+    }
+}
+/*其它大屏*/
+@media only screen and (min-width:380px) and (max-device-width:540px) and (orientation:portrait){
+    .myContainer-verify {
+        padding-top:1.8rem;
+    }
+    .form-group p{
+        margin-bottom: -1rem;
+    }
+    .form-group{
+        margin-bottom:2rem;
+    }
+}
+/*iphone6 Plus */
+@media only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation : portrait){
+    .myContainer-verify {
+        padding-top: 2rem;
+    }
+    .form-group p{
+        margin-bottom: -1.1rem;
+    }
+    .form-group{
+        margin-bottom:2.2rem;
+    }
+    .verify-page input,.message-right{
+        height:4.2rem;
+    }
+    .oil-mask{
+        margin-bottom:-50rem;
+    }
+    .scan-page .page-head{
+        font-size:2.5rem;
+    }
+    .wrap-scan,.mask-bg-sm{
+        height:28rem;
+    }
+    .scan-img{
+        top:7rem;
+    }
+    .receive{
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .scan-page .bg-get,.share-page .bg-get{
+        margin-top: 4.9rem;
+    }
+}
+/*其它大屏*/
+@media only screen and (min-width:540px) and (max-device-width:960px) and (orientation:portrait){
+    .myContainer-verify {
+        padding-top:1.6rem;
+    }
+    .form-group p{
+        margin-bottom: -0.9rem;
+    }
+    .form-group{
+        margin-bottom:1.8rem;
+    }
+}
+/*ipad */
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation : portrait){
+    .myContainer-verify {
+        padding-top:2.8rem;
+    }
+    .form-group p{
+        margin-bottom: -1.5rem;
+    }
+    .form-group:not(:nth-child(2)){
+        margin-bottom:2.6rem;
+    }
+    .form-group:nth-child(2){
+        margin-bottom:3rem;
+    }
+    .verify-page input,.message-right{
+        height:5rem;
+    }
+    .oil-mask{
+        margin-bottom:-80rem;
+    }
+    .scan-page .page-head{
+        font-size:3.5rem;
+        height: 8.4rem;
+        line-height: 8.4rem;
+    }
+    .wrap-scan{
+        height: 37rem;
+        margin-top: 6rem;
+    }
+    .mask{
+        height:80rem;
+    }
+    .mask-bg-sm{
+        height:45rem;
+        margin-top:14rem;
+    }
+    .scan-img{
+        top:10rem;
+    }
+    .scan-btn{
+        padding:1rem;
+    }
+    .scan-search-btn{
+        width:8rem;
+        height:5rem;
+        font-size:1.8rem;
+    }
+    .bg-get{
+        height:80rem;
+        margin-top:8.5rem;
+    }
+    .share-page .bg-get {
+        height: 80rem;
+        margin-top: 5.5rem;
+    }
+    .congra_c{
+        color: #ed3123;
+        font-size: 5.5rem;
+        line-height: 8.5rem;
+        margin-top: 0;
+    }
+    .congra {
+        padding-left:2rem;
+        font-size: 5.2rem;
+        line-height: 5.3rem;
+        margin-bottom: 0.6rem;
+    }
+    .share-success .congra{
+        font-size:2.8rem;
+    }
+    .rechanging {
+        margin-bottom: 3.4rem;
+        font-size:1.7rem;
+    }
+    .active-share{
+        font-size: 2.6rem;
+    }
+    .receive{
+        margin-top: 4.6rem;
+    }
+    .scan-search .scan-search-input{
+        height:6rem;
+        font-size: 1.8rem;
+    }
+    .verify-page .mask-bg-sm {
+        height: 33rem;
+    }
+}
+/*********************************************/
+/*所有屏幕横屏*/
+@media all and (orientation : landscape){
+    .mask{
+        height:64rem;
+    }
+    .rechanging{
+        font-size:1.8rem;
+    }
+    .active-share {
+        font-size: 2.2rem;
+    }
+}
+/*************************************************************************************************************/
+/*iphone6Plus横屏*/
+@media only screen and (min-width:414px) and (max-device-width:736px) and (orientation:landscape){
+    .bg-get{
+        margin-top:3.8rem;
+    }
+    .scan-page .page-head {
+        font-size: 3.3rem;
+    }
+}
+/*iphone6横屏*/
+@media only screen and (min-width:375px) and (max-device-width:667px) and (orientation:landscape){
+    .bg-get{
+        margin-top:3.4rem;
+    }
+    .scan-page .page-head {
+        font-size: 3.05rem;
+    }
+}
+/*三星S4横屏*/
+@media only screen and (min-width:360px) and (max-device-width:640px) and (orientation:landscape){
+    .bg-get{
+        margin-top:3.4rem;
+    }
+    .scan-page .page-head {
+        font-size: 2.9rem;
+    }
+}
+/*iphone5横屏*/
+@media only screen and (min-width:320px) and (max-device-width:568px) and (orientation:landscape){
+    .bg-get{
+        margin-top:4.1rem;
+    }
+    .scan-page .page-head {
+        font-size: 2.6rem;
+    }
+}
+/*iphone4横屏*/
+@media only screen and (min-width:320px) and (max-device-width: 480px) and (orientation:landscape){
+    .bg-get{
+        margin-top:4.4rem;
+    }
+    .scan-page .page-head {
+        font-size: 2.5rem;
+    }
+}

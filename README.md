@@ -126,6 +126,103 @@
     </ul>
   </div>
 
-
+<div>
+    <h3>R5E</h3>
+    <ul>
+      <li>
+         https://xulayen.github.io/CCN/CCN.R5E/app/front/verify.html
+      </li>
+    </ul>
   </div>
+
+  <div>
+      <h3>美赞臣追溯1</h3>
+      <ul>
+        <li>
+           https://xulayen.github.io/CCN/CCN.MJN.ZS.S/app/front/Trace/zs.html
+        </li>
+      </ul>
+    </div>
+
+  <div>
+      <h3>美赞臣追溯2</h3>
+      <ul>
+        <li>
+           https://xulayen.github.io/CCN/CCN.MJN.ZS.C/app/front/zs.html
+        </li>
+      </ul>
+    </div>
+
+    <div>
+        <h3>永鑫牛肉</h3>
+        <ul>
+          <li>
+             https://xulayen.github.io/CCN/CCN.YX/app/front/homePage.html
+          </li>
+        </ul>
+      </div>
+
+    <div>
+        <h3>美光</h3>
+        <ul>
+          <li>
+             https://xulayen.github.io/CCN/CCN.YX/app/front/防伪查询.html
+          </li>
+        </ul>
+      </div>
+
+    <div>
+        <h3>超凡喜力线上</h3>
+        <ul>
+          <li>
+             https://xulayen.github.io/CCN/CCN.CFXL/app/front/homepage_on.html
+          </li>
+        </ul>
+      </div>
+
+    <div>
+        <h3>超凡喜力线下</h3>
+        <ul>
+          <li>
+             https://xulayen.github.io/CCN/CCN.CFXL/app/store/homepage.html
+          </li>
+        </ul>
+      </div>
+
+     <div>
+         <h3>加油站</h3>
+         <ul>
+           <li>
+              https://xulayen.github.io/CCN/CCN.JYZ/app/store/homepage.html
+           </li>
+         </ul>
+       </div>
+
+      <div>
+          <h3>曼牌</h3>
+          <ul>
+            <li>
+               https://xulayen.github.io/CCN/CCN.MP/MP/app/front/homePage.html
+            </li>
+          </ul>
+        </div>
+
+    <div>
+      <h3>蓝河</h3>
+      <ul>
+        <li>
+           https://xulayen.github.io/CCN/CCN.LH/app/front/ygyx.html
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>易到</h3>
+      <ul>
+        <li>
+           https://xulayen.github.io/CCN/CCN.YD/yidao/app/front/login.html
+        </li>
+      </ul>
+    </div>
+
 </div>

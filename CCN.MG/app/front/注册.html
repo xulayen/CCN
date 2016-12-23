@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>注册</title>
+
+    <!-- 屏幕适配 rem 的大小-->
+    <script src="../../static/js/autoRem.js"></script>
+    <!-- 前端页面样式-->
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+
+</head>
+<body class="registerPage">
+<form action="" class="register_form">
+    <div class="form_group">
+        <input type="text" class="register_input uname"/>
+        <span class="input_help">姓名：</span>
+    </div>
+    <div class="form_group">
+        <input type="text" class="register_input utel" maxlength="11"/>
+        <span class="input_help">手机号码：</span>
+    </div>
+    <div class="btn_register_wrap">
+        <button type="button" class="btn_register_submit">确认</button>
+        <button type="reset" class="btn_register_reset">重置</button>
+    </div>
+</form>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../static/jquery/jquery-2.2.0.min.js"></script>
+<script>
+    $(function(){
+        $(".btn_register_submit").click(function () {
+            location.href="注册后页面.html";
+        });
+    })
+</script>
+</body>
+</html>

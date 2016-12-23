@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>礼品领取页面</title>
+    <!-- 屏幕适配 rem 的大小-->
+    <script src="../../static/js/autoRem2.js"></script>
+    <!-- 前端页面样式-->
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="giftPage">
+    <div class="gift_container">
+        <h1 class="gift_lucky">恭喜您</h1>
+        <h2 class="gift_get">获得50京东券资格！</h2>
+        <p class="gift_sel">选择壳牌指定门店换油领取礼品</p>
+        <form action="#" method="post">
+            <ul class="sel_name">
+                <!--sel_no  sel_ing  sel_end-->
+                <li class="sel_pro_ sel_no" onclick="showOptionMask()">选择省份</li>
+                <li class="sel_city_ sel_no" >选择城市</li>
+                <li class="sel_store_ sel_no" >选择门店</li>
+            </ul>
+            <ul class="gift_result">
+                <li>门店编码：<span>10001</span></li>
+                <li>门店名称：<span>上海张传兴修理厂</span></li>
+                <li>门店地址：<span>嘉定区思义路1768号</span></li>
+            </ul>
+            <button type="button" class="btn_submit" onclick="showBookMask()">提交确认</button>
+        </form>
+    </div>
+    <!-- 遮罩层黑背景-->
+    <div class="mask" onclick="hideMask()"></div>
+    <!-- 选择省份弹窗-->
+    <div class="option_wrap">
+        <span class="panel_close" onclick="hideMask();"></span>
+        <div class="pop_panel">
+            <div class="pop_head"> 选择省份</div>
+            <div class="option_body">
+                <ul class="option_list">
+                    <li>河北省</li>
+                    <li>河南省</li>
+                    <li>湖南省</li>
+                    <li>山东省</li>
+                    <li>辽宁省</li>
+                    <li>江苏省</li>
+                    <li>浙江省</li>
+                    <li>四川省</li>
+                    <li>河北省</li>
+                    <li>河南省</li>
+                    <li>河北省</li>
+                    <li>河南省</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 预约结果弹窗-->
+    <div class="book_wrap">
+        <div class="book_head">预约结果</div>
+        <div class="book_body">
+            <h2 class="book_suc">预约成功！</h2>
+            <h2 class="book_guild">去壳牌喜力指定门店换油即可领取礼品！</h2>
+            <p class="book_more">更有机会获得法兰西激擎之旅！</p>
+        </div>
+    </div>
+    <!-- -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../static/jquery/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="application/javascript" src="../../static/js/front.js"></script>
+
+</body>
+</html>

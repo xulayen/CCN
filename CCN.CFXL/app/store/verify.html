@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>验证信息</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../static/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+    <!-- 屏幕适配 rem 的大小-->
+    <script src="../../static/js/autoRem.js"></script>
+    <!-- 前端页面样式-->
+    <link rel="stylesheet" href="../../static/css/store.css"/>
+</head>
+<body class="verifyPage">
+    <div class="page_head">验证信息</div>
+    <div class="verify_wrap">
+        <form action="" class="verify_form">
+            <div class="form-group">
+                <input type="text" placeholder="姓名（选填）"/>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="之前所用油品（选填）" class="oil_used" readonly/>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="手机号(必填)" maxlength="11" class="necessary"/>
+                <label>请输入正确11位手机号码</label>
+            </div>
+            <div class="form-group clearfix">
+                <input type="tel" placeholder="请填写短信验证码(必填)" maxlength="6" class="message_code necessary"/>
+                <button type="button" class="message_get">获取验证码</button>
+                <label class="message_label">验证码错误，点击重新获取</label>
+            </div>
+            <div class="form-group btn_submit_wrap">
+                <button type="button" class="btn_submit" onclick="location.href='scan.html'">提交验证</button>
+            </div>
+        </form>
+    </div>
+    <div class="oil_wrap">
+        <div class="page_head">之前所用油品</div>
+        <ul class="oil_list">
+            <li>超凡喜力UItra</li>
+            <li>壳牌喜力HX8(灰壳)</li>
+            <li>壳牌喜力HX7(蓝壳)</li>
+            <li>美孚</li>
+            <li>嘉实多</li>
+            <li>道达尔</li>
+            <li>
+                <input type="text" placeholder="其它" class="oil_input"/>
+            </li>
+        </ul>
+    </div>
+    <div class="mask" onclick="hideMask()">
+        <div class="notice_wrap">
+            <img src="../../static/images/face-1.png" alt="" class="img_face"/>
+            <h2>您已参与过本次活动</h2>
+            <p>叫上朋友一起来抢好礼吧！</p>
+        </div>
+    </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../static/jquery/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="application/javascript" src="../../static/js/store.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</body>
+</html>

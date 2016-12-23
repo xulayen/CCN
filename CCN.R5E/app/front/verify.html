@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <!--电话号码，在微信浏览器上正常显示-->
+        <meta name="format-detection" content="telephone=no">
+        <title>verify</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../static/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../../static/css/common.css"/>
+        <link rel="stylesheet" href="../../static/css/front.css"/>
+        <link rel="stylesheet" href="../../static/css/adaptation.css"/>
+        <script src="../../static/js/autoRem.js"></script>
+    </head>
+    <body class="verify-page clearfix">
+        <div class="page-head">验证信息</div>
+        <div class="myContainer-verify">
+            <form action="">
+                <div class="form-group">
+                    <input type="text" placeholder="姓名(必填)" class="user-name"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="之前所用油品(选填)" class="oil-used" readonly/>
+                    <div class="oil-mask">
+                        <div class="page-head">之前所用油品</div>
+                        <div class="myContainer-oil">
+                            <ul class="oil-list">
+                                <li>壳牌劲霸R2</li>
+                                <li>壳牌劲霸R3</li>
+                                <li>壳牌劲霸R4</li>
+                                <li>美孚</li>
+                                <li>道达尔</li>
+                                <li>
+                                    <input type="text" placeholder="其它" class="input-text"/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="门店编号(必填)(请询问门店人员)" class="store-number" maxlength="5"/>
+                    <p class="help-block none">请输入正确门店编号，具体请询问门店人员</p>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="手机号(必填)" class="phone-number" maxlength="11"/>
+                    <p class="help-block none">请输入正确11位手机号码</p>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="请填写短信验证码(必填)" class="message-left" maxlength="6"/>
+                    <button type="button" class="message-right">获取验证码</button>
+                    <p class="help-block none">验证码错误，点击重新获取</p>
+                </div>
+                <div class="form-group verify-agree">
+                    <label>
+                        <input type="checkbox" id="checkbox_a1" class="chk" checked/>
+                        <label for="checkbox_a1" class="check-left"></label>
+                        <span class="check-right">我同意加入壳牌劲霸R5E VIP俱乐部，并已阅读<a href="">《会员服务条款》</a></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <button class="full-verify" type="button" onclick="location.href='scan.html'">提交验证</button>
+                </div>
+            </form>
+            <div class="mask">
+                <div class="mask-bg-sm">
+                    <div class="face"><img src="../../static/images/face-1.png" alt="" class="face-verify"/></div>
+                    <p class="notice">您已参与过本次活动</p>
+                    <p class="cue">叫上朋友一起来抢话费吧！</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="../../static/jquery/jquery-2.2.0.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type="text/javascript" src="../../static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="../../static/js/front.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </body>
+</html>

@@ -1,0 +1,100 @@
+body{
+    background:url('../../../static/images/trace/page1/2.png') repeat-y;
+    background-size:100% auto;
+    background-image:-moz-linear-gradient(left, #1cacf2,#1aabef 10%,#1db2f0 20%,#20b9f2 30%,#22c0f3 40%,#22c2f4 50%,#22c0f3 60%,#20bef3 70%,#1fb6f1 80%,#1aabef 90%,#1cacf2);
+    background-image:-o-linear-gradient(left, #1cacf2,#1aabef 10%,#1db2f0 20%,#20b9f2 30%,#22c0f3 40%,#22c2f4 50%,#22c0f3 60%,#20bef3 70%,#1fb6f1 80%,#1aabef 90%,#1cacf2);
+    background-image:-webkit-linear-gradient(left, #1cacf2,#1aabef 10%,#1db2f0 20%,#20b9f2 30%,#22c0f3 40%,#22c2f4 50%,#22c0f3 60%,#20bef3 70%,#1fb6f1 80%,#1aabef 90%,#1cacf2);
+}
+img{
+    margin-top:2rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+.p1 img:nth-child(1),.p3 img:nth-child(1){
+    width:100%;
+    margin-top: 0;
+}
+.p1 img:nth-child(2) {
+    width:58%;
+}
+.p1 img:nth-child(3){
+    width:57%;
+}
+.p1 img:nth-child(4){
+    width:70%;
+}
+.p1 img:nth-child(5){
+    width: 82%;
+    margin-top:4rem;
+}
+.p1 img:nth-child(6){
+    width:100%;
+}
+.p2{
+    background: #fff;
+    padding-top:4rem;
+}
+.p2-time{
+    background:url('../../images/trace/page2/9.png') no-repeat;
+    background-size:100% auto;
+    height:50px;
+    line-height:50px;
+    width:88%;
+    margin-left:6%;
+    font-size:1.2rem;
+}
+.p2 img:nth-child(2){
+    width:56%;
+}
+.p2 img:nth-child(3){
+    width:100%;
+    margin-top:-0.2rem;
+}
+.p2 img:nth-child(4){
+    width:80%;
+    padding-bottom:3rem;
+}
+.p3 .p3-time{
+    margin-top:3rem;
+    background:url('../../images/trace/page3/14.png') no-repeat;
+    background-size:100% auto;
+    height:50px;
+    line-height:50px;
+    width:88%;
+    margin-left:6%;
+    font-size:1.2rem;
+}
+.p3 img:nth-child(3){
+    width:80%;
+}
+.p3 img:nth-child(4){
+    width:58%;
+}
+.p3 img:nth-child(5){
+    width:80%;
+}
+.p4{
+    padding-top:2rem;
+    background: #fff;
+    padding-bottom:14rem;
+}
+.p4 img:nth-child(2){
+    width:66%;
+}
+.p4 img:nth-child(3){
+    width:80%;
+}
+.p4 img:nth-child(4){
+    width:70%;
+}
+.btn-fixed{
+    width:100%;
+    height:140px;
+    background:url('../../images/trace/page4/5.png') no-repeat;
+    background-size:100% auto;
+    position: fixed;
+    left:0;
+    bottom:0;
+    border:none;
+    outline:none;
+}

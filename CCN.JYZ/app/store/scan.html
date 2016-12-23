@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>扫描页面</title>
+    <!-- 屏幕适配 rem 的大小-->
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <!-- 前端页面样式-->
+    <link rel="stylesheet" href="../../static/css/store.css"/>
+</head>
+<body class="scanPage">
+<div class="page_head">揭开桶盖标签扫描防伪码</div>
+<div class="scan_wrap">
+    <img src="../../static/images/scan.png" alt="" class="img_scan"/>
+    <button type="button" class="btn_scan">开始扫描</button>
+</div>
+<div class="scan_bottom_wrap">
+    <div class="scan_bottom">
+        <input type="text" placeholder="无法扫描请填写16位数字防伪码" class="scan_bottom_input" maxlength="16"/>
+        <button type="button" class="scan_bottom_btn" onclick="showResultMask()">确定</button>
+    </div>
+</div>
+<div class="mask none" onclick="hideMask()">
+    <!-- 笑脸弹出层样式  -->
+    <div class="notice_wrap none">
+        <img src="../../static/images/face-4.png" alt="" class="img_face"/>
+        <div class="notice_info_wrap">
+            <div class="parent">
+                <div class="child">
+                    <p class="notice_info_t">该产品不参加本次活动</p>
+                    <p class="notice_info">请扫描壳牌4升装超凡喜力/HX8产品防伪码</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 笑脸弹出层样式结束  -->
+    <!-- 结果弹出层样式  -->
+    <div class=" result_wrap none">
+        <div class="QRcode_wrap">
+            <img src="../../static/images/QRcode.jpg" alt="二维码"/>
+        </div>
+        <div class="result_info_wrap">
+            <!----四种不同样式，有值时传值，没值时不传即可，不用控制样式的显示或隐藏---->
+
+            <!-- .result_title  恭喜您-->
+            <p class="result_title">您与大奖擦肩而过</p>
+            <!-- .result_r 感谢您的参与，请持续关注 ， 获得50元亚马逊电子优惠券！，获得参加壳牌南法选拔赛！ -->
+            <!-- result_fail未中奖时为true，中奖时为false -->
+            <p class="result_r result_fail">感谢您的参与，请持续关注</p>
+            <!-- .result_attention  【壳牌中国加油站】  -->
+            <p class="result_attention">【壳牌中国加油站】</p>
+            <!--.result_info  壳牌工作人员将于9月下旬与您进行电话面试，请保持手机畅通 ，券号密码会以短信密码形式发送，请注意查收 -->
+            <p class="result_info"></p>
+        </div>
+    </div>
+    <!-- 结果弹出层样式结束  -->
+</div>
+
+<!--------jQuery------->
+<script src="../../static/jquery/jquery-2.2.0.min.js"></script>
+<!---- 页面脚本----->
+<script type="application/javascript" src="../../static/script/store.js"></script>
+</body>
+</html>

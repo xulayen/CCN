@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>防伪查询</title>
+
+    <!-- 屏幕适配 rem 的大小-->
+    <script src="../../static/js/autoRem.js"></script>
+    <!-- 前端页面样式-->
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+
+</head>
+<body class="inquiryPage">
+<form action="" class="inquiry_form">
+    <div class="form_group">
+        <input type="text" class="inquiry_input"/>
+        <span class="input_help">防伪码：</span>
+    </div>
+    <div class="btn_wrap">
+        <button type="button" class="btn_inquiry">查询</button>
+    </div>
+</form>
+<!--<div class="mask_alert"></div>-->
+<!--<div class="panel_alert">-->
+    <!--<div class="panel_alert_head"></div>-->
+    <!--<div class="panel_alert_body">为了您更好的浏览体验，请竖屏显示！</div>-->
+<!--</div>-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../static/jquery/jquery-2.2.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script>
+    $(function(){
+        $(".btn_inquiry").click(function () {
+            location.href="防伪查询_2.html";
+        });
+    })
+</script>
+
+</body>
+</html>

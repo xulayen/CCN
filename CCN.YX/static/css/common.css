@@ -1,0 +1,33 @@
+html {
+    height: 100%;
+}
+body{
+    font-family: "san_francisco_displayregular", sans-serif;
+    color:#fff;
+    min-height:100%;
+}
+.bg:before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:#21201c url("../images/bg_1.png") no-repeat center 0;
+    background-size:cover;
+}
+.bg_2:before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:#21201c url("../images/bg_2.png") no-repeat center 0;
+    background-size:cover;
+}
+.head_logo{
+    width:100%;
+}

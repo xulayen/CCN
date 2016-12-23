@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="ShellWT" ng-controller="configCtrl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>注册</title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="login_page" ng-controller="loginCtrl" onselectstart="return false">
+    <!--背景为模糊的，均在原有标签旁加了_blur的标签，用来做模糊背景-->
+    <div class="login_contain" ng-class="{'form_change':login.formChange,'car_change':login.carChange,'cont_trans':login.transCar,'select_trans':login.transSelect}">
+        <div class="login_title" ng-class="{'none_fade':login.selectShow}">验证信息</div>
+        <img src="../../static/images/logo.png" alt="" class="login_logo" ng-class="{'none_fade':login.selectShow}"/>
+        <!-- 表单模糊背景-->
+        <div class="form_cont_blur" ng-class="{'none':login.formBlur}"></div>
+        <!-- 表单-->
+        <form class="login_form">
+            <div class="form_cont">
+                <div class="form_cont_w" ng-class="{'none':login.selectShow}">
+                    <input type="text" class="input_tel" placeholder="手机号"/>
+                    <div class="border_gl"></div>
+                    <div class="login_select" ng-click="login.sShow()">
+                        <img src="../../static/images/f_car.png" alt="" class="f_car"/><span ng-bind="login.carName">爱车品牌</span><b class="login_more"></b>
+                    </div>
+                    <div class="border_gl"></div>
+                    <input type="text" class="input_code" placeholder="输入验证码"/>
+                    <div class="get_message">获取验证码</div>
+                    <!-- 错误提示-->
+                    <div class="error_message none">手机号码格式不正确！</div>
+                </div>
+                <!-- 移动的小车-->
+                <img src="../../static/images/f_car.png" alt="" class="img_car none" ng-class="{'block':login.selectShow}"/>
+            </div>
+            <a type="button" class="btn_login" onclick="location.href='scan.html'" ng-class="{'none':login.selectShow}">确认</a>
+        </form>
+        <!-- 选择框模糊-->
+        <div class="select_list_blur none"  ng-class="{'block':login.blurShow}"></div>
+        <ul class="select_list none"  ng-class="{'block':login.selectShow}">
+            <li ng-repeat="c in login.carList track by $index" ng-bind="c" ng-click="login.sHide(c)"></li>
+            <li><input type="text" placeholder="其他"  id="selec_other" ng-model="login.otherCar" ng-blur="login.sHide(login.otherCar)"/></li>
+        </ul>
+    </div>
+    <!-- loading-->
+    <div class="mask none"><img src="../../static/images/loading.gif" alt="" class="img_loading"/></div>
+
+    <script src="../../static/script/main.js"></script>
+    <script src="../../static/script/login.js"></script>
+    <script src="../controller/loginCtrl.js"></script>
+</body>
+</html>

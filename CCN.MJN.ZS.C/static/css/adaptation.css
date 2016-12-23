@@ -1,0 +1,51 @@
+/*iphone4s*/
+@media only screen and (min-device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2){
+
+}
+/* iphone5*/
+@media only screen and (min-device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+
+}
+/*三星S4*/
+@media only screen and (min-width:360px) and (max-device-width:640px) and (orientation:portrait){
+
+}
+/*iphone6*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait){
+
+}
+/*iphone6 Plus */
+@media only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation : portrait){
+
+}
+/*ipad */
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation : portrait){
+
+}
+/*************************************************************************************************************/
+/*所有屏幕横屏*/
+@media all and (orientation : landscape){
+
+}
+/*************************************************************************************************************/
+/*iphone6Plus横屏*/
+@media only screen and (min-width:414px) and (max-device-width:736px) and (orientation:landscape){
+
+}
+/*iphone6横屏*/
+@media only screen and (min-width:375px) and (max-device-width:667px) and (orientation:landscape){
+
+}
+/*三星S4横屏*/
+@media only screen and (min-width:360px) and (max-device-width:640px) and (orientation:landscape){
+
+
+}
+/*iphone5横屏*/
+@media only screen and (min-width:320px) and (max-device-width:568px) and (orientation:landscape){
+
+}
+/*iphone4横屏*/
+@media only screen and (min-width:320px) and (max-device-width: 480px) and (orientation:landscape){
+
+}

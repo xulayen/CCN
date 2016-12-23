@@ -1,0 +1,230 @@
+.img-thumbnail{
+    background: none;
+    border: none;
+}
+body.bg {
+    background: #fff url("../../images/t/b.png") no-repeat;
+    background-size: 100% auto;
+}
+
+body.verify-body-bg {
+    background: #fff url("../../images/f/b.png") no-repeat;
+    background-size: 100% auto;
+}
+
+body.scan-body-bg {
+    background: #fff url("../../images/f/b.png") no-repeat;
+    background-size: 100% auto;
+}
+body.draw-body-bg{
+    background: #fff url("../../images/y/b.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.activerule-body .rule div:first-child, .activerule-body .rule div:first-child + div {
+    padding-top: 1.4rem;
+}
+
+.activerule-body .rule div:first-child img {
+    width: 60%;
+}
+
+.activerule-body .poster {
+    margin-top: 70%;
+    margin-bottom: 30%;
+}
+
+.activerule-body .foot {
+    font-weight: bolder;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin-top: 45%;
+    padding: 0.2rem 0;
+
+}
+
+/*验证页面*/
+
+.verify-body .page_title {
+    right: 0.5rem;
+    top: 1rem;
+}
+
+.scan-body-bg .page_title,.draw-body-bg .page_title{
+    top: 1.2rem;
+}
+
+.verify-body .page_title, .scan-body-bg .page_title,.draw-body-bg .page_title{
+    color: #fff;
+    position: absolute;
+    font-size: 2.4rem;
+}
+
+.verify-body .form input[type='text']::-webkit-input-placeholder, .verify-body .form input[type='tel']::-webkit-input-placeholder {
+    color: #ffc239;
+    text-align: center;
+}
+
+.verify-body .form input[type='text']::-moz-placeholder, .verify-body .form input[type='tel']::-moz-placeholder {
+    color: #ffc239;
+    text-align: center;
+}
+
+/* firefox 19+ */
+.verify-body .form input[type='text']:-ms-input-placeholder, .verify-body .form input[type='tel']:-ms-input-placeholder {
+    color: #ffc239;
+    text-align: center;
+}
+
+/* ie */
+.verify-body .form input[type='text']:-moz-placeholder, .verify-body .form input[type='tel']:-moz-placeholder {
+    color: #ffc239;
+    text-align: center;
+}
+
+.verify-body .form .form-group {
+    margin-top: 2.5rem;
+}
+
+.verify-body .form .form-group:first-child {
+    margin-top: 0;
+}
+
+.verify-body .form .btnVerify {
+    background: #fff;
+}
+
+.verify-body .form input[type='text'], .verify-body .form input[type='tel'], .verify-body .form .btnVerify {
+    filter: alpha(opacity=75); /*支持 IE 浏览器*/
+    -moz-opacity: 0.75; /*支持 FireFox 浏览器*/
+    opacity: 0.75; /*支持 Chrome, Opera, Safari 等浏览器*/
+    border: 1px solid #ffc239;
+    color: #ffc239;
+    text-align: center;
+}
+
+/*扫描抢红包*/
+.scan-body .nav-pills {
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+
+.nav-pills > li > a {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    -moz-box-shadow: 2px 2px 10px #c2c2c2; /*firefox*/
+    -webkit-box-shadow: 2px 2px 10px #c2c2c2; /*safari或chrome*/
+    box-shadow: 2px 2px 10px #c2c2c2; /*opera或ie9*/
+}
+
+.nav-pills > li:first-child {
+    float: left;
+}
+
+.nav-pills > li:first-child + li {
+    float: right;
+}
+
+.nav-pills > li > a, .nav-pills > li > a:focus, .nav-pills > li > a:hover {
+    background: #ffffff;
+    color: #999999;
+    font-weight: bold;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background: #fec339;
+    color: #fff;
+}
+
+.scan-body .smallRed {
+    margin: 2.8rem;
+
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.scan-body .smallRed div.scan {
+    background: #fff;
+    -moz-box-shadow: 2px 2px 10px #dcdcdc; /*firefox*/
+    -webkit-box-shadow: 2px 2px 10px #dcdcdc; /*safari或chrome*/
+    box-shadow: 2px 2px 10px #dcdcdc; /*opera或ie9*/
+}
+
+.scan-body .smallRed div.scan, .scan-body .smallRed div.scan div {
+    padding: 20px;
+}
+
+.scan-body .smallRed img {
+    width: 50%;
+    border: none;
+}
+
+.scan-body .smallRed div.input {
+    margin-top: 4rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.scan-body .smallRed .btnScan {
+    background: #fff;
+    color: #ffc239;
+    border: 1px solid #ffc239;
+    font-weight: bold;
+}
+
+.scan-body .smallRed .btnScan:focus {
+    border: 1px solid #ffc239;
+}
+
+.scan-body .smallRed .input .btnSubmit {
+    background: #ffc640;
+    color: #fff;
+    border: none;
+}
+
+.scan-body .smallRed .input [type=tel]::-webkit-input-placeholder {
+    color: #bcc0c1;
+}
+
+.cover {
+    display: none;
+    position: relative;
+    z-index: 10;
+
+}
+
+.cover p {
+    position: absolute;
+    z-index: 100;
+    top: -50px;
+}
+
+.cover p img {
+    width: 50%;
+    border: none;
+}
+
+.cover .result {
+    margin-top: 80px;
+}
+
+.cover .result h1, .cover .result h2 {
+    color: #ffc239;
+    font-weight: 600;
+}
+
+.cover .result h1, .cover .result h2, .cover .result h3 {
+    padding: 0 20px;
+    margin: 0;
+    line-height:46px;
+
+}
+.cover .result h3 {
+    color: #969696;
+}
+

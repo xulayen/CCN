@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--电话号码，在微信浏览器上正常显示-->
+    <meta name="format-detection" content="telephone=no">
+    <title>转盘抽奖</title>
+    <!-- 屏幕适配 rem 的大小-->
+    <script src="../../static/js/autoRem.js"></script>
+    <!-- 前端页面样式-->
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+
+</head>
+<body class="turnPage">
+    <div class="active_date">
+        <p>活动时间：2016年6月1日至2016年7月30日</p>
+    </div>
+    <div class="turn_wrap">
+        <div class="turn_panel"><img src="../../static/images/turn.png" alt=""/></div>
+        <div class="turn_guide"><img src="../../static/images/guide.png" alt=""/></div>
+    </div>
+    <div class="win_record">
+        <button type="button" class="btn_record">我的中奖纪录</button>
+    </div>
+
+    <!----- 弹出层----->
+    <!-- 遮罩层-->
+    <div class="mask"></div>
+    <!-- 弹出面板-->
+    <div class="panel">
+        <div class="panel_head">
+            <img src="../../static/images/close.png" alt="" class="close"/>
+        </div>
+        <div class="panel_body">
+            <h4 class="panel_body_title">没中奖～</h4>
+            <p class="panel_body_content">感谢您购买美光中国的正宗产品，您本次未中奖，请正确登记个人信息以便后期参与二次中奖机会！</p>
+
+            <!-- 注释内容为抽中奖品时的显示文字，h4标签用来调节位置，不可去掉-->
+            <!--<h4 class="panel_body_title"></h4>-->
+            <!--<p class="panel_body_content">亲，恭喜您本次抽中XX奖品，请点击“注册”正确登记个人信息，以便派送礼品及二次参与中大奖机会！</p>-->
+        </div>
+        <div class="panel_foot">
+            <a href="注册.html" class="turn_register">注册</a>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../static/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../../static/js/roatate.js"></script>
+    <script>
+        $(function () {
+            var chance = 1;
+            var rotateFn = function (awards) {
+                var angles = (parseInt(awards) * 51) - 25;
+                $('.turn_panel').stopRotate();
+                $('.turn_panel').rotate({
+                    angle: 0,
+                    animateTo: 2880 - angles, //大盘旋转8圈之后取得角度
+                    duration: 10000, //持续时间10s
+                    callback: function () {
+                        $(".mask,.panel").show();
+                    }
+                })
+            };
+
+            //            var _lock = false; //解锁
+            $('.turn_guide').click(function () {
+                chance--;
+                if (chance < 0) {
+                    return;
+                } else {
+                    rotateFn(4); /***************获得的奖品，从指针向右方向依次为数字1,2,3,4,5,6,7*****************/
+
+                    //                if (!_lock) {
+                    //                    _lock = true; //加锁
+                    //
+                    //                    $.ajax({
+                    //                        type: "GET",
+                    //                        url: "../../../Ajax/Lottery.ashx",
+                    //                        data: { time: new Date() },
+                    //                        dataType: "json",
+                    //                        success: function (data) {
+                    //                            _lock = false; //解锁
+                    //                            console.log(data);
+                    //                            if (data.user == "0") {
+                    //                                alert("请先登录！");
+                    //                                location.href = '../../login/';
+                    //                                return;
+                    //                            }
+                    //                            switch (data.lotterytype) {
+                    //                                case "2":
+                    //                                    // 135 话费
+                    //                                    rotateFn(1, 22, data.result);
+                    //                                    break;
+                    //                                case "0":
+                    //                                    //293 未中奖
+                    //                                    rotateFn(2, 67, data.result);
+                    //                                    break;
+                    //                                case "1":
+                    //                                    //317 实物礼品
+                    //                                    rotateFn(4, 205, '' + data.result + '', ' ../../member/mypointslotterys/');
+                    //
+                    //                                    break;
+                    //                                case "3":
+                    //                                    //226 分值
+                    //                                    rotateFn(7, 113, data.result);
+                    //                                    break;
+                    //                                case "-1":
+                    //                                default:
+                    //                                    alert(data.result);
+                    //                                    break;
+                    //                            }
+                    //                        },
+                    //                        error: function (e) {
+                    //                            _lock = false; //解锁
+                    //                            alert("网络异常!请刷新页面！");
+                    //                        }
+                    //                    });
+                    //                }
+                }
+            });
+            $(".btn_record").click(function () {
+                if (chance == 1) {
+                    return;
+                } else {
+                    $(".mask,.panel").show();
+                }
+            });
+            $(".close").click(function () {
+                $(".mask,.panel").hide();
+            });
+        });
+    </script>
+
+</body>
+</html>

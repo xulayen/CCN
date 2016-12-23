@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>登录</title>
+    <script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="login_page">
+    <div class="login_wrap none"  id="wrapper">
+        <div class="login_cnt" id="scroller">
+           <div class="login_top">
+               <!-- 主题图片-->
+               <img src="../../static/images/theme.png" alt="" class="page_theme"/>
+               <p class="active_cnt">新年将至，指定门店买金装壳牌超凡喜力润滑油，扫码即获188元礼券，还享抽取金装壳牌超凡喜力润滑油机会！</p>
+               <!-- 活动规则-->
+               <div class="btn_s active_rule" onclick="ruleShow()">活动规则</div>
+           </div>
+            <div class="login_form_wrap">
+                <div class="board">
+                    <img src="../../static/images/oil.png" alt="" class="oil"/>
+                </div>
+                <form action="" class="login_form">
+                    <div class="login_input_wrap">
+                        <input type="tel" placeholder="手机号" maxlength="11"  class="lInput_tel" oninput="change('lInput_tel')" onfocus="change('lInput_tel')"/>
+                        <input type="tel" placeholder="输入验证码" maxlength="4" class="lInput_msg" oninput="change('lInput_msg')" onfocus="change('lInput_msg')"/>
+                    </div>
+                    <div class="login_get"  onclick="noticeShow()">获取验证码</div>
+                    <button type="button" class="login_active" onclick="location.href='scan.html?vv_url='+Math.random()+''">扫码抢优惠</button>
+                </form>
+            </div>
+        </div>
+        <!-- 箭头-->
+        <div class="arrow_box" id="arrow">
+            <img src="../../static/images/arrow_big.png" alt="" class="arrow_big"/>
+            <img src="../../static/images/arrow_middle.png" alt="" class="arrow_middle"/>
+            <img src="../../static/images/arrow_small.png" alt="" class="arrow_small"/>
+        </div>
+    </div>
+    <!-- 活动规则弹窗-->
+    <div class="mask_active none">
+        <div class="active_content">
+            <img src="../../static/images/box_rule.png" alt="" class="box_rule"/>
+            <div class="active_head">活动规则</div>
+            <div class="active_body" id="wrapper2">
+                <div id="scroller2">
+                    <h3>一、活动时间</h3>
+                    <p>即日起至2017年1月27日</p>
+                    <h3>二、活动咨询</h3>
+                    <p>活动热线：021-26095506</p>
+                    <p>工作时间：周一至周五9:00-21:00</p>
+                    <p class="sunny_time">周六、周日9:00-18:00</p>
+                    <h3>三、活动声明及注意事项</h3>
+                    <ol>
+                        <li><b>1、</b>活动主办方：壳牌（中国）有限公司。</li>
+                        <li><b>2、</b>凡自愿参与本活动的，即视为同意本活动规则所述的各项规定，并同意注册手机接收来自壳牌喜力的活动提醒、优惠及其它相关讯息。</li>
+                        <li><b>3、</b>活动时间以主办方网络服务器时间为准。</li>
+                        <li><b>4、</b>前往壳牌喜力指定门店内购买才可参与本次活动，咨询活动服务热线了解可参与门店。</li>
+                        <li><b>5、</b>本次活动仅限购买壳牌金装极净超凡喜力4L产品的用户，填写正确完整的个人手机号码（限中国大陆地区移动、联通、电信运营商），验证通过后即可参与活动。</li>
+                        <li><b>6、</b>每位用户在活动期间仅有一次活动参与机会（微信open ID、手机号码或者其它身份识别账号相同，均被视为同一用户）。</li>
+                        <li><b>7、</b>本次活动所有产品包装标签内的防伪码具有唯一性，每个防伪码在活动期间只能领取一份礼券奖励，如一个防伪码参与活动且领取过礼券奖励，再次参与活动均视为无效扫码，将不产生任何有效数据。</li>
+                        <li><b>8、</b>参与活动获得的188元礼券用于门店购油抵扣，使用时请与门店工作人员联系；参与活动获得的1桶金装壳牌极净超凡喜力润滑油，将由客服联系您后快递寄出，若两个工作日后仍未收到客服联系电话，请咨询活动热线。</li>
+                        <li><b>9、</b>如发现有用户在活动中使用任何不正当的手段（包括但不限于软件作弊、通过系统漏洞、利用黑客工具等）参与活动，活动主办方有权取消其活动参与资格，并有权撤回其所获不当获益，具体认定以主办方判定为准。</li>
+                        <li><b class="lg_nine">10、</b>活动过程中，如出现不可抗力或情势变更的情况（包括但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或因系统故障需要暂停举办等），活动主办方可依相关法律法规的规定主张免责。</li>
+                        <li><b class="lg_nine">11、</b>活动主办方可以根据本活动的实际举办情况对活动规则进行变动或调整，相关变动或调整将公布在活动页面上，并于公布时即时生效。</li>
+                    </ol>
+                    <div class="copyright">本次活动最终解释权归壳牌（中国）有限公司所有</div>
+                </div>
+            </div>
+            <div class="btn_s active_close" onclick="ruleHide()">返回</div>
+        </div>
+    </div>
+    <!-- 提示层-->
+    <div class="mask_notice none" onclick="noticeHide()">
+        <div class="box_notice">
+            <!-- 您已参与过本次活动-->
+            <h3>该产品不参加本活动</h3>
+            <!-- 叫上朋友一起来参与吧！ 请扫描壳牌金装极净超凡喜力4L产品防伪码-->
+            <!-- 有两行文字，需要加上notice_cnt_double，否则一行时只保留notice_cnt这一个样式 -->
+            <p class="notice_cnt notice_cnt_double">请购买壳牌金装极净超凡喜力4L产品，重新扫描防伪码</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../static/script/plugins/iscroll_probe.js"></script>
+    <script type="text/javascript" src="../../static/script/main.js"></script>
+    <script type="text/javascript" src="../../static/script/login.js"></script>
+</body>
+</html>
