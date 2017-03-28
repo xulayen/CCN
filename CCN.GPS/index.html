@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style type="text/css">
+        body, html, #container {
+            height: 100%;
+            margin: 0px;
+            font: 12px Arial;
+        }
+
+        .taiwan {
+            border: solid 1px red;
+            color: red;
+            float: left;
+            width: 50px;
+            background-color: rgba(255, 0, 0, 0.1)
+        }
+    </style>
+    <title>Marker example</title>
+</head>
+<body>
+<div id="container" tabindex="0"></div>
+<script src="http://webapi.amap.com/js/marker.js"></script>
+<script src="http://webapi.amap.com/maps?v=1.3&key=f0dc15adda3aa5058cba7b76a84a759b"></script>
+<script type="text/javascript">
+
+    var map = new AMap.Map('container', {resizeEnable: true, zoom: 16});
+    var markers = []; //province见Demo引用的JS文件
+
+    //    var provinces = [{"name": "三久物流", "center": "121.50915,31.09914", "type": 2, "subDistricts": []}, {
+    //        "name": " 长东商贸",
+    //        "center": "121.50915,31.09914",
+    //        "type": 2,
+    //        "subDistricts": []
+    //    }, {"name": "大攀物流修理厂", "center": "121.50915,31.09914", "type": 2, "subDistricts": []}];
+
+    var provinces = [{"name": "三久物流", "center": "121.50915,31.09914", "type": 2, "subDistricts": []}, {
+        "name": "长东商贸",
+        "center": "110.50915,31.19914",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "大攀物流修理厂", "center": "121.50915,31.09914", "type": 2, "subDistricts": []}, {
+        "name": "山西省",
+        "center": "112.549248,37.857014",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "内蒙古自治区", "center": "111.670801,40.818311", "type": 2, "subDistricts": []}, {
+        "name": "辽宁省",
+        "center": "123.429096,41.796767",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "吉林省", "center": "125.3245,43.886841", "type": 2, "subDistricts": []}, {
+        "name": "黑龙江省",
+        "center": "126.642464,45.756967",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "上海市", "center": "121.472644,31.231706", "type": 2, "subDistricts": []}, {
+        "name": "江苏省",
+        "center": "118.767413,32.041544",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "浙江省", "center": "120.153576,30.287459", "type": 2, "subDistricts": []}, {
+        "name": "安徽省",
+        "center": "117.283042,31.86119",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "福建省", "center": "119.306239,26.075302", "type": 2, "subDistricts": []}, {
+        "name": "江西省",
+        "center": "115.892151,28.676493",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "山东省", "center": "117.000923,36.675807", "type": 2, "subDistricts": []}, {
+        "name": "河南省",
+        "center": "113.665412,34.757975",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "湖北省", "center": "114.298572,30.584355", "type": 2, "subDistricts": []}, {
+        "name": "湖南省",
+        "center": "112.982279,28.19409",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "广东省", "center": "113.280637,23.125178", "type": 2, "subDistricts": []}, {
+        "name": "广西壮族自治区",
+        "center": "108.320004,22.82402",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "海南省", "center": "110.33119,20.031971", "type": 2, "subDistricts": []}, {
+        "name": "重庆市",
+        "center": "106.504962,29.533155",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "四川省", "center": "104.065735,30.659462", "type": 2, "subDistricts": []}, {
+        "name": "贵州省",
+        "center": "106.713478,26.578343",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "云南省", "center": "102.712251,25.040609", "type": 2, "subDistricts": []}, {
+        "name": "西藏自治区",
+        "center": "91.132212,29.660361",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "陕西省", "center": "108.948024,34.263161", "type": 2, "subDistricts": []}, {
+        "name": "甘肃省",
+        "center": "103.823557,36.058039",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "青海省", "center": "101.778916,36.623178", "type": 2, "subDistricts": []}, {
+        "name": "宁夏回族自治区",
+        "center": "106.278179,38.46637",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "新疆维吾尔自治区", "center": "87.617733,43.792818", "type": 2, "subDistricts": []}, {
+        "name": "台湾省",
+        "center": "121.509062,25.044332",
+        "type": 2,
+        "subDistricts": []
+    }, {"name": "香港特別行政區", "center": "114.173355,22.320048", "type": 2, "subDistricts": []}, {
+        "name": "澳門特別行政區",
+        "center": "113.54909,22.198951",
+        "type": 2,
+        "subDistricts": []
+    }];
+
+
+    for (var i = 0; i < provinces.length; i += 1) {
+
+        var marker;
+        if (provinces[i].type === 0) {
+            var icon = new AMap.Icon({
+                image: 'http://vdata.amap.com/icons/b18/1/2.png',
+                size: new AMap.Size(24, 24)
+            });
+            marker = new AMap.Marker({
+                icon: icon,
+                position: provinces[i].center.split(','),
+                offset: new AMap.Pixel(-12, -12),
+                zIndex: 101,
+                title: provinces[i].name,
+                map: map
+            });
+        } else {
+            marker = new AMap.Marker({
+                position: provinces[i].center.split(','),
+                title: provinces[i].name,
+                map: map
+            });
+            if (provinces[i].type === 2) {
+                var content = "<div class = 'taiwan'>" + provinces[i].name + "</div>";
+                baodao = new AMap.Marker({
+                    content: content,
+                    position: provinces[i].center.split(','),
+                    title: provinces[i].name,
+                    offset: new AMap.Pixel(0, 0),
+                    map: map
+                });
+            }
+        }
+        markers.push(marker);
+    }
+    map.setFitView();
+</script>
+<script type="text/javascript" src="http://webapi.amap.com/demos/js/liteToolbar.js"></script>
+</body>
+</html>
