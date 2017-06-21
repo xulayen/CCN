@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" href="../../static/css/common.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="common_bg menuPage">
+    <!--底边黑阴影-->
+    <div class="bottom_mask"></div>
+    <div class="menu_head">
+        <div class="head_left">
+            <p class="head_km">12560<span>KM</span></p>
+            <p class="head_texts">当前里程</p>
+        </div>
+        <div class="head_center">
+            <div class="menu_rule" onclick="ruleShow()">
+                活动规则
+            </div>
+            <div class="person_wrap clearfix">
+                <div class="person_circle">
+                    <img src="../../static/images/menu/person.png" alt="" class="head_person"/>
+                </div>
+            </div>
+        </div>
+        <div class="head_right">
+            <p class="head_type">新手上路</p>
+            <p class="head_texts">当前等级</p>
+        </div>
+    </div>
+    <!-- 菜单选项栏-->
+    <div class="menu_wrap" id="wrapper">
+        <ul class="menu_list">
+            <li class="menu_scan" onclick="location.href='scan.html?vvUrl='+new Date().getTime()+''">
+                <img src="../../static/images/menu/menu1.png" alt="" class="head_person"/>
+                <div class="menu_content">
+                    <p><img src="../../static/images/menu/icon1.png" alt=""/>好礼相伴</p>
+                    <h2>扫码赢话费</h2>
+                    <p class="s2 s3">100%中奖,<br/>最高可得500元</p>
+                    <img src="../../static/images/common/oil.png" alt="" class="menu_oil"/>
+                </div>
+
+            </li>
+            <li class="menu_invite" onclick="location.href='invite.html?vvUrl='+new Date().getTime()+''">
+                <img src="../../static/images/menu/menu2.png" alt="" class="head_person"/>
+                <div class="menu_content">
+                    <p><img src="../../static/images/invite/icon2.png" alt=""/>邀请有奖</p>
+                    <h2>邀请好友</h2>
+                    <p class="s2 s4">叫上朋友一起，成<br/>功即得30元话费</p>
+                </div>
+            </li>
+            <li  class="menu_mile" onclick="location.href='mile.html?vvUrl='+new Date().getTime()+''">
+                <img src="../../static/images/menu/menu3.png" alt="" class="head_person"/>
+                <div class="menu_content">
+                    <p><img src="../../static/images/menu/icon3.png" alt=""/>里程激励</p>
+                    <h2 class="s1">我的通行证</h2>
+                    <p class="s2">看里程攻略，快速升级</p>
+                </div>
+            </li>
+            <li  class="menu_grxx" onclick="location.href='grxx.html?vvUrl='+new Date().getTime()+''">
+                <img src="../../static/images/menu/menu4.png" alt="" class="head_person"/>
+                <div class="menu_content">
+                    <p><img src="../../static/images/menu/icon4.png" alt=""/>个人中心</p>
+                    <h2>完善信息</h2>
+                    <p class="s2 s4">补充个人信息，<br/>轻松赚里程</p>
+                </div>
+            </li>
+            <li  class="menu_select"  onclick="location.href='select.html?vvUrl='+new Date().getTime()+''">
+                <img src="../../static/images/menu/menu5.png" alt="" class="head_person"/>
+                <div class="menu_content">
+                    <p><img src="../../static/images/menu/icon5.png" alt=""/>查询门店</p>
+                    <h2 class="s1">附近门店</h2>
+                    <p class="s2">查询门店点这里</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="mask none"></div>
+    <!-- 老用户弹出层-->
+    <div class="common_box common_box_big vip_box none">
+        <div class="common_box_body clearfix">
+            <img src="../../static/images/menu/logo.png" alt="" class="vip_logo"/>
+            <p class="vip_2016">2016，感谢您的参与！</p>
+            <img src="../../static/images/menu/2017.png" alt="" class="vip_2017"/>
+            <p class="vip_more">更多惊喜等您体验！</p>
+        </div>
+        <div class="common_box_foot" onclick="UserHide()">开启新里程</div>
+    </div>
+    <!-- 新注册弹出层-->
+    <div class="common_box newUser_box bounceIn none">
+        <img src="../../static/images/common/oil.png" alt="" class="common_box_oil"/>
+        <div class="common_box_body clearfix">
+            <img src="../../static/images/pop_icon/icon2.png" alt="" class="common_box_icon"/>
+            <h3>注册成功</h3>
+            <p class="common_box_tx">壳牌劲霸活动全新升级，<br/>等您来体验！</p>
+        </div>
+        <div class="common_box_foot" onclick="UserHide()">开启新里程</div>
+    </div>
+    <!-- 活动规则弹窗-->
+    <div class="active_content none">
+        <div class="active_head">活动规则</div>
+        <div class="active_body">
+            <h3>一、活动时间</h3>
+            <p class="active_pre">2017年3月15日至2017年5月31日</p>
+            <h3>二、活动咨询</h3>
+            <p>咨询热线：021-26095506</p>
+            <p class="work_time">工作时间：周一至周五9：00-21：00</p>
+            <p class="sunny_time">周六、周日9：00-18：00</p>
+            <h3>三、活动声明及注意事项</h3>
+            <ol>
+                <li><b>1、</b>活动主办方：壳牌（中国）有限公司。</li>
+                <li><b>2、</b>凡自愿参与本活动的，即视为同意本活动规则所述的各项规定，并同意注册手机接收来自壳牌劲霸的活动提醒、优惠及其他相关讯息。</li>
+                <li><b>3、</b>活动时间以主办方网络服务器时间为准。</li>
+                <li><b>4、</b>前往壳牌劲霸指定门店内购买才可参与本次活动，咨询活动服务热线或在预约流程查看门店列表了解可参与门店。</li>
+                <li><b>5、</b><p style="text-indent: 0;white-space:nowrap;">本次活动仅限购买壳牌劲霸R5E/R5NG/R5X/</p>R6M/R6LM新包装18L产品（限生产日期为2016年6月1日之后的产品）的用户，填写正确完整的个人手机号码（限中国大陆地区移动、联通、电信运营商），验证通过后即可参与活动抽取20、50、100、500元不等话费。每个自然月内每类产品仅可获得一次扫码赢话费机会。</li>
+                <li><b>6、</b>壳牌劲霸R5E/R5NG/R5X/R6M/R6LM新包装18L产品标签内的防伪码具有唯一性，每个防伪码在活动期间只能领取一次话费。如一个防伪码参与活动且领取过话费后，再次参与活动均视为无效扫码，将不产生任何有效数据。同时，参加过2016年壳牌劲霸R5E“燃油省省省，补贴抢抢抢”活动的产品防伪码不可参与本次活动。</li>
+                <li><b>7、</b>本次活动成功参与扫码赢话费后获得邀请好友资格，当月内任一好友成功购买产品参加活动，邀请人即可获得30元话费及里程数。此外，每自然月还有一次免费邀请好友资格，用户利用该资格发送邀请及邀请成功都可获得得里程数奖励。注：活动期间扫码赢话费获得的邀请资格可累计使用，每月免费邀请资格则隔月清零。</li>
+                <li class="jiangli"><b>8、</b>本次活动成功参加扫码赢话费、邀请好友、完善信息，均可获得劲霸里程数奖励。里程奖励规则如下：
+                    <p>扫描R5E/R5NG/R5X产品赢话费：60KM</p>
+                    <p>扫描R6M/R6LM产品赢话费：120KM</p>
+                    <p>填写手机号邀请好友：200KM</p>
+                    <p>任一被邀请好友完成购买：400KM</p>
+                    <p>完善个人信息：100KM</p>
+                    活动结束时率先完成里程数目标或里程数排名第一的用户奖励2017年意大利单人游。（注：如出现多人里程数相同，则奖励系统时间上最先达成该里程数的用户）
+                </li>
+                <li><b>9、</b>如发现有用户在活动中使用任何不正当的手段（包括但不限于软件作弊、通过系统漏洞、利用黑客工具等）参与活动，活动主办方有权取消其活动参与资格，并有权撤回其所获不当获益，具体认定以主办方判定为准。</li>
+                <li><b class="lg_nine">10、</b>活动过程中，如出现不可抗力或情势变更的情况（包括但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或因系统故障需要暂停举办等），活动主办方可依相关法律法规的规定主张免责。</li>
+                <li><b class="lg_nine">11、</b>活动主办方可以根据本活动的实际举办情况对活动规则进行变动或调整，相关变动或调整将公布在活动页面上，并于公布时即时生效。</li>
+
+            </ol>
+            <div class="copyright">本次活动最终解释权归壳牌（中国）有限公司所有</div>
+        </div>
+        <div class="active_close" onclick="ruleHide()">返回</div>
+    </div>
+    <script src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+    <script src="../../static/script/plugins/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="../../static/script/plugins/iscroll.js" ></script>
+    <script>
+//	    var myScroll;
+//	        vv_scroll();  //后台获取数据后，执行这个函数(加滚动条);
+//	        function vv_scroll(){
+//	            myScroll = new IScroll('#wrapper',{
+//	                scrollbars: true,
+//	                disableMouse:true,
+//	                disablePointer:true,
+//	                bounceEasing:'back',
+//	                click:true,
+//	                fadeScrollbars: false
+//	            });
+//	        }
+//	        
+        function UserHide(){
+            $('.common_box,.mask').hide();
+        }
+        function ruleShow(){
+            $('.active_content,.mask').show();
+        }
+        function ruleHide(){
+            $('.active_content,.mask').hide();
+        }
+    </script>
+</body>
+</html>

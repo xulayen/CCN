@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>个人信息</title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js" ></script>
+	<link rel="stylesheet" href="../../static/css/common.css" />
+	<link rel="stylesheet" href="../../static/css/animate.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+	<link rel="stylesheet" href="../../static/css/slick/slick.css" />
+</head>
+<body class="r_bg grxxPage clearfix">
+<div class="rcode_bg">
+	<button type="button" class="btn_message grxx_current" onclick="location.href='grxx.html'">个人信息</button>
+	<button type="button" class="btn_scode" onclick="location.href='zjjl.html'">中奖纪录</button>
+</div>
+<div class="message_tx">
+	<div class="message_cnt clearfix">
+		<div class="person_circle">
+			<img src="../../static/images/menu/person.png" alt="" class="head_person"/>
+		</div>
+	</div>
+	<p class="person_name">WALL_E</p>
+</div>
+<div class="message_body">
+	<table cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="t_first">
+				<p class="mfirst">姓名</p>
+				<input type="text" placeholder="请输入姓名" class="msencond" maxlength="11"/>
+			</td>
+			<td>
+				<p class="mfirst">手机号</p>
+				<p class="msencond">13788955977</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="t_first" onclick="selectList('name')">
+				<p class="mfirst">用车品牌</p>
+				<p class="msencond car_name">请选择</p>
+				<span class="sj tri_name"></span>
+				<input type="text" autofocus class="input_other input_name none" placeholder="请输入" maxlength="8"/>
+			</td>
+			<td onclick="selectList('age')">
+				<p class="mfirst">车龄</p>
+				<p class="msencond car_age">请选择</p>
+				<span class="sj tri_age"></span>
+			</td>
+		</tr>
+		<tr>
+			<td onclick="selectList('oil')">
+				<p class="mfirst">之前所用油品</p>
+				<p class="msencond car_oil">请选择</p>
+				<span class="sj tri_oil"></span>
+				<input type="text" autofocus class="input_other input_oil none" placeholder="请输入" maxlength="8"/>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<div class="select_time">
+		<p class="slide_title swing none">请选择</p>
+		<div class="select_cnt"></div>
+	</div>
+	<div class="message_foot">
+		<button type="button" onclick="success_show()">修改</button>
+	</div>
+</div>
+<!--遮罩层-->
+<div class="mask fadeIn none"></div>
+<button type="button" class="invite_close none" id="btn1" onclick="closeMask()"><img src="../../static/images/common/close.png" alt="close"/></button>
+<!--是否修改弹窗-->
+	<div class="common_box isChange_box bounceIn none">
+		<img src="../../static/images/common/oil.png" alt="" class="common_box_oil"/>
+		<div class="common_box_body clearfix">
+			<img src="../../static/images/pop_icon/icon1.png" alt="" class="common_box_icon"/>
+			<h3>完善信息</h3>
+			<p class="common_box_tx">完善100%得里程</p>
+		</div>
+		<div class="common_box_foot box_change_foot">
+			<p onclick="isChangeHide()">立刻完善</p><p>残忍拒绝</p>
+		</div>
+	</div>
+<!--修改成功弹窗-->
+	<div class="mask fadeIn mask_bg_blur none">
+		<div class="share none share1" style="display: block;">
+			炫耀一下<img src="../../static/images/mile/share.png" alt="share">
+		</div>
+		<div class="success_box bounceIn none">
+			<img src="../../static/images/common/success_tex.png" alt="success_text" class="s_text"/>
+			<img src="../../static/images/common/color_bar.png"  alt="color_bar" class="c_bar"/>
+			<p class="jl">100%完善信息得100KM里程</p>
+			<div class="ewm"><img src="../../static/images/common/ewm.png" alt="ewm"/> </div>
+			<p class="attention">关注公众号查看中奖信息</p>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="../../static/script/plugins/slick.js" ></script>
+<script>
+	function closeMask(){
+		$(".mask_bg_blur,.invite_close").hide();
+	}
+	function success_show(){
+		$(".mask_bg_blur,.success_box,.invite_close").show();
+	}
+	function isChangeHide(){
+		$(".mask,.isChange_box").hide();
+	}
+	var List={
+		name:['解放牌','东风牌','福田(欧曼)牌','陕汽牌','江淮牌','福田牌','庆铃牌','江铃牌','其他'],
+		age:['2年以内','2-5年','5-10年','10年以上'],
+		oil:['壳牌R2','壳牌R3','壳牌R4','美孚','道达尔','嘉实多','其他']
+	};
+	var isFirst=true;
+	var currentObj;      //当前选择的种类
+	function selectList(obj){
+		$('.slide_title').show();
+		if(currentObj==obj){
+			$('.slide_title').toggleClass('swing').toggleClass('swing2');
+			return false;
+		}
+		currentObj=obj;
+		var objList=List[obj];
+		var objHTML='';
+		for(var i=0;i<objList.length;i++){
+			objHTML+='<p>'+objList[i]+'</p>'
+		}
+		if(isFirst){
+			isFirst=false;
+			$('.select_cnt').append(objHTML).slick({
+				dots: true,
+				infinite: false,
+				slidesToShow: 2,
+				slidesToScroll: 2
+			});
+		}else{
+			$('.select_cnt').slick('unslick').empty().append(objHTML).slick({
+				dots: true,
+				infinite: false,
+				slidesToShow: 2,
+				slidesToScroll: 2
+			});
+		}
+		if(obj!=='age'){
+			$('.select_cnt p:not(:last-child)').click(function(){
+				$('.car_'+obj).text($(this).text());
+			});
+			$('.select_cnt p:last-child').click(function(){
+				$('.car_'+obj+',.tri_'+obj+'').hide();
+				$('.input_'+obj).show().focus();
+			});
+			$('.input_'+obj).blur(function(){
+				var tx=$(this).val();
+				tx=$.trim(tx)==''?'请选择':tx;
+				$('.car_'+obj).text(tx);
+				$('.input_'+obj).hide();
+				$('.car_'+obj+',.tri_'+obj+'').show();
+			});
+		}else{
+			$('.select_cnt p').click(function(){
+				$('.car_'+obj).text($(this).text());
+			});
+		}
+
+
+	}
+</script>
+</html>

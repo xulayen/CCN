@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	    <meta name="format-detection" content="telephone=no"/>
+	    <title>开始扫描</title>
+	    <link rel="stylesheet" href="../../static/css/common.css" />
+	    <link rel="stylesheet" href="../../static/css/index.css" />
+	    <link rel="stylesheet" href="../../static/css/animate.css" />
+		<script type="text/javascript" src="../../static/script/plugins/autoRem.js" ></script>
+	</head>
+	<body class="clearfix homePage common_bg">
+		<div class="menu_head">
+			<div class="head_left">
+				<p class="head_km">12560<span>KM</span></p>
+				<p class="head_texts">当前里程</p>
+			</div>
+			<div class="head_center">
+				<div class="person_wrap clearfix">
+					<div class="person_circle">
+						<img src="../../static/images/menu/person.png" alt="" class="head_person"/>
+					</div>
+				</div>
+			</div>
+			<div class="head_right">
+				<p class="head_type">新手上路</p>
+				<p class="head_texts">当前等级</p>
+			</div>
+		</div>
+		<div class="scan_body_bg"></div>
+		<div class="scan_body_bgg">
+			<div class="mdbm_wrap">
+				<p class="mdbm_tx">门店编码：</p>
+				<input type="text" placeholder="请询问门店人员" class="mdbm"/>
+			</div>
+			<img src="../../static/images/scan/sm.png" alt="sm" class="sm_tp" />
+			<p class="sm_text"><img src="../../static/images/scan/sm1.png" />开始扫描</p>
+			<div class="fwm_cnt">
+				<input type="text" class="fwm" placeholder="无法扫描请输入16位数字防伪码"/>
+				<span class="fwm_sure" onclick="popShow()">确定</span>
+			</div>
+		</div>
+
+		<div class="mask mask_bg_blur fadeIn none">
+			<div class="share none share1">炫耀一下<img src="../../static/images/mile/share.png" alt="share"/></div>
+			<button type="button" class="invite_close none" id="btn1"><img src="../../static/images/common/close.png" alt="close" onclick="scan_hide()"/></button>
+			<!--扫描成功弹窗-->
+			<div class="success_box bounceIn none success">
+				<img src="../../static/images/scan/gxn.png" alt="gxn_text" class="gxn"/>
+				<p class="clear"></p>
+				<img src="../../static/images/common/color_bar.png"  alt="color_bar" class="c_bar"/>
+				<p class="jl">获得50元话费及50KM里程</p>
+				<P class="j2">同时还可以参加壳牌劲霸刮刮卡活动哦，详情咨询门店店员!</P>
+				<div class="ewm ewm1"><img src="../../static/images/common/ewm.png" alt="ewm"/> </div>
+				<p class="attention att">关注公众号查看中奖信息</p>
+				<button type="button" class="btn_lq" onclick="location.href='grxx.html?vvUrl='+new Date().getTime()+''">领取邀请好友资格</button>
+			</div>
+			<!-- 邀请发送成功-->
+			<div class="common_box scan_error_box bounceIn none">
+				<img src="../../static/images/common/oil.png" alt="" class="common_box_oil"/>
+				<div class="common_box_body clearfix">
+					<img src="../../static/images/pop_icon/face5.png" alt="" class="common_box_icon"/>
+					<h3>该码不参加本活动</h3>
+					<p class="common_box_tx">请扫描R5E/R5NG/R5X/R6M/R6LM新包<br/>装18L产品防伪码</p>
+				</div>
+				<div class="common_box_foot">
+					<div class="close_wrap" onclick="popHide()">
+						<img src="../../static/images/home/close.png" class="close">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+		<script src="../../static/script/plugins/layer_mobile/layer.js"></script>
+		<script>
+			function popShow(){
+				$('.success_box,.mask,.invite_close,.share').show();
+			}
+			function scan_hide(){
+				$('.success_box,.mask,.invite_close,.share').hide();
+			}
+		</script>
+	</body>
+</html>

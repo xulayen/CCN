@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	    <meta name="format-detection" content="telephone=no"/>
+	    <title>劲霸车神</title>
+	    <link rel="stylesheet" href="../../static/css/common.css" />
+	    <link rel="stylesheet" href="../../static/css/index.css" />
+	    <link rel="stylesheet" href="../../static/css/animate.css" />
+		<script type="text/javascript" src="../../static/script/plugins/autoRem.js" ></script>
+	</head>
+	<body class="common_bg">
+		<div class="mask"></div>
+		<div class="rank rank1">
+			<div class="rank_title">
+				<img src="../../static/images/mile/honnor/honnor_bg.png" alt="title_bg"/>
+				<img src=""  alt="title" class="star_text"/>
+				<img src=""  alt="star" class="star"/>
+			</div>
+			<div class="rank_content cnt1">
+				<!-- 背景-->
+				<img src=""  alt="bg_rank" class="bg_rank"/>
+				<ul class="rank_message">
+					<li class="rank_fir pang">我是<span>王东杰</span></li>
+					<!-- 使用油-->
+					<li class="rank_sen pang"></li>
+					<li class="rank_thi">已达到<span class="pang">500KM</span> 劲霸里程</li>
+					<li class="rank_for">获得<span>小试牛刀</span>荣誉称号</li>
+				</ul>
+				<div class="rank_bottom">
+					<p>我的高度已令人仰望</p>
+					<p class="line_left"></p>
+					<p class="line_rgt"></p>
+				</div>
+			</div>
+			<div class="unblieve">
+				<p>不可能有任何人超越我</p>
+				<p>我才不信</p>
+			</div>
+		</div>
+	</body>
+	<script src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+	<script>
+		var rank_thi=[
+			{'name':'小试牛刀','rank_for':'500KM','rank_get_tx':'小有成就，再接再厉','typeImg':'xs.png','oilImg':'我用<span>劲霸合成油R6</span>'},
+			{'name':'劲霸老司机','rank_for':'1200KM','rank_get_tx':'老司机已发车','typeImg':'sj.png','oilImg':'我用<span>劲霸合成油R6</span>'},
+			{'name':'劲霸车神','rank_for':'5000KM','rank_get_tx':'我的高度已令人仰望','typeImg':'cs.png','oilImg':'我用<span>劲霸合成油R6</span>'},
+			{'name':'劲霸英雄','rank_for':'1000KM','rank_get_tx':'真英雄，最劲霸','typeImg':'yx.png','oilImg':''}
+		];//等级数据
+		var  RedTx=4; //RedTx为2,3,4,5四种取值
+		popType();
+		function popType(){
+			var typeDate=rank_thi[RedTx-2];
+			$('.rank_thi').find('span').text(typeDate.rank_for);
+			$('.rank_for').find('span').text(typeDate.name);
+			$('.rank_get_tx').text(typeDate.rank_get_tx);
+			$('.star_text').attr('src','../../static/images/mile/honnor/title_'+typeDate.typeImg);
+			$('.star').attr('src','../../static/images/mile/honnor/icon_'+typeDate.typeImg);
+			$('.bg_rank').attr('src','../../static/images/mile/honnor/bg_'+typeDate.typeImg);
+			$('.rank_sen').html(typeDate.oilImg);
+			$('.mask,.share,.rank').show();
+		}
+	</script>
+</html>

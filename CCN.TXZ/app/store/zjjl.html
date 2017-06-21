@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	    <meta name="format-detection" content="telephone=no"/>
+	    <title>中奖记录</title>
+	    <link rel="stylesheet" href="../../static/css/common.css" />
+	    <link rel="stylesheet" href="../../static/css/index.css" />
+		<script type="text/javascript" src="../../static/script/plugins/autoRem.js" ></script>
+	</head>
+	<body class="r_bg clearfix homePage">
+		<div class="rcode_bg" id="rcode_bg">
+			<img src="../../static/images/common/oil.png"  alt="oil" class="r_oil"/>
+			<button type="button" class="btn_message" onclick="location.href='grxx.html'">个人信息</button>
+			<button type="button" class="btn_scode grxx_current">中奖纪录</button>
+		</div>
+		<div class="rcode_cnt">
+			<p><img src="../../static/images/record/r_day.png" /></p>
+			<p><img src="../../static/images/record/a_setting.png" /> </p>
+			<p class="rgt1"><img src="../../static/images/record/rank.png" /></p>
+		</div>
+		<div class="rcode_cnt1" id="wrapper">
+			<ul class="rcnt">
+					<li>
+						<p class="cnt_left">3.15</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费及1200km里程数</p>
+					</li>
+					<li>
+						<p class="cnt_left">5.23</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费</p>
+					</li>
+					<li>
+						<p class="cnt_left">11.2</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费及1200km里程数</p>
+					</li>
+					<li>
+						<p class="cnt_left">2.26</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费</p>
+					</li>
+					<li>
+						<p class="cnt_left">5.23</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费及1200km里程数</p>
+					</li>
+					<li>
+						<p class="cnt_left">11.2</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费</p>
+					</li>
+					<li>
+						<p class="cnt_left">5.23</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费及1200km里程数</p>
+					</li>
+					
+					
+					
+					<li>
+						<p class="cnt_left">11.2</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费</p>
+					</li>
+					<li>
+						<p class="cnt_left">5.23</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费及1200km里程数</p>
+					</li>
+					<li>
+						<p class="cnt_left">11.2</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费</p>
+					</li>
+					<li>
+						<p class="cnt_left">5.23</p>
+						<p class="cnt_center">扫码赢话费</p>
+						<p class="cnt_right rgt">500元话费及1200km里程数</p>
+					</li>
+					
+					
+					
+				</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../static/script/plugins/iscroll.js" ></script>
+	<script>
+        var myScroll;
+        vv_scroll();  //后台获取数据后，执行这个函数(加滚动条);
+        function vv_scroll(){
+            myScroll = new IScroll('#wrapper',{
+                scrollbars: true,
+                disableMouse:true,
+                disablePointer:true,
+                bounceEasing:'back',
+                click:true,
+                fadeScrollbars: false
+            });
+        }
+        
+	</script>
+</html>

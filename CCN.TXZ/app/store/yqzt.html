@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	    <meta name="format-detection" content="telephone=no"/>
+	    <title>邀请人状态</title>
+	    <link rel="stylesheet" href="../../static/css/front.css" />
+	    <link rel="stylesheet" href="../../static/css/index.css" />
+	    <link rel="stylesheet" href="../../static/css/animate.css" />
+		<script type="text/javascript" src="../../static/script/plugins/autoRem.js" ></script>
+	</head>
+	<body>
+		<div class="mask"></div>
+		<button type="button" class="invite_btn" onclick="invite_hide()"><img src="../../static/images/close.png" alt="close"/></button>
+		<div class="invite_cnt" id="invite">
+			<table cellpadding="0" cellspacing="0">
+				<tr class="invite_title">
+					<td>日期</td>
+					<td>被邀请人</td>
+					<td>状态</td>
+				</tr>
+			</table>
+			<div class="invite_message" id="wrapper">
+				<table cellpadding="0" cellspacing="0">
+					<tr class="invite_cnt1">
+						<td>2.26</td>
+						<td>13788955977</td>
+						<td class="invite_success">邀请成功</td>
+					</tr>
+					<tr class="invite_cnt1">
+						<td>2.26</td>
+						<td>13788955977</td>
+						<td>未激活</td>
+					</tr>
+					<tr class="invite_cnt1">
+						<td>12.2</td>
+						<td>13928752145</td>
+						<td>未激活</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../static/script/plugins/iscroll.js" ></script>
+	<script>
+        var myScroll;
+        vv_scroll();  //后台获取数据后，执行这个函数(加滚动条);
+        function vv_scroll(){
+        	console.log(1);
+            myScroll = new IScroll('#wrapper',{
+                scrollbars: true,
+                disableMouse:true,
+                disablePointer:true,
+                bounceEasing:'back',
+                click:true,
+                fadeScrollbars: false
+            });
+        }
+        
+        function invite_hide(){
+        	var inv=document.getElementById("invite");
+        	var btn=document.getElementsByTagName("button")[0];
+        	inv.style.display="none";
+        	btn.style.display="none"
+        }
+    </script>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/common.css"/>
+    <link rel="stylesheet" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+    <link rel="stylesheet" href="../../static/css/index.css"/>
+</head>
+<body class="common_bg milePage">
+    <div class="menu_head">
+        <div class="head_left">
+            <p class="head_km">12560<span>KM</span></p>
+            <p class="head_texts">当前里程</p>
+        </div>
+        <div class="head_center">
+            <div class="person_wrap clearfix">
+                <div class="person_circle">
+                    <img src="../../static/images/menu/person.png" alt="" class="head_person"/>
+                </div>
+            </div>
+        </div>
+        <div class="head_right">
+            <p class="head_type">新手上路</p>
+            <p class="head_texts">当前等级</p>
+        </div>
+    </div>
+    <div class="two_btn_wrap">
+        <button class="invite_rule"  onclick="rankNotice()"><img src="../../static/images/mile/icon3.png" alt=""/>里程排名</button>
+        <button class="invite_record" onclick="strategyShow()"><img src="../../static/images/mile/icon4.png" alt=""/>里程攻略</button>
+    </div>
+    <div class="mile_blur"></div>
+    <div class="mile_bottom_box">
+        <div class="mile_circle_flex vertical">
+          <div class="mile_circle_wrap">
+              <img src="../../static/images/mile/gray.png" alt="" class="circle_gray"/>
+              <div class="circle_yellow_wrap">
+                  <!-- 当前里程数-->
+                  <div class="current_mile">
+                     <div class="current_mile_text">
+                         <p class="current_mile_tx">当前</p>
+                         <h3 class="current_mile_num"></h3>
+                         <p class="current_mile_km">km</p>
+                     </div>
+                      <img src="../../static/images/mile/current_arrow.png" alt="" class="current_arrow"/>
+                  </div>
+              </div>
+              <!-- 到达等级红圈-->
+              <div class="circle_red_wrap none scaleBig" onclick="popType()">
+                 <div class="circle_red"></div>
+                  <div class="circle_line circleAni1"></div>
+                  <div class="circle_line circleAni2"></div>
+              </div>
+          </div>
+        </div>
+        <div class="mile_type vertical">
+            <ul>
+                <li>劲霸英雄<p><span class="type_tx_yl">10000</span><span>km</span></p></li>
+                <li>劲霸车神<p><span class="type_tx_yl">5000</span><span>km</span></p></li>
+                <li>劲霸老司机<p>1200<span>km</span></p></li>
+                <li>小试牛刀<p>500<span>km</span></p></li>
+                <li>新手上路<p>0<span>km</span></p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mask none"></div>
+    <button type="button" class="invite_close none close1" onclick="strategyHide()"><img src="../../static/images/common/close.png" alt="close"/></button>
+    <div class="skill none" id="skill">
+        <div class="scan"><a href="scan.html"><img src="../../static/images/mile/11111.png" alt="scan"/></a></div>
+        <div class="invite"><a href="invite.html"><img src="../../static/images/mile/22222.png" alt="invite"/></a></div>
+        <div class="complete"><a href="grxx.html"><img src="../../static/images/mile/33333.png" alt="complete"/></a></div>
+    </div>
+    <!-- 等级-->
+    <div class="mask none fadeIn"></div>
+    <button type="button none" class="share_close none" id="btn1"><img src="../../static/images/common/close.png" alt="close" onclick="share_hide1()"></button>
+    <div class="share none">炫耀一下<img src="../../static/images/mile/share.png" alt="share"/></div>
+    <div class="rank none bounceIn">
+        <div class="rank_title">
+            <img src="../../static/images/mile/honnor/honnor_bg.png" alt="title_bg"/>
+            <img src=""  alt="title" class="star_text"/>
+            <img src=""  alt="star" class="star"/>
+        </div>
+        <div class="rank_content">
+            <!-- 背景-->
+            <img src=""  alt="bg_rank" class="bg_rank"/>
+            <ul class="rank_message">
+                <li class="rank_fir pang">我是<span>王东杰</span></li>
+                <!-- 使用油-->
+                <li class="rank_sen pang"></li>
+                <li class="rank_thi">已达到<span class="pang">500KM</span> 劲霸里程</li>
+                <li class="rank_for">获得<span>小试牛刀</span>荣誉称号</li>
+            </ul>
+            <div class="rank_bottom">
+                <p class="rank_get_tx">小有成就，再接再厉</p>
+                <p class="line_left"></p>
+                <p class="line_rgt"></p>
+            </div>
+
+        </div>
+    </div>
+    <script src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+    <script src="../../static/script/plugins/layer_mobile/layer.js"></script>
+    <script>
+        function strategyShow(){
+            $('#skill,.invite_close,.mask').show();
+        }
+        function strategyHide(){
+            $('#skill,.invite_close,.mask').hide();
+        }
+        function share_hide1(){
+        	 $('.share,#btn1,.mask,.rank').hide();
+        }
+        mileAni(800);   //等级动画
+        var  RedTx;     //等级类别
+        var rank_thi=[
+            {'name':'小试牛刀','rank_for':'500KM','rank_get_tx':'小有成就，再接再厉','typeImg':'xs.png','oilImg':'我用<span>劲霸合成油R6</span>'},
+            {'name':'劲霸老司机','rank_for':'1200KM','rank_get_tx':'老司机已发车','typeImg':'sj.png','oilImg':'我用<span>劲霸合成油R6</span>'},
+            {'name':'劲霸车神','rank_for':'5000KM','rank_get_tx':'我的高度已令人仰望','typeImg':'cs.png','oilImg':'我用<span>劲霸合成油R6</span>'},
+            {'name':'劲霸英雄','rank_for':'1000KM','rank_get_tx':'真英雄，最劲霸','typeImg':'yx.png','oilImg':''}
+        ];//等级数据
+        function mileAni(obj){
+            var ylHeight=0;
+            if(0<=obj&&obj<500){
+                ylHeight=parseFloat(obj*4.8/500)+0.5;
+                RedTx=1;
+            }else if(500<=obj&&obj<1200){
+                ylHeight=parseFloat((obj-500)*4.05/700)+5;
+                RedTx=2;
+            }else if(1200<=obj&&obj<5000){
+                ylHeight=parseFloat((obj-1200)*4.05/3800)+8.95;
+                RedTx=3;
+            }else if(5000<=obj&&obj<10000){
+                ylHeight=parseFloat((obj-5000)*4.05/5000)+12.95;
+                RedTx=4;
+            }else if(10000<=obj&&obj<19800){
+                ylHeight=parseFloat((obj-10000)*0.6/9800)+17;
+                RedTx=5;
+            }else if(19800<=obj){
+                ylHeight=17.6;
+                RedTx=5;
+            }
+            $('.current_mile_num').text(obj);
+            $('.circle_yellow_wrap').animate({
+                'height':ylHeight+'rem'
+            },700*RedTx,function(){
+                $('.current_mile').addClass('fadeInUp');
+                if(RedTx>1){
+                    setTimeout(function(){
+                        $('.circle_red').text(RedTx);
+                        $('.circle_red_wrap').css({'top':(5-RedTx)*4.01+'rem'}).show();
+                        setTimeout(function(){
+                            $('.mile_type li').eq(5-RedTx).addClass('current');
+                        },300);
+                    },600);
+                }else{
+                    setTimeout(function(){
+                        $('.mile_type li').eq(5-RedTx).addClass('current');
+                    },300);
+                }
+            });
+        }
+        function popType(){
+            var typeDate=rank_thi[RedTx-2];
+            $('.rank_thi').find('span').text(typeDate.rank_for);
+            $('.rank_for').find('span').text(typeDate.name);
+            $('.rank_get_tx').text(typeDate.rank_get_tx);
+            $('.star_text').attr('src','../../static/images/mile/honnor/title_'+typeDate.typeImg);
+            $('.star').attr('src','../../static/images/mile/honnor/icon_'+typeDate.typeImg);
+            $('.bg_rank').attr('src','../../static/images/mile/honnor/bg_'+typeDate.typeImg);
+            $('.rank_sen').html(typeDate.oilImg);
+            $('.mask,.share,.rank,#btn1').show();
+        }
+        function rankNotice(){
+            layer.open({
+                content: '功能建设中，敬请期待'
+                ,btn: '我知道了'
+            });
+        }
+    </script>
+</body>
+</html>

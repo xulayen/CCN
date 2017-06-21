@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" href="../../static/css/common.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="homePage ">
+    <div class="homePage_cnt">
+        <!-- 第一屏-->
+        <section class="section1">
+            <img src="../../static/images/home/logo.png" alt="" class="logo"/>
+            <div class="theme_wrap">
+                <img src="../../static/images/home/theme.png" alt="" class="theme"/>
+            </div>
+            <div class="clearfix btn_rule" onclick="ruleShow()">
+               	活动规则
+            </div>
+            <img src="../../static/images/home/shell.png" alt="" class="shell_theme"/>
+            <!--视频-->
+			<div class="video_box">	
+				<iframe  frameborder="0" width="100%" height="100%"
+src="https://v.qq.com/iframe/player.html?vid=h0382ju8fcd&tiny=0&auto=0" allowfullscreen></iframe> 
+			</div>
+			<div class="page1_bottom">
+                <img src="../../static/images/common/oil.png" alt="" class="section1_oil"/>
+            </div>
+        </section>
+        <!-- 第二屏-->
+        <section class="section2">
+            <img src="../../static/images/home/section2_top.png" alt="" class="section2_top"/>
+            <div class="section2_title_wrap clearfix">
+                <div class="section2_title pang">
+                    <p>高技能保护</p>
+                    <p>技术领先</p>
+                </div>
+            </div>
+            <div class="yellow_box"></div>
+            <div class="gif_wrap">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <img src="../../static/images/home/gif.png" alt="" class="gif"/>
+            </div>
+        </section>
+        <!-- 第三屏-->
+        <section class="section3">
+            <div class="section3_title pang">
+                <p class="section3_tt1">壳牌劲霸合成油</p>
+                <p>我有话说</p>
+            </div>
+            <div class="words_wrap words_wrap1">
+                <img src="../../static/images/home/words_1.png" alt="" class="words_1"/>
+            </div>
+            <div class="words_wrap words_wrap2">
+                <img src="../../static/images/home/words_2.png" alt="" class="words_2"/>
+            </div>
+            <div class="words_wrap words_wrap3">
+                <img src="../../static/images/home/words_3.png" alt="" class="words_3"/>
+            </div>
+        </section>
+        <!-- 第四屏-->
+        <section class="section4">
+            <div class="section4_cnt">
+                <div class="section4_title">
+                    <h2 class="pang">四重好礼送不停</h2>
+                </div>
+                <p class="section4_rule">2017年3月15日至2017年5月31日，在活动页面填写手机号预约资格，可获得最高500元话费资格。前往指定门店购买产品参与活动，赢取四重好礼。</p>
+                <ul class="gift_list">
+                    <li>                 
+                        <div class="gift_cnt gift_cnt1">
+                            <h2>购R5/R6<span>赢话费</span></h2>
+                            <p>购买R5E/R5NG/R5X/R6M/R6LM产品，扫码参与赢取最高500元、最低20元话费！</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gift_cnt gift_cnt2">
+                            <h2>邀请好友<span>领话费</span></h2>
+                            <p>参与扫码赢话费后还可邀请好友，当月内任一好友成功参与即可获得30元话费！</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gift_cnt gift_cnt3">
+                            <h2>持通行证<span>赢大礼</span></h2>
+                            <p>注册劲霸通行证，收集里程数即可获精美礼品！</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gift_cnt gift_cnt4">
+                            <h2>赢排名<span>游意大利</span></h2>
+                            <p>活动期间率先完成累计里程目标，还可赢取意大利游！</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 第五屏-->
+        <section class="section5">
+            <div class="flow_wrap">
+                <img src="../../static/images/home/flow1.png" class="flow1">
+                <img src="../../static/images/home/flow2.png" class="flow2">
+                <img src="../../static/images/home/flow3.png" class="flow3">
+                <img src="../../static/images/home/flow4.png" class="flow4">
+                <img src="../../static/images/home/flow5.png" class="flow5">
+                <img src="../../static/images/home/flow6.png" class="flow6">
+            </div>
+            <button type="button" class="btn_start" style="margin-top:6.6rem;" onclick="location.href='login.html?vvUrl'+new Date().getTime()+''">我要领话费</button>
+        </section>
+    </div>
+    <div class="mask help_mask none" onclick="helpHide()"></div>
+    <div class="mask rule_mask none"></div>
+    <div class="mask person_mask"></div>
+    <!-- 活动参加人数-->
+    <div class="common_box common_box_big has_active">
+        <div class="common_box_body clearfix">
+            <img src="../../static/images/common/oil.png" class="has_active_oil">
+            <img src="../../static/images/home/ribbon.png" class="ribbon">
+            <p class="has_active_title">本活动已有</p>
+            <div class="digist_wrap pang">
+                <ul>
+                    <li>
+                        <ul class="digistAni">
+                            <li>0</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>0</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="digistAni">
+                            <li>0</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>0</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="digistAni">
+                            <li>0</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>0</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="digistAni">
+                            <li>0</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>0</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="digistAni">
+                            <li>0</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>0</li>
+                        </ul>
+                    </li>
+                </ul>
+                <span class="digist_text pang">位</span>
+            </div>
+            <p class="has_active_foot">车主成功领取话费，快来参加吧!</p>
+        </div>
+        <div class="common_box_foot">
+            <div class="close_wrap" onclick="hasActiveHide()">
+                <img src="../../static/images/home/close.png" class="close">
+            </div>
+        </div>
+    </div>
+    <!-- 活动规则弹窗-->
+    <div class="active_content none">
+        <div class="active_head">活动规则</div>
+        <div class="active_body">
+            <h3>一、活动时间</h3>
+            <p class="active_pre">2017年3月15日至2017年5月31日</p>
+            <h3>二、活动咨询</h3>
+            <p>咨询热线：021-26095506</p>
+            <p class="work_time">工作时间：周一至周五9：00-21：00</p>
+            <p class="sunny_time">周六、周日9：00-18：00</p>
+            <h3>三、活动声明及注意事项</h3>
+            <ol>
+                <li><b>1、</b>活动主办方：壳牌（中国）有限公司。</li>
+                <li><b>2、</b>凡自愿参与本活动的，即视为同意本活动规则所述的各项规定，并同意注册手机接收来自壳牌劲霸的活动提醒、优惠及其他相关讯息。</li>
+                <li><b>3、</b>活动时间以主办方网络服务器时间为准。</li>
+                <li><b>4、</b>前往壳牌劲霸指定门店内购买才可参与本次活动，咨询活动服务热线或在预约流程查看门店列表了解可参与门店。</li>
+                <li><b>5、</b><p style="text-indent: 0;white-space:nowrap;">本次活动仅限购买壳牌劲霸R5E/R5NG/R5X/</p>R6M/R6LM新包装18L产品（限生产日期为2016年6月1日之后的产品）的用户，填写正确完整的个人手机号码（限中国大陆地区移动、联通、电信运营商），验证通过后即可参与活动抽取20、50、100、500元不等话费。每个自然月内每类产品仅可获得一次扫码赢话费机会。</li>
+                <li><b>6、</b>壳牌劲霸R5E/R5NG/R5X/R6M/R6LM新包装18L产品标签内的防伪码具有唯一性，每个防伪码在活动期间只能领取一次话费。如一个防伪码参与活动且领取过话费后，再次参与活动均视为无效扫码，将不产生任何有效数据。同时，参加过2016年壳牌劲霸R5E“燃油省省省，补贴抢抢抢”活动的产品防伪码不可参与本次活动。</li>
+                <li><b>7、</b>本次活动成功参与扫码赢话费后获得邀请好友资格，当月内任一好友成功购买产品参加活动，邀请人即可获得30元话费及里程数。此外，每自然月还有一次免费邀请好友资格，用户利用该资格发送邀请及邀请成功都可获得得里程数奖励。注：活动期间扫码赢话费获得的邀请资格可累计使用，每月免费邀请资格则隔月清零。</li>
+                <li class="jiangli"><b>8、</b>本次活动成功参加扫码赢话费、邀请好友、完善信息，均可获得劲霸里程数奖励。里程奖励规则如下：
+                    <p>扫描R5E/R5NG/R5X产品赢话费：60KM</p>
+                    <p>扫描R6M/R6LM产品赢话费：120KM</p>
+                    <p>填写手机号邀请好友：200KM</p>
+                    <p>任一被邀请好友完成购买：400KM</p>
+                    <p>完善个人信息：100KM</p>
+                    活动结束时率先完成里程数目标或里程数排名第一的用户奖励2017年意大利单人游。（注：如出现多人里程数相同，则奖励系统时间上最先达成该里程数的用户）
+                </li>
+                <li><b>9、</b>如发现有用户在活动中使用任何不正当的手段（包括但不限于软件作弊、通过系统漏洞、利用黑客工具等）参与活动，活动主办方有权取消其活动参与资格，并有权撤回其所获不当获益，具体认定以主办方判定为准。</li>
+                <li><b class="lg_nine">10、</b>活动过程中，如出现不可抗力或情势变更的情况（包括但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或因系统故障需要暂停举办等），活动主办方可依相关法律法规的规定主张免责。</li>
+                <li><b class="lg_nine">11、</b>活动主办方可以根据本活动的实际举办情况对活动规则进行变动或调整，相关变动或调整将公布在活动页面上，并于公布时即时生效。</li>
+
+            </ol>
+            <div class="copyright">本次活动最终解释权归壳牌（中国）有限公司所有</div>
+        </div>
+        <div class="active_close" onclick="ruleHide()">返回</div>
+    </div>
+<script src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+    <script src="../../static/script/plugins/layer_mobile/layer.js"></script>
+<script>
+     setTimeout(function(){
+            dgResult(45123);   //显示人数；
+     },50);
+    function dgResult(digist){
+        if(typeof(digist)=='number'){
+            var dgArr=String(digist+100000).slice(1).split('');
+            var i=0;
+            var $Li=$('.digist_wrap>ul>li');
+            var $target;
+            var dTimer=setInterval(function(){
+                if(i<5){
+                    $target=$Li.eq(i).find('ul');
+               		$target.removeClass('digistAni').css({'transition':'transform 0.5s ease-out','-webkit-transition':'transform 0.5s ease-out'});
+                    setTimeout(function(){
+                   		$target.css({'transform':'translate3d(0,-'+2.75*parseInt(dgArr[i-1])+'rem,0)','-webkit-transform':'translate3d(0,-'+2.75*parseInt(dgArr[i-1])+'rem,0)'});
+                    },10);
+                }else{
+                	clearInterval(dTimer);
+                    $('.digist_text').addClass('fadeInUp');
+                    $('.has_active_foot').addClass('flash');
+                    setTimeout(function(){
+                        hasActiveHide();
+                    },3000);
+                }
+                i++;
+            },400);
+        }
+    }
+   function helpShow(){
+       $('.btn_help').attr('src','../../static/images/home/btn_help.png');
+       $('.help_mask,.help_notice').show();
+   }
+   function helpHide(){
+       $('.btn_help').attr('src','../../static/images/home/btn_help_.png');
+       $('.help_mask,.help_notice').hide();
+   }
+   function ruleShow(){
+       $('.active_content,.rule_mask').show();
+   }
+   function ruleHide(){
+       $('.active_content,.rule_mask').hide();
+   }
+    function hasActiveHide(){
+        $('.has_active,.person_mask').hide();
+      $('.homePage_cnt').removeClass('blur');
+//		$('.inner_circle').addClass("redCircle1");
+//		$('.inner_circle2').addClass("redCircle2");
+        
+    }
+   
+	//var nowTop=0;
+//	var clickArea=document.getElementsByClassName("click_area")[0];
+//	clickArea.addEventListener('touchend',function(){
+////		nowTop = document.body.scrollTop;
+////      $('body').css('top',-1*nowTop);
+////      $('body').css('position','fixed');
+//		$(".vedio_container").show();
+//		$("iframe").attr("src","https://v.qq.com/iframe/player.html?vid=h0382ju8fcd&tiny=0&auto=0")
+//		setTimeout(function(){
+//			$(".vedio_container").addClass("video_show");
+//			setTimeout(function(){
+//				$(".video_box,iframe").show();
+//			},300);
+//		},100);
+//	});
+//	$(".close_icon").click(function(){
+////		$('body').css('top',0);
+////		$('body').css('position','relative');
+//		//$(window).scrollTop(nowTop)
+//		$(".video_box,iframe").hide();
+//		$("iframe").attr("src","#");
+//		$(".vedio_container").removeClass("video_show");
+//		setTimeout(function(){
+//			$(".vedio_container").hide();
+//		},300);
+//	})
+</script>
+</body>
+</html>

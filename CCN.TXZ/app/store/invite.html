@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" href="../../static/css/common.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="common_bg invitePage">
+    <div class="menu_head">
+        <div class="head_left">
+            <p class="head_km">12560<span>KM</span></p>
+            <p class="head_texts">当前里程</p>
+        </div>
+        <div class="head_center">
+            <div class="person_wrap clearfix">
+                <div class="person_circle">
+                    <img src="../../static/images/menu/person.png" alt="" class="head_person"/>
+                </div>
+            </div>
+        </div>
+        <div class="head_right">
+            <p class="head_type">新手上路</p>
+            <p class="head_texts">当前等级</p>
+        </div>
+    </div>
+    <div class="two_btn_wrap">
+        <button class="invite_rule" onclick="inviteRule()"><img src="../../static/images/invite/icon1.png" alt=""/>邀请规则</button>
+        <button class="invite_record"  onclick="inviteRecord()"><img src="../../static/images/invite/icon2.png" alt=""/>邀请记录</button>
+    </div>
+    <div class="chance_wrap">
+        <div class="chance_scan_wrap" onclick="scanShow()">
+            <div class="parent">
+                <div class="child">
+                    <p class="chance_count">18</p>
+                </div>
+            </div>
+        </div>
+        <div class="chance_get_wrap chanceSmall" onclick="getShow()">
+            <div class="parent">
+                <div class="child">
+                    <p class="chance_count">8</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="invite_bottom">
+        <img src="../../static/images/invite/arrow.png" alt="" class="invite_arrow1"/>
+        <img src="../../static/images/invite/arrow.png" alt="" class="invite_arrow2 none"/>
+        <form action="">
+            <div class="invite_input_box">
+                <input type="tel" placeholder="手机号1" maxlength="11" />
+                <input type="tel" placeholder="手机号2" maxlength="11" />
+                <input type="tel" placeholder="手机号3" maxlength="11" />
+            </div>
+            <button type="button" class="btn_common btn_invite" onclick="show()">一键发送邀请</button>
+        </form>
+    </div>
+    <div class="mask none fadeIn" id="mask1"></div>
+    <button type="button" class="invite_close none" onclick="invite_hide1()" id="btn1"><img src="../../static/images/common/close.png" alt="close"/></button>
+    <!-- 邀请规则-->
+    <div class="invite_cnt content bounceIn none" id="inviteRule">
+        <div class="rule_cnt">
+            <p class="rule_title">邀请规则</p>
+            <p class="rule_ms">
+                <span>1.</span>使用参与扫码赢话费获得资格邀请好友，发送邀请即可获得200KM里程奖励，每次邀请名单中的任一好友成功购买产品参加活动，还可获得30元话费及300KM里程奖励!
+            </p>
+            <p class="rule_ms">
+                <span>2.</span>使用每月赠送邀请资格邀请好友，发送邀请即可或者200KM里程奖励，每次邀请名单中的任一好友成功购买产品参加活动，还可再获400KM里程奖励！
+            </p>
+        </div>
+        <img src="../../static/images/common/oil.png" alt="oil" />
+        <div class="invite_bg"></div>
+    </div>
+    <!-- 邀请纪录-->
+    <div class="mask none fadeIn" id="mask"></div>
+    <div class="invite_cnt bounceIn none" id="invite">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="invite_title">
+                <td>日期</td>
+                <td>被邀请人</td>
+                <td>状态</td>
+            </tr>
+        </table>
+        <div class="invite_message" id="wrapper">
+            <table cellpadding="0" cellspacing="0">
+                <tr class="invite_cnt1">
+                    <td>2.26</td>
+                    <td>13788955977</td>
+                    <td class="invite_success">邀请成功</td>
+                </tr>
+                <tr class="invite_cnt1">
+                    <td>2.26</td>
+                    <td>13788955977</td>
+                    <td>未激活</td>
+                </tr>
+                <tr class="invite_cnt1">
+                    <td>12.2</td>
+                    <td>13928752145</td>
+                    <td>未激活</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <!--扫描成功弹窗-->
+	<div class="mask fadeIn none" id="maskk"></div>
+	<div class="share none share1">炫耀一下<img src="../../static/images/mile/share.png" alt="share"/></div>
+	<button type="button" class="success_close none"><img src="../../static/images/common/close.png" alt="close" onclick="success_hide()"/></button>
+	<div class="success_box bounceIn none">
+		<img src="../../static/images/scan/gxn1.png" alt="gxn_text" class="gxn1"/>
+		<p class="clear"></p>
+		<img src="../../static/images/common/color_bar.png"  alt="color_bar" class="c_bar" />
+		<p class="jl">获得200KM里程奖励</p>
+		<P class="j2">好友成功参加更多奖励等你来拿</P>
+		<div class="ewm ewm1"><img src="../../static/images/common/ewm.png" alt="ewm"/> </div>
+		<p class="attention att">关注公众号查看中奖信息</p>
+	</div>	
+<script src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script src="../../static/script/plugins/iscroll.js"></script>
+<script src="../../static/script/plugins/layer_mobile/layer.js"></script>
+    <script>
+        function UserHide(){
+            $('.common_box_big,.mask').hide();
+        }
+        var zIndex=1;
+        function getShow(){
+            $('.chance_get_wrap').removeClass('chanceSmall').css({'zIndex':++zIndex});
+            $('.chance_scan_wrap').addClass('chanceSmall').css({'zIndex':--zIndex});
+            $('.invite_arrow1').hide();
+            $('.invite_arrow2').show();
+        }
+        function scanShow(){
+            $('.chance_scan_wrap').removeClass('chanceSmall').css({'zIndex':++zIndex});
+            $('.chance_get_wrap').addClass('chanceSmall').css({'zIndex':--zIndex});
+            $('.invite_arrow1').show();
+            $('.invite_arrow2').hide();
+        }
+        function inviteRule(){
+            $('.mask,#inviteRule,.invite_close').show();
+        }
+        function inviteRecord(){
+            $('.mask,#invite,.invite_close').show();
+        }
+        function invite_hide1(){
+            $('.mask,.invite_cnt,.invite_close').hide();
+        }
+        var myScroll;
+        vv_scroll();  //后台获取数据后，执行这个函数(加滚动条);
+        function vv_scroll(){
+            myScroll = new IScroll('#wrapper',{
+                scrollbars: true,
+                disableMouse:true,
+                disablePointer:true,
+                bounceEasing:'back',
+                click:true,
+                fadeScrollbars: false
+            });
+        }
+        
+        function invite_hide(){
+            var inv=document.getElementById("invite");
+            var btn=document.getElementsByTagName("button")[0];
+            inv.style.display="none";
+            btn.style.display="none"
+        }
+        
+       function show(){
+       		$(".success_close,#maskk,.success_box,.share").show()
+       }
+       function success_hide(){
+       		$(".success_close,#maskk,.success_box,.share").hide()
+       }
+    </script>
+</body>
+</html>

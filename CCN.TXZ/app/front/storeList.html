@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+    <script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" href="../../static/css/common.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+</head>
+<body class="storePage clearfix onLineSore">
+    <div class="mask store_mask"></div>
+    <div class="select_bg_wrap">
+        <img src="../../static/images/common/bg.png" alt="" class="bg_selectPage"/>
+    </div>
+    <p class="store_theme">上海市有<span>96</span>家门店</p>
+    <div class="store_wrap" id="wrapper">
+        <ul class="store_list">
+            <li>
+                <div class="store_num vertical"><p>1</p></div>
+                <ul class="store_detail vertical">
+                   <li>
+                       <img src="../../static/images/store/store.png" alt=""/>
+                       <p>黄兴路大悦城2号路</p>
+                   </li>
+                   <li>
+                       <img src="../../static/images/store/adr.png" alt=""/>
+                       <p>黄埔区威海路2902路2902号3栋201商铺</p>
+                   </li>
+                </ul>
+                <div class="btn_store vertical">提交</div>
+            </li>
+            <li>
+                <div class="store_num vertical"><p>1</p></div>
+                <ul class="store_detail vertical">
+                   <li>
+                       <img src="../../static/images/store/store.png" alt=""/>
+                       <p>黄兴路大悦城2号路</p>
+                   </li>
+                   <li>
+                       <img src="../../static/images/store/adr.png" alt=""/>
+                       <p>黄埔区威海路2902路2902号</p>
+                   </li>
+                </ul>
+                <div class="btn_store vertical">提交</div>
+            </li>
+            <li>
+                <div class="store_num vertical"><p>1</p></div>
+                <ul class="store_detail vertical">
+                   <li>
+                       <img src="../../static/images/store/store.png" alt=""/>
+                       <p>黄兴路大悦城2号路</p>
+                   </li>
+                   <li>
+                       <img src="../../static/images/store/adr.png" alt=""/>
+                       <p>黄埔区威海路2902路2902号3栋201商铺</p>
+                   </li>
+                </ul>
+                <div class="btn_store vertical">提交</div>
+            </li> 
+        </ul>
+    </div>
+    <div class="mask fadeIn none"></div>
+    <button type="button" id="btn3" class="none"><img src="../../static/images/common/close.png" alt="close"/></button>
+    <div class="common_box order_end_box bounceIn none">
+        <img src="../../static/images/common/oil.png" alt="" class="common_box_oil"/>
+        <div class="common_box_body clearfix">
+            <img src="../../static/images/pop_icon/face5.png" alt="" class="common_box_icon"/>
+            <h3>您已预约过本活动</h3>
+            <div class="pop_flex pop_store_flex"><p>门店名称:</p><p>黄兴路大悦城2号路</p></div>
+            <div class="pop_flex"><p>门店地址:</p><p>黄埔区威海路2902路2902号3栋201商铺</p></div>
+            <!--<p class="common_box_tx">快快选择门店参加活动</p>-->
+        </div>
+        <div class="common_box_foot">好的</div>
+    </div>
+    <script src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+    <script src="../../static/script/plugins/iscroll.js"></script>
+    <script src="../../static/script/plugins/layer_mobile/layer.js"></script>
+    <script>
+        var myScroll;
+        vv_scroll();  //后台获取数据后，执行这个函数(加滚动条);
+        function vv_scroll(){
+            myScroll = new IScroll('#wrapper',{
+                scrollbars: true,
+                disableMouse:true,
+                disablePointer:true,
+                bounceEasing:'back',
+                click:true,
+                fadeScrollbars: false
+            });
+        }
+       
+        $('.btn_store').click(function(){
+            $('.order_end_box,.mask,#btn3').show();
+        });
+        $("#btn3").click(function(){
+        	$('.order_end_box,.mask,#btn3').hide();
+        })
+    </script>
+</body>
+</html>
