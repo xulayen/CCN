@@ -67,3 +67,10 @@ https://xulayen.github.io/CCN/CCN.LH/app/front/ygyx.html
 
 #### 易到
 https://xulayen.github.io/CCN/CCN.YD/app/front/login.html
+
+#### 通行证
+https://xulayen.github.io/CCN/CCN.TXZ/app/front/homeOnline.html
+
+https://xulayen.github.io/CCN/CCN.TXZ/app/store/login.html
+
+
