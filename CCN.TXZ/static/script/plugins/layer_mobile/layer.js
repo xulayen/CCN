@@ -71,7 +71,7 @@
         var a = document.scripts, c = a[a.length - 1], d = c.src, e = d.substring(0, d.lastIndexOf("/") + 1);
         c.getAttribute("merge") || document.head.appendChild(function () {
             var a = b.createElement("link");
-            return a.href = e + "need/layer.css?2.0", a.type = "text/css", a.rel = "styleSheet", a.id = "layermcss", a
+            return a.href = e + "need/layer.css?v=2.0", a.type = "text/css", a.rel = "styleSheet", a.id = "layermcss", a
         }())
     }()
 }(window);

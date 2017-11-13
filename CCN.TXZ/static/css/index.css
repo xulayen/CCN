@@ -118,7 +118,7 @@ input::-webkit-input-placeholder {
 }
 
 /*首页注册页结束*/
-/*中奖纪录*/
+/*中奖记录*/
 .rcode_bg button {
     background: transparent;
 }
@@ -437,7 +437,7 @@ input::-webkit-input-placeholder {
 /*完善个人信息成功*/
 .invite_close {
     position: absolute;
-    bottom:0.6rem;
+    bottom:0.4rem;
     left:50%;
     margin-left:-1.5rem;
     z-index:9999;
@@ -462,13 +462,13 @@ input::-webkit-input-placeholder {
 
 .success_box {
     position: absolute;
-    top: 55%;
+    top: 52%;
     left: 50%;
     z-index: 99999;
     margin-top: -6.8rem;
     margin-left: -7.38rem;
     width: 14.72rem;
-    height: 14.72rem;
+    height:18rem;
     background: #fff;
     text-align: center;
 }
@@ -492,6 +492,7 @@ input::-webkit-input-placeholder {
     color: #ed1b24;
     text-align: center;
     font-size: 1rem;
+    font-weight:bold;
 }
 
 .c_bar {
@@ -521,10 +522,11 @@ input::-webkit-input-placeholder {
 }
 
 .attention {
-    margin-top: -0.5rem;
+    margin-top:1rem;
     color: #6A6A69;
     font-size: 0.57rem;
 }
+
 /*开始扫描*/
 .scan_head {
     position: relative;
@@ -532,37 +534,45 @@ input::-webkit-input-placeholder {
     width: 80%;
     height: 3.52rem;
 }
+
 .head_bg {
     filter: blur(2px);
     -webkit-filter: blur(2px);
 }
+
 .scan_head div {
     position: absolute;
     float: left;
     height: 3.52rem;
 }
+
 .scan_head div:nth-child(1) {
     top: 0;
     left: 0;
 }
+
 .scan_head div:nth-child(3) {
     top: 0;
     right: 0;
 }
+
 .scan_head p:nth-child(1) {
     margin-top: 0.8rem;
     color: #fff;
     text-align: center;
     font-size: 0.9rem;
 }
+
 .scan_head p:nth-child(2) {
     color: #fff;
     text-align: center;
     font-size: 0.53rem;
 }
+
 .mile span {
     font-size: 0.5rem;
 }
+
 .scan_tx {
     left: 50%;
     overflow: hidden;
@@ -572,10 +582,12 @@ input::-webkit-input-placeholder {
     border: 3px solid #fed703;
     border-radius: 100%;
 }
+
 .scan_tx img {
     width: 3.52rem;
     height: 3.52rem;
 }
+
 .scan_body_bgg {
     position: absolute;
     top: 6.95rem;
@@ -586,10 +598,12 @@ input::-webkit-input-placeholder {
     background: rgba(255, 255, 255, 0.75);
     box-shadow: -3px 0 14px 2px rgba(0, 0, 0, 0.2);
 }
+
 .body_bg {
     filter: blur(2px);
     -webkit-filter: blur(2px);
 }
+
 .scan_body_bg {
     position: absolute;
     top: 6.95rem;
@@ -601,31 +615,34 @@ input::-webkit-input-placeholder {
     background-size: 100% auto;
     -webkit-filter: blur(2px);
 }
+
 .mdbm_wrap {
-    position:relative;
-    margin:2.63rem auto 0 auto;
-    width:85%;
-    height:2.27rem;
-    font-size:0.7rem;
-    line-height:2.27rem;
+    position: relative;
+    margin: 2.63rem auto 0 auto;
+    width: 85%;
+    height: 2.27rem;
+    font-size: 0.7rem;
+    line-height: 2.27rem;
 }
+
 .mdbm_tx {
-    position:absolute;
-    left:3.9rem;
-    height:2.27rem;
-    line-height:2.27rem;
+    position: absolute;
+    left: 3.9rem;
+    top:0.1rem
 }
+
 .mdbm {
     padding-left: 7.5rem;
     width: 100%;
     height: 2.27rem;
-    background: #eeeff1 url('../images/scan/5.png') no-repeat 2.2rem 50%;
+    background: #eeeff1 url('../images/scan/5.png') no-repeat 2.2rem 52%;
     background-size: 1.05rem auto;
     box-shadow: 0px 0px 0px transparent, 0px 0px 0px transparent, inset 0px 3px 6px #dedfe0, 0px 0px 0px transparent;
     color: #5b5b5b;
     text-align: left;
     font-size: 0.7rem;
 }
+
 .mdbm img {
     position: relative;
     top: -0.1rem;
@@ -693,6 +710,21 @@ input::-webkit-input-placeholder {
     font-size: 0.83rem;
     line-height: 1.9rem;
 }
+.share_tip{
+	overflow:hidden;
+}
+.share_tip img{
+	width: 3rem;
+    position: absolute;
+    right: 1.8rem;
+    top: 1.2rem;
+}
+.share_tip p{
+	color: #fff;
+    font-size: 0.8rem;
+    margin-top: 5rem;
+    margin-left: 3rem;
+}
 
 /*开始扫描结束*/
 /*扫描结果*/
@@ -705,9 +737,9 @@ input::-webkit-input-placeholder {
     font-size: 0.7rem;
 }
 
-.ewm1 {
+/*.ewm1 {
     margin-top: -1.5rem;
-}
+}*/
 
 .att {
     margin-top: 0.7rem;
@@ -715,14 +747,16 @@ input::-webkit-input-placeholder {
 
 .btn_lq {
     display: block;
-    margin-top: 1.71rem;
-    width: 100%;
+    margin-top: 1.3rem;
+    width:84%;
+    margin-left:8%;
     height: 2.76rem;
     background: #ffd300;
     color: #404040;
     letter-spacing: 1px;
     font-size: 0.83rem;
     line-height: 2.76rem;
+    box-shadow:0px 1px 6px 1px #bbb28a;
 }
 
 .gxn {
@@ -735,6 +769,17 @@ input::-webkit-input-placeholder {
 }
 /*扫描结果结束*/
 /*门店查询开始*/
+
+#btn1{
+	position:absolute;
+	z-index:9999;
+	background:transparent;
+    bottom:0.6rem;
+    left: 50%;
+    margin-left: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+}
 .mask1 {
     background: inherit;
     filter: blur(2px);

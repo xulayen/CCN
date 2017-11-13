@@ -376,11 +376,12 @@
 	margin-left:0.2rem;
 	margin-right:0.2rem
 }
-.share_bottom{
-	position: absolute;
+
+.share_bottom {
+    position: absolute;
     bottom: 0.7rem;
-    left: 5%;
-    width: 90%;
+    left: 2%;
+    width: 96%;
     height: 1.5rem;
     color: #fff;
     text-align: center;
@@ -388,22 +389,7 @@
     font-size: 0.43rem;
     line-height: 1.5rem;
 }
-.share_bottom p:nth-of-type(1){
-	position: absolute;
-    bottom: 0.75rem;
-    left: 0;
-    width: 19%;
-    height: 1px;
-    background: #fff;
-}
-.share_bottom p:nth-of-type(2){
-	position: absolute;
-    right: 0;
-    bottom: 0.75rem;
-    width: 19%;
-    height: 1px;
-    background: #fff;
-}
+
 .won{
 	color:#fff;
 	font-size:1rem
@@ -462,3 +448,20 @@
 	animation-duration:.2s;
 	background-position:right;
 }
+
+.menu_left,.menu_middle,.menu_right{
+	width:33.3%;
+}
+
+fieldset {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #fff;
+    border-width: 1px;
+}
+
+
+
+
+

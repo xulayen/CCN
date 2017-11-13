@@ -8,6 +8,22 @@
     font-style: normal;
 }
 .pang{font-family:pang}
+@font-face {
+    font-family: 'fz';
+    src:
+        url('../font/FZZDHJW.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.fz{font-family:fz}
+@font-face {
+    font-family: 'pf';
+    src:
+        url('../font/PingFang Heavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.pf{font-family:pf}
 html{height:100%}
 /*Microsoft YaHei*/
 body{font-family:'simHei',sans-serif;width:100%;min-height:100%;margin:0;padding:0;position:relative;overflow:hidden;box-sizing:border-box}
@@ -70,3 +86,65 @@ button,input{-webkit-appearance:none;border-radius:0;border:none;outline:0}
 .pop_store_flex{margin-top:.5rem}
 .close_wrap{width:2.75rem;height:2.75rem;margin:auto}
 .close{width:.65rem}
+
+
+.suprise_box{
+	width:78%;
+    position:relative;
+    left:11%;
+    top: 0;
+    margin-top: 6rem;
+    z-index: 9999;
+    height:17rem;
+}
+.suprise_bg{
+	width: 17rem;
+    position: absolute;
+    left: -1.5rem;
+    top: -2.5rem;
+    z-index:999;
+}
+.suprise_bar{
+	width: 16rem;
+	position: absolute;
+    left: -1rem;
+    top: 1rem;
+    z-index:999999;
+}
+.suprise_cnt{
+	background:#fff url(../images/scan/line.png) no-repeat left 95%;
+	background-size:100% auto;
+	z-index:9999;
+	position:relative;
+	top:2rem;
+	height:14rem;
+	text-align:center;
+	overflow:hidden;
+	color:#424242;
+}
+.suprise_title{
+	color:#f63c0a;
+	position:relative;
+	z-index:9999999;
+	top:1.7rem;
+    text-align: center;
+    font-size:1.5rem;
+}
+.find{
+	margin-top:3rem;
+}
+.findNum{
+	color:#f63c0a;
+	margin:0.5rem 0;
+	font-size:1.3rem;
+}
+.findNum span{
+	font-size:2rem;
+}
+.go{
+	color:#797979;
+	position: absolute;
+    bottom: 1.5rem;
+    width: 100%;
+    font-size:0.94rem;
+}

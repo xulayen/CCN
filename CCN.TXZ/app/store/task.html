@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<title>劲霸大冒险</title>
+	<script src="../../static/script/plugins/autoRem.js"></script>
+    <link rel="stylesheet" href="../../static/css/common.css"/>
+    <link rel="stylesheet" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" href="../../static/css/front.css"/>
+    <link rel="stylesheet" href="../../static/css/risk.css"/>
+</head>
+<body class="common_bg milePage">
+    <!--里程任务弹窗-->
+    <div class="task_blur none"></div>
+    <div class="task_layer">
+    	<p class="share_task pm">本月内分享一次活动</p>
+    	<div class="share_finsh">
+    		<p class="share_gift">奖励<span>30KM</span></p>
+    		<P class="finish_btn none">领取</P>
+    		<p class="unfinish_btn">去完成</p>
+    	</div>
+    	<p class="share_task pm">累计邀请成功人数</p>
+    	<div class="share_finsh">
+    		<p class="share_gift">3人=<span>60KM</span></p>
+    		<div class="carry_btn">
+    			<p class="receive_num1"><span>1</span>/3</p>
+    			<p class="loading1"></p>
+    		</div>
+    	</div>
+    	<div class="share_finsh">
+    		<p class="share_gift">6人=<span>120KM</span></p>
+    		<div class="carry_btn">
+    			<p class="receive_num2"><span>3</span>/6</p>
+    			<p class="loading2"></p>
+    		</div>
+    	</div>
+    	<div class="share_finsh">
+    		<p class="share_gift">9人=<span>180KM</span></p>
+    		<div class="carry_btn">
+    			<p class="receive_num3"><span>5</span>/9</p>
+    			<p class="loading3"></p>
+    		</div>
+    	</div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script>
+	var text1=$(".receive_num1 span").html();
+	var text2=$(".receive_num2 span").html();
+	var text3=$(".receive_num3 span").html();
+	var load_width1=Math.floor((4/3)*text1);
+	var load_width2=Math.floor((4/9)*text2);
+	var load_width3=Math.floor((4/9)*text2);
+	
+	console.log(load_width2)
+	
+	$(".loading1").animate({'width':load_width1+'rem'});
+	$(".loading2").animate({'width':load_width2+'rem'});
+	$(".loading3").animate({'width':load_width3+'rem'});
+</script>
