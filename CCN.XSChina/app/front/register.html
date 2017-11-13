@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>小松</title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg">
+	<div class="register_content_blur"></div>
+	<div class="register_content">
+		<input type="text" placeholder="姓名" class="inpu1 common_inpu" maxlength="10"/>
+		<input type="tel" placeholder="手机号码" class="inpu2 common_inpu" maxlength="11"/>
+		<input type="tel" placeholder="输入验证码" class="inpu3 common_inpu" maxlength="4"/>
+		<div class="get_message">获取验证码</div>
+	</div>
+	<div class="register fang" onclick="location.href='scan.html'">立即参与</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script>
+	$('.common_inpu').focus(function () {    //文本框获取焦点时上移位置
+        thisPlace=$(this).attr('placeholder');
+        $(this).attr('placeholder','');
+        iIndex=$(this).index()+1;
+        $(this)[0].className='inpu_'+iIndex;
+//      $(".bg").css({"background-size":"100% auto"});
+    }).blur(function () {                     //文本框失去焦点时改变样式
+        $(this).attr('placeholder',thisPlace);
+        if($(this).val()==""){
+        	iIndex=$(this).index()+1;
+		    $(this)[0].className='inpu'+iIndex;
+        } 
+//      $(".bg").css({"background-size":"100% 100%"});
+    });
+    $(".get_message").click(function(){
+    	if($(".inpu2").val()==""){
+    		$(".inpu2").attr('placeholder','手机号不能为空').addClass("textColor");
+    	}else{
+    		$(".inpu2").removeClass("textColor");
+    	}
+    })
+    
+     var _height=$("body").height();
+   $("body").css({"background-size":"100%"+ _height+"px"})
+</script>
