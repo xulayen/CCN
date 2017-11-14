@@ -75,3 +75,6 @@ https://xulayen.github.io/CCN/CCN.TXZ/app/store/login.html
 
 #### 小松中国
 https://xulayen.github.io/CCN/CCN.XSChina/app/front/index.html
+
+#### 百适通
+https://xulayen.github.io/CCN/CCN.BST/app/front/index.html
