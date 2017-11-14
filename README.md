@@ -78,3 +78,6 @@ https://xulayen.github.io/CCN/CCN.XSChina/app/front/index.html
 
 #### 百适通
 https://xulayen.github.io/CCN/CCN.BST/app/front/index.html
+
+#### 防伪
+https://xulayen.github.io/CCN/CCN.Global.AC/app/front/index.html

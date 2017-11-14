@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>壳牌防伪查询系统</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="../../static/images/favicon.ico" />
+    <!--<link rel="stylesheet" href="../../static/css/swipe.css" />-->
+    <link rel="stylesheet" href="../../static/css/slick.css" />
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+	<script type="text/javascript" src="../../static/script/plugins/jquery-1.10.2.min.js" ></script>
+    <script src="../../static/script/plugins/BroswerUtil.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../static/script/plugins/Slider.js"></script>
+    <script type="text/javascript" src="../../static/script/plugins/swipe.js" ></script>
+    <script type="text/javascript" src="../../static/script/plugins/slick.min.js" ></script>
+    <!--<script type="text/javascript" src="../../static/script/plugins/require.js" defer async="true"></script>
+    <script type="text/javascript" src="../../static/script/plugins/require.js"  data-main="../../static/script/plugins/main"></script>-->
+</head>
+<body>
+	<div class="gif_mask none"></div>
+	<div class="main">
+		<!--头部开始-->
+		<nav>
+			<div class="nav">
+				<div class="logo" onclick="location.href='index.html'">Shell Anti-Counterfeit System</div>
+	            <div id="btn" class="btn">
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	            </div>
+	            <div id="navbar" class="navbar">
+	                <ul class="layer_clcik">
+	                    <li><a href="#">Understand label features</a></li>
+	                </ul>
+	            </div>  
+			</div>
+		</nav>
+		
+		<div class="layer_main">
+			<!--banner图开始-->
+			<div class="banner">
+			    <div class="slick">
+					<div><img src="../../static/images/banner_1.png" alt=""></div>
+					<div><img src="../../static/images/banner_2.png" alt=""></div>
+					<div><img src="../../static/images/banner_3.png" alt=""></div>
+					<div><img src="../../static/images/banner_4.png" alt=""></div>
+					<div class="layer_img"><img src="../../static/images/banner_5.png" alt=""></div>
+					<div class="layer_img1"><img src="../../static/images/banner_6.png" alt=""></div>
+				</div>
+			</div>
+
+			<!--正文内容开始-->
+			<form class="container" action method="post" accept-charset="UTF-8">
+				<div class="cn_main">
+					<h2 class="title">WELCOME</h2>
+					<div class="cnt">
+						<div class="cnt_left">
+							<p class="text">
+								Thank you for purchasing a Shell Lubricants Product.</br>
+								Please use our Anti-Counterfeit system to verify its authenticity.
+							</p>
+							<div class="u_sle">
+								<p class="list_title">
+									<span>Select Country</span>
+									<span>Select Language</span>
+								</p>
+								<div class="select_country">
+									<div class="country_left" >
+										<!--<div class="select_left" id="_country"><i class="iconfont">&#xe502;</i></div>-->
+										<div class="select_left" id="_country"></div>
+										<p class="country_img"><img src="../../static/images/China.png" /></p>
+										<p class="country" id="count">China</p>
+										<input type="hidden" value="" id="currentCountry">
+									</div>
+									<div class="country_right">
+										<!--<div class="select_left" id="_language"><i class="iconfont">&#xe611;</i></div>-->
+										<div class="select_left" id="_language"></div>
+										<p class="select_language">Mandarin</p>
+										<input type="hidden" value="" id="currentLanguage">
+									</div>
+								</div>
+							</div>
+							<div class="countryContainer none">
+								<ul class="select_flag" id="flags">
+									<li><img src="../../static/images/China.png"  />China</li>
+									<li><img src="../../static/images/Iran.png"  />Iran</li>
+									<li><img src="../../static/images/Indonesia.png"  />Indonesia</li>
+									<li><img src="../../static/images/Iraq.png"  />Iraq</li>
+									<li><img src="../../static/images/Russian.png"  />Russia</li>
+									<li><img src="../../static/images/SaudiaArabia.png"  />SaudiaArabia</li>
+									<li><img src="../../static/images/UK.png"  />uk</li>
+								</ul>
+							</div>
+							<div class="countryContainer1 none">
+								<ul id="_select" class="_select">
+									<li>China</li>
+									<li>Iran</li>
+									<li>Indonesia</li>
+									<li>Iraq</li>
+									<li>Russia</li>
+									<li>SaudiaArabia</li>
+									<li>uk</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="cnt_right">
+							<p class="limitWidth">Enter the 16-digit Anti-Counterfeit code:</p>
+							<p style="font-weight:bold" class="limitWidth">PLEASE UNCOVER LABEL to find
+							   16 digit Anti-Counterfeit Code
+							</p>
+							<input type="text" name="inpt" placeholder="Scan the QR code to skip manual input" class="inpt" maxlength="16" id="inpt"/>
+							<p class="err_tip">ERROR! You have entered an incorrect code.(Please try again)</p>
+							<div class="gif">
+								<img src="../../static/images/animation_2.gif"  />
+								<!--<img src="../../static/images/animation_2.gif"  />-->
+							</div>
+						</div>	
+						<div class="clear"></div>
+					</div>
+					<div class="cnt1">
+						<p>Real person confirmation</p>
+						<div class="cnt1_left">
+							<div class="slide_cnt index-below-action">
+								<div id="slider" class="slider left">
+					                <div id="pageSlide">
+					                    <input id="captcha" class="valid" type="hidden" validmsg="请向右滑动。" value="0">
+					                    <span id="label" class="label"></span>
+					                    <span id="lableTip" hasslider="Thank you！" noslider="SLIDE to confirm you are human！">SLIDE to confirm you are human</span>
+					                </div>
+					            </div>
+							</div>
+						</div>
+						<div class="cnt1_right">
+							<input type="button" value="Submit" class="sub" onclick="location.href='suc_result.html'"/>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<p class="contact">
+						<a href="contact.html">Contact us |</a> 
+						<a href="#">Privacy Policy | </a>
+						<a href="#">Terms & Conditions</a>
+					</p>
+					<p class="t_url">
+						<span>&copy; 2014 Shell.All rights reserved.</span>
+						<span><a href="http://www.ac.shell.com">www.ac.shell.com</a></span>
+					</p>
+				</div>
+				
+			</form>
+		</div>
+		<!--gif弹窗-->
+		<div class="pop_layer none">
+			<div class="hideGif">
+				<img src="../../static/images/english.gif"  /> 
+				<span class="closeGif">X</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/common.js" ></script>
+<script type="text/javascript" src="../../static/script/plugins/nav.js" ></script>
+<script>
+
+	var slider1 = new Slider();
+    slider1.Init();
+    ///屏幕大小发生改变时触发
+    $(window).resize(function () {
+        slider1.HanderIn();
+        slider1.HanderOut();
+	});
+</script>

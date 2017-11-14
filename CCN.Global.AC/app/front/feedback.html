@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>壳牌防伪查询系统</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--<link rel="stylesheet" href="../../static/css/swipe.css"  />-->
+    <link rel="stylesheet" href="../../static/css/slick.css" />
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+	<script type="text/javascript" src="../../static/script/plugins/jquery-1.10.2.min.js" ></script>
+	 <script type="text/javascript" src="../../static/script/plugins/slick.min.js" ></script>
+    <!--<script type="text/javascript" src="../../static/script/plugins/swipe.js" ></script>-->
+    <!--<script type="text/javascript" src="../../static/script/plugins/require.js" defer async="true"></script>
+    <script type="text/javascript" src="../../static/script/plugins/require.js"  data-main="../../static/script/plugins/main"></script>-->
+</head>
+<body>
+	<div class="gif_mask none"></div>
+	<div class="main">
+		<nav>
+			<div class="nav">
+				<div class="logo" onclick="location.href='index.html'">Shell Anti-Counterfeit System</div>
+	            <div id="btn" class="btn">
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	            </div>
+	            <div id="navbar" class="navbar">
+	                <ul>
+	                    <li onclick="location.href='feedback.html'"><a href="#">FEEDBACK</a></li>
+	                </ul>
+	            </div>  
+			</div>
+		</nav>
+		<!--banner开始-->
+		<div class="banner">
+			 <div class="slick">
+					<div><img src="../../static/images/banner_1.png" alt=""></div>
+					<div><img src="../../static/images/banner_2.png" alt=""></div>
+					<div><img src="../../static/images/banner_3.png" alt=""></div>
+					<div><img src="../../static/images/banner_4.png" alt=""></div>
+					<div class="layer_img"><img src="../../static/images/banner_5.png" alt=""></div>
+					<div class="layer_img1"><img src="../../static/images/banner_6.png" alt=""></div>
+				</div>
+		</div>
+		<!--查询开始-->
+		<form class="container">
+			<div class="cn_main">
+				<div class="cnt">
+					<div class="cnt_left">
+						<p class="p_first">Your feedback is important to Shell Lubricants.</p>
+						<p>Please complete the feedback form.If your know where,when and who you purchased this product from,it is important to tell us.</p>
+						<p class="p_code"><span>Anti-Counterfeit code:</span>0000 0000 0000 0000</p>
+						<p class="cnt_inpu"><span><strong>Name:</strong>(Optional)</span>
+							<input type="text" maxlength="10"/>
+						</p>
+						<p class="cnt_inpu"><span><strong>Tel:</strong>(Optional)</span>
+							<input type="tel" maxlength="11"/></p>
+						<p class="cnt_inpu"><span><strong>Email:</strong></span>
+							<input type="email" placeholder="name@domain.com" maxlength="20"/>
+						</p>
+					</div>
+					<div class="cnt_right">
+						<p class="p_first">Feedback</p>
+						<textarea></textarea>
+						<div class="tip_text">
+							<p>Example:</p>
+							<p>I have bought one bottle of4L Helix Ultra from Auto-parts city,which is located in Road No.322,Huan Street.The store contract number is 130-0000-0000.And found that the anti-counterfeit code does not exist.Can you help me? Or let me known the nearest Shell authorised store?</p>
+						</div>
+						<p class="radio_inpu">
+							<label><input name="aa" type="checkbox" value="11"/>
+								I have read and understand the Privacy policy(Please tick)
+							</label> 
+						</p>
+						<div class="cnt1 fed_btn">
+							<input type="button" value="Submit" class="inpu_sub" onclick="location.href='feed_submit.html'"/>	
+							<input type="reset" value="Reset" class="inpu_res"/>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p class="contact">
+					<a href="contact.html">Contact us |</a> 
+					<a href="#">Privacy Policy | </a>
+					<a href="#">Terms & Conditions</a>
+				<p class="t_url">
+					<span>&copy; 2014 Shell.All rights reserved.</span>
+					<span><a href="http://www.ac.shell.com">www.ac.shell.com</a></span>
+				</p>
+			</div>	
+		</form>
+		<!--gif弹窗-->
+		<div class="pop_layer none">
+			<div class="hideGif">
+				<img src="../../static/images/gif_1.GIF"  /> 
+				<span class="closeGif">X</span>
+			</div>
+		</div>
+		<div class="pop_layer1 none"><img src="../../static/images/gif_1.GIF"  /> </div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/common.js" ></script>
+<script type="text/javascript" src="../../static/script/plugins/nav.js" ></script>
