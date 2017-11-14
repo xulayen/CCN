@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>百适通</title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg1">
+	<div class="empty"></div>
+	<div class="activity"></div>
+	<div class="box_cnt">
+		<div class="box"></div>
+		<div class="bar"></div>
+	</div>
+	<p class="tip none">长按二维码，关注百适通</p>
+	<p class="tip none">官方微信参与抽奖活动</p>
+	<p class="rule"></p>
+
+	<!--活动规则弹窗-->
+	<div class="mask none"></div>
+	<div class="bg_blur none"></div>
+	<div class="rule_cnt none">
+		<div class="rule_title">活动规则</div>
+		<div class="rule_body">
+			<p class="rule_head">活动时间</p>
+			<p>即日起-2017年12月31日</p>
+			<p class="rule_head">活动咨询</p>
+			<P>活动服务热线：021-26095599</p>
+			<p>工作时间：周一至周五9:00-21:00</p>
+			<P>周六、周日9:00-18:00</p>
+			<p class="rule_head">活动说明及注意事项</p>
+			<ul>
+				<li>
+					1.凡在双十一期间通过线上购买百适通产品,即可在瓶身上找到刮刮卡一张，刮开涂层扫码即兑奖.
+				</li>
+				<li>
+					2.中奖后请仔细填写相关信息以便奖品寄送,获奖礼品全国免费配送.
+				</li>
+				<li>
+					3.兑奖时间截止至2017年12月31日.
+				</li>
+				<li>
+					4.本次活动刮刮卡上的二维码只能具有唯一性,每个活动二维码在活动期间只能领取一次奖励的机会,如一个二维码参与活动且领取过奖品,再次参与活动均视为无效扫码。
+				</li>
+			</ul>
+		</div>
+		<div class="rule_close">完成</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js"></script>
+<script>
+	$(".rule").click(function(){
+		$(".mask,.bg_blur,.rule_cnt").show();
+	})
+	$(".rule_close").click(function(){
+		$(".mask,.bg_blur,.rule_cnt").hide();
+	})
+	
+	setTimeout(function(){
+		$(".box_cnt").css("visibility","visible").addClass("bounceIn");
+		$(".bar").addClass("tada");
+	},1000)
+	setTimeout(function(){
+		$(".tip").show()
+	},1500)
+	
+</script>
