@@ -1,0 +1,27 @@
+/*旋转动画*/
+@-webkit-keyframes el_rotate {
+    from {transform:rotate(0deg)}
+    to {transform:rotate(360deg)}
+}
+
+.el_rotate {
+    -webkit-backface-visibility: visible !important;
+    -ms-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation: el_rotate 2.5s linear 0s infinite normal;
+    animation:el_rotate 2.5s linear 0s infinite normal;
+}
+
+/*上下浮动动画*/
+@-webkit-keyframes up_down_floated {
+    from {transform:translateY(-3px)}
+    to {transform:translateY(3px)}
+}
+
+.up_down_floated {
+    -webkit-backface-visibility: visible !important;
+    -ms-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation: up_down_floated 1s linear 0s infinite alternate;
+    animation:up_down_floated 1s linear 0s infinite alternate;
+}

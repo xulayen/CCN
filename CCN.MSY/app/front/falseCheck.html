@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>马石油</title>
+	<script type="text/javascript" src="../../static/script/autoRem.js"></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg">
+	<img src="../../static/images/logo.png"  class="logo _blur"/>
+	<img src="../../static/images/title.png"  class="title _blur"/>
+	<div class="bg_blur"></div>
+	<div class="maskk"></div>
+	<!--防伪查询-->
+	<div class="falseCnt ph">
+		<img src="../../static/images/false.png"  />
+		<p>防伪查询系统</p>
+		<p>欢迎您使用防伪查询验证系统,</br>点击"确定"按钮获取本次查询结果</p>
+		<p class="recBtn ph">确定</p>
+	</div>
+	<!--防伪结果-->
+	<div class="winCheck none">
+		<div class="winHead">
+			<p class="ph">防伪查询</p>
+			<p class="pb">您查询数码为：749829782002796</p>
+		</div>
+		<div class="fasleBody pm">
+			<p>感谢购买正品润滑油,我们正在举行购油抽奖活动.请您长按下方二维码关注上汽红岩微信公众号,并扫描刮开二维码参与活动</p>
+			<p class="none">感谢购买正品润滑油,您的号码已于2016年09月20日10时51分被查询过,我们正在举行购油抽奖活动.请您长按下方二维码关注上汽红岩微信公众号,并扫描刮开二维码参与活动</p>
+			<img src="../../static/images/er.png"  />
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/jquery-2.2.0.min.js"></script>
+<script>
+	$(".recBtn").click(function(){
+		$(".falseCnt").hide();
+		$(".winCheck").show();
+	})
+</script>

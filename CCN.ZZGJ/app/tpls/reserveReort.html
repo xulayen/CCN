@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>中种国际</title>
+	<script type="text/javascript" src="../../static/js/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg">
+	<div class="return_menu">
+		<P onclick="location.href='menu.html'"><span></span>首页</P>
+		<P>库存统计报表</P>
+	</div>
+	<div class="supplier_body_blur"></div>
+	<div class="supplier_information_cnt">
+		<div class="supplier_head">
+			<p class="supplier_name"><span>长葛市农业职务保护站人民路北段服务部</span></p>
+			<div class="supplier_nurmber">
+				<p class="line_left"></p>
+				<p>编号：8113000</p>
+				<p class="line_right"></p>
+			</div>
+		</div>
+		<div class="supplier_body">
+			<div class="information_head">
+				<p class="productName"><span></span>品种名称</p>
+				<!--<p class="search"></p>-->
+				<div id="sb-search" class="sb-search">
+					<form>
+						<input class="sb-search-input" placeholder="请输入产品名" type="text" value="" name="search" id="search">
+						<input class="sb-search-submit" type="submit" value="">
+						<span class="search"></span>
+					</form>
+				</div>
+			</div>
+			<div class="information_body detail_information_body">
+				<ul class="detail_lists reserve_list_cnt">
+					<li>
+						<div class="detail_lists_cnt">
+							<p>CD京科968凤云海燕纸筒包衣6000粒</p>
+							<p>库存数量<span>350</span></p>
+						</div>
+					</li>
+					<li>
+						<div class="detail_lists_cnt">
+							<p>CD京科968凤云海燕纸筒包衣6000粒</p>
+							<p>库存数量<span>350</span></p>
+						</div>
+					</li>
+					<li>
+						<div class="detail_lists_cnt">
+							<p>CD京科968凤云海燕纸筒包衣6000粒</p>
+							<p>库存数量<span>350</span></p>
+						</div>
+					</li>
+					<li>
+						<div class="detail_lists_cnt">
+							<p>CD京科968凤云海燕纸筒包衣6000粒</p>
+							<p>库存数量<span>350</span></p>
+						</div>
+					</li>
+					<li>
+						<div class="detail_lists_cnt">
+							<p>CD京科968凤云海燕纸筒包衣6000粒</p>
+							<p>库存数量<span>350</span></p>
+						</div>
+					</li>
+					<li>
+						<div class="detail_lists_cnt">
+							<p>CD京科968凤云海燕纸筒包衣6000粒</p>
+							<p>库存数量<span>350</span></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="write_blur reserve_blur">
+			<div class="write_cnt reserve_cnt">
+				<p>12450</p>
+				<p>库存数量</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/js/jquery-2.2.0.min.js" ></script>
+<script>
+	$(".search").click(function(){
+		$(".sb-search").addClass("sb-search-open");
+		$(".productName").hide();
+		$(this).css({"z-index":"-1"});
+		$(".sb-search-submit").css({"z-index":"10"});
+	})
+</script>

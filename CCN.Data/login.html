@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>通用红包系统后台</title>
+	<link rel="stylesheet" href="css/front.css" />
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+<body class="bg">
+	<div class="system_title" style="position:relative">
+		<P class="system_name">中商用码红包营销系统</P>
+	</div>
+	<div class="login_cnt">
+		<div class="login_main">
+			<div class="login_name">
+				<p>手机号 ：</p>
+				<p><input type="tel"/></p>
+			</div>
+			<div class="login_check">
+				<p>验证码 ：</p>
+				<p>
+					<input type="text" placeholder="请输入验证码" maxlength="4"/>
+					<span>获取验证码</span>
+				</p>
+			</div>
+			<div class="agreement_tip">
+				<div class="language">
+					<input type="radio" id="accept" name="language"/>
+					<label for="accept"></label>
+					<p class="tip_text">中文</p>
+				</div>
+				<div class="language">
+					<input type="radio" id="accept1" name="language"/>
+					<label for="accept1"></label>
+					<p class="tip_text">English</p>
+				</div>
+			</div>
+			<div class="login_btn" onclick="location.href='index.html'">登录</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+<script>
+	$(".tip_text").click(function(){
+		$(".mask").show();
+		$(".agreement_layer").addClass("show");
+	})
+	$(".close_agreement").click(function(){
+		$(".agreement_layer").removeClass("show");
+		setTimeout(function(){
+			$(".mask").hide();
+		},500)
+		
+	})
+</script>

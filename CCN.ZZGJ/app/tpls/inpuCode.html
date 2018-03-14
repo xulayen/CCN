@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>中种国际</title>
+	<script type="text/javascript" src="../../static/js/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg">
+	<div class="return_menu">
+		<P onclick="location.href='menu.html'"><span></span>首页</P>
+		<P>发货扫描</P>
+	</div>
+	<div class="inpuCode_cnt">
+		<div class="inpuCode_head">
+			<p class="supplier_name"><span>长葛市农业职务保护站人民路北段服务部</span></p>
+			<div class="supplier_nurmber">
+				<p class="line_left"></p>
+				<p>编号：8113000</p>
+				<p class="line_right"></p>
+			</div>
+		</div>
+		<div class="inpuCode_body">
+			<div class="inpu_cnt">
+				<div class="inpu_blur"></div>
+				<input type="tel" placeholder="输入数码" maxlength="16"/>
+			</div>
+			<div class="repeat_inpu_cnt">
+				<div class="repeat_inpu_blur"></div>
+				<input type="tel" placeholder="重复数码" maxlength="16"/>
+			</div>
+		</div>
+	</div>
+	<input type="button" class="inpu_sure_btn" value="确定"/>
+	
+	<!--结束扫码弹窗-->
+	<div class="mask none"></div>
+	<div class="finish_scan_layer bounceIn none">
+		<p><img src="../../static/images/finish_scan_img.png" /></p>
+		<p class="finish_tip">您两次输入的数码不一致</p>
+		<p class="close_layer">确定</p>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/js/jquery-2.2.0.min.js" ></script>
+<script>
+	$(".inpu_sure_btn").click(function(){
+		if($(".inpu_cnt input").val()!==$(".repeat_inpu_cnt input").val()){
+			$(".mask,.finish_scan_layer").show();
+			$(".inpuCode_cnt").hide();
+		}else{
+			location.href='inpuResult.html';
+		}
+	});
+	$(".close_layer").click(function(){
+		$(".mask,.finish_scan_layer").hide();
+			$(".inpuCode_cnt").show();
+	})
+</script>

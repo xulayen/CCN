@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>小罐茶</title>
+<link rel="stylesheet" href="../../static/css/front.css" />
+<link rel="stylesheet" href="../../static/css/index.css" />
+<script type="text/javascript" src="../../static/script/autoRem.js" ></script>
+</head>
+<body>
+	<div class="menu_header">
+		<div class="company_name">
+			<img src="../../static/images/tx.png"  />
+			<p>北京茗门茶业有限公司</p>
+			<p>编号:8202000</p>
+		</div>
+		<p class="productName">
+			<img src="../../static/images/send_1.png"/>
+			<span>分销商——京烟连锁</span>
+			<span>发货产品统计</span>
+		</p>
+	</div>
+	<div class="scanCnt">
+		<div class="shipScan">
+			<p class="scanLeft">
+				<span></span>
+				<span>扫描录入</span>
+			</p>
+			<p class="scanRight">
+				<span></span>
+				<span>编码录入</span>
+			</p>
+		</div>
+		<div class="label">
+			<input type="checkbox" id="continue"/>
+			<label for="continue"></label>
+			<span>连续扫描</span>
+		</div>
+	</div>
+	<!--扫描录入弹窗-->
+	<div class="productLayer none">
+		<div class="productCnt">
+			<p class="product_header">
+				<span>产品名称</span>
+				<span>实发数量</span>
+			</p>
+			<div class="productLis">
+				<ul>
+					<li>
+						<p>大红袍(经典)10罐装2.0版A大红袍(经典)10罐装2.0版A</p>
+						<p>20</p>
+					</li>
+					<li>
+						<p>茉莉花茶(经典)10罐装2.0版A</p>
+						<p>20</p>
+					</li>
+					<li>
+						<p>普洱熟茶(经典)10罐装2.0版A</p>
+						<p>20</p>
+					</li>
+					<li>
+						<p>湞红茶(经典)10罐装2.0版A</p>
+						<p>20</p>
+					</li>
+					<li>
+						<p>小罐红(经典)10罐装2.0版A</p>
+						<p>20</p>
+					</li>
+					<li>
+						<p>小罐红(经典)10罐装2.0版A</p>
+						<p>20</p>
+					</li>
+					<li>
+						<p>小罐红(经典)10罐装2.0版A</p>
+						<p>20</p>
+					</li>
+					<li>
+						<p>小罐红(经典)10罐装2.0版A</p>
+						<p>20</p>
+					</li>
+				</ul>
+			</div>
+			<p class="line"></p>
+			<p class="totalNum">总计:<span>50万</span></p>
+		</div>
+		<div class="scan_btn">
+			<p>继续扫描</p>
+			<p>结束扫描</p>
+		</div>
+	</div>
+	
+	<!--底部菜单-->
+	<ul class="bottom">
+		<li class="homeIco" onclick="location.href='menu.html'">
+			<p></p>
+			<p>首页</p>
+		</li>
+		<li class="scanIco active" onclick="location.href='shipScan.html'">
+			<p></p>
+			<p>发货扫描</p>
+		</li>
+		<li class="sendIco" onclick="location.href='sendProduct.html'">
+			<p></p>
+			<p>发货统计</p>
+		</li>
+		<li class="saveIco" onclick="location.href='saveProduct.html'">
+			<p></p>
+			<p>库存统计</p>
+		</li>
+	</ul>
+	
+	<!--编码录入弹窗-->
+	<div class="mask none"></div>
+	<div class="inpuCode none">
+		<form>
+			<div>
+				<p>输入数码</p>
+				<input type="tel" maxlength="16" placeholder="请输入数码" class="code"/>
+			</div>
+			<div>
+				<p>确认数码</p>
+				<input type="tel" maxlength="16" placeholder="请再次输入数码" class="reCode"/>
+			</div>
+			<div class="err">两次输入的数码不一致</div>
+			<p class="codeSure">确定</p>
+		</form>
+	</div>
+	
+	<!--扫描成功弹窗-->
+	<div class="layerCnt none">
+		<p class="scanSuc">你已完成本次发货扫描</p>
+		<p class="scanBack">
+			<span>查看</span>
+			<span>返回</span>
+		</p>
+	</div>
+	<!--数码已记录弹窗-->
+	<div class="layerCnt1 none">
+		<p>次数码已记录过一次！</p>
+		<span>返回</span>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/jquery-2.2.0.min.js" ></script>
+<script>
+	//扫描录入弹窗
+	$(".scanLeft span:nth-of-type(1)").click(function(){
+		$(".productLayer").show();
+		$(".scanCnt").hide();
+	})
+	$(".scan_btn p:nth-of-type(1)").click(function(){
+		$(".productLayer").hide();
+		$(".scanCnt").show();
+	})
+	//发货扫描成功弹窗
+	$(".scan_btn p:nth-of-type(2)").click(function(){
+		$(".mask,.layerCnt").show();
+	})
+	$(".scanBack span:nth-of-type(2)").click(function(){
+		$(".mask,.layerCnt").hide();
+	})
+	//编码录入弹窗
+	$(".scanRight span:nth-of-type(1)").click(function(){
+		$(".inpuCode,.mask").show();
+	})
+	$(".codeSure").click(function(){
+		//数码不一致弹窗
+		if($(".code").val()!==$(".reCode").val()){
+			$(".err").css({"visibility":"visible"});
+		}else{
+			$(".inpuCode,.mask").hide();
+			$(".err").css({"visibility":"hidden"});
+			$(".code").val("");
+			$(".reCode").val("");
+		}
+	})
+	
+</script>

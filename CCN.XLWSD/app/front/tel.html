@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>九总证手机号</title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css"  />
+</head>
+<body class="home_bg">
+	<div class="empty"></div>
+	<div class="tel_container">
+		<div class="tel_title">
+			<p>验证您的手机号</p>
+			<p>以便您继续参与活动，获得更多惊喜哦！</P>
+		</div>
+		<div class="tel_cnt">
+			<form>
+				<div class="inpu_tel">
+					<input type="tel" placeholder="手机号" id="tel" maxlength="11"/>	
+					<div class="tip1 none" id="tip1">请输入正确手机号</div>
+				</div>
+				<div class="inpu_yz">
+					<input type="text" placeholder="验证码" id="yz_inp" maxlength="4"/>
+					<input class="yz_btn" id="yz" type="button" value="获取验证码"/>
+					<div class="tip1 tip2 none" id="tip2">请输入正确验证码</div>
+				</div>
+				<div class="submit_btn">
+					<div class="sub_left" onclick="location.href='red_packet.html'">确认</div>
+					<div class="sub_right">取消</div>
+				</div>
+			</form>
+		</div>
+		<div class="product_box"></div>
+	</div>
+	<div class="bg_bottom" style="top:18rem"></div>
+	<div class="red_bottom">
+		<div class="bottom_left" onclick="location.href='index.html'"><span></span>回到首页</div>
+		<div class="bottom_right" onclick="location.href='message.html'"><span></span>个人信息</div>
+	</div>
+	
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script>
+	window.onresize = function () {
+		var h = $(window).height();
+		//console.log(h+','+window.screen.availHeight)
+		var u = navigator.userAgent;
+		if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+		if(h <= window.screen.availHeight/2){
+			$('.red_bottom').css({'position':'absoult',"margin-top":"-.5rem",'display':'none'});
+			}else{
+			    $('.red_bottom').css({'position':'fixed','display':'block'});
+			}
+		 }
+	}
+	var yz=document.getElementById("yz");
+	var tel=document.getElementById("tel");
+	var tip1=document.getElementById("tip1");
+	var tip2=document.getElementById("tip2");
+	var bottom=document.getElementById("bottom");
+	var timer=null;
+	t=60;
+	yz.onclick=function(){
+		if(tel.value==""){
+			tip1.style.display="block";
+		}else{
+			clearInterval(timer);
+			timer=setInterval(function(){
+				if(t>=0){
+					yz.value="重新发送"+t+"s";
+					t-=1;
+					yz.style.background="#999999";
+					yz.disabled=true;
+				}else{
+					t=60;
+					yz.value="获取验证码";
+					yz.disabled=false;
+					yz.style.background="#b60005";
+					clearInterval(timer);
+				}
+			},1000)
+		}
+	}
+	
+	tel.onfocus=function(){
+		tip1.style.display="none";
+	}
+//	tel.onblur=function(){
+//		tip1.style.display="block";
+//	}
+	tip1.onclick=function(){
+		this.style.display="none";
+		tel.focus();
+	}
+	
+	
+</script>
+

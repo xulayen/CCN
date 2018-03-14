@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>中种国际</title>
+	<script type="text/javascript" src="../../static/js/autoRem.js"></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+	<link rel="stylesheet" href="../../static/css/iosSelect.css" />
+</head>
+<body class="bg">
+	<div class="return_menu">
+		<P onclick="location.href='menu.html'"><span></span>首页</P>
+		<P>发货扫描</P>
+	</div>
+	<div class="select_supplier_cnt">
+		<div class="supplier_head">
+			<p class="supplier_name"><span>长葛市农业职务保护站人民路北段服务部</span></p>
+			<div class="supplier_nurmber">
+				<p class="line_left"></p>
+				<p>编号：NONOGH</p>
+				<p class="line_right"></p>
+			</div>
+		</div>
+		<div class="select_cnt">
+				<div class="inpu_blur"></div>
+				<input type="hidden" name="data_id" id="dataId" value="">   
+				<P id="showData">请选择收货单位<span></span></P>
+			</div>
+	</div>
+	<div class="container"></div>
+	<div id="searchCnt" class="searchCnt none">
+		<form>
+			<input class="sb-search-input" placeholder="请输入收货单位" type="text" value="" name="search" id="search">
+			<input class="sb-search-submit" type="submit" value="">
+			<span class="searchSuppier"></span>
+		</form>
+	</div>
+	<input type="button" class="inpu_sure_btn" onclick="location.href='inpuResult.html'" value="确定"/>
+</body>
+</html>
+<script type="text/javascript" src="../../static/js/supplierData.js" ></script>
+<script type="text/javascript" src="../../static/js/iscroll.js" ></script>
+<script type="text/javascript" src="../../static/js/iosSelect.js" ></script>
+<script type="text/javascript" src="../../static/js/jquery-2.2.0.min.js" ></script>
+<script>
+	var showDataDom = document.querySelector('#showData');
+    var dataIdDom = document.querySelector('#dataId');
+    var suppName = document.querySelector('.supplier_name span');
+    //var dataSelect;
+    showDataDom.addEventListener('click', function () {
+        var dataId = showDataDom.dataset['id'];
+        var dataName = showDataDom.dataset['value'];
+
+        var dataSelect = new IosSelect(1, 
+            [data],
+            {
+                container: '.container',
+                title: '请选择经销商',
+                itemHeight:40,
+                itemShowCount:9,
+                oneLevelId: dataId,
+                callback: function (selectOneObj) {
+                    dataIdDom.value = selectOneObj.id;
+                    //showDataDom.innerHTML = selectOneObj.value;
+                    showDataDom.dataset['id'] = selectOneObj.id;
+                    showDataDom.dataset['value'] = selectOneObj.value;
+                    suppName.innerHTML=selectOneObj.value;
+                }
+        });
+        
+        
+        $('.return_menu p').click(function(){
+	 		$('.olay').remove();
+	 		new IosSelect(1, 
+	            [data2],
+	            {
+	                container: '.container',
+	                title: '',
+	                itemHeight:40,
+	                itemShowCount:9,
+	                oneLevelId: dataId,
+	                callback: function (selectOneObj) {
+	                    dataIdDom.value = selectOneObj.id;
+	                    showDataDom.dataset['id'] = selectOneObj.id;
+	                    showDataDom.dataset['value'] = selectOneObj.value;
+	                    suppName.innerHTML=selectOneObj.value;
+	                }
+	        })
+	 	})
+        
+        $(".select_supplier_cnt").hide();
+        $(".searchCnt").show();
+        if($(".searchCnt").hasClass("searchCnt-open")){
+        	$(".searchCnt").removeClass("searchCnt-open");
+        	$(".searchSuppier").css({"z-index":"10"});
+        	$(".sb-search-submit").css({"z-index":"-1"});
+        }
+       
+    });
+    
+    $(".searchSuppier").click(function(){
+		$(".searchCnt").addClass("searchCnt-open");
+//		$(".productName").hide();
+		$(this).css({"z-index":"-1"});
+		$(".sb-search-submit").css({"z-index":"10"});
+	})
+ 	
+</script>

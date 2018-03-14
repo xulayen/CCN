@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>九总个人信息</title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css"  />
+</head>
+<body class="message_bg">
+	<div class="empty" style="top:-1rem"></div>
+	<p class="m_title"><span>不要迷恋哥，哥名不想说张先生（131****6268）已累计获得：</span></p>
+	<div class="red_total">
+		<div class="total_left">
+			<p>530.12</p>
+			<p>元红包</p>
+		</div>
+		<div class="total_right">
+			<p>316</p>
+			<p>积分</p>
+		</div>
+	</div>
+	<div class="det_title">
+		<p>日期</p>
+		<p>产品</p>
+		<p>奖励</p>
+	</div>
+	<div id="wrapper">
+		<ol class="red_list" id="list">
+			<li>
+				<p>12.12</p>
+				<p>九总</p>
+				<p><span>1.88</span>元扫码红包</p>
+				<p><span>15</span>积分</p>
+			</li>
+			<li>
+				<p>02.02</p>
+				<p>九总</p>
+				<p><span>99.88</span>元扫码红包</p>
+				<p><span>5</span>积分</p>
+			</li>
+			<li>
+				<p>08.12</p>
+				<p>一口怪兽</p>
+				<p><span>10.10</span>元扫码红包</p>
+				<p><span>5</span>积分</p>
+			</li>
+			<li>
+				<p>11.02</p>
+				<p>一口怪兽</p>
+				<p><span>9.88</span>元扫码红包</p>
+				<p><span>15</span>积分</p>
+			</li>
+			<li>
+				<p>08.12</p>
+				<p>九总</p>
+				<p><span>9.88</span>元扫码红包</p>
+				<p><span>99</span>积分</p>
+			</li>
+			<li>
+				<p>08.12</p>
+				<p>九总</p>
+				<p><span>99.88</span>元分享红包</p>
+				<p><span></span></p>
+			</li>
+			<li>
+				<p>08.12</p>
+				<p>九总</p>
+				<p><span>99.88</span>元分享红包</p>
+				<p><span></span></p>
+			</li>
+			<li>
+				<p>08.12</p>
+				<p>九总</p>
+				<p><span>99.88</span>元扫码红包</p>
+				<p><span>99</span>积分</p>
+			</li>
+			<li>
+				<p>08.12</p>
+				<p>九总</p>
+				<p><span>99.88</span>元扫码红包</p>
+				<p><span>99</span>积分</p>
+			</li>
+		</ol>
+	</div>
+	<input type="button" class="more" id="more" value="查看更多" />
+	<div class="bg_bottom" style="top:20rem"></div>
+	<div class="red_bottom">
+		<div class="bottom_left" onclick="location.href='index.html'"><span></span>回到首页</div>
+		<div class="bottom_right" onclick="location.href='message.html'"><span></span>个人信息</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/iscroll.js" ></script>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script>
+    function loaded(){
+	    setTimeout(function(){
+	        var myScroll;
+		    vv_scroll();  //后台获取数据后，执行这个函数(加滚动条);
+		    function vv_scroll(){
+		        myScroll = new IScroll('#wrapper',{
+		            scrollbars: true,
+		            disableMouse:true,
+		            disablePointer:true,
+		            bounceEasing:'back',
+		            click:true,
+		            fadeScrollbars: false
+		        });
+		    }
+	    },2000);
+	}
+    window.addEventListener("load",loaded,false);
+    //console.log($(".red_list li").length);
+    if($(".red_list li").length<=7){
+    	$("#more").hide();
+    }else{
+    	$("#more").show();
+    	$("#more").click(function(){
+	    	$("#wrapper").css({"height":"13.5rem"});
+	    	$(this).css({"top":"22.7rem"})
+	    })
+    }
+</script>

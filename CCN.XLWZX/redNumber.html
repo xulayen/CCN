@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>小龙王折线图</title>
+	<link rel="stylesheet" href="css/front.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<script type="text/javascript" src="js/echarts.min.js" ></script>
+</head>
+<body>
+	<div class="pepole_trends_cnt">
+		<ul class="nav">
+			<li><a href="index.html">参与人数趋势</a></li>
+			<li><a href="product.html">产品类别构成</a></li>
+			<li><a href="red.html">红包发放趋势</a></li>
+			<li class="active1"><a href="redNumber.html">红包发放金额趋势</a></li>
+			<li><a href="sendTime.html">经销商发放次数趋势</a></li>
+			<li><a href="supplier.html">积分发放量趋势</a></li>
+			<li><a href="user.html">用户黏性构成</a></li>
+		</ul>
+		<p class="pepole_trends">红包发放金额趋势</p>
+		<div class="country_cnt">
+			<p class="country">
+				<input type="checkbox" id="checkbox1" checked="checked"/>
+				<span></span>
+				<label for="checkbox1">全国</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox2" />
+				<span></span>
+				<label for="checkbox2">湖南</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox3" />
+				<span></span>
+				<label for="checkbox3">广东</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox4" />
+				<span></span>
+				<label for="checkbox4">河南</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox5" />
+				<span></span>
+				<label for="checkbox5">江西</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox6" />
+				<span></span>
+				<label for="checkbox6">湖北</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox7" />
+				<span></span>
+				<label for="checkbox7">海南</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox8" />
+				<span></span>
+				<label for="checkbox8">浙江</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox9" />
+				<span></span>
+				<label for="checkbox9">江苏</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox10" />
+				<span></span>
+				<label for="checkbox10">福建</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox11" />
+				<span></span>
+				<label for="checkbox11">安徽</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox12" />
+				<span></span>
+				<label for="checkbox12">云南</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox13" />
+				<span></span>
+				<label for="checkbox13">广西</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox14" />
+				<span></span>
+				<label for="checkbox14">河北</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox15" />
+				<span></span>
+				<label for="checkbox15">山东</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox16" />
+				<span></span>
+				<label for="checkbox16">贵州</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox17" />
+				<span></span>
+				<label for="checkbox17">重庆</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox18" />
+				<span></span>
+				<label for="checkbox18">新疆</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox19" />
+				<span></span>
+				<label for="checkbox19">四川</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox20" />
+				<span></span>
+				<label for="checkbox20">甘肃</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox21" />
+				<span></span>
+				<label for="checkbox21">陕西</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox22" />
+				<span></span>
+				<label for="checkbox22">北京</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox23" />
+				<span></span>
+				<label for="checkbox23">天津</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox24" />
+				<span></span>
+				<label for="checkbox24">辽宁</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox25" />
+				<span></span>
+				<label for="checkbox25">青海</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox26" />
+				<span></span>
+				<label for="checkbox26">内蒙古</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox27" />
+				<span></span>
+				<label for="checkbox27">宁夏</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox28" />
+				<span></span>
+				<label for="checkbox28">上海</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox29" />
+				<span></span>
+				<label for="checkbox29">西藏</label>
+			</p>
+			<p class="country">
+				<input type="checkbox" id="checkbox30" />
+				<span></span>
+				<label for="checkbox30">吉林</label>
+			</p>
+			<p class="country" id="selectall">
+				<input type="checkbox" id="checkbox31" flag="1"/>
+				<label for="checkbox31">全选</label>
+			</p>
+		</div>
+		<!--<input id="selectall" type="button" value="全选" flag="1"/>-->
+		<div class="select_time_cnt unit_cnt country_time">
+			<p class="dayTime">
+				<input type="radio" id="hour" name="time" checked="checked"/>
+				<label for="hour">单位：小时</label>
+			</p>
+			<p class="weekTime">
+				<input type="radio" id="day" name="time"/> 
+				<label for="day">单位：天</label>
+			</p>
+			<p class="mouthTime">
+				<input type="radio" id="week" name="time"/>
+				<label for="week">单位：周</label>
+			</p>
+			<p class="mouthTime">
+				<input type="radio" id="mouth" name="time"/>
+				<label for="mouth">单位：月</label>
+			</p>
+			<span>选择时间</span>
+			<div class="iDate date">
+				<input type="text">
+				<button type="button" class="addOn"></button>
+			</div>
+			<span>-</span>
+			<div class="iDate date">
+				<input type="text">
+				<button type="button" class="addOn"></button>
+			</div>
+			<span class="sure_btn">确定</span>
+			<div class="reportBtn">数据导出</div>
+			<p class="tip">注：选择小时，按0.5小时为单位显示</p>
+		</div>
+	 	<div id="main" style="width:1200px;height:500px;"></div>
+	</div>
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="js/redNnmberInit.js" ></script>
+<script type="text/javascript" src="js/moment.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" ></script>
+<script>
+    $(document).ready(function(){
+    // date time picker
+   
+    if($(".iDate.date").length>0){
+        $(".iDate.date").datetimepicker({
+            locale:"zh-cn",
+            format:"YYYY-MM-DD",
+            dayViewHeaderFormat:"YYYY年 MMMM"
+        });
+    }
+})
+</script>

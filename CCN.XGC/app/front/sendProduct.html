@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>小罐茶</title>
+<link rel="stylesheet" href="../../static/css/front.css" />
+<link rel="stylesheet" href="../../static/css/index.css" />
+<link rel="stylesheet" href="../../static/css/iosSelect.css" />
+<script type="text/javascript" src="../../static/script/autoRem.js" ></script>
+</head>
+<body>
+	<div class="menu_header">
+		<div class="company_name">
+			<img src="../../static/images/tx.png"  />
+			<p>北京茗门茶业有限公司</p>
+			<p>编号:8202000</p>
+		</div>
+		<p>发货数量(件)</p>
+		<p class="goodNum">5万</p>
+	</div>
+	<div class="productCnt">
+		<div class="selecTime">
+			<p>本季度</p>
+			<div class="begainTime">
+				<span id="showDate">开始时间</span>
+				<span>~</span>
+				<span id="showDate1">结束时间</span>
+				<span class="search"></span>
+			</div>
+			<ul class="time">
+				<li>今天</li>
+				<li>本周</li>
+				<li>本月</li>
+				<li>本季度</li>
+			</ul>
+		</div>
+		<p class="product_header">
+			<span>产品名称</span>
+			<span>实发数量</span>
+		</p>
+		<div class="productLis" style="height:7rem">
+			<ul>
+				<li>
+					<p>大红袍(经典)10罐装2.0版A大红袍(经典)10罐装2.0版A</p>
+					<p>20</p>
+				</li>
+				<li>
+					<p>茉莉花茶(经典)10罐装2.0版A</p>
+					<p>20</p>
+				</li>
+				<li>
+					<p>普洱熟茶(经典)10罐装2.0版A</p>
+					<p>20</p>
+				</li>
+				<li>
+					<p>湞红茶(经典)10罐装2.0版A</p>
+					<p>20</p>
+				</li>
+				<li>
+					<p>小罐红(经典)10罐装2.0版A</p>
+					<p>20</p>
+				</li>
+				<li>
+					<p>小罐红(经典)10罐装2.0版A</p>
+					<p>20</p>
+				</li>
+				<li>
+					<p>小罐红(经典)10罐装2.0版A</p>
+					<p>20</p>
+				</li>
+				<li>
+					<p>小罐红(经典)10罐装2.0版A</p>
+					<p>20</p>
+				</li>
+			</ul>
+		</div>
+		<p class="line"></p>
+		<p class="totalNum">总计:<span>50万</span></p>
+	</div>
+	<ul class="bottom">
+		<li class="homeIco" onclick="location.href='menu.html'">
+			<p></p>
+			<p>首页</p>
+		</li>
+		<li class="scanIco" onclick="location.href='shipScan.html'">
+			<p></p>
+			<p>发货扫描</p>
+		</li>
+		<li class="sendIco active" onclick="location.href='sendProduct.html'">
+			<p></p>
+			<p>发货统计</p>
+		</li>
+		<li class="saveIco" onclick="location.href='saveProduct.html'">
+			<p></p>
+			<p>库存统计</p>
+		</li>
+	</ul>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="../../static/script/zepto.js"></script>
+<script type="text/javascript" src="../../static/script/iosSelect.js" ></script>
+<script type="text/javascript" src="../../static/script/iscroll.js" ></script>
+<script>
+	$(".selecTime>p").click(function(){
+		$(".time").addClass("show");
+	})
+	$(".time li").click(function(){
+		$(".time").removeClass("show");
+		var html=$(this).html();
+		$(".selecTime>p").html(html);
+	})
+	
+	//选择时间
+	var selectDateDom = $('#selectDate');
+    var showDateDom = $('#showDate');
+
+	var selectDateDom1 = $('#selectDate1');
+    var showDateDom1 = $('#showDate1');
+    // 初始化时间
+    var now = new Date();
+    var nowYear = now.getFullYear();
+    var nowMonth = now.getMonth() + 1;
+    var nowDate = now.getDate();
+    showDateDom.attr('data-year', nowYear);
+    showDateDom.attr('data-month', nowMonth);
+    showDateDom.attr('data-date', nowDate);
+
+	showDateDom1.attr('data-year', nowYear);
+    showDateDom1.attr('data-month', nowMonth);
+    showDateDom1.attr('data-date', nowDate);
+    // 数据初始化
+    function formatYear (nowYear) {
+        var arr = [];
+        for (var i = nowYear - 5; i <= nowYear + 5; i++) {
+            arr.push({
+                id: i ,
+                value:i+'年'
+            });
+        }
+        return arr;
+    }
+    function formatMonth () {
+        var arr = [];
+        for (var i = 1; i <= 12; i++) {
+            arr.push({
+                id: i ,
+                value:i+'月'
+            });
+        }
+        return arr;
+    }
+    function formatDate (count) {
+        var arr = [];
+        for (var i = 1; i <= count; i++) {
+            arr.push({
+                id: i ,
+                value:i+'日'
+            });
+        }
+        return arr;
+    }
+    var yearData = function(callback) {
+        callback(formatYear(nowYear))
+    }
+    var monthData = function (year, callback) {
+        callback(formatMonth());
+    };
+    var dateData = function (year, month, callback) {
+        if (/^(1|3|5|7|8|10|12)$/.test(month)) {
+            callback(formatDate(31));
+        }
+        else if (/^(4|6|9|11)$/.test(month)) {
+            callback(formatDate(30));
+        }
+        else if (/^2$/.test(month)) {
+            if (year % 4 === 0 && year % 100 !==0 || year % 400 === 0) {
+                callback(formatDate(29));
+            }
+            else {
+                callback(formatDate(28));
+            }
+        }
+        else {
+            throw new Error('month is illegal');
+        }
+    };
+    showDateDom.bind('click', function () {
+        var oneLevelId = showDateDom.attr('data-year');
+        var twoLevelId = showDateDom.attr('data-month');
+        var threeLevelId = showDateDom.attr('data-date');
+        var iosSelect = new IosSelect(3, 
+			 [yearData, monthData, dateData],
+            {
+                title: '',
+                itemHeight: 35,
+                relation: [1, 1, 0, 0],
+                itemShowCount: 7,
+                oneLevelId: oneLevelId,
+                twoLevelId: twoLevelId,
+                threeLevelId: threeLevelId,
+                callback: function (selectOneObj, selectTwoObj, selectThreeObj) {
+                    showDateDom.attr('data-year', selectOneObj.id);
+                    showDateDom.attr('data-month', selectTwoObj.id);
+                    showDateDom.attr('data-date', selectThreeObj.id);
+                    showDateDom.html(selectOneObj.value +  selectTwoObj.value +  selectThreeObj.value);
+                }
+        });
+    });
+
+	showDateDom1.bind('click', function () {
+        var oneLevelId = showDateDom1.attr('data-year');
+        var twoLevelId = showDateDom1.attr('data-month');
+        var threeLevelId = showDateDom1.attr('data-date');
+        var iosSelect = new IosSelect(3, 
+			 [yearData, monthData, dateData],
+            {
+                title: '',
+                itemHeight: 35,
+                relation: [1, 1, 0, 0],
+                itemShowCount: 7,
+                oneLevelId: oneLevelId,
+                twoLevelId: twoLevelId,
+                threeLevelId: threeLevelId,
+                callback: function (selectOneObj, selectTwoObj, selectThreeObj) {
+                    showDateDom1.attr('data-year', selectOneObj.id);
+                    showDateDom1.attr('data-month', selectTwoObj.id);
+                    showDateDom1.attr('data-date', selectThreeObj.id);
+                    showDateDom1.html(selectOneObj.value + selectTwoObj.value + selectThreeObj.value);
+                }
+        });
+    });
+</script>

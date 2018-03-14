@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>无锡君帆</title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js"></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg">
+	<div class="empty"></div>
+	<p class="title_name pr">新增维修</p>
+	<img src="../../static/images/connect.png"  class="connect1" />
+	<div class="Inpucode fixCont">
+		<p class="fixName pm">维修内容:</p>
+		<input type="text" />
+	</div>
+	<div class="scanCnt addCnt">
+		<p class="pm">备注<span>(不能超过50字)</span>:</p>
+		<textarea maxlength="50">
+			
+		</textarea>
+	</div>
+	<div class="resultBtn pBold">
+		<p style="margin-top:2rem">重置</p>
+		<p style="margin-top:0">确认提交</p>
+	</div> 
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script>
+	$(".resultBtn p:nth-of-type(1)").click(function(){
+		$(".fixCont input").val("");
+		$(".addCnt textarea").val("");
+		
+	})
+</script>

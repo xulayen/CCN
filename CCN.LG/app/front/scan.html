@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	    <meta name="viewport"
+	          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	    <meta name="format-detection" content="telephone=no"/>
+	    <title>柳工</title>
+		<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+		<script type="text/javascript" src="../../static/script/plugins/autoRem.js"\></script>
+		<link rel="stylesheet" href="../../static/css/front.css" />
+		<link rel="stylesheet" href="../../static/css/index.css" />
+	</head>
+	<body class="bg1">
+		<div class="logo _blur" style="position:absolute;top:0;"></div>
+		<div class="scan_head pf">扫码领红包</div>
+		<div class="scan_blur"></div>
+		<div class="scan_cnt">
+			<div class="scanImg"></div>
+			<button class="bg_scan pf">开始扫描</button>
+		</div>
+		<div class="scan_cx">
+			<input type="text" placeholder="无法扫描请输入16位数字防伪码" maxlength="16"/>
+			<button class="scan_btn pf">确定</button>
+		</div>
+		<div class="foil"></div>
+		<div class="bg_bottom"></div>
+		<!--弹框提示-->
+		<!--扫码领红包弹窗-->
+		<div class="bg_blur none"></div>
+		<div class="scan_hb bounceIn none">
+			<p class="lx">恭喜你！</p>
+			<p>获得神秘大奖</p>
+			<p class="fr">（随机抽取5-88元现金红包）</p>
+			<p>点击抽红包领取奖励</p>
+		</div>
+		<p class="r_packet pf none">抽红包</p>
+		<p class="thank pf none">感谢您购买广西柳工机械股份有限公司的正牌产品</p>
+
+		<!--拆红包弹窗-->
+		<div class="re_number none tada">
+			<p class="re_title lx">恭喜你获得</p>
+			<p class="num ph"><span>6.6</span>￥</p>
+			<div class="res">
+				<p class="lx">邀请好友再得红包</p>
+				<p>邀请<span class="lx number">3</span>位好友参与活动</p>
+				<p>还可获得<span class="lx number">3</span>次额外红包奖励！</p>
+			</div>
+		</div>
+		<div class="number_bottom none pf">
+			<p class="back">返回</p>
+			<p class="recive" onclick="location.href='recive.html'">邀请好友</p>
+		</div>
+		
+		
+		<!--活动尚未开始-->
+		<div class="mask none"></div>
+		<div class="scan_tip none bounceIn">
+			<p class="tip_face face1"></p>
+			<p class="tip_title pf">活动尚未开始</p>
+			<p class="tip_cnt">收藏页面，3月1日后再来尝试吧</p>
+		</div>
+		
+		<!--<div class="scan_tip end_tip none">
+			<p class="tip_face face2"></p>
+			<p class="tip_title pf t_col">活动已结束</p>
+			<p class="tip_cnt c_col">本次活动已经结束，关注广西柳工微信公众号了解更多活动</p>
+		</div>-->
+		
+		<!--<div class="scan_tip none">
+			<p class="tip_face face3"></p>
+			<p class="tip_title pf">数码不存在</p>
+			<p class="tip_cnt">您查询的数码不存在，请用正确数码参与活动，若有疑问请拨打咨询热线:</br>021-26095599。感谢！</p>
+		</div>-->
+		
+		<!--<div class="scan_tip none">
+			<p class="tip_face face4"></p>
+			<p class="tip_title pf">活动参与过抽奖</p>
+			<p class="tip_cnt">该码已参与过本次活动不能再参与。首次参与抽奖时间是：2017/2/25</br>14:35:21.如有疑问请拨打服务热线:</br>021-26095599</p>
+		</div>-->
+		
+		<!--<div class="scan_tip none">
+			<p class="tip_face face5"></p>
+			<p class="tip_title pf">活动参与次数限制</p>
+			<p class="tip_cnt">尊敬的用户您好，您的手机号已经参与10次，已超过当天最大活动限制。</br>谢谢您的参与</p>
+		</div>-->
+	</body>
+</html>
+<script>
+	$(".bg_scan").click(function(){
+		$(".scan_hb,.r_packet,.thank,.bg_blur").show();
+		$(".scan_head,.scan_blur,.scan_cnt,.scan_cx").hide();
+		$(".foil").addClass("_blur");
+	})
+	$('.r_packet').click(function(){
+		$('.re_number,.number_bottom').show();
+		$('.scan_hb,.r_packet,.thank').hide()
+	})
+	$('.back').click(function(){
+		$('.re_number,.number_bottom,.scan_hb,.r_packet,.thank').hide();
+		$('.scan_head,.scan_blur,.scan_cnt,.scan_cx').show();
+		$(".foil").removeClass("_blur");
+	})
+	$(".scan_btn").click(function(){
+		$(".scan_tip,.mask,.bg_blur").show();
+		$(".scan_head,.scan_blur,.scan_cnt,.scan_cx").hide();
+		$(".foil").addClass("_blur");
+	})
+	
+	
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>小罐茶</title>
+<link rel="stylesheet" href="../../static/css/front.css" />
+<link rel="stylesheet" href="../../static/css/index.css" />
+<script type="text/javascript" src="../../static/script/autoRem.js" ></script>
+</head>
+<body>
+<div class="photo">
+	<img src="../../static/images/tx.png"  />
+</div>
+<div class="register_cnt">
+	<form>
+		<div class="userName">
+			<p>姓名</p>
+			<input type="text" maxlegth="20" placeholder="请输入姓名"/>
+		</div>
+		<div class="userCode">
+			<p>授权编号</p>
+			<input type="tel" placeholder="请输入经销商编号"/>
+		</div>
+		<div class="userPass">
+			<p>授权密码</p>
+			<input type="tel" placeholder="请输入密码" class="text"/>
+			<input type="password" placeholder="请输入密码" class="pass none"/>
+			<div><input type="checkbox" class="check"/></div>
+		</div>
+		<div class="userTel">
+			<p>手机号</p>
+			<input type="tel" placeholder="请输入手机号" maxlength="11"/>
+		</div>
+		<div class="userYz">
+			<p>验证码</p>
+			<input type="tel" placeholder="验证码" maxlength="6"/>
+			<button>获取验证码</button>
+		</div>
+		<span class="register_btn">立即注册</span>
+	</form>
+</div>
+
+<!--注册成功弹窗-->
+<div class="mask none"></div>
+<div class="layerCnt none">
+	<p>注册成功！</p>
+	<span>确定</span>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/jquery-2.2.0.min.js" ></script>
+<script>
+	$(".register_btn").click(function(){
+		$(".mask,.layerCnt").show();
+	})
+	$(".layerCnt span").click(function(){
+		$(".mask,.layerCnt").hide();
+		location.href='menu.html';
+	})
+	$(".check").click(function(){
+		if($(this).prop("checked")){
+			$(".pass").show();
+			$(".text").hide();
+			$(".pass").val($(".text").val());
+			$(".userPass div").addClass("active");
+		}else{
+			$(".pass").hide();
+			$(".text").show();
+			$(".text").val($(".pass").val());
+			$(".userPass div").removeClass("active");
+		}
+		
+	})
+</script>

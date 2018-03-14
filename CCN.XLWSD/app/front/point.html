@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>一口怪兽红包页</title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css"  />
+</head>
+<body class="home_bg">
+	<div class="mask" id="makk"></div>
+	<div class="loading" id="loading"><img src="../../static/images/timg.gif" /></div>
+	<div class="empty"></div>
+	<div class="red_get pointBg none" id="red" style="z-index:999">
+		<div class="thanks"></div>
+		<p class="red_jf" style="margin-top:0.3rem">+20商城积分</p>
+		<div class="gold_loding">
+			<div class="gold"></div>
+			<img src="../../static/images/red_load.png"  id="imgs"/>
+		</div>
+		<p class="red_lj">您已累计获得商城积分<span id="sp">4500</span>/10000</p>
+		<p class="red_shop s_first">2秒后即将前往积分商城</p>
+		<p class="red_shop">积分可兑换任意商品</p>
+		<p style="margin-top:0.5rem;text-align:center"><a href="tel:400 900 9777" style="color:#fff;font-size:0.8rem">全国招商热线：400 900 9777</a></p>
+	</div>
+	<div class="product_box" style="position:absolute;top:22rem"></div>
+	<div class="bg_bottom" style="top:auto;bottom:1.3rem"></div>
+	<!-- <div class="whiteBg"></div> -->	
+	<div class="red_bottom">
+		<div class="bottom_left" onclick="location.href='index.html'"><span></span>回到首页</div>
+		<div class="bottom_right" onclick="location.href='message.html'"><span></span>个人信息</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script>
+	var sp=$("#sp").html();
+	var tt=Math.round((5.45/10000)*sp);
+//	img.style.width=tt+"rem";
+	$("#imgs").animate({'width':tt+'rem'})
+	
+	
+	var timer=null;
+	var load=document.getElementById("loading");
+	var red=document.getElementById("red");
+	var makk=document.getElementById("makk");
+	timer=setTimeout(function(){
+		load.style.display="none";
+		makk.style.display="none";
+		red.style.display="block";
+	},4000)
+	
+</script>

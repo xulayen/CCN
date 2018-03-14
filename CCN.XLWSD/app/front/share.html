@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>九总分享红包</title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css"  />
+</head>
+<body class="home_bg">
+	<div class="mask"></div>
+	<div class="loading"><img src="../../static/images/timg.gif" /></div>
+	<div class="empty"></div>
+	<!--分享红包-->
+	<div class="red_get none">
+		<p class="red_title">恭喜您获得2个红包</p>
+		<p class="red_number">1.88元扫码红包</p>
+		<p class="red_number nub1">+1元额外红包</p>
+		<p class="red_err">(若不足1元将累计至1元后发放)</p>
+		<p class="red_jf jf2">+20商城积分</p>
+		<div class="gold_loding">
+			<div class="gold"></div>
+			<img src="../../static/images/red_load.png"  id="imgs"/>
+		</div>
+		<p class="red_lj">您已累计获得商城积分<span id="sp">3900</span>/10000</p>
+		<p class="red_shop s_first">2秒后即将前往积分商城</p>
+		<p class="red_shop">积分可兑换任意商品</p>
+	</div>
+	<div class="bg_bottom" style="top:18.8rem"></div>
+	<div class="red_bottom">
+		<div class="bottom_left" onclick="location.href='index.html'"><span></span>回到首页</div>
+		<div class="bottom_right" onclick="location.href='message.html'"><span></span>个人信息</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script>
+	var sp=$("#sp").html();
+	var tt=Math.round((5.45/10000)*sp);
+//	img.style.width=tt+"rem";
+	$("#imgs").animate({'width':tt+'rem'})
+	
+	var timer=null;
+	timer=setTimeout(function(){
+		$('.mask').hide();
+		$('.loading').hide();
+		$('.red_get').show();
+	},4000)
+</script>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>小龙王折线图</title>
+	<link rel="stylesheet" href="css/front.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<script type="text/javascript" src="js/echarts.min.js" ></script>
+</head>
+<body>
+	<div class="pepole_trends_cnt send_trends">
+		<ul class="nav">
+			<li><a href="index.html">参与人数趋势</a></li>
+			<li><a href="product.html">产品类别构成</a></li>
+			<li><a href="red.html">红包发放趋势</a></li>
+			<li><a href="redNumber.html">红包发放金额趋势</a></li>
+			<li class="active1"><a href="sendTime.html">经销商发放次数趋势</a></li>
+			<li><a href="supplier.html">积分发放量趋势</a></li>
+			<li><a href="user.html">用户黏性构成</a></li>
+		</ul>
+		<p class="pepole_trends" style="margin-left:2px">经销商发放次数趋势</p>
+		<!--<input id="selectall" type="button" value="全选" flag="1"/>-->
+		<div class="send_contanier">
+			<div class="send_cnt">
+				<div class="province">
+					<p class="triggleIco">湖南<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" checked="checked" id="checked1"/>
+							<span></span>
+							<label for="checked1">湖南-长沙市-长沙陈-SXXAXAC</label>
+							<!-- <span>湖南-长沙市-长沙陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">广东<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked2"/>
+							<span></span>
+							<label for="checked2">广东-广东市-广东陈-SXXAXAC</label>
+							<!-- <span></span>
+							<span>广东-广东市-广东陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">河南<span></span></p>
+					<div class="select_location_cnt">
+						<p>
+							<input type="checkbox" id="checked3"/>
+							<span></span>
+							<label for="checked3">河南-河南市-河南陈-SXXAXAC</label>
+							<!-- <span>河南-河南市-河南陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">江西<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked4"/>
+							<span></span>
+							<label for="checked4">江西-江西市-江西陈-SXXAXAC</label>
+							<!-- <span>江西-江西市-江西陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">湖北<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked5"/>
+							<span></span>
+							<label for="checked5">湖北-湖北市-湖北陈-SXXAXAC</label>
+							<!-- <span>湖北-湖北市-湖北陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">海南<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked6"/>
+							<span></span>
+							<label for="checked6">海南-海南市-海南陈-SXXAXAC</label>
+							<!-- <span>海南-海南市-海南陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">浙江<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked7"/>
+							<span></span>
+							<label for="checked7">浙江-浙江市-浙江陈-SXXAXAC</label>
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">江苏<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked8"/>
+							<span></span>
+							<label id="checked8">江苏-江苏市-江苏陈-SXXAXAC</label>
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">福建<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked9"/>
+							<span></span>
+							<label for="checked9">福建-福建市-福建陈-SXXAXAC</label>
+							<!-- <span>福建-福建市-福建陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">安徽<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" for="checked10"/>
+							<span></span>
+							<label for="checked10">安徽-安徽市-安徽陈-SXXAXAC</label>
+							<!-- <span>安徽-安徽市-安徽陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">云南<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked11"/>
+							<span></span>
+							<label for="checked11">云南-云南市-云南陈-SXXAXAC</label>
+							<!-- <span>云南-云南市-云南陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">广西<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked12"/>
+							<span></span>
+							<label for="checked12">广西-广西市-广西陈-SXXAXAC</label>
+							<!-- <span>广西-广西市-广西陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">河北<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked13"/>
+							<span></span>
+							<label for="checked13">河北-河北市-河北陈-SXXAXAC</label>
+							<!-- <span>河北-河北市-河北陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">山东<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked14"/>
+							<span></span>
+							<label for="checked14">山东-山东市-山东陈-SXXAXAC</label>
+							<!-- <span>山东-山东市-山东陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">贵州<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked15"/>
+							<span></span>
+							<label for="checked15">贵州-贵州市-贵州陈-SXXAXAC</label>
+							<!-- <span>贵州-贵州市-贵州陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">重庆<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked16"/>
+							<span></span>
+							<label for="checked16">重庆-重庆市-重庆陈-SXXAXAC</label>
+							<!-- <span>重庆-重庆市-重庆陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">新疆<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked17"/>
+							<span></span>
+							<label for="checked17">新疆-新疆市-新疆陈-SXXAXAC</label>
+							<!-- <span>新疆-新疆市-新疆陈-SXXAXAC</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">四川<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">甘肃<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">陕西<span></span></p>
+					<div class="select_location_cnt none">
+						<p>
+							<input type="checkbox" id="checked18"/>
+							<span></span>
+							<label for="checked18">西安-西安市-西安陈-SXXAXAC</label>
+							<!-- <span>西安-西安市-西安陈-SXXAXAC</span> -->
+						</p>
+						<p>
+							<input type="checkbox" id="checked19"/>
+							<span></span>
+							<label for="checked19">西安-西安市-西安马-SXXAXAM</label>
+							<!-- <span>西安-西安市-西安马-SXXAXAM</span> -->
+						</p>
+						<p>
+							<input type="checkbox" id="checked20"/>
+							<span></span>
+							<label for="checked20">咸阳-咸阳市-咸阳谢-SXXAXAM</label>
+							<!-- <span>咸阳-咸阳市-咸阳谢-SXXAXAM</span> -->
+						</p>
+					</div>
+				</div>
+				<div class="province">
+					<p class="triggleIco">北京<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">天津<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">辽宁<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">青海<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">内蒙古<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">宁夏<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">上海<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">西藏<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">吉林<span></span></p>
+				</div>
+				<div class="province">
+					<p class="triggleIco">天津<span></span></p>
+				</div>
+				<p class="country" id="selectall">
+					<input type="checkbox" id="checkbox31" flag="1"/>
+					<label for="checkbox31">全选</label>
+				</p>
+			</div>
+		</div>
+		<div class="select_time_cnt unit_cnt send_unt">
+			<p class="dayTime">
+				<input type="radio" id="hour" name="time" checked="checked"/>
+				<label for="hour">单位：小时</label>
+			</p>
+			<p class="weekTime">
+				<input type="radio" id="day" name="time"/> 
+				<label for="day">单位：天</label>
+			</p>
+			<p class="mouthTime">
+				<input type="radio" id="week" name="time"/>
+				<label for="week">单位：周</label>
+			</p>
+			<p class="mouthTime">
+				<input type="radio" id="mouth" name="time"/>
+				<label for="mouth">单位：月</label>
+			</p>
+			<span>选择时间</span>
+			<div class="iDate date">
+				<input type="text">
+				<button type="button" class="addOn"></button>
+			</div>
+			<span>-</span>
+			<div class="iDate date">
+				<input type="text">
+				<button type="button" class="addOn"></button>
+			</div>
+			<span class="sure_btn">确定</span>
+			<div class="reportBtn">数据导出</div>
+			<p class="tip">注：选择小时，按0.5小时为单位显示</p>
+		</div>
+	 	<div id="main" style="width:1200px;height:500px;"></div>
+	</div>
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="js/sendInit.js" ></script>
+<script type="text/javascript" src="js/moment.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" ></script>
+<script>
+    $(document).ready(function(){
+    // date time picker
+   
+    if($(".iDate.date").length>0){
+        $(".iDate.date").datetimepicker({
+            locale:"zh-cn",
+            format:"YYYY-MM-DD",
+            dayViewHeaderFormat:"YYYY年 MMMM"
+        });
+    }
+})
+</script>

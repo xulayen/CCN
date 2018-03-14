@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>小龙王实物奖品</title>
+    <link rel="stylesheet" href="css/front.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script type="text/javascript" src="js/autoRem.js" ></script>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+    <script>
+    	var _height=$("body").height();
+        $("body").css({"background-size":"100%"+ _height+"px"})
+    </script>
+</head>
+<body class="_bg">
+	<div class="empty"></div>
+	<div class="box"></div>
+	<div class="gift_text">
+		<p class="fang">劲道好槟榔 自然好手气</p>
+		<p class="fang">恭喜您获得iphone x手机一台</p>
+	</div>
+	<div class="color_bar"></div>
+	<div class="gift_product">
+		<img src="images/iphone.png"  />
+	</div>
+	<div class="fang recive_btn" onclick="location.href='address.html'">完善信息并领取</div>
+	<div class="recive_tip">
+		<span>!</span>
+		<span>领取说明</span>
+	</div>
+	<div class="red_bottom">
+		<div class="bottom_left" onclick="location.href='index.html'"><span></span>回到首页</div>
+		<div class="bottom_right" onclick="location.href='message.html'"><span></span>个人信息</div>
+	</div>
+<!--领取说明弹窗-->
+<div class="mask none"></div>
+<div class="receive_note none">
+	<div class="receive_header">
+		<p>领取说明</p>
+		<p class="recive_close"></p>
+	</div>
+	<div class="receive_body">
+		<ul>
+			<li><b>1.</b>获奖用户在兑奖页面填写正确收货信息并确认提交后表示已成功取,中途因任何原因退出导致无法领取奖品,本公司不承担相关责任;</li>
+			<li><b>2.</b>本奖不可截图兑换、更改物流信息以及在线下经销商处兑换;</li>
+			<li><b>3.</b>本奖为一次性使用,不可兑换现金或其他物品、不可找零;</li>
+			<li><b>4.</b>奖品相关使用方法,售后问题由手机品牌厂商负责;</li>
+			<li><b>5.</b>因取消关注、手机无法联系无法收取物流信息、无法收货,本公司不承担相关责任;</li>
+			<li class="activity_time">活动时限: 2017年0月0日-2017年0月0日</li>
+			<li class="company">活动解释权归湖南小龙王集团所有</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+<script>
+	$(".recive_tip").click(function(){
+		$(".mask,.receive_note").show();
+	});
+	$(".recive_close").click(function(){
+		$(".mask,.receive_note").hide();
+	})
+	
+	
+</script>

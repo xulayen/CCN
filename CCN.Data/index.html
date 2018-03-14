@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>CCN数据大屏</title>
+	<link rel="stylesheet" href="css/front.css" />
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+<body class="bg">
+	<div class="header">
+		<p class="pang">CCN中商大数据平台</p>
+		<p class="exit">
+			<span>2 Feb 2018</span>
+			<img src="images/exit.png"  />
+		</p>
+	</div>
+	<div class="contanier">
+		<div class="contLeft">
+			<div class="dataCnt">
+				<p class="leftHead scan">消费者实时扫码量</p>
+				<div id="scanData" style="width:100%;height:317px"></div>
+			</div>
+			<div class="dataCnt">
+				<p class="leftHead person">营销大数据</p>
+				<div class="userNum">
+					<p>用户量</p>
+					<p>4,175,451</p>
+				</div>
+				<ul class="marketData" style="padding:0 15px">
+					<li>
+						<p>红包发放金额</p>
+						<p><span>￥</span><span class="redNum">29,995,030.05</span></p>
+					</li>
+					<li>
+						<p>流量额(RM)</p>
+						<p class="flowNum">4,108,288</p>
+					</li>
+					<li>
+						<p>话费额</p>
+						<p><span>￥</span><span class="callNum">16,952,980</span></p>
+					</li>
+					<li>
+						<p>积分值</p>
+						<p class="jfNum">1,820,607,164</p>
+					</li>
+				</ul>
+				<p class="stickyNum">黏性指数<span>61.21%</span></p>
+				<div id="buyNum" style="width:100%;height:250px;"></div>
+			</div>
+		</div>
+		<div class="contCenter">
+			<div class="dataCnt" style="background:none;margin-bottom:0;">
+				<div class="scanNum">
+					<p>1,961,051,043</p>
+					<p>消费者扫码总量</p>
+				</div>
+				<div class="mapTitle">
+					<p>合作品牌分布</p>
+					<p>消费者热力分布</p>
+				</div>
+				<div class="map">
+					<div class="mapCnt">
+						<div id="mapWord" style="width:100%;height:100%"></div>
+						<div id="chinaMap" style="width:100%;height:100%"></div>
+					</div>
+				</div>
+				<div class="cooperData">
+					<p class="coopLeft">合作品牌数<span>2678</span></p>
+					<div class="cooRight">
+						<p>最新合作品牌</p>
+						<div class="brand">
+							<ul>
+								<li>索康国际</li>
+								<li>雪佛龙（天津）润滑油</li>
+								<li>三江益农</li>
+								<li>小罐茶</li>
+								<li>速比坤</li>
+								<li>君帆科技</li>
+								<li>弘辉种业</li>
+								<li>美逸生物</li>
+								<li>丽倍生</li>
+								<li>珠海蔻辰</li>
+								<li>福达</li>
+								<li>沛滢生物</li>
+								<li>易百信息</li>
+								<li>大有天象</li>
+								<li>康普顿</li>
+								<li>云养邦</li>
+								<li>正仁医药</li>
+								<li>格物生物</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="dataCnt">
+				<div class="trueCheck">
+					<span>正</span>
+					<p>正品商品保护数</p>
+					<p>7,844,204,173</p>
+				</div>
+				<div class="warnCnt">
+					<p class="warnHead"><img src="images/ico_1.png" />疑似窜货预警</p>
+					<p class="warnTitle">
+						<span>产品数码</span>
+						<span>疑似窜货区域</span>
+						<span>窜货可能性</span>
+						<span>时间</span>
+					</p>
+					<div class="warnDetail">
+						<ul class="font_inner">
+							<li>
+								<span>1809****0987****</span>
+								<span>湖北省武汉市</span>
+								<span>78.2%</span>
+								<span>2018.01.25 11:20:01</span>
+							</li>
+							<li>
+								<span>0701****0287****</span>
+								<span>湖北省黄冈市</span>
+								<span>68.4%</span>
+								<span>2018.01.22 12:45:01</span>
+							</li>
+							<li>
+								<span>3506****1907****</span>
+								<span>湖北省麻城市</span>
+								<span>79.8%</span>
+								<span>2018.01.26 09:00:01</span>
+							</li>
+							<li>
+								<span>5809****0987****</span>
+								<span>安微省淮南市</span>
+								<span>78.3%</span>
+								<span>2018.01.23 13:15:01</span>
+							</li>
+							<li>
+								<span>6809****3987****</span>
+								<span>江苏省徐州市</span>
+								<span>78.2%</span>
+								<span>2018.01.27 11:55:01</span>
+							</li>
+							<li>
+								<span>1802****1984****</span>
+								<span>河南省郑州市</span>
+								<span>68.1%</span>
+								<span>2018.02.01 12:40:01</span>
+							</li>
+							
+							<li>
+								<span>0884****7967****</span>
+								<span>江苏省无锡市</span>
+								<span>78.2%</span>
+								<span>2018.02.01 11:30:01</span>
+							</li>
+							<li>
+								<span>3701****0357****</span>
+								<span>浙江省温州市</span>
+								<span>68.4%</span>
+								<span>2018.01.01 12:05:01</span>
+							</li>
+							<li>
+								<span>5506****0907****</span>
+								<span>江西省南昌市</span>
+								<span>79.8%</span>
+								<span>2018.01.02 09:22:01</span>
+							</li>
+							<li>
+								<span>3809****4467****</span>
+								<span>湖北省荆门市</span>
+								<span>78.3%</span>
+								<span>2018.01.22 13:34:01</span>
+							</li>
+							<li>
+								<span>4709****5987****</span>
+								<span>江苏省徐州市</span>
+								<span>78.2%</span>
+								<span>2018.01.19 11:42:01</span>
+							</li>
+							<li>
+								<span>6802****8984****</span>
+								<span>广东省佛山市</span>
+								<span>68.1%</span>
+								<span>2018.02.01 12:00:01</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="warnCnt" style="margin-bottom:8px">
+					<p class="warnHead"><img src="images/ico_1.png" />疑似仿冒品预警</p>
+					<p class="warnTitle">
+						<span>产品数码</span>
+						<span>疑似仿冒品区域</span>
+						<span>仿冒品可能性</span>
+						<span>时间</span>
+					</p>
+					<div class="warnDetail">
+						<ul class="font_inner">
+							<li>
+								<span>2509****3447****</span>
+								<span>湖北省宜昌市</span>
+								<span>78.2%</span>
+								<span>2018.01.23 11:33:01</span>
+							</li>
+							<li>
+								<span>1701****4987****</span>
+								<span>湖南省长沙市</span>
+								<span>58.4%</span>
+								<span>2018.01.24 12:15:01</span>
+							</li>
+							<li>
+								<span>5508****7977****</span>
+								<span>广西省桂林市</span>
+								<span>69.8%</span>
+								<span>2018.01.26 09:45:01</span>
+							</li>
+							<li>
+								<span>4809****6987****</span>
+								<span>江苏省徐州市</span>
+								<span>68.3%</span>
+								<span>2018.01.20 13:25:01</span>
+							</li>
+							<li>
+								<span>8809****2357****</span>
+								<span>吉林省吉林市</span>
+								<span>77.2%</span>
+								<span>2018.01.23 11:47:01</span>
+							</li>
+							<li>
+								<span>3702****1984****</span>
+								<span>河南省郑州市</span>
+								<span>66.1%</span>
+								<span>2018.01.27 12:34:01</span>
+							</li>
+							
+							<li>
+								<span>7634****0547****</span>
+								<span>江苏省无锡市</span>
+								<span>78.2%</span>
+								<span>2018.01.23 11:27:01</span>
+							</li>
+							<li>
+								<span>1701****3987****</span>
+								<span>湖北省黄石市</span>
+								<span>78.4%</span>
+								<span>2018.01.24 12:45:01</span>
+							</li>
+							<li>
+								<span>4506****0417****</span>
+								<span>云南省昆明市</span>
+								<span>80.8%</span>
+								<span>2018.01.26 09:44:01</span>
+							</li>
+							<li>
+								<span>9809****1907****</span>
+								<span>四川省乐山市</span>
+								<span>77.9%</span>
+								<span>2018.02.01 13:00:01</span>
+							</li>
+							<li>
+								<span>2729****0387****</span>
+								<span>贵州省贵阳市</span>
+								<span>66.6%</span>
+								<span>2018.02.01 11:05:01</span>
+							</li>
+							<li>
+								<span>3832****5334****</span>
+								<span>甘肃省兰州市</span>
+								<span>70.5%</span>
+								<span>2018.02.02 12:47:01</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div style="width:100%;height:1px"></div>
+			</div>
+		</div>
+		<div class="contRight">
+			<div class="dataCnt">
+				<p class="leftHead product">生产大数据</p>
+				<ul class="produceData" style="padding:13px 15px">
+					<li>
+						<p>流通期追溯商品数(件)</p>
+						<p class="num">1,087,246,905</p>
+					</li>
+					<li>
+						<p>生产关联箱数(箱)</p>
+						<p class="num">8,820,837</p>
+					</li>
+					<li>
+						<p>接入全自动化生产线(条)</p>
+						<p class="num">384</p>
+					</li>
+					<li>
+						<p>全自动化生产在线数(条)</p>
+						<p class="num">119</p>
+					</li>
+					<li>
+						<p>物流节点在线数(条)</p>
+						<p class="num">83,559</p>
+					</li>
+				</ul>
+			</div>
+			<div class="dataCnt">
+				<div class="serviceTotal">
+					<p>在线服务行业数<span>30+</span></p>
+					<p>接入门店数<span>91,669</span>家</p>
+				</div>
+				<div class="visitData" style="position:relative">
+					<div class="busiRank">
+						<p>今日访问量</p>
+						<div class="busiName">
+							<div class="active"></div>
+							<ul>
+								<li>食品</li>
+								<li class="active1">汽配</li>
+								<li>农资</li>
+								<li>医药</li>
+								<li>化工</li>
+								<li>日化</li>
+								<li>IT</li>
+								<li>机械配件</li>
+								<li>服装</li>
+								<li>建材</li>
+							</ul>
+						</div>
+					</div>
+					<div id="visit" style="width:100%;height:344px"></div>
+				</div>
+			</div>
+			<div class="dataCnt">
+				<p class="leftHead rank">扫码TOP排名</p>
+				<div class="scanRank">
+					<div class="rankLeft">
+						<p>
+							<span>1</span>
+							<span>小龙王食品</span>
+						</p>
+						<p>
+							<span>2</span>
+							<span>QP润滑油</span>
+						</p>
+						<p>
+							<span>3</span>
+							<span>美赞臣</span>
+						</p>
+						<p>
+							<span>4</span>
+							<span>银桥乳业</span>
+						</p>
+						<p>
+							<span>5</span>
+							<span>三元乳业</span>
+						</p>
+					</div>
+					<div class="rankRight">
+						<p>
+							<span>6</span>
+							<span>伊力特</span>
+						</p>
+						<p>
+							<span>7</span>
+							<span>万金工具</span>
+						</p>
+						<p>
+							<span>8</span>
+							<span>红星美凯龙</span>
+						</p>
+						<p>
+							<span>9</span>
+							<span>福伦汽车</span>
+						</p>
+						<p>
+							<span>10</span>
+							<span>聚美优品</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="js/echarts.min.js" ></script>
+<script type="text/javascript" src="js/scanInit2.js" ></script>
+<script type="text/javascript" src="js/buyInit.js" ></script>
+<script type="text/javascript" src="js/word.js" ></script>
+<script type="text/javascript" src="js/mapInit.js" ></script>
+<script type="text/javascript" src="js/visitInit.js" ></script>
+<script type="text/javascript" src="js/jquery.kxbdMarquee.js" ></script>
+<script type="text/javascript" src="js/china.js" ></script>
+<script type="text/javascript" src="js/chinaInit.js" ></script>
+<script>
+	$(".brand").kxbdMarquee({
+		isEqual:false,        
+        scrollDelay:28,
+	});
+	
+	$(".warnDetail").kxbdMarquee({
+		direction:"up",
+		isEqual:false,
+		scrollAmount:1,     //步长         
+        scrollDelay:45,        //时长
+	});
+	
+	//世界地图和中国地图的切换
+	var a=0;
+	var timer=null;
+	var width=$("#mapWord").width();
+	var left=$("#mapWord").css("left");
+	function lb(){
+		if(a>=1){
+			a=0;
+			$("#mapWord").css({"left":width});
+			$("#chinaMap").animate({"left":-width},1200);
+			$("#mapWord").animate({"left":0},1200);
+		}else{
+			a=a+1;
+			$("#chinaMap").css({"left":width});
+			$("#mapWord").animate({"left":-width},1200);
+			$("#chinaMap").animate({"left":0},1200);
+		}
+	}
+	 timer=setInterval(lb,8000);
+	$(".map").mouseover(function(){
+		clearInterval(timer);
+	})
+	$(".map").mouseout(function(){
+		timer=setInterval(lb,8000)
+	})
+	
+	//扫码总量
+	//20-50的随机数
+	setInterval(function(){
+		var aa=parseInt(Math.random()*30+20);
+		var html=parseInt($(".scanNum p:nth-of-type(1)").html().replace(/,/g,''));
+		var _html=html+aa;
+		$(".scanNum p:nth-of-type(1)").html(parseFloat(_html).toLocaleString());
+	},1000)
+	
+	//合作品牌数
+	setInterval(function(){
+		var uNum=parseInt($(".coopLeft span").html().replace(/,/g,''))+1;
+		$(".coopLeft span").html(parseFloat(uNum).toLocaleString());
+	},172800000)
+	
+	
+	//用户量
+	setInterval(function(){
+		var uNum=parseInt($(".userNum p:nth-of-type(2)").html().replace(/,/g,''))+14;
+		$(".userNum p:nth-of-type(2)").html(parseFloat(uNum).toLocaleString());
+	},60000)
+	
+	//红包
+	setInterval(function(){
+		var aa1=Math.floor((Math.random()*3+3.5)*100)/100;
+		var rNum=parseInt($(".redNum").html().replace(/,/g,''))+aa1+0.05;
+		$(".redNum").html(parseFloat(rNum).toLocaleString());
+	},1000)
+	
+	//流量额
+	setInterval(function(){
+		var fNum=parseInt($(".flowNum").html().replace(/,/g,''))+90;
+		$(".flowNum").html(parseFloat(fNum).toLocaleString());
+	},3600000)
+	
+	//话费额
+	setInterval(function(){
+		var cNum=parseInt($(".callNum").html().replace(/,/g,''))+20;
+		$(".callNum").html(parseFloat(cNum).toLocaleString());
+	},60000)
+	
+	//积分值
+	setInterval(function(){
+		var aa2=parseInt(Math.random()*4+16);
+		var jNum=parseInt($(".jfNum").html().replace(/,/g,''))+aa2;
+		$(".jfNum").html(parseFloat(jNum).toLocaleString());
+	},1000)
+	
+	//parseFloat(num_s).toLocaleString()
+	
+	
+	
+	
+	
+//	var str='98888232689';
+//	var str=str.split('').reverse().join('').replace(/(\d{3})/g,'$1,').replace(/\,$/,'').split('').reverse().join('');
+</script>

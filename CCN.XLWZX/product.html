@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>小龙王折线图</title>
+	<link rel="stylesheet" href="css/front.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<script type="text/javascript" src="js/echarts.min.js" ></script>
+</head>
+<body>
+	<div class="pepole_trends_cnt">
+		<ul class="nav">
+			<li><a href="index.html">参与人数趋势</a></li>
+			<li class="active1"><a href="product.html">产品类别构成</a></li>
+			<li><a href="red.html">红包发放趋势</a></li>
+			<li><a href="redNumber.html">红包发放金额趋势</a></li>
+			<li><a href="sendTime.html">经销商发放次数趋势</a></li>
+			<li><a href="supplier.html">积分发放量趋势</a></li>
+			<li><a href="user.html">用户黏性构成</a></li>
+		</ul>
+		<p class="pepole_trends">产品类别构成</p>
+		<!--<input id="selectall" type="button" value="全选" flag="1"/>-->
+		<div class="product_contanier">
+			<div class="product_cnt">
+				<p class="product">
+					<input type="checkbox" id="checkbox1" checked="checked"/>
+					<span></span>
+					<label for="checkbox1">一口怪兽</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox2"/>
+					<span></span>
+					<label for="checkbox2">能量兽</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox3"/>
+					<span></span>
+					<label for="checkbox3">雷霆兽</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox4"/>
+					<span></span>
+					<label for="checkbox4">擎天兽</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox5"/>
+					<span></span>
+					<label for="checkbox5">霸王兽</label>
+				</p>
+				<p class="country1" id="selectall">
+					<input type="checkbox" id="checkbox31" flag="1"/>
+					<label for="checkbox31">全选</label>
+				</p>
+			</div>
+			<div class="product_cnt">
+				<p class="product">
+					<input type="checkbox" id="checkbox6"/>
+					<span></span>
+					<label for="checkbox6">九总珍品</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox7"/>
+					<span></span>
+					<label for="checkbox7">5元</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox8"/>
+					<span></span>
+					<label for="checkbox8">10元</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox9"/>
+					<span></span>
+					<label for="checkbox9">15元</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox10"/>
+					<span></span>
+					<label for="checkbox10">20元</label>
+				</p>
+			</div>
+			<div class="product_cnt">
+				<p class="product">
+					<input type="checkbox" id="checkbox11"/>
+					<span></span>
+					<label for="checkbox11">福和祥</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox12"/>
+					<span></span>
+					<label for="checkbox12">福和祥5元</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox13"/>
+					<span></span>
+					<label for="checkbox13">福和祥10元</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox14"/>
+					<span></span>
+					<label for="checkbox14">福和祥15元</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox15"/>
+					<span></span>
+					<label for="checkbox15">福和祥20元</label>
+				</p>
+			</div>
+			<div class="product_cnt">
+				<p class="product">
+					<input type="checkbox" id="checkbox16"/>
+					<span></span>
+					<label for="checkbox16">九总</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox17"/>
+					<span></span>
+					<label for="checkbox17">九总5元</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox18"/>
+					<span></span>
+					<label for="checkbox18">九总10元</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox19"/>
+					<span></span>
+					<label for="checkbox19">九总15元</label>
+				</p>
+				<p class="product">
+					<input type="checkbox" id="checkbox20"/>
+					<span></span>
+					<label for="checkbox20">九总20元</label>
+				</p>
+			</div>
+		</div>
+		<div class="select_time_cnt unit_cnt send_unt">
+			<p class="dayTime">
+				<input type="radio" id="day" name="time" checked="checked"/>
+				<label for="day"></label>
+				 <span>单位：天</span>
+			</p>
+			<p class="weekTime">
+				<input type="radio" id="week" name="time"/> 
+				<label for="week"></label>
+				<span>单位：周</span>
+			</p>
+			<p class="mouthTime">
+				<input type="radio" id="mouth" name="time"/>
+				<label for="mouth"></label>
+				<span>单位：月</span>
+			</p>
+			<span>选择时间</span>
+			<div class="iDate date">
+				<input type="text">
+				<button type="button" class="addOn"></button>
+			</div>
+			<span>-</span>
+			<div class="iDate date">
+				<input type="text">
+				<button type="button" class="addOn"></button>
+			</div>
+			<span class="sure_btn">确定</span>
+			<div class="reportBtn" style="margin-right:374px">数据导出</div>
+			<p class="tip">注：选择小时，按0.5小时为单位显示</p>
+		</div>
+	 	<div id="main" style="width:1200px;height:500px;"></div>
+	</div>
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="js/productInit.js" ></script>
+<script type="text/javascript" src="js/moment.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" ></script>
+<script>
+    $(document).ready(function(){
+    // date time picker
+   
+    if($(".iDate.date").length>0){
+        $(".iDate.date").datetimepicker({
+            locale:"zh-cn",
+            format:"YYYY-MM-DD",
+            dayViewHeaderFormat:"YYYY年 MMMM"
+        });
+    }
+})
+</script>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>小罐茶</title>
+<link rel="stylesheet" href="../../static/css/front.css" />
+<link rel="stylesheet" href="../../static/css/index.css" />
+<link rel="stylesheet" href="../../static/css/iosSelect.css" />
+<script type="text/javascript" src="../../static/script/autoRem.js" ></script>
+</head>
+<body>
+	<div class="menu_header">
+		<div class="company_name">
+			<img src="../../static/images/tx.png"  />
+			<p>北京茗门茶业有限公司</p>
+			<p>编号:8202000</p>
+		</div>
+		<p>发货数量(件)</p>
+		<p class="goodNum">5万</p>
+	</div>
+	<div class="selectDress">
+		<p class="seLeft">分销商</p>
+		<!--<p class="seRight">请选择收货单位</p>-->
+		<div class="seRight">                     
+	        <input type="hidden" name="su_id" id="suId" value=""> 
+	        <input type="hidden" name="wei_id" id="weiId" value="">                     
+	        <span id="showGeneral">请选择收货单位</span>  
+	    </div> 
+		<div class="selectShop">
+			<p>分销商</p>
+			<p>终端店</p>
+		</div>
+	</div>
+	<p class="selectSure" onclick="location.href='shipScan.html'">确定</p>
+		
+	<ul class="bottom">
+		<li class="homeIco active" onclick="location.href='menu.html'">
+			<p></p>
+			<p>首页</p>
+		</li>
+		<li class="scanIco" onclick="location.href='shipScan.html'">
+			<p></p>
+			<p>发货扫描</p>
+		</li>
+		<li class="sendIco" onclick="location.href='sendProduct.html'">
+			<p></p>
+			<p>发货统计</p>
+		</li>
+		<li class="saveIco" onclick="location.href='saveProduct.html'">
+			<p></p>
+			<p>库存统计</p>
+		</li>
+	</ul>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="../../static/script/data.js" ></script>
+<script type="text/javascript" src="../../static/script/iosSelect.js" ></script>
+<script type="text/javascript" src="../../static/script/iscroll.js" ></script>
+<script>
+	$(".seLeft").click(function(){
+		$(".selectShop").addClass("show");
+	})
+	$(".selectShop p").click(function(){
+		var html=$(this).html();
+		$(".seLeft").html(html);
+		$(".selectShop").removeClass("show");
+	})
+</script>
+<script>
+	 var showGeneralDom = document.querySelector('#showGeneral');
+    var suIdDom = document.querySelector('#suId');
+    var weiIdDom = document.querySelector('#weiId');
+    showGeneralDom.addEventListener('click', function () {
+        var suId = showGeneralDom.dataset['su_id'];
+        var suValue = showGeneralDom.dataset['su_value'];
+        var weiId = showGeneralDom.dataset['wei_id'];
+        var weiValue = showGeneralDom.dataset['wei_value'];
+        var sanguoSelect = new IosSelect(2, 
+            [suData, weiData],
+            {
+                title: '',
+                itemHeight: 35,
+                oneLevelId: suId,
+                twoLevelId: weiId,
+                itemShowCount:5,
+                callback: function (selectOneObj, selectTwoObj) {
+                    suIdDom.value = selectOneObj.id;
+                    weiIdDom.value = selectTwoObj.id;
+                    showGeneralDom.innerHTML =selectOneObj.value + selectTwoObj.value;
+
+                    showGeneralDom.dataset['su_id'] = selectOneObj.id;
+                    showGeneralDom.dataset['su_value'] = selectOneObj.value;
+                    showGeneralDom.dataset['wei_id'] = selectTwoObj.id;
+                    showGeneralDom.dataset['wei_value'] = selectTwoObj.value;
+                }
+        });
+        $(".close,.sure").click(function(){
+        	if($("#showGeneral").html()!=="请选择收货单位"){
+						$(".selectSure").css({"visibility":"visible"});
+					}
+        })
+    });
+</script>

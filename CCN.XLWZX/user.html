@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>小龙王折线图</title>
+	<link rel="stylesheet" href="css/front.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<script type="text/javascript" src="js/echarts.min.js" ></script>
+</head>
+<body>
+	<div class="pepole_trends_cnt">
+		<ul class="nav">
+			<li><a href="index.html">参与人数趋势</a></li>
+			<li><a href="product.html">产品类别构成</a></li>
+			<li><a href="red.html">红包发放趋势</a></li>
+			<li><a href="redNumber.html">红包发放金额趋势</a></li>
+			<li><a href="sendTime.html">经销商发放次数趋势</a></li>
+			<li><a href="supplier.html">积分发放量趋势</a></li>
+			<li class="active1"><a href="user.html">用户黏性构成</a></li>
+		</ul>
+		<p class="pepole_trends" style="margin-left:2px">用户黏性构成</p>
+		<ul class="day">
+			<li><span class="icoColor1"></span>1次</li>
+			<li><span class="icoColor2"></span>2次</li>
+			<li><span class="icoColor3"></span>3次</li>
+			<li><span class="icoColor4"></span>4-5次</li>
+			<li><span class="icoColor5"></span>6-10次</li>
+			<li><span class="icoColor6"></span>10次以上</li>
+			<li class="select_tip">注: 选择天统计维度</li>
+		</ul>
+		<ul class="week">
+			<li><span class="icoColor1"></span>1-7次</li>
+			<li><span class="icoColor2"></span>8-15次</li>
+			<li><span class="icoColor3"></span>16-20次</li>
+			<li><span class="icoColor4"></span>21-35次</li>
+			<li><span class="icoColor5"></span>36-70次</li>
+			<li><span class="icoColor6"></span>70次以上</li>
+			<li class="select_tip">注: 选择周统计维度</li>
+		</ul>
+		<ul class="mouth">
+			<li><span class="icoColor1"></span>1-30次</li>
+			<li><span class="icoColor2"></span>31-60次</li>
+			<li><span class="icoColor3"></span>61-90次</li>
+			<li><span class="icoColor4"></span>91-105次</li>
+			<li><span class="icoColor5"></span>151-300次</li>
+			<li><span class="icoColor6"></span>150次以上</li>
+			<li class="select_tip">注: 选择月统计维度</li>
+		</ul>
+		<div class="unit_cnt">
+			<p class="dayTime">
+				<input type="radio" id="day" name="time" checked="checked"/>
+				<label for="day"></label>
+				 <span>单位：天</span>
+			</p>
+			<p class="weekTime">
+				<input type="radio" id="week" name="time"/> 
+				<label for="week"></label>
+				<span>单位：周</span>
+			</p>
+			<p class="mouthTime">
+				<input type="radio" id="mouth" name="time"/>
+				<label for="mouth"></label>
+				<span>单位：月</span>
+			</p>
+			<span>选择时间</span>
+			<div class="iDate date">
+				<input type="text">
+				<button type="button" class="addOn"></button>
+			</div>
+			<span>-</span>
+			<div class="iDate date">
+				<input type="text">
+				<button type="button" class="addOn"></button>
+			</div>
+			<span class="sure_btn">确定</span>
+			<div class="reportBtn" style="margin-right:337px">数据导出</div>
+		</div>
+	 	<div id="main" style="width:1200px;height:450px;"></div>
+	</div>
+	
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="js/userInit.js" ></script>
+<script type="text/javascript" src="js/moment.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" ></script>
+<script>
+    $(document).ready(function(){
+    // date time picker
+   
+    if($(".iDate.date").length>0){
+        $(".iDate.date").datetimepicker({
+            locale:"zh-cn",
+            format:"YYYY-MM-DD",
+            dayViewHeaderFormat:"YYYY年 MMMM"
+        });
+    }
+})
+</script>

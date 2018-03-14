@@ -1,0 +1,93 @@
+/********公共样式*********/
+ @font-face {
+    font-family: 'xl';
+    src:
+        url('../font/xyl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.xl{font-family:xl}
+@font-face {
+    font-family: 'mh';
+    src:
+        url('../font/MComputer HKS Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.mh{font-family:mh}
+html {
+    height: 100%;
+}
+body {
+    font-family:'xl','Microsoft YaHei',sans-serif,SimHei;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+@media screen and (orientation: landscape) {
+    body{
+        overflow-y: auto;
+    }
+}
+ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,div,input,button,a,form,textarea,th,tr,td,table,span{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a{
+    text-decoration: none;
+    color:#333;
+}
+ul,ol{
+    list-style:none;
+}
+input,button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: none;
+    outline: none;
+}
+.parent {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.child {
+    display: table-cell;
+    vertical-align: middle;
+}
+.clearfix:before {
+    content: '';
+    display: table;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    background: rgba(0,0,0,0.8);
+    z-index: 999999999;
+}
+.none{
+    display: none;
+}
+/********公共样式结束*********/
+.header{
+	width:100%;
+	height:3.6rem;
+	background: #fbce07;
+}
+
+

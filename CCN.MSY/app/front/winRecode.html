@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>马石油</title>
+	<script type="text/javascript" src="../../static/script/autoRem.js"></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg">
+	<div class="bg_blur"></div>
+	<div class="maskk"></div>
+	<img src="../../static/images/logo.png"  class="logo _blur"/>
+	<img src="../../static/images/title.png"  class="title _blur"/>
+	<div class="winCnt bounceIn">
+		<div class="winHead">
+			<p class="ph">中奖记录</p>
+			<p class="pb">
+				<span>中奖数码</span>
+				<span>领取状态</span>
+			</p>
+		</div>
+		<div class="winBody pm">
+			<p>
+				<span>8975315266718145</span>
+				<span>查看</span>
+			</p>
+			<p>
+				<span>8975315266718145</span>
+				<span>查看</span>
+			</p>
+			<p>
+				<span>8975315266718145</span>
+				<span>查看</span>
+			</p>
+			<p>
+				<span>8975315266718145</span>
+				<span>查看</span>
+			</p>
+		</div>
+		<p class="winBottom ph" onclick="location.href='scan.html'">确定</p>
+	</div>
+	
+	<!--查看中奖纪录弹窗-->
+	<div class="winCheck bounceIn none">
+		<div class="winHead">
+			<p class="ph">小主您好</p>
+			<p class="pb">您已于2016.09.20 10:26:10参与抽奖</p>
+		</div>
+		<div class="checkBody pm">
+			<div class="checName">
+				<p>姓名</p>
+				<span>：</span>
+				<input type="text" placeholder="阳阳"/>
+			</div>
+			<div class="checWin">
+				<p>奖品</p>
+				<span>：</span>
+				<input type="text" placeholder="多功能电锤"/>
+			</div>
+			<div class="checTel">
+				<p>联系方式</p>
+				<span>：</span>
+				<input type="tel" placeholder="18317007672"/>
+			</div>
+			<div class="checDre">
+				<p>收货地址</p>
+				<span>：</span>
+				<div class="line"></div>
+				<div class="line1"></div>
+				<textarea maxlength="30">测试地址</textarea>
+			</div>
+			<div class="send">
+				<p>派送状态</p>
+				<span>：</span>
+				<p>未派送</p>
+			</div>
+		</div>
+		<p class="pm sendTip">我们将在5个工作日内为您派送,</br>请注意查收！</p>
+		<!--未填写地址-->
+		<p class="pm sendTip1 none">您当前的中奖数码还没有进行补全资料,我们将无法为您派送礼品,请尽快补全资料,谢谢!!</p>
+		<p class="winBottom ph" onclick="location.href='scan.html'">确定</p>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/jquery-2.2.0.min.js"></script>
+<script>
+	$(".winBody span:nth-of-type(2)").click(function(){
+		$(".winCnt").hide();
+		$(".winCheck").show();
+	})
+	
+</script>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no">
+    <script src="static/js/jquery-1.10.0.min.js"></script>
+    <script src="static/plugins/layer_mobile/layer.js"></script>
+    <script src="static/js/autoRem.js"></script>
+    <script src="static/js/iscroll_probe.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/small/wix/css/front.css">
+    <link rel="stylesheet" type="text/css" href="static/css/animation.css">
+</head>
+<body>
+<div class="baoming_bg">
+    <div class="ste1">
+        <img class="baoming_logo" src="static/small/wix/images/baoming_logo.png">
+        <p class="baoming_logo_p1">WIX带你“趣”自驾</p>
+        <p class="baoming_logo_p2">填写报名信息</p>
+        <article>
+            <div class="baoming_main">
+                <div class="baoming_item">
+                    <label>姓　名</label>
+                    <input class="baoming_input" name="name" id="baoming_name" type="text" placeholder="请输入姓名" maxlength="10">
+                </div>
+                <div class="baoming_item">
+                    <label>手机号</label>
+                    <input class="baoming_input" name="phone" id="baoming_phone" type="tel" placeholder="请输入手机号" maxlength="11">
+                </div>
+                <div class="baoming_item">
+                    <label>车　型</label>
+                    <input class="baoming_input input_chexing" id="baoming_chexing" name="chexing" onfocus="this.blur();" type="text"
+                           placeholder="请选择参与车型">
+                </div>
+            </div>
+            <div class="baoming_bottom">
+                <div class="switch">
+                    <span>提交</span>
+                    <div class="switch-btn"><img src="static/small/wix/images/yuandian.png"></div>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+<div class="pop_select none">
+    <div class="baiche">
+        <img src="static/small/wix/images/baiche.png">
+    </div>
+    <div class="pop_select_right">
+        <div class="pop_select_item" data-text="奥迪">
+            <img class="left_arrow none" src="static/small/wix/images/left_arrow.png">
+            <span class="pop_select_text">奥迪</span>
+        </div>
+        <div class="pop_select_item" data-text="奔驰">
+            <img class="left_arrow none" src="static/small/wix/images/left_arrow.png">
+            <span class="pop_select_text">奔驰</span>
+        </div>
+        <div class="pop_select_item" data-text="宝马">
+            <img class="left_arrow none" src="static/small/wix/images/left_arrow.png">
+            <span class="pop_select_text">宝马</span>
+        </div>
+        <div class="pop_select_item" data-text="凯迪拉克/斯柯达">
+            <img class="left_arrow none" style="left: 0.2rem" src="static/small/wix/images/left_arrow.png">
+            <span class="pop_select_text">凯迪拉克/斯柯达</span>
+        </div>
+        <div class="pop_select_item" data-text="别克/雪佛兰/大众">
+            <img class="left_arrow none" style="left: 0.2rem" src="static/small/wix/images/left_arrow.png">
+            <span class="pop_select_text">别克/雪佛兰/大众</span>
+        </div>
+        <div class="pop_select_item" data-text="其他">
+            <img class="left_arrow none" src="static/small/wix/images/left_arrow.png">
+            <span class="pop_select_text">其他</span>
+        </div>
+    </div>
+</div>
+<div class="pop_result none">
+    <img class="result" src="static/small/wix/images/result.png">
+    <img class="result_button" src="static/small/wix/images/result_button.png">
+</div>
+<div class="pop_share none">
+    <img src="static/small/wix/images/gif.gif?v=ssss">
+</div>
+</body>
+<script>
+    var left, right, x, is_left = true; //获取左滑最大距离
+    //滑动开始事件
+    $('.switch-btn').on('touchstart', function (e) {
+        isMove = true;
+//            e.preventDefault();
+        left = parseInt($(this).css('left'));
+        right = parseInt($(this).css('right'));
+        x = e.originalEvent.targetTouches[0].pageX;
+    });
+    $('.switch-btn').on('touchmove', function (e) {
+        e.preventDefault();
+        if (x - e.originalEvent.targetTouches[0].pageX >= 1) {
+            switch_btn_left();
+            is_left = false;
+        } else if (x - e.originalEvent.targetTouches[0].pageX <= -1) {
+            if (is_left) {
+                switch_btn_right();
+            }
+        }
+    });
+    function switch_btn_left() {
+        if (!$('.switch-btn').is(":animated")) {
+            $('.switch-btn').animate({
+                'left': '0.1rem'
+            }, function () {
+                $('.switch').css('background', '#fcae25');
+                $('.switch').css('box-shadow','0 0 1rem #fa8e0f inset');
+                $('.switch').find('span').hide();
+                $('.ste1').fadeOut();$('.pop_result').fadeIn();
+            });
+        }
+    }
+
+    function switch_btn_right() {
+        if (!$('.switch-btn').is(":animated")) {
+            $('.switch-btn').animate({
+                'left': '2.8rem'
+            }, function () {
+                $('.switch').css('background', '#1a1b1b');
+                $('.switch').css('box-shadow','0 0 1rem #1a1b1b inset');
+                $('.switch').find('span').show();
+            });
+        }
+    }
+
+    $('.switch-btn').click(function () {
+        switch_btn_left();
+        is_left = false;
+    });
+
+    function reload_switch_btn() {
+        switch_btn_right();
+        is_left = true;
+    }
+</script>
+<script>
+    var chexing = '';
+    $('.pop_select_item').click(function () {
+        chexing = $(this).attr('data-text');
+        $('.input_chexing').val(chexing);
+        $('.pop_select_item').css('color', '#f8b10d');
+        $('.pop_select_item').find('.left_arrow').addClass('none');
+        $(this).css('color', '#fff');
+        $(this).find('.left_arrow').removeClass('none');
+        $('.baiche').find('img').css('left', '-1.8rem');
+        $('.baiche').find('img').stop().animate({
+            'left': '0.8rem'
+        }, 1000, function () {
+            $('article').fadeIn();
+            $('.pop_select').fadeOut();
+        });
+    });
+    $('.input_chexing').click(function () {
+        $('article').fadeOut();
+        $('.pop_select').fadeIn();
+    });
+    $('.result_button').click(function () {
+        $('.pop_share').show();
+        $('.result,.result_button').addClass('blur');
+    });
+    $('.pop_share').click(function () {
+        $('.pop_share').hide();
+        $('.result,.result_button').removeClass('blur');
+    })
+</script>
+<script>
+    $(function () {
+        pageShow();
+        function pageShow() {
+            $('.page1,.baoming_bg,.pop_select').height($(window).height());
+        }
+    });
+</script>

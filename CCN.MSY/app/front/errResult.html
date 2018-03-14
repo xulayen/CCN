@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>马石油</title>
+	<script type="text/javascript" src="../../static/script/autoRem.js"></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg">
+	<img src="../../static/images/logo.png"  class="logo _blur"/>
+	<img src="../../static/images/title.png"  class="title _blur"/>
+	<div class="bg_blur"></div>
+	<p class="title1 _blur ph">复杂路况依旧我行我素</p>
+	<div class="bottom _blur ph">
+		<p onclick="location.href='register.html'"><span>扫码抽奖</span></p>
+		<p class="rule">
+			<img src="../../static/images/rule.png" />
+			<span>活动规则</span>
+		</p>
+		<p class="join">
+			<img src="../../static/images/join.png"  />
+			<span onclick="location.href='winRecode.html'">参与记录</span>
+		</p>
+	</div>
+	<!--扫描异常弹窗-->
+	<!--已参与活动-->
+	<div class="errCnt bounceIn ph none">
+		<img src="../../static/images/close1.png"  class="messClose"/>
+		<img src="../../static/images/face_1.png"  />
+		<p>当前数码已参与活动</p>
+		<p>请确认数码后重新扫描或输入,谢谢!!</p>
+	</div>
+	<!--时间已逾期-->
+	<div class="errCnt bounceIn ph none">
+		<img src="../../static/images/close1.png"  class="messClose"/>
+		<img src="../../static/images/face_2.png"  />
+		<p>尊敬的客户您好</p>
+		<p>您参与活动的时间已逾期,详情请查看活动规则,谢谢您的支持！</p>
+	</div>
+	<!--数码不存在-->
+	<div class="errCnt bounceIn ph none">
+		<img src="../../static/images/close1.png"  class="messClose"/>
+		<img src="../../static/images/face_3.png"  />
+		<p>您所查询的数码不存在</p>
+		<p>谨防假冒,或核对后重新输入,并拨打咨询热线:021-26095599</br>感谢您的使用!</p>
+	</div>
+	<!--未中奖-->
+	<div class="errCnt bounceIn ph ">
+		<img src="../../static/images/close1.png"  class="messClose"/>
+		<img src="../../static/images/face_3.png"  />
+		<p>您本次未中奖</p>
+		<p>亲，请继续关注上汽红岩产品，赢取更多中奖机会哦！</p>
+	</div>
+	
+	<!--活动规则弹窗-->
+	<div class="rule_cnt">
+		<div class="rule_content">
+			<div class="rule_head">
+				<img src="../../static/images/rule_title.png"  />
+			</div>
+			<div class="rule_body">
+				<img src="../../static/images/card.png"  />
+				<p class="pr">2018年4月1日-2018年6月30日期间,凡购买促销范围内的油品,即可在4L装纸箱上或18L油桶上找到刮刮卡标签一张,刮去涂层,扫描二维码,参与抽奖,即有机会赢取大礼,所获礼品全国免费配送</p>
+				<div class="lis">
+					<p>获得奖励</p>
+					<ul class="pm">
+						<li>
+							<div><img src="../../static/images/fir.png"  /></div>
+							<p>
+								<span>一等奖</span>
+								<span>IPad</span>
+							</p>
+						</li>
+						<li>
+							<div><img src="../../static/images/sen.png"  /></div>
+							<p>
+								<span>二等奖</span>
+								<span>新秀丽书包</span>
+							</p>
+						</li>
+						<li>
+							<div><img src="../../static/images/thr.png"  /></div>
+							<p>
+								<span>三等奖</span>
+								<span>多功能锤</span>
+							</p>
+						</li>
+						<li>
+							<div><img src="../../static/images/for.png"  /></div>
+							<p>
+								<span>四等奖</span>
+								<span>毛巾礼盒</span>
+							</p>
+						</li>
+						<li>
+							<div><img src="../../static/images/four.png"  /></div>
+							<p>
+								<span>四等奖</span>
+								<span>折叠雨伞</span>
+							</p>
+						</li>
+					</ul>
+					<p class="pr">四等奖奖品可直接在上汽红岩服务站领取</p>
+				</div>
+				<div class="tips pr">
+					<p>刮奖指南</p>
+					<p>1.扫描右侧二维码关注上汽红岩官方微信</p>
+					<p>2.打开官方微信，点击"扫码抽奖"按钮</p>
+					<p>3.刮开并扫描右下方二维码参加活动</p>
+					<img src="../../static/images/close.png"  class="rule_close"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</html>
+<script type="text/javascript" src="../../static/script/jquery-2.2.0.min.js"></script>
+<script>
+	$(".messClose").click(function(){
+		$(".errCnt,.bg_blur").hide();
+		$(".title,.title1,.bottom,.logo").removeClass("_blur");
+	})
+	$(".rule span").click(function(){
+		$(".bg_blur").show();
+		$(".bottom").hide();
+		$(".logo,.title,.title1").addClass("_blur");
+		$(".rule_cnt").addClass("show")
+	})
+	$(".rule_close").click(function(){
+		$(".bg_blur").hide();
+		$(".bottom").show();
+		$(".logo,.title,.title1").removeClass("_blur");
+		$(".rule_cnt").removeClass("show")
+	})
+</script>

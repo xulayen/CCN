@@ -1,0 +1,123 @@
+/********公共样式*********/
+html {
+    height: 100%;
+}
+body {
+    font-family:'Microsoft YaHei',sans-serif;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+	background:#edf9fb;
+}
+@media screen and (orientation: landscape) {
+    body{
+        overflow-y: auto;
+    }
+}
+ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,div,input,button,a,form,textarea,th,tr,td,table,span{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a{
+    text-decoration: none;
+    color:#333;
+}
+ul,ol{
+    list-style:none;
+}
+input,button {
+    /*-webkit-appearance: none;*/
+    border-radius: 0;
+    border: none;
+    outline: none;
+}
+.parent {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.child {
+    display: table-cell;
+    vertical-align: middle;
+}
+.clearfix:before {
+    content: '';
+    display: table;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    background: rgba(0,0,0,0.6);
+    z-index: 99;
+}
+.none{
+    display: none;
+}
+
+@font-face {
+    font-family: 'fl';
+    src:
+        url('../font/Futura LT Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.fl{font-family:fl}
+
+@font-face {
+    font-family: 'pang';
+    src:
+        url('../font/pang.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.pang{font-family:pang}
+
+@font-face {
+    font-family: 'pf';
+    src:
+        url('../font/PingFang Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.pf{font-family:pf}
+
+@font-face {
+    font-family: 'zh';
+    src:
+        url('../font/zhao.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.zh{font-family:zh}
+
+@font-face {
+    font-family: 'pb';
+    src:
+        url('../font/PingFang Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.pb{font-family:pb}
+
+@font-face {
+    font-family: 'pr';
+    src:
+        url('../font/PingFang Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.pr{font-family:pr}
