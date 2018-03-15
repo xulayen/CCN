@@ -115,6 +115,12 @@ https://xulayen.github.io/CCN/CCN.XLWMAP/index.html
 #### 高峰论坛
 https://xulayen.github.io/CCN/CCN.GFLT/app/front/index.html
 
+#### 喜力
+https://xulayen.github.io/CCN/CCN.XL/app/front/register.html
+
+#### 用码
+https://xulayen.github.io/CCN/CCN.YM/app/front/index.html
+
 
 
 

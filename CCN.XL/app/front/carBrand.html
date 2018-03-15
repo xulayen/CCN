@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg1">
+	<div class="brand_container">
+		<p class="logo"></p>
+		<div class="brand_head">
+			<p class="brand_title">壳牌喜力超凡大师</p>	
+			<p class="brand_message">
+				<span>品牌</span>
+				<span>壳牌喜力HX7 5W40</span>
+			</p>
+			<p class="brand_message">
+				<span>升数</span>
+				<span>4L</span>
+			</p>
+		</div>
+		<div class="brand_blur"></div>
+		<div class="brand_cnt">
+			<form>
+				<div class="car_name" >
+					<p class="carName">车品牌</p>
+					<input type="text" placeholder="车品牌" class="inpu_brand"/>
+					<span></span>
+				</div>
+				<div class="carNameCnt none">
+					<ul>
+						<li>宝马</li>
+						<li>奔驰</li>
+						<li>奥迪</li>
+						<li>大众</li>
+						<li>宝马</li>
+						<li>奔驰</li>
+						<li>奥迪</li>
+						<li>大众</li>
+						<li class="edit">其他</li>
+					</ul>	
+				</div>
+				<div class="car_type">
+					<p class="carType">车型号</p>
+					<input type="text" placeholder="车型号" class="inpu_type"/>
+					<span></span>
+				</div>
+				<div class="carTypeCnt none">
+					<ul>
+						<li>GLK200/GLK260/300</li>
+						<li>E180/E200/E260/E320/E400</li>
+						<li>C180/C200/C300/C260</li>
+						<li>GLK200/GLK260/300</li>
+						<li>E180/E200/E260/E320/E400</li>
+						<li>C180/C200/C300/C260</li>
+						<li class="edit">其他</li>
+					</ul>	
+				</div>
+				<div class="car_number">
+					<input type="text" placeholder="车牌号"/>
+				</div>
+				<div class="car_mile">
+					<input type="text" placeholder="公里数"/>
+				</div>
+				<div class="active_btn brandSrue">确认</div>
+			</form>
+		</div>
+	</div>
+	<!--二维码弹窗-->
+	<div class="ma none">
+		<p><img src="../../static/images/ma.png" /></p>
+		<p>车主需要在15分钟内完成验证,</br>验证完成即可获得激活奖励</p>	
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script>
+
+	$(".car_name").click(function(){
+		$(".carNameCnt").toggle();
+		$(".carName").show();
+		$(".car_name span").toggleClass("arrows");
+	});
+	$(".car_type").click(function(){
+		$(".carTypeCnt").toggle();
+		$(".carType").show();
+		$(".car_type span").toggleClass("arrows");
+	});
+	
+	//选择车品牌
+	$('.carNameCnt li:not(:last-child)').click(function(){
+		var _text=$(this).text();
+		$(".carName").text(_text);
+		$(".carNameCnt").hide();	
+	})
+	$('.carNameCnt li:last-child').click(function(){
+		$(".inpu_brand").show().focus();
+		$(".carName,.carNameCnt").hide();	
+	})
+	$('.inpu_brand').blur(function(){
+		var tx=$(this).val();
+		tx=$.trim(tx)==''?'车品牌':tx;
+		$(".carName").text(tx);
+		$(".carName").show();	
+		$(".inpu_brand").hide();
+		
+	});
+	
+	//选择车型号
+	$('.carTypeCnt li:not(:last-child)').click(function(){
+		var _text=$(this).text();
+		$(".carType").text(_text);
+		$(".carTypeCnt").hide();	
+	})
+	$('.carTypeCnt li:last-child').click(function(){
+		$(".inpu_type").show().focus();
+		$(".carType,.carTypeCnt").hide();	
+	})
+	$('.inpu_type').blur(function(){
+		var tx=$(this).val();
+		tx=$.trim(tx)==''?'车型号':tx;
+		$(".carType").text(tx);
+		$(".carType").show();	
+		$(".inpu_type").hide();
+		
+	});
+
+	
+	$(".brandSrue").click(function(){
+		$(".brand_container").hide();
+		$(".ma").show()
+	})
+</script>

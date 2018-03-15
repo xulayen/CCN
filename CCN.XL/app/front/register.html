@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+	<script type="text/javascript" src="../../static/script/plugins/autoRem.js"\></script>
+	<link rel="stylesheet" href="../../static/css/front.css" />
+	<link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="bg">
+	<div class="register">
+		<div class="register_head">
+			<p>喜力超凡车主招募赛</p>
+			<p>请查您确认您此次的换油记录</p>
+		</div>
+		<div class="carMessage">
+			<p>
+				<span class="letter">门店</span>
+				<span>乌鲁木齐泽朋工贸有限公司（朝霞江苏专业烤铆喷漆）</span>
+			</p>
+			<p>
+				<span class="letter1">机修工</span>
+				<span>张三</span>
+			</p>
+			<p>
+				<span class="letter">产品</span>
+				<span>壳牌喜力HX7 5W40</span>
+			</p>
+			<p>
+				<span class="letter">升数</span>
+				<span>4L</span>
+			</p>
+			<p>
+				<span class="letter1">车牌号</span>
+				<span>沪A888888</span>
+			</p>
+			<p>
+				<span class="letter">品牌</span>
+				<span>宝马</span>
+			</p>
+			<p>
+				<span class="letter">型号</span>
+				<span>X5</span>
+			</p>
+			<p>
+				<span class="letter1">公里数</span>
+				<span>89034KM</span>
+			</p>
+		</div>
+		<div class="register_cnt">
+			<form>
+				<div class="inpu_male">
+					<div class="name_ico"></div>
+					<input type="text" placeholder="姓名" class="inpu_name" maxlength="9"/>
+					<p class="select_sex">
+						<input type="radio" name="male" id="gril"/>
+						<label for="gril"></label>
+						<span>女士</span>
+					</p>
+					<p class="select_sex">
+						<input type="radio" name="male" id="boy"/>
+						<label for="boy"></label>
+						<span>先生</span>
+					</p>
+				</div>
+				<div class="inpu_tel">
+					<div class="tel_ico"></div>
+					<input type="tel" placeholder="手机号码" maxlength="11"/>
+				</div>
+				<div class="inpu_yzm">
+					<div class="yzm_ico"></div>
+					<input type="tel" placeholder="输入验证码" maxlength="4"/>
+					<button>获取验证码</button>
+				</div>
+				<div class="active_btn">确认激活</div>
+			</form>
+		</div>
+	</div>
+	
+	<!--换油时间提示-->
+	<div class="tip_container none">
+		<div class="tip_cnt">
+			<!--您已累计换油<span class="fBold">14L</span>-->
+			<p class="tip_title">本次您换油等级历史最高</p>
+			<p class="tip_text">奖励<span class="fBold">50</span>元京东电子卡, 累计第<span class="fBold">16L</span>即可获得<span class="fBold">200</span>京东电子卡.您距离下次换油时间还有<span class="fBold">12</span>天. </p>
+			<!--累计<span class="fBold">16L</span>即可获得<span class="fBold">200</span>京东电子卡.您距离下次换油时间还有<span class="fBold">12</span>天. -->
+			<div class="pBold personal" onclick="location.href='setting.html'">个人中心</div>
+		</div>
+		<p class="goTip">点击前往个人中心查看中奖记录</p>
+	</div>
+	
+	<!--中奖提示-->
+	<div class="win_cnt none">
+		<div class="tip_cnt">
+			<p class="win"><img src="../../static/images/win.png"  /></p>
+			<p class="tip_text _center">获得<span class="fBold">50</span>元京东电子卡 </br>距离下次换油时间还有12天 </p>
+			<!--获得<span class="fBold">200</span>元京东电子卡 </br>距离下次换油时间还有<span class="fBold">12</span>天 -->
+			<!--获得<span class="fBold">50</span>元京东电子卡 </br>距离下次换油时间还有12天 -->
+			<div class="pBold personal" onclick="location.href='setting.html'">个人中心</div>
+		</div>
+		<p class="goTip">点击前往个人中心查看中奖记录</p>
+	</div>
+	
+</body>
+</html>
+<script type="text/javascript" src="../../static/script/plugins/jquery-2.2.0.min.js" ></script>
+<script>
+	$(".active_btn").click(function(){
+		$(".register").hide();
+		$(".win_cnt").show();
+	})
+</script>
